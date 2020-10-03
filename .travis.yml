@@ -1,6 +1,5 @@
 os:
   - linux
-dist: bionic
 language: cpp
 compiler:
   - gcc
@@ -23,8 +22,6 @@ after_script:
 # install build dependencies and enable Coverity scan
 addons:
   apt:
-    sources:
-    - ubuntu-toolchain-r-test # gcc backports
     packages:
     - libbluetooth-dev
     - libusb-1.0-0-dev
@@ -36,7 +33,6 @@ addons:
     - libdbd-pgsql
     - cmake
     - cmake-data
-    - libmyodbc
     - gcc-7
     - g++-7
   coverity_scan:

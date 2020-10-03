@@ -2038,12 +2038,14 @@ GSM_Error ATGEN_GetManufacturer(GSM_StateMachine *s)
 
 	if (Priv->Manufacturer != 0 && s->Phone.Data.Manufacturer[0] != 0) return ERR_NONE;
 
+	strcpy(s->Phone.Data.Manufacturer, "Unknown");
+
 	error = ATGEN_WaitForAutoLen(s, "AT+CGMI\r", 0x00, 40, ID_GetManufacturer);
 
 	if (error != ERR_NONE) {
 		error = ATGEN_WaitForAutoLen(s, "ATI3\r", 0x00, 40, ID_GetManufacturer);
 	}
-	return error;
+	return ERR_NONE;
 }
 
 GSM_Error ATGEN_ReplyGetFirmware(GSM_Protocol_Message *msg, GSM_StateMachine *s)
@@ -2213,6 +2215,7 @@ GSM_Error ATGEN_Initialise(GSM_StateMachine *s)
 #ifdef GSM_ENABLE_CELLBROADCAST
 	Priv->CNMIBroadcastProcedure	= -1;
 #endif
+	Priv->CNMIClearUnsolicitedResultCodes = -1;
 
 	Priv->ErrorText			= NULL;
 
@@ -3328,7 +3331,11 @@ GSM_Error ATGEN_GetNetworkInfo(GSM_StateMachine *s, GSM_NetworkInfo *netinfo)
 	if (error != ERR_NONE) {
 		return error;
 	}
-	if (netinfo->State == GSM_HomeNetwork || netinfo->State == GSM_RoamingNetwork) {
+	if (netinfo->State == GSM_HomeNetwork          ||
+	    netinfo->State == GSM_RoamingNetwork       ||
+	    netinfo->PacketState == GSM_HomeNetwork    ||
+	    netinfo->PacketState == GSM_RoamingNetwork
+	    ) {
 		/* Set numeric format for AT+COPS? */
 		smprintf(s, "Setting short network name format\n");
 		error = ATGEN_WaitForAutoLen(s, "AT+COPS=3,2\r", 0x00, 40, ID_ConfigureNetworkInfo);
@@ -6327,6 +6334,7 @@ GSM_Reply_Function ATGENReplyFunctions[] = {
 {ATGEN_GenericReplyIgnore,	"^STIN:"		,0x00,0x00,ID_IncomingFrame	 },
 {ATGEN_GenericReplyIgnore, 	"+ZUSIMR:"		,0x00,0x00,ID_IncomingFrame	 },
 {ATGEN_GenericReplyIgnore, 	"+SPNWNAME:"		,0x00,0x00,ID_IncomingFrame	 },
+{ATGEN_GenericReplyIgnore, 	"+PSBEARER:"	,0x00,0x00,ID_IncomingFrame	 },
 {ATGEN_GenericReplyIgnore, 	"+ZEND"			,0x00,0x00,ID_IncomingFrame	 },
 {ATGEN_IncomingSMSInfo,		  "+CDSI:" 	 	,0x00,0x00,ID_IncomingFrame	 },
 {ATGEN_GenericReplyIgnore,	"+CLCC:"		,0x00,0x00,ID_IncomingFrame	 },

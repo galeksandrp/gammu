@@ -317,6 +317,7 @@ typedef struct {
 	int			MemorySize;
 	int			MotorolaMemorySize;
 	int			MemoryUsed;
+  int			NumFolders;
 
 	GSM_SMSMemoryStatus	LastSMSStatus;
 	int			LastSMSRead;
@@ -380,7 +381,10 @@ typedef struct {
 	 */
 	int			CNMIBroadcastProcedure;
 #endif
-
+	/**
+	 * Mode used to indicate unsolicited result code handling.
+	 */
+        int CNMIClearUnsolicitedResultCodes;
 	/**
 	 * Whether phone support Motorola like mode switching.
 	 */

@@ -14,6 +14,7 @@
  * @{
  */
 
+#include "gammu-error.h"
 #define _GNU_SOURCE
 #include <gammu-config.h>
 
@@ -217,6 +218,15 @@ GSM_Error ATGEN_GetSMSMemories(GSM_StateMachine *s)
 		Priv->SIMSMSMemory = AT_NOTAVAILABLE;
 		Priv->SIMSaveSMS = AT_NOTAVAILABLE;
 	}
+
+	// count standard folders
+	Priv->NumFolders = 0;
+	if(ATGEN_IsMemoryAvailable(Priv, MEM_SM))
+	  Priv->NumFolders++;
+
+  if(ATGEN_IsMemoryAvailable(Priv, MEM_ME))
+    Priv->NumFolders++;
+
 	return ERR_NONE;
 }
 
@@ -1370,8 +1380,8 @@ GSM_Error ATGEN_GetNextSMS(GSM_StateMachine *s, GSM_MultiSMSMessage *sms, gboole
 		smprintf(s, "Cache status: Found: %d, count: %d\n", found, Priv->SMSCount);
 
 		if (found >= Priv->SMSCount) {
-			/* Did we already read second folder? */
-			if (Priv->SMSReadFolder == 2) {
+			/* Have we read all folders? */
+			if (Priv->SMSReadFolder == Priv->NumFolders) {
 				return ERR_EMPTY;
 			}
 
@@ -2609,7 +2619,7 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 		return ERR_UNKNOWNRESPONSE;
 	}
 
-	/* Sample resposne we get here:
+	/* Sample responses we get here:
 	AT+CNMI=?
 	+CNMI: (0-2),(0,1,3),(0),(0,1),(0,1)
 
@@ -2625,6 +2635,7 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 #ifdef GSM_ENABLE_CELLBROADCAST
 	Priv->CNMIBroadcastProcedure	= 0;
 #endif
+	Priv->CNMIClearUnsolicitedResultCodes = 0;
 
 	buffer = GetLineString(msg->Buffer, &Priv->Lines, 2);
 
@@ -2648,7 +2659,11 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 	if (range == NULL) {
 		return  ERR_UNKNOWNRESPONSE;
 	}
-	if (InRange(range, 2)) {
+	param = s->CurrentConfig->CNMIParams[0];
+	if (param >= 0 && InRange(range, param)) {
+		Priv->CNMIMode = param;
+	}
+	else if (InRange(range, 2)) {
 		Priv->CNMIMode = 2; 	/* 2 = buffer messages and send them when link is free */
 	}
 	else if (InRange(range, 3)) {
@@ -2674,7 +2689,7 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 	}
 
 	param = s->CurrentConfig->CNMIParams[1];
-	if (param && InRange(range, param)) {
+	if (param >= 0 && InRange(range, param)) {
 		Priv->CNMIProcedure = param;
 	}
 	else if (InRange(range, 1)) {
@@ -2703,7 +2718,7 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 	}
 
 	param = s->CurrentConfig->CNMIParams[2];
-	if (param && InRange(range, param)) {
+	if (param >= 0 && InRange(range, param)) {
 		Priv->CNMIBroadcastProcedure = param;
 	}
 	else if (InRange(range, 2)) {
@@ -2733,7 +2748,7 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 	}
 
 	param = s->CurrentConfig->CNMIParams[3];
-	if (param && InRange(range, param)) {
+	if (param >= 0 && InRange(range, param)) {
 		Priv->CNMIDeliverProcedure = param;
 	}
 	else if (InRange(range, 2)) {
@@ -2745,6 +2760,26 @@ GSM_Error ATGEN_ReplyGetCNMIMode(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 	/* we don't want: 0 = no routing */
 	free(range);
 	range = NULL;
+
+	buffer++;
+	buffer = strchr(buffer, '(');
+
+	if (buffer == NULL) {
+		return  ERR_NONE;
+	}
+	range = GetRange(s, buffer);
+
+	if (range == NULL) {
+		return  ERR_UNKNOWNRESPONSE;
+	}
+
+	param = s->CurrentConfig->CNMIParams[4];
+	if (param >= 0 && InRange(range, param)) {
+		Priv->CNMIClearUnsolicitedResultCodes = param;
+	}
+	free(range);
+	range = NULL;
+
 	return ERR_NONE;
 }
 
@@ -2780,7 +2815,7 @@ GSM_Error ATGEN_SetCNMI(GSM_StateMachine *s)
 
 	length = sprintf(
 		buffer,
-		"AT+CNMI=%d,%d,%d,%d\r",
+		"AT+CNMI=%d,%d,%d,%d,%d\r",
 		Priv->CNMIMode,
 		s->Phone.Data.EnableIncomingSMS ? Priv->CNMIProcedure : 0,
 #ifdef GSM_ENABLE_CELLBROADCAST
@@ -2788,7 +2823,8 @@ GSM_Error ATGEN_SetCNMI(GSM_StateMachine *s)
 #else
 		0,
 #endif
-		Priv->CNMIDeliverProcedure
+		Priv->CNMIDeliverProcedure,
+		Priv->CNMIClearUnsolicitedResultCodes
 	);
 
 	return ATGEN_WaitFor(s, buffer, length, 0x00, 80, ID_SetIncomingSMS);
