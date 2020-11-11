@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WAP &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Porting from libGammu older than 1.12.0" href="porting.html" />
+    <link rel="prev" title="Unicode" href="unicode.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">python-gammu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">libGammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hints.html">Hints for libGammu Novices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">libGammu C API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="backup.html">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap.html">Bitmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="callback.html">Callback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.html">Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datetime.html">Date and time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debug.html">Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inifile.html">INI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html">Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html">Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc.html">Miscellaneous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nokia.html">Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ringtone.html">Ringtone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html">SMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statemachine.html">State machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.html">Unicode</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WAP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="porting.html">Porting from libGammu older than 1.12.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">libGammu</a> &raquo;</li>
+        
+          <li><a href="api.html">libGammu C API</a> &raquo;</li>
+        
+      <li>WAP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c/wap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wap">
+<h1>WAP<a class="headerlink" href="#wap" title="Permalink to this headline">¶</a></h1>
+<dl class="c function">
+<dt id="c.GSM_EncodeURLFile">
+<span class="target" id="group__WAP_1gaec2efc58d78f2ee41f1fe40890a4a5d6"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_EncodeURLFile</code><span class="sig-paren">(</span>unsigned char *<em>Buffer</em>, size_t *<em>Length</em>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark">GSM_WAPBookmark</a> *<em>bookmark</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeURLFile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes URL to VBKM file.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Storage for text. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Length</span></code>: Pointer to storage, will be updated. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bookmark</span></code>: Bookmark to encode.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetWAPBookmark">
+<span class="target" id="group__WAP_1gaca60c559c62d6c881ea3119ce1a8100c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetWAPBookmark</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark">GSM_WAPBookmark</a> *<em>bookmark</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetWAPBookmark" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads WAP bookmark.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bookmark</span></code>: Bookmark storage, need to contain location.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetWAPBookmark">
+<span class="target" id="group__WAP_1gafabe8a6b0d98dee0fd9e42106a6cf64a"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SetWAPBookmark</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark">GSM_WAPBookmark</a> *<em>bookmark</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetWAPBookmark" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets WAP bookmark.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bookmark</span></code>: Bookmark data.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_DeleteWAPBookmark">
+<span class="target" id="group__WAP_1gafc5e8d3688f4346757d6598501c4fb41"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DeleteWAPBookmark</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark">GSM_WAPBookmark</a> *<em>bookmark</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteWAPBookmark" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deletes WAP bookmark.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bookmark</span></code>: Bookmark data, need to contain location.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetWAPSettings">
+<span class="target" id="group__WAP_1gadbe999cded99607de51398509b6f1f68"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetWAPSettings</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MultiWAPSettings" title="GSM_MultiWAPSettings">GSM_MultiWAPSettings</a> *<em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetWAPSettings" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acquires WAP settings.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code>: Settings storage.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetWAPSettings">
+<span class="target" id="group__WAP_1gad9af63edfdf04df610dab9440ea9680f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SetWAPSettings</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MultiWAPSettings" title="GSM_MultiWAPSettings">GSM_MultiWAPSettings</a> *<em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetWAPSettings" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Changes WAP settings.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code>: Settings data.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_WAPBookmark">
+<span class="target" id="structGSM__WAPBookmark"></span><em class="property">struct </em><code class="sig-name descname">GSM_WAPBookmark</code><a class="headerlink" href="#c.GSM_WAPBookmark" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>WAP bookmark data. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_WAPBookmark.Location">
+<span class="target" id="structGSM__WAPBookmark_1a935ab5249ecfaa9c15c88ccbd053e86c"></span>int <code class="sig-name descname">Location</code><a class="headerlink" href="#c.GSM_WAPBookmark.Location" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location where it is stored. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPBookmark.Address">
+<span class="target" id="structGSM__WAPBookmark_1a53ec8cbda2a962146dafe74992b53222"></span>unsigned char <code class="sig-name descname">Address</code>[(255 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPBookmark.Address" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bookmark URL. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPBookmark.Title">
+<span class="target" id="structGSM__WAPBookmark_1a738e0bbbc22b8b4dcdaf16e8a01d4766"></span>unsigned char <code class="sig-name descname">Title</code>[(50 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPBookmark.Title" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bookmark title. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.WAPSettings_Speed">
+<span class="target" id="group__WAP_1ga10859c3bcff3090876b601d184c0ae26"></span><em class="property">enum </em><code class="sig-name descname">WAPSettings_Speed</code><a class="headerlink" href="#c.WAPSettings_Speed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Connection speed configuration. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Speed.WAPSETTINGS_SPEED_9600">
+<span class="target" id="group__WAP_1gga10859c3bcff3090876b601d184c0ae26ab00b721ffe399e23666e1c637bfce8f1"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_SPEED_9600</code><a class="headerlink" href="#c.WAPSettings_Speed.WAPSETTINGS_SPEED_9600" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Speed.WAPSETTINGS_SPEED_14400">
+<span class="target" id="group__WAP_1gga10859c3bcff3090876b601d184c0ae26ab0b0982d4b06aa6a3537f0da28859465"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_SPEED_14400</code><a class="headerlink" href="#c.WAPSettings_Speed.WAPSETTINGS_SPEED_14400" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Speed.WAPSETTINGS_SPEED_AUTO">
+<span class="target" id="group__WAP_1gga10859c3bcff3090876b601d184c0ae26a513b3699c50008e06d63d74a415ff991"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_SPEED_AUTO</code><a class="headerlink" href="#c.WAPSettings_Speed.WAPSETTINGS_SPEED_AUTO" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.WAPSettings_Bearer">
+<span class="target" id="group__WAP_1ga2875cc4d4c64f06afcf946f6c8bbca64"></span><em class="property">enum </em><code class="sig-name descname">WAPSettings_Bearer</code><a class="headerlink" href="#c.WAPSettings_Bearer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Connection bearer configuration. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Bearer.WAPSETTINGS_BEARER_SMS">
+<span class="target" id="group__WAP_1gga2875cc4d4c64f06afcf946f6c8bbca64a747ba57c776f2b9430f7a31c4f8824a9"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_BEARER_SMS</code><a class="headerlink" href="#c.WAPSettings_Bearer.WAPSETTINGS_BEARER_SMS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Bearer.WAPSETTINGS_BEARER_DATA">
+<span class="target" id="group__WAP_1gga2875cc4d4c64f06afcf946f6c8bbca64ae49439f6a2a5cf35b1930a1b6a535ae2"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_BEARER_DATA</code><a class="headerlink" href="#c.WAPSettings_Bearer.WAPSETTINGS_BEARER_DATA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Bearer.WAPSETTINGS_BEARER_USSD">
+<span class="target" id="group__WAP_1gga2875cc4d4c64f06afcf946f6c8bbca64a573f1b99014a2b9bcf4f34006a838144"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_BEARER_USSD</code><a class="headerlink" href="#c.WAPSettings_Bearer.WAPSETTINGS_BEARER_USSD" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.WAPSettings_Bearer.WAPSETTINGS_BEARER_GPRS">
+<span class="target" id="group__WAP_1gga2875cc4d4c64f06afcf946f6c8bbca64a94662945db2708dd5334f41889593f58"></span><em class="property">enumerator </em><code class="sig-name descname">WAPSETTINGS_BEARER_GPRS</code><a class="headerlink" href="#c.WAPSettings_Bearer.WAPSETTINGS_BEARER_GPRS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_WAPSettings">
+<span class="target" id="structGSM__WAPSettings"></span><em class="property">struct </em><code class="sig-name descname">GSM_WAPSettings</code><a class="headerlink" href="#c.GSM_WAPSettings" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>WAP setting. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Title">
+<span class="target" id="structGSM__WAPSettings_1a2f0189dab830d04305c94a47fe27d4b4"></span>char <code class="sig-name descname">Title</code>[(20 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.Title" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Settings name. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.HomePage">
+<span class="target" id="structGSM__WAPSettings_1a28953dd3035c5da5472261d376397310"></span>char <code class="sig-name descname">HomePage</code>[(100 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.HomePage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Home page. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Bearer">
+<span class="target" id="structGSM__WAPSettings_1a251dbdbd0f3cec79f28b3317ea4a4f2e"></span><a class="reference internal" href="#c.WAPSettings_Bearer" title="WAPSettings_Bearer">WAPSettings_Bearer</a> <code class="sig-name descname">Bearer</code><a class="headerlink" href="#c.GSM_WAPSettings.Bearer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bearer of WAP connection. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IsSecurity">
+<span class="target" id="structGSM__WAPSettings_1ade9b0170436931672b83cb7f3f9426a0"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">IsSecurity</code><a class="headerlink" href="#c.GSM_WAPSettings.IsSecurity" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Secure connection? </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IsContinuous">
+<span class="target" id="structGSM__WAPSettings_1a1f132e89ce77b1860e3bf954de3e83c4"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">IsContinuous</code><a class="headerlink" href="#c.GSM_WAPSettings.IsContinuous" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Is this connectin continuous? </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IsISDNCall">
+<span class="target" id="structGSM__WAPSettings_1af80e0222dcb9f94a7cd4ba6e3e8b66dc"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">IsISDNCall</code><a class="headerlink" href="#c.GSM_WAPSettings.IsISDNCall" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether is ISDN for data bearer </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IsNormalAuthentication">
+<span class="target" id="structGSM__WAPSettings_1a7a350b0046b2b81c81a6c25142cef8bb"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">IsNormalAuthentication</code><a class="headerlink" href="#c.GSM_WAPSettings.IsNormalAuthentication" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether is normal auth for data bearer </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Server">
+<span class="target" id="structGSM__WAPSettings_1a44de421d2f79a8ee16c2f9240947b453"></span>char <code class="sig-name descname">Server</code>[(21 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.Server" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Server for sms bearer. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Service">
+<span class="target" id="structGSM__WAPSettings_1aba9933d0767484bc9139001dda1818ca"></span>char <code class="sig-name descname">Service</code>[(20 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.Service" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Service for sms or ussd bearer. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IsIP">
+<span class="target" id="structGSM__WAPSettings_1a339b0fca64880aa53c678f0aff46cb3e"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">IsIP</code><a class="headerlink" href="#c.GSM_WAPSettings.IsIP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether is IP, for sms or ussd bearer. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Code">
+<span class="target" id="structGSM__WAPSettings_1abe0e00e95c1730b589c72f105412b993"></span>char <code class="sig-name descname">Code</code>[(10 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.Code" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Code for ussd bearer. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.IPAddress">
+<span class="target" id="structGSM__WAPSettings_1a56c5a5eba2dc147bb1762e48f781e001"></span>char <code class="sig-name descname">IPAddress</code>[(20 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.IPAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>IP address for data or gprs. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.ManualLogin">
+<span class="target" id="structGSM__WAPSettings_1a7f80c087da0790e59e8adecaaf290505"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">ManualLogin</code><a class="headerlink" href="#c.GSM_WAPSettings.ManualLogin" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Login for data or gprs. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.DialUp">
+<span class="target" id="structGSM__WAPSettings_1aa3b0c067253f1aeec3ca748e71f6388d"></span>char <code class="sig-name descname">DialUp</code>[(20 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.DialUp" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dial up number for data or gprs. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.User">
+<span class="target" id="structGSM__WAPSettings_1a8768d6cc890390e38e577a3cd6d821b6"></span>char <code class="sig-name descname">User</code>[(50 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.User" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User name for data or gprs.</p>
+<p><dl class="xrefsect">
+<dt>
+<em>Todo:</em></dt>
+<dd><p>Is length okay? </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Password">
+<span class="target" id="structGSM__WAPSettings_1afb356384348c412250761ea41cb23030"></span>char <code class="sig-name descname">Password</code>[(50 + 1) * 2]<a class="headerlink" href="#c.GSM_WAPSettings.Password" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User password for data or gprs.</p>
+<p><dl class="xrefsect">
+<dt>
+<em>Todo:</em></dt>
+<dd><p>Is length okay? </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_WAPSettings.Speed">
+<span class="target" id="structGSM__WAPSettings_1af15f0bd82b37c92b188e8f211194d3f6"></span><a class="reference internal" href="#c.WAPSettings_Speed" title="WAPSettings_Speed">WAPSettings_Speed</a> <code class="sig-name descname">Speed</code><a class="headerlink" href="#c.GSM_WAPSettings.Speed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Speed settings for data or gprs. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_MultiWAPSettings">
+<span class="target" id="structGSM__MultiWAPSettings"></span><em class="property">struct </em><code class="sig-name descname">GSM_MultiWAPSettings</code><a class="headerlink" href="#c.GSM_MultiWAPSettings" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set of WAP settings. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Location">
+<span class="target" id="structGSM__MultiWAPSettings_1aedece2c2d955fee76188b0dbbc7d3947"></span>int <code class="sig-name descname">Location</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.Location" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Number">
+<span class="target" id="structGSM__MultiWAPSettings_1a98b42b5169c4e7e7a764a13e542081cb"></span>unsigned char <code class="sig-name descname">Number</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.Number" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of elements in Settings. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Settings">
+<span class="target" id="structGSM__MultiWAPSettings_1ae0eb13a71085ba80cdc5205f4733a77c"></span><a class="reference internal" href="#c.GSM_WAPSettings" title="GSM_WAPSettings">GSM_WAPSettings</a> <code class="sig-name descname">Settings</code>[4]<a class="headerlink" href="#c.GSM_MultiWAPSettings.Settings" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Real WAP settings. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Active">
+<span class="target" id="structGSM__MultiWAPSettings_1a89bdc5d0efa8abcd68af3e73d01085b2"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">Active</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.Active" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether this configuration is active. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.ReadOnly">
+<span class="target" id="structGSM__MultiWAPSettings_1a029184620a713ac5f8acbcf5d2b88e5b"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">ReadOnly</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.ReadOnly" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether this configuration is read only. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Proxy">
+<span class="target" id="structGSM__MultiWAPSettings_1ab43a50a09fb5dc7af9634dcfe3b516d9"></span>char <code class="sig-name descname">Proxy</code>[(100 + 1) * 2]<a class="headerlink" href="#c.GSM_MultiWAPSettings.Proxy" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Proxy server. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.ProxyPort">
+<span class="target" id="structGSM__MultiWAPSettings_1a484346f1954ae99c6069db14b3d5be40"></span>int <code class="sig-name descname">ProxyPort</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.ProxyPort" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Proxy port. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Proxy2">
+<span class="target" id="structGSM__MultiWAPSettings_1a715b08341fcb520568c060444f602b71"></span>char <code class="sig-name descname">Proxy2</code>[(100 + 1) * 2]<a class="headerlink" href="#c.GSM_MultiWAPSettings.Proxy2" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Second proxy server. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.Proxy2Port">
+<span class="target" id="structGSM__MultiWAPSettings_1aecc0704ce1d43dca781559f0f1acfe89"></span>int <code class="sig-name descname">Proxy2Port</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.Proxy2Port" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Second proxy port. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MultiWAPSettings.ActiveBearer">
+<span class="target" id="structGSM__MultiWAPSettings_1a254703dbb1c507857e2fe612ede05913"></span><a class="reference internal" href="#c.WAPSettings_Bearer" title="WAPSettings_Bearer">WAPSettings_Bearer</a> <code class="sig-name descname">ActiveBearer</code><a class="headerlink" href="#c.GSM_MultiWAPSettings.ActiveBearer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bearer of current connection. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="porting.html" class="btn btn-neutral float-right" title="Porting from libGammu older than 1.12.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unicode.html" class="btn btn-neutral float-left" title="Unicode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

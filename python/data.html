@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>gammu.data – Generic data usable with Gammu &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="gammu.worker - Asynchronous communication to phone." href="worker.html" />
+    <link rel="prev" title="gammu.smsd – SMSD access" href="smsd.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">python-gammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#a-taste-of-python-gammu">A taste of python-gammu</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#api-documentation">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gammu.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu</span></code> – Mobile phone access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.smsd</span></code> – SMSD access</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code> – Generic data usable with Gammu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="worker.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exceptions.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">libGammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">python-gammu</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code> – Generic data usable with Gammu</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-gammu.data">
+<span id="gammu-data-generic-data-usable-with-gammu"></span><h1><a class="reference internal" href="#module-gammu.data" title="gammu.data: Provides various data, which can be useful with Gammu."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code></a> – Generic data usable with Gammu<a class="headerlink" href="#module-gammu.data" title="Permalink to this headline">¶</a></h1>
+<dl class="py data">
+<dt id="gammu.data.Connections">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">Connections</code><a class="headerlink" href="#gammu.data.Connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of connection strings known to Gammu. They can be used for
+example when giving user a choice of connection string.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.MemoryValueTypes">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">MemoryValueTypes</code><a class="headerlink" href="#gammu.data.MemoryValueTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of types of memory entry values.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.CalendarTypes">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">CalendarTypes</code><a class="headerlink" href="#gammu.data.CalendarTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of calendar event types.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.CalendarValueTypes">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">CalendarValueTypes</code><a class="headerlink" href="#gammu.data.CalendarValueTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of types of calendar entry values.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.TodoPriorities">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">TodoPriorities</code><a class="headerlink" href="#gammu.data.TodoPriorities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of todo priorities.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.TodoValueTypes">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">TodoValueTypes</code><a class="headerlink" href="#gammu.data.TodoValueTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides list of types of todo entry values.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.InternationalPrefixes">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">InternationalPrefixes</code><a class="headerlink" href="#gammu.data.InternationalPrefixes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of known international prefixes.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.Errors">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">Errors</code><a class="headerlink" href="#gammu.data.Errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping of text representation of errors to gammu error codes. Reverse to <a class="reference internal" href="#gammu.data.ErrorNumbers" title="gammu.data.ErrorNumbers"><code class="xref py py-data docutils literal notranslate"><span class="pre">ErrorNumbers</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="gammu.data.ErrorNumbers">
+<code class="sig-prename descclassname">gammu.data.</code><code class="sig-name descname">ErrorNumbers</code><a class="headerlink" href="#gammu.data.ErrorNumbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping of gammu error codes to text representation. Reverse to <a class="reference internal" href="#gammu.data.Errors" title="gammu.data.Errors"><code class="xref py py-data docutils literal notranslate"><span class="pre">Errors</span></code></a>.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="worker.html" class="btn btn-neutral float-right" title="gammu.worker - Asynchronous communication to phone." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="smsd.html" class="btn btn-neutral float-left" title="gammu.smsd – SMSD access" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

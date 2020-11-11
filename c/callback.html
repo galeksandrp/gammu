@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Callback &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Call" href="call.html" />
+    <link rel="prev" title="Calendar" href="calendar.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">python-gammu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">libGammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hints.html">Hints for libGammu Novices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">libGammu C API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="backup.html">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap.html">Bitmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Callback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.html">Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datetime.html">Date and time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debug.html">Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inifile.html">INI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html">Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html">Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc.html">Miscellaneous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nokia.html">Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ringtone.html">Ringtone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html">SMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statemachine.html">State machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.html">Unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wap.html">WAP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="porting.html">Porting from libGammu older than 1.12.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">libGammu</a> &raquo;</li>
+        
+          <li><a href="api.html">libGammu C API</a> &raquo;</li>
+        
+      <li>Callback</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c/callback.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="callback">
+<h1>Callback<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h1>
+<dl class="c function">
+<dt id="c.GSM_SetIncomingCallCallback">
+<span class="target" id="group__Callback_1ga4a986fa34c8a18847e4b38c5c260f3cc"></span>void <code class="sig-name descname">GSM_SetIncomingCallCallback</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.IncomingCallCallback" title="IncomingCallCallback">IncomingCallCallback</a> <em>callback</em>, void *<em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetIncomingCallCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets callback for incoming calls.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Pointer to callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code>: Second parameter which will be passed to callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetIncomingSMSCallback">
+<span class="target" id="group__Callback_1ga2097be9e660c24823b2eef7cb96b6bf5"></span>void <code class="sig-name descname">GSM_SetIncomingSMSCallback</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.IncomingSMSCallback" title="IncomingSMSCallback">IncomingSMSCallback</a> <em>callback</em>, void *<em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetIncomingSMSCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets callback for incoming SMSes.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Pointer to callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code>: Second parameter which will be passed to callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetIncomingCBCallback">
+<span class="target" id="group__Callback_1ga8c8de4991d56eda2b3ccf3939371e81e"></span>void <code class="sig-name descname">GSM_SetIncomingCBCallback</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.IncomingCBCallback" title="IncomingCBCallback">IncomingCBCallback</a> <em>callback</em>, void *<em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetIncomingCBCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets callback for incoming CB.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Pointer to callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code>: Second parameter which will be passed to callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetIncomingUSSDCallback">
+<span class="target" id="group__Callback_1gad647c2e0d2ea059bdba60bf16efe68e2"></span>void <code class="sig-name descname">GSM_SetIncomingUSSDCallback</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.IncomingUSSDCallback" title="IncomingUSSDCallback">IncomingUSSDCallback</a> <em>callback</em>, void *<em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetIncomingUSSDCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets callback for incoming USSD.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Pointer to callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code>: Second parameter which will be passed to callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetSendSMSStatusCallback">
+<span class="target" id="group__Callback_1ga16c0b2ef7afd79869e5da4b624f88a2d"></span>void <code class="sig-name descname">GSM_SetSendSMSStatusCallback</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.SendSMSStatusCallback" title="SendSMSStatusCallback">SendSMSStatusCallback</a> <em>callback</em>, void *<em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetSendSMSStatusCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets callback for sending SMS.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Pointer to callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code>: Second parameter which will be passed to callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.IncomingCallCallback">
+<span class="target" id="group__Callback_1ga8199ec2b92088a05dad9b705bcb0e6de"></span><em class="property">typedef </em>void (*<code class="sig-name descname">IncomingCallCallback</code>)<span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *s, <a class="reference internal" href="call.html#c.GSM_Call" title="GSM_Call">GSM_Call</a> *call, void *user_data<span class="sig-paren">)</span><a class="headerlink" href="#c.IncomingCallCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback for incoming calls. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.IncomingSMSCallback">
+<span class="target" id="group__Callback_1ga33b7912de1dc319ee671d9d0eeff68e4"></span><em class="property">typedef </em>void (*<code class="sig-name descname">IncomingSMSCallback</code>)<span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *s, <a class="reference internal" href="message.html#c.GSM_SMSMessage" title="GSM_SMSMessage">GSM_SMSMessage</a> *sms, void *user_data<span class="sig-paren">)</span><a class="headerlink" href="#c.IncomingSMSCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback for incoming SMS. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.IncomingCBCallback">
+<span class="target" id="group__Callback_1ga6bedd9f65c8bc6e27c544b2eb326a58a"></span><em class="property">typedef </em>void (*<code class="sig-name descname">IncomingCBCallback</code>)<span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *s, <a class="reference internal" href="message.html#c.GSM_CBMessage" title="GSM_CBMessage">GSM_CBMessage</a> *cb, void *user_data<span class="sig-paren">)</span><a class="headerlink" href="#c.IncomingCBCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback for incoming cell broadcast. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.IncomingUSSDCallback">
+<span class="target" id="group__Callback_1ga7c5e387d6c245bcac5bf74b3b80b3f6a"></span><em class="property">typedef </em>void (*<code class="sig-name descname">IncomingUSSDCallback</code>)<span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *s, <a class="reference internal" href="message.html#c.GSM_USSDMessage" title="GSM_USSDMessage">GSM_USSDMessage</a> *ussd, void *user_data<span class="sig-paren">)</span><a class="headerlink" href="#c.IncomingUSSDCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback for icoming USSD. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt id="c.SendSMSStatusCallback">
+<span class="target" id="group__Callback_1gadf59fff06df627fdee5f8d10f7d36f71"></span><em class="property">typedef </em>void (*<code class="sig-name descname">SendSMSStatusCallback</code>)<span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *s, int status, int MessageReference, void *user_data<span class="sig-paren">)</span><a class="headerlink" href="#c.SendSMSStatusCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback for sending SMS. </p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="call.html" class="btn btn-neutral float-right" title="Call" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="calendar.html" class="btn btn-neutral float-left" title="Calendar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

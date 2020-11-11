@@ -1,0 +1,1109 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Memory &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Messages" href="message.html" />
+    <link rel="prev" title="Limits" href="limits.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">python-gammu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">libGammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hints.html">Hints for libGammu Novices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">libGammu C API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="backup.html">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap.html">Bitmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="callback.html">Callback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.html">Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datetime.html">Date and time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debug.html">Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inifile.html">INI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html">Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc.html">Miscellaneous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nokia.html">Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ringtone.html">Ringtone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html">SMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statemachine.html">State machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.html">Unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wap.html">WAP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="porting.html">Porting from libGammu older than 1.12.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">libGammu</a> &raquo;</li>
+        
+          <li><a href="api.html">libGammu C API</a> &raquo;</li>
+        
+      <li>Memory</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c/memory.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="memory">
+<h1>Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h1>
+<dl class="c function">
+<dt id="c.GSM_StringToMemoryType">
+<span class="target" id="gammu-memory_8h_1a858f5d9f061ad669ef02b16f29108efa"></span><a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType">GSM_MemoryType</a> <code class="sig-name descname">GSM_StringToMemoryType</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_StringToMemoryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Converts memory type from string.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Parsed memory type or 0 on failure. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: String with memory type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetMemoryStatus">
+<span class="target" id="group__Memory_1ga145a1156190ea04a1f56e5c73a54a3d5"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetMemoryStatus</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryStatus" title="GSM_MemoryStatus">GSM_MemoryStatus</a> *<em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetMemoryStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets memory (phonebooks or calls) status (eg. number of used and free entries).</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Storage for status information, MemoryType has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetMemory">
+<span class="target" id="group__Memory_1ga31a30715b54f37896bdca2223df7d3ce"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads entry from memory (phonebooks or calls). Which entry should be read is defined in entry.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Storage for retrieved entry, MemoryType and Location has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetNextMemory">
+<span class="target" id="group__Memory_1ga517e66d31e7ad9e0058da6df823d0703"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetNextMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>start</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads entry from memory (phonebooks or calls). Which entry should be read is defined in entry. This can be easily used for reading all entries.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Storage for retrieved entry. MemoryType has to be set for first call (with start set to TRUE), for subsequent calls Location has to stay intact from previous reading. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Whether we should start from beginning.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetMemory">
+<span class="target" id="group__Memory_1gaeb08d144ac1b695b00f46102df6dda96"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SetMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets memory (phonebooks or calls) entry.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to set, Location and MemoryType has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_AddMemory">
+<span class="target" id="group__Memory_1ga81c4c549acd5879206f04c5e15ae279a"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_AddMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds memory (phonebooks or calls) entry.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to add, Location is ignored, MemoryType has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_DeleteMemory">
+<span class="target" id="group__Memory_1gae1a656293f043e897fa130b7efe1bff3"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DeleteMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deletes memory (phonebooks or calls) entry.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to delete, Location and MemoryType has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_DeleteAllMemory">
+<span class="target" id="group__Memory_1gaa9bbae079304374cf0182a70e0931f8f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DeleteAllMemory</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType">GSM_MemoryType</a> <em>MemoryType</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteAllMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deletes all memory (phonebooks or calls) entries of specified type.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MemoryType</span></code>: Where to delete all entries.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_GetSpeedDial">
+<span class="target" id="group__Memory_1gab60bb85031c604889182e9f92e596dc3"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetSpeedDial</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_SpeedDial" title="GSM_SpeedDial">GSM_SpeedDial</a> *<em>Speed</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetSpeedDial" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets speed dial.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Speed</span></code>: Storage for speed dial, Location has to be set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_SetSpeedDial">
+<span class="target" id="group__Memory_1gaddb5f9b58e9f414d2c1174968cbc1044"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SetSpeedDial</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_SpeedDial" title="GSM_SpeedDial">GSM_SpeedDial</a> *<em>Speed</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetSpeedDial" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets speed dial.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Speed</span></code>: Sspeed dial to set.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_PhonebookGetEntryName">
+<span class="target" id="group__Memory_1ga4a0fc699fb94cd155f0c5d00cf46d182"></span>unsigned char *<code class="sig-name descname">GSM_PhonebookGetEntryName</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PhonebookGetEntryName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns name of entry. It might be possibly concatenated from first and last names.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Static unicode string containing name. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to process.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_PhonebookFindDefaultNameNumberGroup">
+<span class="target" id="group__Memory_1gaf9be792548d0a5626fbb2a6f5ab188cc"></span>void <code class="sig-name descname">GSM_PhonebookFindDefaultNameNumberGroup</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>entry</em>, int *<em>Name</em>, int *<em>Number</em>, int *<em>Group</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PhonebookFindDefaultNameNumberGroup" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Finds default name, number and group for entry.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to process. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Name</span></code>: Output index of name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Number</span></code>: Output index of number. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Group</span></code>: Output index of group. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_EncodeVCARD">
+<span class="target" id="group__Memory_1ga4622f269a8c0c6be7fd6a1874582bf61"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_EncodeVCARD</code><span class="sig-paren">(</span><a class="reference internal" href="debug.html#c.GSM_Debug_Info" title="GSM_Debug_Info">GSM_Debug_Info</a> *<em>di</em>, char *<em>Buffer</em>, <em class="property">const</em> size_t <em>buff_len</em>, size_t *<em>Pos</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>pbk</em>, <em class="property">const</em> <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>header</em>, <em class="property">const</em> <a class="reference internal" href="#c.GSM_VCardVersion" title="GSM_VCardVersion">GSM_VCardVersion</a> <em>Version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeVCARD" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes memory entry to vCard.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">di</span></code>: Pointer to debugging description. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">Buffer</span></code>: Buffer to store vCard text. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buff_len</span></code>: Size of output buffer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">Pos</span></code>: Position in output buffer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">pbk</span></code>: Phonebook data, AddError will be set on non converted entries. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">header</span></code>: Whether to include vCard header in output. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Version</span></code>: What vCard version to create.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_DecodeVCARD">
+<span class="target" id="group__Memory_1gada934dd19e3c8562b675ec4ff188943e"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DecodeVCARD</code><span class="sig-paren">(</span><a class="reference internal" href="debug.html#c.GSM_Debug_Info" title="GSM_Debug_Info">GSM_Debug_Info</a> *<em>di</em>, char *<em>Buffer</em>, size_t *<em>Pos</em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>Pbk</em>, <em class="property">const</em> <a class="reference internal" href="#c.GSM_VCardVersion" title="GSM_VCardVersion">GSM_VCardVersion</a> <em>Version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DecodeVCARD" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decodes memory entry from vCard.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Error code. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">di</span></code>: Pointer to debugging description. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Buffer</span></code>: Buffer to readCard text. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">Pos</span></code>: Position in output buffer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">Pbk</span></code>: Phonebook data read from vCard. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Version</span></code>: What vCard version to parse.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.GSM_FreeMemoryEntry">
+<span class="target" id="gammu-memory_8h_1a9d544e416a543f71b2bcff66278a5cb2"></span>void <code class="sig-name descname">GSM_FreeMemoryEntry</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry">GSM_MemoryEntry</a> *<em>Entry</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FreeMemoryEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Frees any dynamically allocated memory inside memory entry structure.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Entry</span></code>: Pointer to memory entry to process. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.GSM_MemoryType">
+<span class="target" id="group__Memory_1ga0be0a552df786640938d07d7870ea985"></span><em class="property">enum </em><code class="sig-name descname">GSM_MemoryType</code><a class="headerlink" href="#c.GSM_MemoryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enum defines ID for various phone and SIM memories. Phone modules can translate them to values specific for concrete models. Two letter codes (excluding VM and SL) are from GSM 07.07. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_ME">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985acfea025f90f61bf188d116d2496bbe7e"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_ME</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_ME" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Internal memory of the mobile equipment </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_SM">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a2b420267af52fb5b806efa4b1e0416e2"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_SM</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_SM" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>SIM card memory </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_ON">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a4954c69a5f662f3e97ac67c89fbdfa0b"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_ON</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_ON" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Own numbers </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_DC">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985af2606f8eb8f70b5a728ad30776ab7c01"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_DC</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_DC" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dialled calls </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_RC">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a070a27c0ddc7444415f29ea9638a7d93"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_RC</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_RC" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Received calls </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_MC">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a5cb8fcfed67fc76ce0673b232321672b"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_MC</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_MC" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Missed calls </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_MT">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985abfe630b1331ad5bda0a89e5998f18c06"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_MT</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_MT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Combined ME and SIM phonebook </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_FD">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a53a28ca6a03335cb97b0c38e24381ce7"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_FD</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_FD" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fixed dial </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_VM">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985ad05734c4feac2f7a73a9179cb86df7fa"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_VM</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_VM" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Voice mailbox </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_SL">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a85d624396aac5d7031d4cd2cc7106647"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_SL</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_SL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sent SMS logs </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_QD">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a14e897546449fbb2e37088ba7fa446c1"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_QD</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_QD" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Quick dialing choices. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_SR">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a4cb672513a1a7ca3970b9f1d49c059cd"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_SR</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_SR" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Status report memory </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_MemoryType.MEM_INVALID">
+<span class="target" id="group__Memory_1gga0be0a552df786640938d07d7870ea985a1541d259baaac25ffaae86e2fc1e8134"></span><em class="property">enumerator </em><code class="sig-name descname">MEM_INVALID</code><a class="headerlink" href="#c.GSM_MemoryType.MEM_INVALID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Invalid memory type. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_MemoryStatus">
+<span class="target" id="structGSM__MemoryStatus"></span><em class="property">struct </em><code class="sig-name descname">GSM_MemoryStatus</code><a class="headerlink" href="#c.GSM_MemoryStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Structure contains info about number of used/free entries in phonebook memory. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_MemoryStatus.MemoryUsed">
+<span class="target" id="structGSM__MemoryStatus_1ad618d0394adc458e8075b4c4646d3211"></span>int <code class="sig-name descname">MemoryUsed</code><a class="headerlink" href="#c.GSM_MemoryStatus.MemoryUsed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of used entries </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MemoryStatus.MemoryType">
+<span class="target" id="structGSM__MemoryStatus_1a8ef207183c81ef5707cd471cd48a7cce"></span><a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType">GSM_MemoryType</a> <code class="sig-name descname">MemoryType</code><a class="headerlink" href="#c.GSM_MemoryStatus.MemoryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Memory type </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MemoryStatus.MemoryFree">
+<span class="target" id="structGSM__MemoryStatus_1a8af51b8fe86fee6e341f49c30f3bd344"></span>int <code class="sig-name descname">MemoryFree</code><a class="headerlink" href="#c.GSM_MemoryStatus.MemoryFree" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of free entries </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.GSM_EntryType">
+<span class="target" id="group__Memory_1gae40660f3f54c477cd780a89e27419894"></span><em class="property">enum </em><code class="sig-name descname">GSM_EntryType</code><a class="headerlink" href="#c.GSM_EntryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Type of specific phonebook entry. In parenthesis is specified in which member of <a class="reference internal" href="#structGSM__SubMemoryEntry"><span class="std std-ref">GSM_SubMemoryEntry</span></a> value is stored. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_General">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a96b25670c53988fb3345d47b6e3ebfd4"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_General</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_General" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>General number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Mobile">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a3cc9f50d4d57dd2cb44bef6a5f6275df"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Mobile</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Mobile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mobile number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Fax">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a0d5d204a6b36f771b020ed3f16a42982"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Fax</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Fax" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fax number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Pager">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a4b71a35693077bb25fd1fa78faa5ff94"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Pager</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Pager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pager number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Other">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a04fb5c9f3261114c2d1a1675b19d70dc"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Other</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Other" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Note">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aacb1020c777c2b11a07c11b4f9821d06"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Note</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Note" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Note. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Postal">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aa8c90d1435c7601f7fc01867a94f531d"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Postal</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Postal" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Complete postal address. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Email">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a25f5a971276371fb6719f69b69daaaa7"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Email</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Email" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Email. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Email2">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894af5f90103649c3f257db8490f7c6259b2"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Email2</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Email2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_URL">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aa5533dbe13647aec86c8b037580c1462"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_URL</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_URL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>URL (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Date">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894add4cbf601df95e25a05645a1d77421a6"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Date</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Date" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Date and time of last call. (Date) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Caller_Group">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a0afcafdf277155bddc6bdc93acbf5823"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Caller_Group</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Caller_Group" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Caller group. (Number) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Name">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a9f6d7cef605ed5687833ec1283cb1121"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Name</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Name" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Name (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_LastName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894ab3bd2565114d986357370b86daaddb2e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_LastName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_LastName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Last name. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_FirstName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a46769b2e3ddc5aa7451f934508a7fbd3"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_FirstName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_FirstName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>First name. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Company">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a971063faf44ed7eb803781f0d4d11c1e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Company</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Company" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Company. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_JobTitle">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a13999aadadc5764841f48b669e3396da"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_JobTitle</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_JobTitle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Job title. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Category">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a9a78da9c5cb56562e8a20aad1fe4e48b"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Category</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Category" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Category. (Number, if -1 then text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Private">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a9fce6d0a8ebaaa5172b32d79c1687658"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Private</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Private" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether entry is private. (Number) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_StreetAddress">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a6a055c0050b2643d1b62e55fef371bdf"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_StreetAddress</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_StreetAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Street address. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_City">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aa956bd6720484d90da8e9ed37e23a861"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_City</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_City" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>City. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_State">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a569e3284c70816db12491ef7bc202539"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_State</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_State" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>State. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Zip">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894acc17c0ac6bc766896d46c69a55d71b65"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Zip</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Zip" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Zip code. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Country">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894ac4273d33eb8712f30017da0d074cfe7e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Country</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Country" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Country. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Custom1">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aaa5367ff99d90ddaccc23b844b2fcf51"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Custom1</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Custom1" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Custom information 1. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Custom2">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894adfadd3222d04ead42fb188e8a127f8a5"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Custom2</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Custom2" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Custom information 2. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Custom3">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a0c464cd01f5ab873034575ebae2a8f6e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Custom3</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Custom3" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Custom information 3. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_Custom4">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a7ed0091bbe40c6f2275d03e551ef89af"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_Custom4</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_Custom4" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Custom information 4. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_RingtoneID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aa1406761040611a47a7aba4fdbd60fb3"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_RingtoneID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_RingtoneID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ringtone ID. (Number) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_PictureID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a04c09b07da5e0c0d3f505d8679afbcd5"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_PictureID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_PictureID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Picture ID. (Number) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_UserID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a7117b2b93ebb061a78b6c91ac4eccc93"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_UserID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_UserID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User ID. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_CallLength">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a5261c5edf46d8c963caf06f857811b1a"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_CallLength</code><a class="headerlink" href="#c.GSM_EntryType.PBK_CallLength" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Length of call (Number) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_LUID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a055cc831127ef33a9c4ff7183c837763"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_LUID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_LUID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>LUID - Unique Identifier used for synchronisation (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_LastModified">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a756d0a7691737ce785b51d94bf70f40b"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_LastModified</code><a class="headerlink" href="#c.GSM_EntryType.PBK_LastModified" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Date of last modification (Date) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_NickName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a035f0076bd0af742ea091a5e74735061"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_NickName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_NickName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Nick name (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_FormalName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894abdcf9c85078c942a5b08d435db849f85"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_FormalName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_FormalName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Formal name (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_PictureName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a3077d09abca14f4efa466966a5d709f0"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_PictureName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_PictureName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Picture name (on phone filesystem). (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_PushToTalkID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894adc52f1f527cfd1419ef0e5a989953e2d"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_PushToTalkID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_PushToTalkID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Push-to-talk ID (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Messaging">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894adf0837172d66fae4c53c77c3de711fb2"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Messaging</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Messaging" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Favorite messaging number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Photo">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a4e8fd4c9ce12de1323d198c4ac95267f"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Photo</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Photo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Photo (Picture). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_SecondName">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894ad23f0a28877cbdc15c0357b24ffa0359"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_SecondName</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_SecondName" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Second name. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_VOIP">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894abccfcf9e10d9ca7c22f9311c023d2d49"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_VOIP</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_VOIP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>VOIP address (Text). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_SIP">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a9082963cd54289fc5ad343edbf6be61e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_SIP</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_SIP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>SIP address (Text). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_DTMF">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a7e5dc9cbd5e9807b4134496f98853406"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_DTMF</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_DTMF" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>DTMF (Text). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Number_Video">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894a61fa7a8ff72702e9ce722deb8d9135d5"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Number_Video</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Number_Video" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Video number. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_SWIS">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894ace8b384b768d0b4a7234eb28f5b7477f"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_SWIS</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_SWIS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>See What I See address. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_WVID">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aec20b37de3ef22964ce97876331a6f6e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_WVID</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_WVID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Wireless Village user ID. (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_NamePrefix">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894af4d8b0c310a3b0754ad2c31cb7b9c259"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_NamePrefix</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_NamePrefix" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Name prefix (Text) </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryType.PBK_Text_NameSuffix">
+<span class="target" id="group__Memory_1ggae40660f3f54c477cd780a89e27419894aab1daface2a755f7f12f492d3b85255a"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Text_NameSuffix</code><a class="headerlink" href="#c.GSM_EntryType.PBK_Text_NameSuffix" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Name suffix (Text) </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.GSM_EntryLocation">
+<span class="target" id="group__Memory_1gaa881cdf51d52479375f047f9530f7601"></span><em class="property">enum </em><code class="sig-name descname">GSM_EntryLocation</code><a class="headerlink" href="#c.GSM_EntryLocation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location of memory contact. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.GSM_EntryLocation.PBK_Location_Unknown">
+<span class="target" id="group__Memory_1ggaa881cdf51d52479375f047f9530f7601abcf927f246753d43d90a474644ba5843"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Location_Unknown</code><a class="headerlink" href="#c.GSM_EntryLocation.PBK_Location_Unknown" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>No/Unknown location. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryLocation.PBK_Location_Home">
+<span class="target" id="group__Memory_1ggaa881cdf51d52479375f047f9530f7601a2bc05da9b6864e2dc1a48839fa94609e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Location_Home</code><a class="headerlink" href="#c.GSM_EntryLocation.PBK_Location_Home" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Home </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_EntryLocation.PBK_Location_Work">
+<span class="target" id="group__Memory_1ggaa881cdf51d52479375f047f9530f7601a703a5c64f40d391acf0de92767aee59e"></span><em class="property">enumerator </em><code class="sig-name descname">PBK_Location_Work</code><a class="headerlink" href="#c.GSM_EntryLocation.PBK_Location_Work" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Work </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_SubMemoryEntry">
+<span class="target" id="structGSM__SubMemoryEntry"></span><em class="property">struct </em><code class="sig-name descname">GSM_SubMemoryEntry</code><a class="headerlink" href="#c.GSM_SubMemoryEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>One value of phonebook memory entry. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.EntryType">
+<span class="target" id="structGSM__SubMemoryEntry_1a22823377e53e1ea4be1f6c48ec6115f9"></span><a class="reference internal" href="#c.GSM_EntryType" title="GSM_EntryType">GSM_EntryType</a> <code class="sig-name descname">EntryType</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.EntryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Type of entry. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.Location">
+<span class="target" id="structGSM__SubMemoryEntry_1a7b68551e3b18cd162b6355706d8b2829"></span><a class="reference internal" href="#c.GSM_EntryLocation" title="GSM_EntryLocation">GSM_EntryLocation</a> <code class="sig-name descname">Location</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.Location" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location for the entry. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.Date">
+<span class="target" id="structGSM__SubMemoryEntry_1a7b773c49bc19004c23f0df366cfebcb7"></span><a class="reference internal" href="datetime.html#c.GSM_DateTime" title="GSM_DateTime">GSM_DateTime</a> <code class="sig-name descname">Date</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.Date" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Text of entry (if applicable, see <a class="reference internal" href="#group__Memory_1gae40660f3f54c477cd780a89e27419894"><span class="std std-ref">GSM_EntryType</span></a>). </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.Number">
+<span class="target" id="structGSM__SubMemoryEntry_1ab04aa1fdd17fe706d5f13b00d88532cc"></span>int <code class="sig-name descname">Number</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.Number" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of entry (if applicable, see <a class="reference internal" href="#group__Memory_1gae40660f3f54c477cd780a89e27419894"><span class="std std-ref">GSM_EntryType</span></a>). </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.VoiceTag">
+<span class="target" id="structGSM__SubMemoryEntry_1a4badf43afe4e652301cd5e1006e052a4"></span>int <code class="sig-name descname">VoiceTag</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.VoiceTag" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Voice dialling tag. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.AddError">
+<span class="target" id="structGSM__SubMemoryEntry_1aad5163280aa6bddce6de9bf3813024d4"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">AddError</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.AddError" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>During adding SubEntry Gammu can return here info, if it was done OK </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.Text">
+<span class="target" id="structGSM__SubMemoryEntry_1a19d5a053e5537b354002b2a403e8a5bc"></span>unsigned char <code class="sig-name descname">Text</code>[(<code class="sig-name descname">GSM_PHONEBOOK_TEXT_LENGTH</code> + 1) * 2]<a class="headerlink" href="#c.GSM_SubMemoryEntry.Text" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Text of entry (if applicable, see <a class="reference internal" href="#group__Memory_1gae40660f3f54c477cd780a89e27419894"><span class="std std-ref">GSM_EntryType</span></a>). </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SubMemoryEntry.Picture">
+<span class="target" id="structGSM__SubMemoryEntry_1a9ceba01253d441bfd725cf0591a22f2c"></span><a class="reference internal" href="bitmap.html#c.GSM_BinaryPicture" title="GSM_BinaryPicture">GSM_BinaryPicture</a> <code class="sig-name descname">Picture</code><a class="headerlink" href="#c.GSM_SubMemoryEntry.Picture" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Picture data. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_MemoryEntry">
+<span class="target" id="structGSM__MemoryEntry"></span><em class="property">struct </em><code class="sig-name descname">GSM_MemoryEntry</code><a class="headerlink" href="#c.GSM_MemoryEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Structure for saving phonebook entries. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_MemoryEntry.MemoryType">
+<span class="target" id="structGSM__MemoryEntry_1aed0bf4b7414f1f9450ec76329f9c99c3"></span><a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType">GSM_MemoryType</a> <code class="sig-name descname">MemoryType</code><a class="headerlink" href="#c.GSM_MemoryEntry.MemoryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Used memory for phonebook entry </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MemoryEntry.Location">
+<span class="target" id="structGSM__MemoryEntry_1a8d9346506ad588bb11e234fa43cf2ea4"></span>int <code class="sig-name descname">Location</code><a class="headerlink" href="#c.GSM_MemoryEntry.Location" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Used location for phonebook entry </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MemoryEntry.EntriesNum">
+<span class="target" id="structGSM__MemoryEntry_1aba91520bac23ad0fa25adec93aacc5a8"></span>int <code class="sig-name descname">EntriesNum</code><a class="headerlink" href="#c.GSM_MemoryEntry.EntriesNum" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of SubEntries in Entries table. </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_MemoryEntry.Entries">
+<span class="target" id="structGSM__MemoryEntry_1a373d44c30b09a5361810493c5e482260"></span><a class="reference internal" href="#c.GSM_SubMemoryEntry" title="GSM_SubMemoryEntry">GSM_SubMemoryEntry</a> <code class="sig-name descname">Entries</code>[<code class="sig-name descname">GSM_PHONEBOOK_ENTRIES</code>]<a class="headerlink" href="#c.GSM_MemoryEntry.Entries" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Values of SubEntries. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c struct">
+<dt id="c.GSM_SpeedDial">
+<span class="target" id="structGSM__SpeedDial"></span><em class="property">struct </em><code class="sig-name descname">GSM_SpeedDial</code><a class="headerlink" href="#c.GSM_SpeedDial" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Structure for saving speed dials. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="c var">
+<dt id="c.GSM_SpeedDial.Location">
+<span class="target" id="structGSM__SpeedDial_1a7438b4e2b31989d7fe23736c1e85f364"></span>int <code class="sig-name descname">Location</code><a class="headerlink" href="#c.GSM_SpeedDial.Location" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Number of speed dial: 2,3..,8,9 </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SpeedDial.MemoryNumberID">
+<span class="target" id="structGSM__SpeedDial_1a44a22ffdc75c32d1b1d6147cbd319a38"></span>int <code class="sig-name descname">MemoryNumberID</code><a class="headerlink" href="#c.GSM_SpeedDial.MemoryNumberID" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>ID of phone number used in phonebook entry </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SpeedDial.MemoryType">
+<span class="target" id="structGSM__SpeedDial_1adbe53f95943688dd05745222359907d1"></span><a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType">GSM_MemoryType</a> <code class="sig-name descname">MemoryType</code><a class="headerlink" href="#c.GSM_SpeedDial.MemoryType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Memory, where is saved used phonebook entry </p>
+</dd></dl>
+
+<dl class="c var">
+<dt id="c.GSM_SpeedDial.MemoryLocation">
+<span class="target" id="structGSM__SpeedDial_1ae4de6f26f6502dd82c5816c08b28c5f5"></span>int <code class="sig-name descname">MemoryLocation</code><a class="headerlink" href="#c.GSM_SpeedDial.MemoryLocation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location in memory, where is saved used phonebook entry </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="c enum">
+<dt id="c.GSM_VCardVersion">
+<span class="target" id="group__Memory_1ga4d44635f09fc7972d356100430b4f513"></span><em class="property">enum </em><code class="sig-name descname">GSM_VCardVersion</code><a class="headerlink" href="#c.GSM_VCardVersion" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Types of vCard. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt id="c.GSM_VCardVersion.Nokia_VCard10">
+<span class="target" id="group__Memory_1gga4d44635f09fc7972d356100430b4f513a3e7b74a00383d1ab1971eee7eda6fee4"></span><em class="property">enumerator </em><code class="sig-name descname">Nokia_VCard10</code><a class="headerlink" href="#c.GSM_VCardVersion.Nokia_VCard10" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>vCard 1.0 hacked for Nokia. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_VCardVersion.Nokia_VCard21">
+<span class="target" id="group__Memory_1gga4d44635f09fc7972d356100430b4f513a0af3fbe752d3f2e95f18b05b7768b95f"></span><em class="property">enumerator </em><code class="sig-name descname">Nokia_VCard21</code><a class="headerlink" href="#c.GSM_VCardVersion.Nokia_VCard21" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>vCard 2.1 hacked for Nokia. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_VCardVersion.SonyEricsson_VCard10">
+<span class="target" id="group__Memory_1gga4d44635f09fc7972d356100430b4f513a022ee5db5292586efd689a7e20cfb130"></span><em class="property">enumerator </em><code class="sig-name descname">SonyEricsson_VCard10</code><a class="headerlink" href="#c.GSM_VCardVersion.SonyEricsson_VCard10" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>vCard 1.0 hacked for Sony-Ericsson (should be standard vCard). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_VCardVersion.SonyEricsson_VCard21">
+<span class="target" id="group__Memory_1gga4d44635f09fc7972d356100430b4f513a8da2dc737fe3cd5ac09d87df4d93cc67"></span><em class="property">enumerator </em><code class="sig-name descname">SonyEricsson_VCard21</code><a class="headerlink" href="#c.GSM_VCardVersion.SonyEricsson_VCard21" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>vCard 2.1 hacked for Sony-Ericsson (should be standard vCard). </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt id="c.GSM_VCardVersion.SonyEricsson_VCard21_Phone">
+<span class="target" id="group__Memory_1gga4d44635f09fc7972d356100430b4f513a72d1c70c04a8d468ad1e44292d29d081"></span><em class="property">enumerator </em><code class="sig-name descname">SonyEricsson_VCard21_Phone</code><a class="headerlink" href="#c.GSM_VCardVersion.SonyEricsson_VCard21_Phone" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>vCard 2.1 hacked for Sony-Ericsson (should be standard vCard) from phone (no parsing of location and memory type). </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="message.html" class="btn btn-neutral float-right" title="Messages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="limits.html" class="btn btn-neutral float-left" title="Limits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

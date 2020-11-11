@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Unicode &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WAP" href="wap.html" />
+    <link rel="prev" title="Types" href="types.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">python-gammu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">libGammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hints.html">Hints for libGammu Novices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">libGammu C API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="backup.html">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap.html">Bitmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="callback.html">Callback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.html">Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datetime.html">Date and time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debug.html">Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inifile.html">INI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html">Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html">Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc.html">Miscellaneous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nokia.html">Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ringtone.html">Ringtone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html">SMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statemachine.html">State machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wap.html">WAP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="porting.html">Porting from libGammu older than 1.12.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">libGammu</a> &raquo;</li>
+        
+          <li><a href="api.html">libGammu C API</a> &raquo;</li>
+        
+      <li>Unicode</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c/unicode.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unicode">
+<h1>Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h1>
+<dl class="c function">
+<dt id="c.UnicodeLength">
+<span class="target" id="group__Unicode_1ga68d3663b500cc642510e00b952b2a8cf"></span>size_t <code class="sig-name descname">UnicodeLength</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#c.UnicodeLength" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns length of unicode string. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeUnicodeString">
+<span class="target" id="group__Unicode_1gaa0716381d9c06ad47f6d3aa1ed9130c7"></span>char *<code class="sig-name descname">DecodeUnicodeString</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Converts string to locale charset.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Pointer to static string. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeUnicodeConsole">
+<span class="target" id="group__Unicode_1ga6c16a54d0fe480c75a151fc1fce0322a"></span>char *<code class="sig-name descname">DecodeUnicodeConsole</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeConsole" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Converts string to console charset.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Pointer to static string. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeUnicode">
+<span class="target" id="group__Unicode_1ga67cc141aea4e4995fc9a02e000e762e0"></span>void <code class="sig-name descname">DecodeUnicode</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em>, char *<em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Converts string from unicode to local charset. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.EncodeUnicode">
+<span class="target" id="group__Unicode_1gae0967b63a986316f6741034927e43406"></span>void <code class="sig-name descname">EncodeUnicode</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes string from local charset to unicode. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.ReadUnicodeFile">
+<span class="target" id="group__Unicode_1ga8e53f8fe8bd0b3d56aa48bdbc91af0d5"></span>void <code class="sig-name descname">ReadUnicodeFile</code><span class="sig-paren">(</span>unsigned char *<em>Dest</em>, <em class="property">const</em> unsigned char *<em>Source</em><span class="sig-paren">)</span><a class="headerlink" href="#c.ReadUnicodeFile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decodes unicode file data with byte order mark (BOM). </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.CopyUnicodeString">
+<span class="target" id="group__Unicode_1ga983d4eecc607900035e79f31fa975ac5"></span>void <code class="sig-name descname">CopyUnicodeString</code><span class="sig-paren">(</span>unsigned char *<em>Dest</em>, <em class="property">const</em> unsigned char *<em>Source</em><span class="sig-paren">)</span><a class="headerlink" href="#c.CopyUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copies unicode string. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.EncodeUTF8QuotedPrintable">
+<span class="target" id="group__Unicode_1gaf6fd6a0f80365fa204cafc9ee397e8b0"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">EncodeUTF8QuotedPrintable</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes string to UTF-8 quoted printable. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeUTF8QuotedPrintable">
+<span class="target" id="group__Unicode_1ga0d5ee2ec9f452bd105f8f47a8a7cfb1c"></span>void <code class="sig-name descname">DecodeUTF8QuotedPrintable</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decodes UTF-8 quoted printable string. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.EncodeWithUTF8Alphabet">
+<span class="target" id="group__Unicode_1ga91c0c4baea737fa21b61557a63ffdee4"></span>int <code class="sig-name descname">EncodeWithUTF8Alphabet</code><span class="sig-paren">(</span>unsigned long <em>src</em>, unsigned char *<em>ret</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeWithUTF8Alphabet" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes string to UTF-8. </p>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “DecodeWithUTF8Alphabet” in doxygen xml output for project “api” from directory: /home/runner/work/gammu/gammu/build-configure/gammu-doc/xml</p>
+</div>
+<dl class="c function">
+<dt id="c.DecodeHexUnicode">
+<span class="target" id="group__Unicode_1ga772ff27dc27783001321f63e3cea1611"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">DecodeHexUnicode</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decodes string from hex quoted unicode. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.EncodeHexUnicode">
+<span class="target" id="group__Unicode_1ga184692aa3818051a108cfeb722d1e2b2"></span>void <code class="sig-name descname">EncodeHexUnicode</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes string to hex quoted unicode. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt>
+<span class="target" id="group__Unicode_1ga081b452aef935644f59e8945e7612c00"></span><code class="sig-name descname">gboolean mywstrncmp (unsigned const char *a, unsigned const char *b, int num)</code></dt>
+<dd><p>Compares two unicode strings. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt>
+<span class="target" id="group__Unicode_1ga5407ad29d048fde69ae7011e7898ada7"></span><code class="sig-name descname">unsigned char * mywstrstr (unsigned const char *haystack, unsigned const char *needle)</code></dt>
+<dd><p>Locates unicode substring. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt>
+<span class="target" id="group__Unicode_1gaa48178bcab7638aafee828fcf071e81e"></span><code class="sig-name descname">gboolean mywstrncasecmp (unsigned const char *a, unsigned const char *b, int num)</code></dt>
+<dd><p>Compares two unicode strings case insensitive. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.EncodeUTF8">
+<span class="target" id="group__Unicode_1gaec365a5ee5f1aca3972425c47b865331"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">EncodeUTF8</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encode text to UTF-8. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeUTF8">
+<span class="target" id="group__Unicode_1gaddcea22abf1fdaab39c08c2da38840dd"></span>void <code class="sig-name descname">DecodeUTF8</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decode text from UTF-8. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.DecodeHexBin">
+<span class="target" id="group__Unicode_1ga54e998767f2953f9ebeba1aa5f58b86c"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">DecodeHexBin</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexBin" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Decode hex encoded binary text. </p>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “EncodeWithUnicodeAlphabet” in doxygen xml output for project “api” from directory: /home/runner/work/gammu/gammu/build-configure/gammu-doc/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “DecodeWithUnicodeAlphabet” in doxygen xml output for project “api” from directory: /home/runner/work/gammu/gammu/build-configure/gammu-doc/xml</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wap.html" class="btn btn-neutral float-right" title="WAP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="types.html" class="btn btn-neutral float-left" title="Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>gammu.exception – Gammu exception handling &mdash; Gammu 1.42.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Objects" href="objects.html" />
+    <link rel="prev" title="gammu.worker - Asynchronous communication to phone." href="worker.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Gammu
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.42.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">python-gammu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#a-taste-of-python-gammu">A taste of python-gammu</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#api-documentation">API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gammu.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu</span></code> – Mobile phone access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smsd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.smsd</span></code> – SMSD access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code> – Generic data usable with Gammu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="worker.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">libGammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">Gammu internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">File formats used by Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Gammu Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammu/index.html">Gammu Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smsd/index.html">SMS Daemon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Miscellaneous utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Gammu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protocol/index.html">Phone Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Gammu</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">python-gammu</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/exceptions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-gammu.exception">
+<span id="gammu-exception-gammu-exception-handling"></span><h1><a class="reference internal" href="#module-gammu.exception" title="gammu.exception: Defines all exceptions used in Gammu."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code></a> – Gammu exception handling<a class="headerlink" href="#module-gammu.exception" title="Permalink to this headline">¶</a></h1>
+<dl class="py exception">
+<dt id="gammu.exception.gammu.GSMError">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">GSMError</code><a class="headerlink" href="#gammu.exception.gammu.GSMError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic class as parent for all Gammu exceptions. This is never raised
+directly, but should be used to catch any Gammu related exception.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_ABORTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_ABORTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_ABORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_ABORTED.
+Verbose error description: Operation aborted.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_BADFEATURE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_BADFEATURE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_BADFEATURE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_BADFEATURE.
+Verbose error description: Bad feature string in configuration.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_BUG">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_BUG</code><a class="headerlink" href="#gammu.exception.gammu.ERR_BUG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_BUG.
+Verbose error description: Nobody is perfect, some bug appeared in protocol implementation. Please contact authors.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_BUSY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_BUSY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_BUSY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_BUSY.
+Verbose error description: Command rejected because device was busy. Wait and restart.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_CANCELED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_CANCELED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_CANCELED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_CANCELED.
+Verbose error description: Transfer was canceled by phone, maybe you pressed cancel on phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_CANTOPENFILE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_CANTOPENFILE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_CANTOPENFILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_CANTOPENFILE.
+Verbose error description: Can not open specified file.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_CORRUPTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_CORRUPTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_CORRUPTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_CORRUPTED.
+Verbose error description: Corrupted data returned by phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_COULDNT_CONNECT">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_COULDNT_CONNECT</code><a class="headerlink" href="#gammu.exception.gammu.ERR_COULDNT_CONNECT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_COULDNT_CONNECT.
+Verbose error description: Could not connect to the server.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_COULDNT_RESOLVE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_COULDNT_RESOLVE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_COULDNT_RESOLVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_COULDNT_RESOLVE.
+Verbose error description: Could not resolve the host name.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DATACONVERTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DATACONVERTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DATACONVERTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DATACONVERTED.
+Verbose error description: Data were converted.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEBUSY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEBUSY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEBUSY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEBUSY.
+Verbose error description: Error opening device, it is already opened by other application.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICECHANGESPEEDERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICECHANGESPEEDERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICECHANGESPEEDERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICECHANGESPEEDERROR.
+Verbose error description: Error setting device speed. Maybe speed not supported.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEDTRRTSERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEDTRRTSERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEDTRRTSERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEDTRRTSERROR.
+Verbose error description: Error setting device DTR or RTS.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICELOCKED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICELOCKED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICELOCKED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICELOCKED.
+Verbose error description: Error opening device, it is locked.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICENODRIVER">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICENODRIVER</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICENODRIVER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICENODRIVER.
+Verbose error description: Error opening device. No required driver in operating system.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICENOPERMISSION">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICENOPERMISSION</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICENOPERMISSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICENOPERMISSION.
+Verbose error description: Error opening device, you don’t have permissions.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICENOTEXIST">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICENOTEXIST</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICENOTEXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICENOTEXIST.
+Verbose error description: Error opening device, it doesn’t exist.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICENOTWORK">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICENOTWORK</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICENOTWORK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICENOTWORK.
+Verbose error description: Error opening device. Some hardware not connected/wrongly configured.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEOPENERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEOPENERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEOPENERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEOPENERROR.
+Verbose error description: Error opening device. Unknown, busy or no permissions.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEPARITYERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEPARITYERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEPARITYERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEPARITYERROR.
+Verbose error description: Can’t set parity on the device.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEREADERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEREADERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEREADERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEREADERROR.
+Verbose error description: Error during reading from the device.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DEVICEWRITEERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DEVICEWRITEERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DEVICEWRITEERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DEVICEWRITEERROR.
+Verbose error description: Error writing to the device.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_DISABLED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_DISABLED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_DISABLED.
+Verbose error description: Desired functionality has been disabled on compile time.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_EMPTY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_EMPTY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_EMPTY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_EMPTY.
+Verbose error description: Empty entry.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_EMPTYSMSC">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_EMPTYSMSC</code><a class="headerlink" href="#gammu.exception.gammu.ERR_EMPTYSMSC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_EMPTYSMSC.
+Verbose error description: No SMSC number given. Provide it manually or use the one configured in phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FILEALREADYEXIST">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FILEALREADYEXIST</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FILEALREADYEXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FILEALREADYEXIST.
+Verbose error description: File with specified name already exists.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FILENOTEXIST">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FILENOTEXIST</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FILENOTEXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FILENOTEXIST.
+Verbose error description: File with specified name doesn’t exist.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FILENOTSUPPORTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FILENOTSUPPORTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FILENOTSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FILENOTSUPPORTED.
+Verbose error description: File format not supported by Gammu.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FOLDERNOTEMPTY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FOLDERNOTEMPTY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FOLDERNOTEMPTY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FOLDERNOTEMPTY.
+Verbose error description: Folder must be empty.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FOLDERPART">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FOLDERPART</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FOLDERPART" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FOLDERPART.
+Verbose error description: Only part of folder has been listed.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FRAMENOTREQUESTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FRAMENOTREQUESTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FRAMENOTREQUESTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FRAMENOTREQUESTED.
+Verbose error description: Frame not requested right now. See &lt;<a class="reference external" href="https://wammu.eu/support/bugs/">https://wammu.eu/support/bugs/</a>&gt; for information how to report it.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_FULL">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_FULL</code><a class="headerlink" href="#gammu.exception.gammu.ERR_FULL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_FULL.
+Verbose error description: Memory full.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_GETTING_SMSC">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_GETTING_SMSC</code><a class="headerlink" href="#gammu.exception.gammu.ERR_GETTING_SMSC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_GETTING_SMSC.
+Verbose error description: Failed to get SMSC number from phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_GNAPPLETWRONG">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_GNAPPLETWRONG</code><a class="headerlink" href="#gammu.exception.gammu.ERR_GNAPPLETWRONG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_GNAPPLETWRONG.
+Verbose error description: Wrong GNAPPLET version in phone. Use version from currently used Gammu.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_INSIDEPHONEMENU">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_INSIDEPHONEMENU</code><a class="headerlink" href="#gammu.exception.gammu.ERR_INSIDEPHONEMENU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_INSIDEPHONEMENU.
+Verbose error description: You’re inside phone menu (maybe editing?). Leave it and try again.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_INSTALL_NOT_FOUND">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_INSTALL_NOT_FOUND</code><a class="headerlink" href="#gammu.exception.gammu.ERR_INSTALL_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_INSTALL_NOT_FOUND.
+Verbose error description: Installation data not found, please consult debug log and/or documentation for more details.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_INVALIDDATA">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_INVALIDDATA</code><a class="headerlink" href="#gammu.exception.gammu.ERR_INVALIDDATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_INVALIDDATA.
+Verbose error description: Invalid data given to phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_INVALIDDATETIME">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_INVALIDDATETIME</code><a class="headerlink" href="#gammu.exception.gammu.ERR_INVALIDDATETIME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_INVALIDDATETIME.
+Verbose error description: Invalid date or time specified.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_INVALIDLOCATION">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_INVALIDLOCATION</code><a class="headerlink" href="#gammu.exception.gammu.ERR_INVALIDLOCATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_INVALIDLOCATION.
+Verbose error description: Invalid location. Maybe too high?</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_MEMORY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_MEMORY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_MEMORY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_MEMORY.
+Verbose error description: Phone memory error, maybe it is read only.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_MOREMEMORY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_MOREMEMORY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_MOREMEMORY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_MOREMEMORY.
+Verbose error description: More memory required…</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NEEDANOTHERANSWER">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NEEDANOTHERANSWER</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NEEDANOTHERANSWER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NEEDANOTHERANSWER.
+Verbose error description: Phone module need to send another answer frame.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NETWORK_ERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NETWORK_ERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NETWORK_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NETWORK_ERROR.
+Verbose error description: Network error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NONE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NONE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NONE.
+Verbose error description: No error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NONE_SECTION">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NONE_SECTION</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NONE_SECTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NONE_SECTION.
+Verbose error description: No such section exists.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOSERVICE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOSERVICE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOSERVICE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOSERVICE.
+Verbose error description: Service configuration is missing.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOSIM">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOSIM</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOSIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOSIM.
+Verbose error description: Can not access SIM card.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOTCONNECTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOTCONNECTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOTCONNECTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOTCONNECTED.
+Verbose error description: Phone is not connected.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOTIMPLEMENTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOTIMPLEMENTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOTIMPLEMENTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOTIMPLEMENTED.
+Verbose error description: Functionality not implemented. You are welcome to help authors with it.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOTRUNNING">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOTRUNNING</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOTRUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOTRUNNING.
+Verbose error description: Service is not running.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_NOTSUPPORTED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_NOTSUPPORTED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_NOTSUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_NOTSUPPORTED.
+Verbose error description: Function not supported by phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_OTHERCONNECTIONREQUIRED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_OTHERCONNECTIONREQUIRED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_OTHERCONNECTIONREQUIRED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_OTHERCONNECTIONREQUIRED.
+Verbose error description: Current connection type doesn’t support called function.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_PERMISSION">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_PERMISSION</code><a class="headerlink" href="#gammu.exception.gammu.ERR_PERMISSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_PERMISSION.
+Verbose error description: Operation not allowed by phone.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_PHONEOFF">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_PHONEOFF</code><a class="headerlink" href="#gammu.exception.gammu.ERR_PHONEOFF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_PHONEOFF.
+Verbose error description: Phone is disabled and connected to charger.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_PHONE_INTERNAL">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_PHONE_INTERNAL</code><a class="headerlink" href="#gammu.exception.gammu.ERR_PHONE_INTERNAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_PHONE_INTERNAL.
+Verbose error description: Internal phone error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_READ_ONLY">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_READ_ONLY</code><a class="headerlink" href="#gammu.exception.gammu.ERR_READ_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_READ_ONLY.
+Verbose error description: Entry is read only.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_SECURITYERROR">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_SECURITYERROR</code><a class="headerlink" href="#gammu.exception.gammu.ERR_SECURITYERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_SECURITYERROR.
+Verbose error description: Security error. Maybe no PIN?</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_SHOULDBEFILE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_SHOULDBEFILE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_SHOULDBEFILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_SHOULDBEFILE.
+Verbose error description: You have to give file name and not folder name.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_SHOULDBEFOLDER">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_SHOULDBEFOLDER</code><a class="headerlink" href="#gammu.exception.gammu.ERR_SHOULDBEFOLDER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_SHOULDBEFOLDER.
+Verbose error description: You have to give folder name and not file name.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_SOURCENOTAVAILABLE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_SOURCENOTAVAILABLE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_SOURCENOTAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_SOURCENOTAVAILABLE.
+Verbose error description: Some functions not available for your system (disabled in config or not implemented).</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_SPECIFYCHANNEL">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_SPECIFYCHANNEL</code><a class="headerlink" href="#gammu.exception.gammu.ERR_SPECIFYCHANNEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_SPECIFYCHANNEL.
+Verbose error description: Bluetooth configuration requires channel option.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_TIMEOUT">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_TIMEOUT</code><a class="headerlink" href="#gammu.exception.gammu.ERR_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_TIMEOUT.
+Verbose error description: No response in specified timeout. Probably phone not connected.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNCONFIGURED">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNCONFIGURED</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNCONFIGURED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNCONFIGURED.
+Verbose error description: Gammu is not configured.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNKNOWN">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNKNOWN</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNKNOWN.
+Verbose error description: Unknown error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNKNOWNCONNECTIONTYPESTRING">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNKNOWNCONNECTIONTYPESTRING</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNKNOWNCONNECTIONTYPESTRING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNKNOWNCONNECTIONTYPESTRING.
+Verbose error description: Unknown connection type string. Check config file.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNKNOWNFRAME">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNKNOWNFRAME</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNKNOWNFRAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNKNOWNFRAME.
+Verbose error description: Unknown frame. See &lt;<a class="reference external" href="https://wammu.eu/support/bugs/">https://wammu.eu/support/bugs/</a>&gt; for information how to report it.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNKNOWNMODELSTRING">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNKNOWNMODELSTRING</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNKNOWNMODELSTRING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNKNOWNMODELSTRING.
+Verbose error description: Unknown model type string. Check config file.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_UNKNOWNRESPONSE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_UNKNOWNRESPONSE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_UNKNOWNRESPONSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_UNKNOWNRESPONSE.
+Verbose error description: Unknown response from phone. See &lt;<a class="reference external" href="https://wammu.eu/support/bugs/">https://wammu.eu/support/bugs/</a>&gt; for information how to report it.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_USING_DEFAULTS">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_USING_DEFAULTS</code><a class="headerlink" href="#gammu.exception.gammu.ERR_USING_DEFAULTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_USING_DEFAULTS.
+Verbose error description: Using default values.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_WORKINPROGRESS">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_WORKINPROGRESS</code><a class="headerlink" href="#gammu.exception.gammu.ERR_WORKINPROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_WORKINPROGRESS.
+Verbose error description: Function is currently being implemented. If you want to help, please contact authors.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_WRITING_FILE">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_WRITING_FILE</code><a class="headerlink" href="#gammu.exception.gammu.ERR_WRITING_FILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_WRITING_FILE.
+Verbose error description: Error writing file to disk.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_WRONGCRC">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_WRONGCRC</code><a class="headerlink" href="#gammu.exception.gammu.ERR_WRONGCRC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_WRONGCRC.
+Verbose error description: CRC error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gammu.exception.gammu.ERR_WRONGFOLDER">
+<em class="property">exception </em><code class="sig-prename descclassname">gammu.</code><code class="sig-name descname">ERR_WRONGFOLDER</code><a class="headerlink" href="#gammu.exception.gammu.ERR_WRONGFOLDER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception corresponding to gammu error ERR_WRONGFOLDER.
+Verbose error description: Wrong folder used.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="objects.html" class="btn btn-neutral float-right" title="Objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="worker.html" class="btn btn-neutral float-left" title="gammu.worker - Asynchronous communication to phone." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
