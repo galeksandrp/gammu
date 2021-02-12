@@ -348,7 +348,7 @@ message data to other program. This works only with the <a class="reference inte
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nv">INBOX</span><span class="o">=</span>/path/to/smsd/inbox
 <span class="nv">PROGRAM</span><span class="o">=</span>/bin/cat
-<span class="k">for</span> ID in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> ID <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="p">;</span> <span class="k">do</span>
     <span class="nv">$PROGRAM</span> &lt; <span class="nv">$INBOX</span>/<span class="nv">$ID</span>
 <span class="k">done</span>
 </pre></div>
@@ -366,7 +366,7 @@ given programs based on message text.</p>
 <span class="k">fi</span>
 
 <span class="c1"># Handle commands</span>
-<span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$SMS_1_TEXT</span><span class="s2">&quot;</span> in
+<span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$SMS_1_TEXT</span><span class="s2">&quot;</span> <span class="k">in</span>
     <span class="s2">&quot;DMS A&quot;</span><span class="o">)</span>
         /usr/bin/dms-a
         <span class="p">;;</span>
@@ -383,7 +383,7 @@ given programs based on message text.</p>
 message text and sender to external program.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nv">PROGRAM</span><span class="o">=</span>/bin/echo
-<span class="k">for</span> i in <span class="sb">`</span>seq <span class="nv">$SMS_MESSAGES</span><span class="sb">`</span> <span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="nv">$SMS_MESSAGES</span><span class="sb">`</span> <span class="p">;</span> <span class="k">do</span>
     <span class="nb">eval</span> <span class="s2">&quot;</span><span class="nv">$PROGRAM</span><span class="s2"> \&quot;\${SMS_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_NUMBER}\&quot; \&quot;\${SMS_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_TEXT}\&quot;&quot;</span>
 <span class="k">done</span>
 </pre></div>

@@ -230,7 +230,7 @@ all serial ports in your systems, where probably nothing is connected).</p>
 </pre></div>
 </div>
 <p>And you can connect to the phone:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> gammu identify
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu identify
 <span class="go">Device               : /dev/ttyUSB0</span>
 <span class="go">Manufacturer         : Wavecom</span>
 <span class="go">Model                : MULTIBAND  900E  1800 (MULTIBAND  900E  1800)</span>
@@ -291,7 +291,7 @@ MySQL server. Now connect as administrative user to the server (usually
 <p>Once this is ready, you should import the tables structure. It is shipped as
 <code class="file docutils literal notranslate"><span class="pre">docs/sql/mysql.sql</span></code> with Gammu, so all you have to do is to import this
 file (see <a class="reference internal" href="../smsd/mysql.html#mysql-create"><span class="std std-ref">Creating tables for MySQL</span></a> for more details):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mysql -u root -p password smsd &lt; docs/sql/mysql.sql
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mysql -u root -p password smsd &lt; docs/sql/mysql.sql
 </pre></div>
 </div>
 </div>
@@ -325,24 +325,24 @@ most environments. You can find more information on customizing SMSD in
 <p>With configuration file ready, you can actually start SMSD. You can do this
 manually or as a system wide service.</p>
 <p>For manual startup, just execute it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> gammu-smsd
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd
 </pre></div>
 </div>
 <p>Alternatively you can specify path to the configuration file:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> gammu-smsd -c /path/to/gammu-smsdrc
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd -c /path/to/gammu-smsdrc
 </pre></div>
 </div>
 <p>The binary packages on Linux usually come with support for starting SMSD as a
 system wide daemon.</p>
 <p>With systemd, you can start it by:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl start gammu-smsd.service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl start gammu-smsd.service
 </pre></div>
 </div>
 </div>
 <div class="section" id="sending-message-through-smsd">
 <h3>Sending message through SMSD<a class="headerlink" href="#sending-message-through-smsd" title="Permalink to this headline">¶</a></h3>
 <p>Once SMSD is up and running, you can send some messages using it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> gammu-smsd-inject TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd-inject TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>
 </div>
 <p>You can find more examples in the <a class="reference internal" href="../smsd/inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> documentation:
