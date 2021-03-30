@@ -213,13 +213,13 @@
 <h1>Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h1>
 <dl class="c function">
 <dt id="c.UnicodeLength">
-<span class="target" id="group__Unicode_1ga68d3663b500cc642510e00b952b2a8cf"></span><span class="pre">size_t</span> <code class="sig-name descname"><span class="pre">UnicodeLength</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.UnicodeLength" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga68d3663b500cc642510e00b952b2a8cf"></span>size_t <code class="sig-name descname">UnicodeLength</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#c.UnicodeLength" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns length of unicode string. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.DecodeUnicodeString">
-<span class="target" id="group__Unicode_1gaa0716381d9c06ad47f6d3aa1ed9130c7"></span><span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">DecodeUnicodeString</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gaa0716381d9c06ad47f6d3aa1ed9130c7"></span>char *<code class="sig-name descname">DecodeUnicodeString</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts string to locale charset.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Pointer to static string. </p>
@@ -230,7 +230,7 @@
 
 <dl class="c function">
 <dt id="c.DecodeUnicodeConsole">
-<span class="target" id="group__Unicode_1ga6c16a54d0fe480c75a151fc1fce0322a"></span><span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">DecodeUnicodeConsole</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeConsole" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga6c16a54d0fe480c75a151fc1fce0322a"></span>char *<code class="sig-name descname">DecodeUnicodeConsole</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicodeConsole" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts string to console charset.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Pointer to static string. </p>
@@ -241,43 +241,43 @@
 
 <dl class="c function">
 <dt id="c.DecodeUnicode">
-<span class="target" id="group__Unicode_1ga67cc141aea4e4995fc9a02e000e762e0"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">DecodeUnicode</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga67cc141aea4e4995fc9a02e000e762e0"></span>void <code class="sig-name descname">DecodeUnicode</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>src</em>, char *<em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts string from unicode to local charset. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.EncodeUnicode">
-<span class="target" id="group__Unicode_1gae0967b63a986316f6741034927e43406"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">EncodeUnicode</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gae0967b63a986316f6741034927e43406"></span>void <code class="sig-name descname">EncodeUnicode</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUnicode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes string from local charset to unicode. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.ReadUnicodeFile">
-<span class="target" id="group__Unicode_1ga8e53f8fe8bd0b3d56aa48bdbc91af0d5"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">ReadUnicodeFile</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.ReadUnicodeFile" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga8e53f8fe8bd0b3d56aa48bdbc91af0d5"></span>void <code class="sig-name descname">ReadUnicodeFile</code><span class="sig-paren">(</span>unsigned char *<em>Dest</em>, <em class="property">const</em> unsigned char *<em>Source</em><span class="sig-paren">)</span><a class="headerlink" href="#c.ReadUnicodeFile" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes unicode file data with byte order mark (BOM). </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.CopyUnicodeString">
-<span class="target" id="group__Unicode_1ga983d4eecc607900035e79f31fa975ac5"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">CopyUnicodeString</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.CopyUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga983d4eecc607900035e79f31fa975ac5"></span>void <code class="sig-name descname">CopyUnicodeString</code><span class="sig-paren">(</span>unsigned char *<em>Dest</em>, <em class="property">const</em> unsigned char *<em>Source</em><span class="sig-paren">)</span><a class="headerlink" href="#c.CopyUnicodeString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copies unicode string. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.EncodeUTF8QuotedPrintable">
-<span class="target" id="group__Unicode_1gaf6fd6a0f80365fa204cafc9ee397e8b0"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">EncodeUTF8QuotedPrintable</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gaf6fd6a0f80365fa204cafc9ee397e8b0"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">EncodeUTF8QuotedPrintable</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes string to UTF-8 quoted printable. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.DecodeUTF8QuotedPrintable">
-<span class="target" id="group__Unicode_1ga0d5ee2ec9f452bd105f8f47a8a7cfb1c"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">DecodeUTF8QuotedPrintable</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga0d5ee2ec9f452bd105f8f47a8a7cfb1c"></span>void <code class="sig-name descname">DecodeUTF8QuotedPrintable</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8QuotedPrintable" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes UTF-8 quoted printable string. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.EncodeWithUTF8Alphabet">
-<span class="target" id="group__Unicode_1ga91c0c4baea737fa21b61557a63ffdee4"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">EncodeWithUTF8Alphabet</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">long</span> <em><span class="pre">src</span></em>, <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">ret</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeWithUTF8Alphabet" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga91c0c4baea737fa21b61557a63ffdee4"></span>int <code class="sig-name descname">EncodeWithUTF8Alphabet</code><span class="sig-paren">(</span>unsigned long <em>src</em>, unsigned char *<em>ret</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeWithUTF8Alphabet" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes string to UTF-8. </p>
 </dd></dl>
 
@@ -287,49 +287,49 @@
 </div>
 <dl class="c function">
 <dt id="c.DecodeHexUnicode">
-<span class="target" id="group__Unicode_1ga772ff27dc27783001321f63e3cea1611"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">DecodeHexUnicode</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga772ff27dc27783001321f63e3cea1611"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">DecodeHexUnicode</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes string from hex quoted unicode. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.EncodeHexUnicode">
-<span class="target" id="group__Unicode_1ga184692aa3818051a108cfeb722d1e2b2"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">EncodeHexUnicode</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga184692aa3818051a108cfeb722d1e2b2"></span>void <code class="sig-name descname">EncodeHexUnicode</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeHexUnicode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes string to hex quoted unicode. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.mywstrncmp">
-<span class="target" id="group__Unicode_1ga24864aec5d2178305426fba37d9fd7b8"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">mywstrncmp</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">a</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">b</span></em>, <span class="pre">int</span> <em><span class="pre">num</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrncmp" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga24864aec5d2178305426fba37d9fd7b8"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">mywstrncmp</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>a</em>, <em class="property">const</em> unsigned char *<em>b</em>, int <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrncmp" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compares two unicode strings. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.mywstrstr">
-<span class="target" id="group__Unicode_1ga6ad81c9c3f74c27d4d26f463dcb01e37"></span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">mywstrstr</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">haystack</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">needle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrstr" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga6ad81c9c3f74c27d4d26f463dcb01e37"></span>unsigned char *<code class="sig-name descname">mywstrstr</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>haystack</em>, <em class="property">const</em> unsigned char *<em>needle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrstr" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Locates unicode substring. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.mywstrncasecmp">
-<span class="target" id="group__Unicode_1gaa96597155b3f138995f3b4dd277468d9"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">mywstrncasecmp</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">a</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">b</span></em>, <span class="pre">int</span> <em><span class="pre">num</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrncasecmp" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gaa96597155b3f138995f3b4dd277468d9"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">mywstrncasecmp</code><span class="sig-paren">(</span><em class="property">const</em> unsigned char *<em>a</em>, <em class="property">const</em> unsigned char *<em>b</em>, int <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#c.mywstrncasecmp" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compares two unicode strings case insensitive. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.EncodeUTF8">
-<span class="target" id="group__Unicode_1gaec365a5ee5f1aca3972425c47b865331"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">EncodeUTF8</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gaec365a5ee5f1aca3972425c47b865331"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">EncodeUTF8</code><span class="sig-paren">(</span>char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#c.EncodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encode text to UTF-8. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.DecodeUTF8">
-<span class="target" id="group__Unicode_1gaddcea22abf1fdaab39c08c2da38840dd"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">DecodeUTF8</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1gaddcea22abf1fdaab39c08c2da38840dd"></span>void <code class="sig-name descname">DecodeUTF8</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeUTF8" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decode text from UTF-8. </p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.DecodeHexBin">
-<span class="target" id="group__Unicode_1ga54e998767f2953f9ebeba1aa5f58b86c"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">DecodeHexBin</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">dest</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">src</span></em>, <span class="pre">size_t</span> <em><span class="pre">len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexBin" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Unicode_1ga54e998767f2953f9ebeba1aa5f58b86c"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">DecodeHexBin</code><span class="sig-paren">(</span>unsigned char *<em>dest</em>, <em class="property">const</em> unsigned char *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.DecodeHexBin" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decode hex encoded binary text. </p>
 </dd></dl>
 

@@ -213,7 +213,7 @@
 <h1>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h1>
 <dl class="c function">
 <dt id="c.MakeKeySequence">
-<span class="target" id="group__Keys_1ga410afe1ce3115f259df3658d353bed3c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">MakeKeySequence</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">text</span></em>, <a class="reference internal" href="#c.GSM_KeyCode" title="GSM_KeyCode"><span class="pre">GSM_KeyCode</span></a> <span class="pre">*</span><em><span class="pre">KeyCode</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.MakeKeySequence" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1ga410afe1ce3115f259df3658d353bed3c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">MakeKeySequence</code><span class="sig-paren">(</span>char *<em>text</em>, <a class="reference internal" href="#c.GSM_KeyCode" title="GSM_KeyCode">GSM_KeyCode</a> *<em>KeyCode</em>, size_t *<em>Length</em><span class="sig-paren">)</span><a class="headerlink" href="#c.MakeKeySequence" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates key sequence from string.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -230,79 +230,79 @@
 
 <dl class="c function">
 <dt id="c.GSM_PressKey">
-<span class="target" id="group__Keys_1ga1564d49b9764a18d48e52c89a5a84fdd"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_PressKey</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_KeyCode" title="GSM_KeyCode"><span class="pre">GSM_KeyCode</span></a> <em><span class="pre">Key</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">Press</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PressKey" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1ga1564d49b9764a18d48e52c89a5a84fdd"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_PressKey</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_KeyCode" title="GSM_KeyCode">GSM_KeyCode</a> <em>Key</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>Press</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PressKey" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Emulates key press or key release. </p>
 </dd></dl>
 
 <dl class="c enum">
 <dt id="c.GSM_KeyCode">
-<span class="target" id="group__Keys_1ga847ae7a586bfd1d0c506a3062d013ec2"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">GSM_KeyCode</span></code><a class="headerlink" href="#c.GSM_KeyCode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1ga847ae7a586bfd1d0c506a3062d013ec2"></span><em class="property">enum </em><code class="sig-name descname">GSM_KeyCode</code><a class="headerlink" href="#c.GSM_KeyCode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Key event identifiers. </p>
 <p><em>Values:</em></p>
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_NONE">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a340c156a7260ddd62cd8d1998cad9040"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_NONE</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_NONE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a340c156a7260ddd62cd8d1998cad9040"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_NONE</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_NONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_1">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a014c70ea39fdb56eb01913333e4b50ae"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_1</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_1" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a014c70ea39fdb56eb01913333e4b50ae"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_1</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_1" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_2">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a0990febebc605da4457cbe45e5bbb4b3"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_2</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_2" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a0990febebc605da4457cbe45e5bbb4b3"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_2</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_2" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_3">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a374b2da0eb1e04151df095e0e4c187de"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_3</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_3" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a374b2da0eb1e04151df095e0e4c187de"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_3</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_3" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_4">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2ef04c75a876dc7ed6f796e0b93e7e4f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_4</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_4" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2ef04c75a876dc7ed6f796e0b93e7e4f"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_4</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_4" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_5">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a244222f9c62c5e055508dbc756bba43f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_5</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_5" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a244222f9c62c5e055508dbc756bba43f"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_5</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_5" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_6">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2abd1e8b846a828f1aeafb21dc14ab7c5f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_6</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_6" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2abd1e8b846a828f1aeafb21dc14ab7c5f"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_6</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_6" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_7">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a71d439ca6603f5002cf8ff8bd901ea9b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_7</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_7" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a71d439ca6603f5002cf8ff8bd901ea9b"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_7</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_7" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_8">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2abca2b7d9cada1f1c54ec850dd9aaa2db"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_8</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_8" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2abca2b7d9cada1f1c54ec850dd9aaa2db"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_8</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_8" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_9">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a8960009373db80604d99246b3af9b8df"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_9</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_9" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a8960009373db80604d99246b3af9b8df"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_9</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_9" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_0">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a6a9f66e4d1bd22f5c5809a26632970a5"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_0</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_0" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a6a9f66e4d1bd22f5c5809a26632970a5"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_0</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_0" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_HASH">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ae933d745442d4b5d95f0570a76867c09"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_HASH</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_HASH" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ae933d745442d4b5d95f0570a76867c09"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_HASH</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_HASH" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p># </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_ASTERISK">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aa97788a9a1c5f30eba7230bbe98b64a5"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_ASTERISK</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_ASTERISK" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aa97788a9a1c5f30eba7230bbe98b64a5"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_ASTERISK</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_ASTERISK" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><ul class="simple">
 <li></li>
 </ul>
@@ -311,124 +311,124 @@
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_POWER">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a7f8480763def67f32ab0ccddbde6dba6"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_POWER</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_POWER" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a7f8480763def67f32ab0ccddbde6dba6"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_POWER</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_POWER" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Power key. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_GREEN">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a61bc766926d4fd974d8a36da1fd251be"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_GREEN</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_GREEN" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a61bc766926d4fd974d8a36da1fd251be"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_GREEN</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_GREEN" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>in some phone ie. N5110 sometimes works identical to POWER </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_RED">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab49a6d2b1e0a1a19d3ba5c7e29978647"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_RED</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RED" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab49a6d2b1e0a1a19d3ba5c7e29978647"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_RED</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RED" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>(c) key in some phone: ie. N5110 </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_INCREASEVOLUME">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aad01005bafab6650184dc20ccedcb566"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_INCREASEVOLUME</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_INCREASEVOLUME" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aad01005bafab6650184dc20ccedcb566"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_INCREASEVOLUME</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_INCREASEVOLUME" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Not available in some phones as separate button: ie. N5110 </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_DECREASEVOLUME">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aae6662d3edbc0554314de1c02025df63"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_DECREASEVOLUME</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DECREASEVOLUME" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aae6662d3edbc0554314de1c02025df63"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_DECREASEVOLUME</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DECREASEVOLUME" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Not available in some phones as separate button: ie. N5110 </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_UP">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aae124dd62124796d65753a0285c01538"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_UP</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_UP" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2aae124dd62124796d65753a0285c01538"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_UP</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_UP" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_DOWN">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a38def1a154ee80cf7983e0625f4f5380"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_DOWN</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DOWN" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a38def1a154ee80cf7983e0625f4f5380"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_DOWN</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DOWN" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_MENU">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a36dabfff52cb3cd3d3d8374c659074e8"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_MENU</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_MENU" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a36dabfff52cb3cd3d3d8374c659074e8"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_MENU</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_MENU" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_NAMES">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2263ab1e4b324d5a886f2659112e74ce"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_NAMES</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_NAMES" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2263ab1e4b324d5a886f2659112e74ce"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_NAMES</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_NAMES" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Not available in some phone: ie. N5110 </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_LEFT">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a40936a32a7a8276d4c3f1d12e49fb0f3"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_LEFT</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_LEFT" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a40936a32a7a8276d4c3f1d12e49fb0f3"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_LEFT</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_LEFT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Left arrow </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_RIGHT">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2e419fbe8687262afbc52c24be85f009"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_RIGHT</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RIGHT" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a2e419fbe8687262afbc52c24be85f009"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_RIGHT</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RIGHT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Right arrow </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_SOFT1">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a56c1147e2b893077f81a4543ea8e6229"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_SOFT1</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_SOFT1" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a56c1147e2b893077f81a4543ea8e6229"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_SOFT1</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_SOFT1" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Software key which has assigned mening on display. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_SOFT2">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a3b941d649890914bafe3d03abdf5af8c"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_SOFT2</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_SOFT2" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a3b941d649890914bafe3d03abdf5af8c"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_SOFT2</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_SOFT2" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Software key which has assigned mening on display. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_HEADSET">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab8b7dda76b51e939909f557ba605bb08"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_HEADSET</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_HEADSET" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab8b7dda76b51e939909f557ba605bb08"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_HEADSET</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_HEADSET" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Button on headset </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_JOYSTICK">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a8776779b685958da425d04f9256c6971"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_JOYSTICK</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_JOYSTICK" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a8776779b685958da425d04f9256c6971"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_JOYSTICK</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_JOYSTICK" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Joystick pressed </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_CAMERA">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab9f0e379b7b55bbe8047060bd7fda31b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_CAMERA</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_CAMERA" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ab9f0e379b7b55bbe8047060bd7fda31b"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_CAMERA</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_CAMERA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Camera button pressed </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_MEDIA">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a34b8893de6a8da76eba647de06a945ed"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_MEDIA</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_MEDIA" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a34b8893de6a8da76eba647de06a945ed"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_MEDIA</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_MEDIA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Media player button </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_DESKTOP">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a358bfb83cda010b5482b9014f41733e8"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_DESKTOP</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DESKTOP" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a358bfb83cda010b5482b9014f41733e8"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_DESKTOP</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_DESKTOP" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Multi function key, desktop </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_OPERATOR">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a710910293919d2c92048924f650cd648"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_OPERATOR</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_OPERATOR" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a710910293919d2c92048924f650cd648"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_OPERATOR</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_OPERATOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Operator button </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_RETURN">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ac4c158c9f6e38cd8c6aa0fa704335a7c"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_RETURN</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RETURN" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2ac4c158c9f6e38cd8c6aa0fa704335a7c"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_RETURN</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_RETURN" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return button </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_KeyCode.GSM_KEY_CLEAR">
-<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a583741d65e7e0c136e24bdce87149026"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_KEY_CLEAR</span></code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_CLEAR" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Keys_1gga847ae7a586bfd1d0c506a3062d013ec2a583741d65e7e0c136e24bdce87149026"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_KEY_CLEAR</code><a class="headerlink" href="#c.GSM_KeyCode.GSM_KEY_CLEAR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Clear button </p>
 </dd></dl>
 
