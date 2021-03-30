@@ -213,7 +213,7 @@
 <h1>SMSD<a class="headerlink" href="#smsd" title="Permalink to this headline">¶</a></h1>
 <dl class="c function">
 <dt id="c.SMSD_InjectSMS">
-<span class="target" id="group__SMSD_1ga316b34be7ee8c7a1779084d5de9d0022"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">SMSD_InjectSMS</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>Config</em>, <a class="reference internal" href="message.html#c.GSM_MultiSMSMessage" title="GSM_MultiSMSMessage">GSM_MultiSMSMessage</a> *<em>sms</em>, char *<em>NewID</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_InjectSMS" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga316b34be7ee8c7a1779084d5de9d0022"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_InjectSMS</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="message.html#c.GSM_MultiSMSMessage" title="GSM_MultiSMSMessage"><span class="pre">GSM_MultiSMSMessage</span></a> <span class="pre">*</span><em><span class="pre">sms</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">NewID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_InjectSMS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Enqueues SMS message in SMS daemon queue.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code </p>
@@ -230,7 +230,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_GetStatus">
-<span class="target" id="group__SMSD_1ga21560b7a7aad8f6b34e4ce15800e20de"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">SMSD_GetStatus</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>Config</em>, <a class="reference internal" href="#c.GSM_SMSDStatus" title="GSM_SMSDStatus">GSM_SMSDStatus</a> *<em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_GetStatus" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga21560b7a7aad8f6b34e4ce15800e20de"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_GetStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="#c.GSM_SMSDStatus" title="GSM_SMSDStatus"><span class="pre">GSM_SMSDStatus</span></a> <span class="pre">*</span><em><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_GetStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets SMSD status via shared memory.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code </p>
@@ -246,7 +246,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_Shutdown">
-<span class="target" id="group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">SMSD_Shutdown</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>Config</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_Shutdown" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_Shutdown</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_Shutdown" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Flags SMSD daemon to terminate itself gracefully.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code </p>
@@ -261,7 +261,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_ReadConfig">
-<span class="target" id="group__SMSD_1ga38d0fa63d2abbe998420a56ea3bf6b32"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">SMSD_ReadConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>filename</em>, <a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>Config</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>uselog</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_ReadConfig" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga38d0fa63d2abbe998420a56ea3bf6b32"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_ReadConfig</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">filename</span></em>, <a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">uselog</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_ReadConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads SMSD configuration.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code </p>
@@ -278,7 +278,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_MainLoop">
-<span class="target" id="group__SMSD_1ga58771142831632f9a4117b4cbef2b227"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">SMSD_MainLoop</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>Config</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>exit_on_failure</em>, int <em>max_failures</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_MainLoop" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga58771142831632f9a4117b4cbef2b227"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_MainLoop</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">exit_on_failure</span></em>, <span class="pre">int</span> <em><span class="pre">max_failures</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_MainLoop" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Main SMS daemon loop. It connects to phone, scans for messages and sends messages from inbox. Can be interrupted by SMSD_Shutdown.</p>
 <p><dl class="simple">
 <dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"><span class="std std-ref">SMSD_Shutdown</span></a></p>
@@ -297,7 +297,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_NewConfig">
-<span class="target" id="group__SMSD_1gaaec8b0889c17f7bd4725c7e7ab68389e"></span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<code class="sig-name descname">SMSD_NewConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_NewConfig" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1gaaec8b0889c17f7bd4725c7e7ab68389e"></span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">SMSD_NewConfig</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_NewConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates new SMSD configuration.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Pointer to SMSD configuration data block. </p>
@@ -312,7 +312,7 @@
 
 <dl class="c function">
 <dt id="c.SMSD_FreeConfig">
-<span class="target" id="group__SMSD_1gaa2129fb770cc8df44a8168ea483d93ab"></span>void <code class="sig-name descname">SMSD_FreeConfig</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig">GSM_SMSDConfig</a> *<em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_FreeConfig" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1gaa2129fb770cc8df44a8168ea483d93ab"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">SMSD_FreeConfig</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_FreeConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Frees SMSD configuration.</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -325,73 +325,73 @@
 
 <dl class="c struct">
 <dt id="c.GSM_SMSDStatus">
-<span class="target" id="structGSM__SMSDStatus"></span><em class="property">struct </em><code class="sig-name descname">GSM_SMSDStatus</code><a class="headerlink" href="#c.GSM_SMSDStatus" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">GSM_SMSDStatus</span></code><a class="headerlink" href="#c.GSM_SMSDStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Status structure, which can be found in shared memory (if supported on platform). </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Version">
-<span class="target" id="structGSM__SMSDStatus_1aa2a8e656c7eec1b8fcb985d3b7b625f0"></span>int <code class="sig-name descname">Version</code><a class="headerlink" href="#c.GSM_SMSDStatus.Version" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1aa2a8e656c7eec1b8fcb985d3b7b625f0"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">Version</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Version" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Version of this structure (2 for now). </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.PhoneID">
-<span class="target" id="structGSM__SMSDStatus_1a937c135a9fd96e4d084f70cd2dae021f"></span>char <code class="sig-name descname">PhoneID</code>[<code class="sig-name descname">SMSD_TEXT_LENGTH</code> + 1]<a class="headerlink" href="#c.GSM_SMSDStatus.PhoneID" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a937c135a9fd96e4d084f70cd2dae021f"></span><span class="pre">char</span> <code class="sig-name descname"><span class="pre">PhoneID</span></code><span class="pre">[</span><code class="sig-name descname"><span class="pre">SMSD_TEXT_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_SMSDStatus.PhoneID" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>PhoneID from configuration. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Client">
-<span class="target" id="structGSM__SMSDStatus_1a6bf5759d8358138349cf42c5ab7ad9a9"></span>char <code class="sig-name descname">Client</code>[<code class="sig-name descname">SMSD_TEXT_LENGTH</code> + 1]<a class="headerlink" href="#c.GSM_SMSDStatus.Client" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a6bf5759d8358138349cf42c5ab7ad9a9"></span><span class="pre">char</span> <code class="sig-name descname"><span class="pre">Client</span></code><span class="pre">[</span><code class="sig-name descname"><span class="pre">SMSD_TEXT_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_SMSDStatus.Client" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Client software name. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Charge">
-<span class="target" id="structGSM__SMSDStatus_1a50607c6010a50c3f93dfeb6ae71b7e7f"></span><a class="reference internal" href="info.html#c.GSM_BatteryCharge" title="GSM_BatteryCharge">GSM_BatteryCharge</a> <code class="sig-name descname">Charge</code><a class="headerlink" href="#c.GSM_SMSDStatus.Charge" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a50607c6010a50c3f93dfeb6ae71b7e7f"></span><a class="reference internal" href="info.html#c.GSM_BatteryCharge" title="GSM_BatteryCharge"><span class="pre">GSM_BatteryCharge</span></a> <code class="sig-name descname"><span class="pre">Charge</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Charge" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Current phone battery state. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Network">
-<span class="target" id="structGSM__SMSDStatus_1a182a28bcd5e612526d3dd1b96fb082e6"></span><a class="reference internal" href="info.html#c.GSM_SignalQuality" title="GSM_SignalQuality">GSM_SignalQuality</a> <code class="sig-name descname">Network</code><a class="headerlink" href="#c.GSM_SMSDStatus.Network" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a182a28bcd5e612526d3dd1b96fb082e6"></span><a class="reference internal" href="info.html#c.GSM_SignalQuality" title="GSM_SignalQuality"><span class="pre">GSM_SignalQuality</span></a> <code class="sig-name descname"><span class="pre">Network</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Network" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Current network state. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Received">
-<span class="target" id="structGSM__SMSDStatus_1a3ab9d6e35b06a71815b0abfa0ef87689"></span>int <code class="sig-name descname">Received</code><a class="headerlink" href="#c.GSM_SMSDStatus.Received" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a3ab9d6e35b06a71815b0abfa0ef87689"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">Received</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Received" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Number of received messages. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Sent">
-<span class="target" id="structGSM__SMSDStatus_1abf90b22d4df6e6e3e8bdcd517ea9d2a7"></span>int <code class="sig-name descname">Sent</code><a class="headerlink" href="#c.GSM_SMSDStatus.Sent" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1abf90b22d4df6e6e3e8bdcd517ea9d2a7"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">Sent</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Sent" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Number of sent messages. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.Failed">
-<span class="target" id="structGSM__SMSDStatus_1a90afe5b465945c17593c595aa63c76f3"></span>int <code class="sig-name descname">Failed</code><a class="headerlink" href="#c.GSM_SMSDStatus.Failed" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a90afe5b465945c17593c595aa63c76f3"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">Failed</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.Failed" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Number of messages which failed to be send. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.IMEI">
-<span class="target" id="structGSM__SMSDStatus_1a7b1f4165a71beed8afed20560aee8f1c"></span>char <code class="sig-name descname">IMEI</code>[<code class="sig-name descname">GSM_MAX_IMEI_LENGTH</code> + 1]<a class="headerlink" href="#c.GSM_SMSDStatus.IMEI" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a7b1f4165a71beed8afed20560aee8f1c"></span><span class="pre">char</span> <code class="sig-name descname"><span class="pre">IMEI</span></code><span class="pre">[</span><code class="sig-name descname"><span class="pre">GSM_MAX_IMEI_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_SMSDStatus.IMEI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Phone IMEI. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.IMSI">
-<span class="target" id="structGSM__SMSDStatus_1a4068ed2356c1158d5e5bf881604c9e18"></span>char <code class="sig-name descname">IMSI</code>[<code class="sig-name descname">GSM_MAX_INFO_LENGTH</code> + 1]<a class="headerlink" href="#c.GSM_SMSDStatus.IMSI" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a4068ed2356c1158d5e5bf881604c9e18"></span><span class="pre">char</span> <code class="sig-name descname"><span class="pre">IMSI</span></code><span class="pre">[</span><code class="sig-name descname"><span class="pre">GSM_MAX_INFO_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_SMSDStatus.IMSI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>SIM IMSI. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_SMSDStatus.NetInfo">
-<span class="target" id="structGSM__SMSDStatus_1a9599fde3454576dc514e359be4b78787"></span><a class="reference internal" href="info.html#c.GSM_NetworkInfo" title="GSM_NetworkInfo">GSM_NetworkInfo</a> <code class="sig-name descname">NetInfo</code><a class="headerlink" href="#c.GSM_SMSDStatus.NetInfo" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SMSDStatus_1a9599fde3454576dc514e359be4b78787"></span><a class="reference internal" href="info.html#c.GSM_NetworkInfo" title="GSM_NetworkInfo"><span class="pre">GSM_NetworkInfo</span></a> <code class="sig-name descname"><span class="pre">NetInfo</span></code><a class="headerlink" href="#c.GSM_SMSDStatus.NetInfo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Network information. </p>
 </dd></dl>
 
@@ -400,7 +400,7 @@
 
 <dl class="c type">
 <dt id="c.GSM_SMSDConfig">
-<span class="target" id="group__SMSD_1ga2868d248a60dea6802b968895729fa76"></span><em class="property">typedef </em><em class="property">struct</em> _GSM_SMSDConfig <code class="sig-name descname">GSM_SMSDConfig</code><a class="headerlink" href="#c.GSM_SMSDConfig" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__SMSD_1ga2868d248a60dea6802b968895729fa76"></span><em class="property"><span class="pre">typedef</span> </em><em class="property"><span class="pre">struct</span></em> <span class="pre">_GSM_SMSDConfig</span> <code class="sig-name descname"><span class="pre">GSM_SMSDConfig</span></code><a class="headerlink" href="#c.GSM_SMSDConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>SMSD configuration data, these are not expected to be manipulated directly by application. </p>
 </dd></dl>
 

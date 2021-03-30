@@ -194,7 +194,7 @@
 <h2><a class="reference internal" href="#gammu.smsd.SMSD" title="gammu.smsd.SMSD"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMSD</span></code></a><a class="headerlink" href="#smsd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="gammu.smsd.SMSD">
-<em class="property">class </em><code class="sig-prename descclassname">gammu.smsd.</code><code class="sig-name descname">SMSD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gammu.smsd.</span></code><code class="sig-name descname"><span class="pre">SMSD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD" title="Permalink to this definition">¶</a></dt>
 <dd><p>SMSD main class, that is used for communication with phone.</p>
 <p>You don’t need to run the SMS daemon itself to control or ask it for
 status, this can be also done on separately running instances. All you
@@ -207,7 +207,7 @@ using.</p>
 </dl>
 <dl class="py method">
 <dt id="gammu.smsd.SMSD.MainLoop">
-<code class="sig-name descname">MainLoop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">MaxFailures</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.MainLoop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">MainLoop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MaxFailures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.MainLoop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs SMS daemon main loop.</p>
 <p>Please note that this will run until some serious error occurs or until
 terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" title="gammu.smsd.SMSD.Shutdown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Shutdown()</span></code></a>.</p>
@@ -226,7 +226,7 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 
 <dl class="py method">
 <dt id="gammu.smsd.SMSD.Shutdown">
-<code class="sig-name descname">Shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.Shutdown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.Shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Signals SMS daemon to stop.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -240,7 +240,7 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 
 <dl class="py method">
 <dt id="gammu.smsd.SMSD.GetStatus">
-<code class="sig-name descname">GetStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.GetStatus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">GetStatus</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.GetStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns SMSD status.</p>
 <p>The following values are set in resulting dictionary:</p>
 <p>Client</p>
@@ -287,7 +287,7 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 
 <dl class="py method">
 <dt id="gammu.smsd.SMSD.InjectSMS">
-<code class="sig-name descname">InjectSMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.InjectSMS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">InjectSMS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.InjectSMS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Injects SMS message into outgoing messages queue in SMSD.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
