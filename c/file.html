@@ -213,7 +213,7 @@
 <h1>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h1>
 <dl class="c function">
 <dt id="c.GSM_JADFindData">
-<span class="target" id="group__File_1gafebe928b158d74c354eac9524a20d417"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_JADFindData</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, char *<em>Vendor</em>, char *<em>Name</em>, char *<em>JAR</em>, char *<em>Version</em>, int *<em>Size</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_JADFindData" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gafebe928b158d74c354eac9524a20d417"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_JADFindData</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Vendor</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Name</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">JAR</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Version</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_JADFindData" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses JAD file.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -233,7 +233,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_ReadFile">
-<span class="target" id="group__File_1ga3a57982b7901ad60c7ae79f1e79e85ae"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_ReadFile</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>FileName</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ReadFile" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1ga3a57982b7901ad60c7ae79f1e79e85ae"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_ReadFile</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">FileName</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ReadFile" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads file from filesystem to <a class="reference internal" href="#structGSM__File"><span class="std std-ref">GSM_File</span></a> structure.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -249,7 +249,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_IdentifyFileFormat">
-<span class="target" id="group__File_1gac7c70b03292f9e867f5a179e16e4186e"></span>void <code class="sig-name descname">GSM_IdentifyFileFormat</code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IdentifyFileFormat" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gac7c70b03292f9e867f5a179e16e4186e"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_IdentifyFileFormat</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IdentifyFileFormat" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Identifies file format by checking it’s content.</p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -262,7 +262,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_GetNextFileFolder">
-<span class="target" id="group__File_1gadfa7de5222adb4b90c2e4ffd4d74fc98"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetNextFileFolder</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>start</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextFileFolder" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gadfa7de5222adb4b90c2e4ffd4d74fc98"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextFileFolder</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextFileFolder" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets next filename from filesystem.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -279,7 +279,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_GetFolderListing">
-<span class="target" id="group__File_1ga8e8e542c48e541017920b4dea382c862"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetFolderListing</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <em>start</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFolderListing" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1ga8e8e542c48e541017920b4dea382c862"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetFolderListing</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFolderListing" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets listing of folder.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -296,7 +296,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_GetNextRootFolder">
-<span class="target" id="group__File_1gaa0b5b4a914842ab5663fb8e02061536f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetNextRootFolder</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextRootFolder" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gaa0b5b4a914842ab5663fb8e02061536f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextRootFolder</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextRootFolder" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets next root folder.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -312,7 +312,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_SetFileAttributes">
-<span class="target" id="group__File_1gaa8fcc309ff4371ab80688797009e5e46"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SetFileAttributes</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetFileAttributes" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gaa8fcc309ff4371ab80688797009e5e46"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetFileAttributes</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetFileAttributes" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets file system attributes.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -328,7 +328,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_GetFilePart">
-<span class="target" id="group__File_1gad7e0d82b76881d754525c76a15e3fa06"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetFilePart</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, int *<em>Handle</em>, size_t *<em>Size</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFilePart" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gad7e0d82b76881d754525c76a15e3fa06"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetFilePart</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Handle</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFilePart" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves file part.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code, <a class="reference internal" href="error.html#group__Error_1gga2c447f4f55c989b3aa5e41cadd9fb7c3acdc3171f597e4c1349717464b452dc1e"><span class="std std-ref">ERR_EMPTY</span></a> after transfer end. </p>
@@ -346,7 +346,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_AddFilePart">
-<span class="target" id="group__File_1gaa1444efc3a865bf679eb08e13c7d7bfc"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_AddFilePart</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, size_t *<em>Pos</em>, int *<em>Handle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddFilePart" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gaa1444efc3a865bf679eb08e13c7d7bfc"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddFilePart</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddFilePart" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds file to filesystem. Call repeatedly until function returns <a class="reference internal" href="error.html#group__Error_1gga2c447f4f55c989b3aa5e41cadd9fb7c3acdc3171f597e4c1349717464b452dc1e"><span class="std std-ref">ERR_EMPTY</span></a>.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code, <a class="reference internal" href="error.html#group__Error_1gga2c447f4f55c989b3aa5e41cadd9fb7c3acdc3171f597e4c1349717464b452dc1e"><span class="std std-ref">ERR_EMPTY</span></a> after transfer end. </p>
@@ -364,7 +364,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_SendFilePart">
-<span class="target" id="group__File_1gae2aadb1333d6f175001b25431b44327c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_SendFilePart</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em>, size_t *<em>Pos</em>, int *<em>Handle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SendFilePart" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gae2aadb1333d6f175001b25431b44327c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SendFilePart</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SendFilePart" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sends file to phone, it’s up to phone to decide what to do with it. It is usually same as when you receive file over Bluetooth from other phone. Use in same way as <a class="reference internal" href="#group__File_1gaa1444efc3a865bf679eb08e13c7d7bfc"><span class="std std-ref">GSM_AddFilePart</span></a>.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code, <a class="reference internal" href="error.html#group__Error_1gga2c447f4f55c989b3aa5e41cadd9fb7c3acdc3171f597e4c1349717464b452dc1e"><span class="std std-ref">ERR_EMPTY</span></a> after transfer end. </p>
@@ -382,7 +382,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_GetFileSystemStatus">
-<span class="target" id="group__File_1ga0d063cc1065ab803fa4d8985b5923955"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_GetFileSystemStatus</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_FileSystemStatus" title="GSM_FileSystemStatus">GSM_FileSystemStatus</a> *<em>Status</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFileSystemStatus" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1ga0d063cc1065ab803fa4d8985b5923955"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetFileSystemStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_FileSystemStatus" title="GSM_FileSystemStatus"><span class="pre">GSM_FileSystemStatus</span></a> <span class="pre">*</span><em><span class="pre">Status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFileSystemStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Acquires filesystem status.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -398,7 +398,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_DeleteFile">
-<span class="target" id="group__File_1ga12a0823d757c199f6abbdaa7fae3d8a9"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DeleteFile</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, unsigned char *<em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteFile" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1ga12a0823d757c199f6abbdaa7fae3d8a9"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteFile</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">ID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteFile" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes file from filesystem.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -414,7 +414,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_AddFolder">
-<span class="target" id="group__File_1gaca91c15e4095d5f009e6acc83aa6356b"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_AddFolder</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File">GSM_File</a> *<em>File</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddFolder" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gaca91c15e4095d5f009e6acc83aa6356b"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddFolder</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_File" title="GSM_File"><span class="pre">GSM_File</span></a> <span class="pre">*</span><em><span class="pre">File</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddFolder" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds folder to filesystem.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -430,7 +430,7 @@
 
 <dl class="c function">
 <dt id="c.GSM_DeleteFolder">
-<span class="target" id="group__File_1gaf6e9f2324fa7469074af83fd425fef9b"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error">GSM_Error</a> <code class="sig-name descname">GSM_DeleteFolder</code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine">GSM_StateMachine</a> *<em>s</em>, unsigned char *<em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteFolder" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gaf6e9f2324fa7469074af83fd425fef9b"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteFolder</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">ID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteFolder" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes folder from filesystem.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Error code. </p>
@@ -446,164 +446,164 @@
 
 <dl class="c struct">
 <dt id="c.GSM_FileSystemStatus">
-<span class="target" id="structGSM__FileSystemStatus"></span><em class="property">struct </em><code class="sig-name descname">GSM_FileSystemStatus</code><a class="headerlink" href="#c.GSM_FileSystemStatus" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__FileSystemStatus"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">GSM_FileSystemStatus</span></code><a class="headerlink" href="#c.GSM_FileSystemStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Status of filesystem. </p>
 </dd></dl>
 
 <dl class="c enum">
 <dt id="c.GSM_FileType">
-<span class="target" id="group__File_1ga159df16b101896a0c263613a59ca739e"></span><em class="property">enum </em><code class="sig-name descname">GSM_FileType</code><a class="headerlink" href="#c.GSM_FileType" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1ga159df16b101896a0c263613a59ca739e"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">GSM_FileType</span></code><a class="headerlink" href="#c.GSM_FileType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>File type identifier. </p>
 <p><em>Values:</em></p>
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Other">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea8505a1062f3a7936964b60fd82af5e60"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Other</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Other" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea8505a1062f3a7936964b60fd82af5e60"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Other</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Other" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Java_JAR">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eaa2274ba01ee117546e2eb2e64481feff"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Java_JAR</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Java_JAR" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eaa2274ba01ee117546e2eb2e64481feff"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Java_JAR</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Java_JAR" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Image_JPG">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea2bf3639d4c781266ae0c92b05c557a44"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Image_JPG</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_JPG" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea2bf3639d4c781266ae0c92b05c557a44"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Image_JPG</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_JPG" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Image_BMP">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eac1514598543d758dfe40142e66495002"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Image_BMP</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_BMP" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eac1514598543d758dfe40142e66495002"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Image_BMP</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_BMP" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Image_GIF">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea01a0287470f376bf807a710e03ea5892"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Image_GIF</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_GIF" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea01a0287470f376bf807a710e03ea5892"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Image_GIF</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_GIF" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Image_PNG">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea3e22dbc6f80b5c24ab0482d05205b9ee"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Image_PNG</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_PNG" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea3e22dbc6f80b5c24ab0482d05205b9ee"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Image_PNG</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_PNG" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Image_WBMP">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea90b3b72c260323fd092224327cecbb54"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Image_WBMP</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_WBMP" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea90b3b72c260323fd092224327cecbb54"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Image_WBMP</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Image_WBMP" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Video_3GP">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea9f13fbd032b440099999698dfde1f87f"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Video_3GP</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Video_3GP" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea9f13fbd032b440099999698dfde1f87f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Video_3GP</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Video_3GP" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Sound_AMR">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea05bd4d12e2929fe6850ba5c90eef8445"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Sound_AMR</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_AMR" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea05bd4d12e2929fe6850ba5c90eef8445"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Sound_AMR</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_AMR" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Sound_NRT">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eacab3eaa871e0c41868acc2b06203bdb0"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Sound_NRT</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_NRT" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739eacab3eaa871e0c41868acc2b06203bdb0"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Sound_NRT</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_NRT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>DCT4 binary format </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_Sound_MIDI">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea5178b247f3815b075944c0e7b96635ab"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_Sound_MIDI</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_MIDI" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea5178b247f3815b075944c0e7b96635ab"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_Sound_MIDI</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_Sound_MIDI" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_MMS">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea66d53cff1841fa08a5ab1e66d6a9464b"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_MMS</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_MMS" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea66d53cff1841fa08a5ab1e66d6a9464b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_MMS</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_MMS" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c enumerator">
 <dt id="c.GSM_FileType.GSM_File_INVALID">
-<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea8a986df0b81d99911d0ead77150a54fe"></span><em class="property">enumerator </em><code class="sig-name descname">GSM_File_INVALID</code><a class="headerlink" href="#c.GSM_FileType.GSM_File_INVALID" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__File_1gga159df16b101896a0c263613a59ca739ea8a986df0b81d99911d0ead77150a54fe"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GSM_File_INVALID</span></code><a class="headerlink" href="#c.GSM_FileType.GSM_File_INVALID" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="c struct">
 <dt id="c.GSM_File">
-<span class="target" id="structGSM__File"></span><em class="property">struct </em><code class="sig-name descname">GSM_File</code><a class="headerlink" href="#c.GSM_File" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">GSM_File</span></code><a class="headerlink" href="#c.GSM_File" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Structure for holding file information and data. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="c var">
 <dt id="c.GSM_File.Used">
-<span class="target" id="structGSM__File_1a4e8a3092569ece9407955dcfdd39a3fb"></span>size_t <code class="sig-name descname">Used</code><a class="headerlink" href="#c.GSM_File.Used" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a4e8a3092569ece9407955dcfdd39a3fb"></span><span class="pre">size_t</span> <code class="sig-name descname"><span class="pre">Used</span></code><a class="headerlink" href="#c.GSM_File.Used" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>How many bytes are used. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Name">
-<span class="target" id="structGSM__File_1a5e5f92c9174113ebf0cf25bee4c596e3"></span>unsigned char <code class="sig-name descname">Name</code>[2 * (<code class="sig-name descname">GSM_MAX_FILENAME_LENGTH</code> + 1)]<a class="headerlink" href="#c.GSM_File.Name" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a5e5f92c9174113ebf0cf25bee4c596e3"></span><span class="pre">unsigned</span> <span class="pre">char</span> <code class="sig-name descname"><span class="pre">Name</span></code><span class="pre">[</span><span class="pre">2</span> <span class="pre">*</span> <span class="pre">(</span><code class="sig-name descname"><span class="pre">GSM_MAX_FILENAME_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">)</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_File.Name" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Name in Unicode </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Folder">
-<span class="target" id="structGSM__File_1ad69b958089a8f790dc12a1128bf8f791"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">Folder</code><a class="headerlink" href="#c.GSM_File.Folder" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1ad69b958089a8f790dc12a1128bf8f791"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">Folder</span></code><a class="headerlink" href="#c.GSM_File.Folder" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>True, when folder </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Level">
-<span class="target" id="structGSM__File_1afedbb5af8ff7f7bcaddb5ac500c766f5"></span>int <code class="sig-name descname">Level</code><a class="headerlink" href="#c.GSM_File.Level" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1afedbb5af8ff7f7bcaddb5ac500c766f5"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">Level</span></code><a class="headerlink" href="#c.GSM_File.Level" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>How much file is nested on filesystem. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Type">
-<span class="target" id="structGSM__File_1a9b4f2bdaeddbdf55c520b8b943454295"></span><a class="reference internal" href="#c.GSM_FileType" title="GSM_FileType">GSM_FileType</a> <code class="sig-name descname">Type</code><a class="headerlink" href="#c.GSM_File.Type" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a9b4f2bdaeddbdf55c520b8b943454295"></span><a class="reference internal" href="#c.GSM_FileType" title="GSM_FileType"><span class="pre">GSM_FileType</span></a> <code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#c.GSM_File.Type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of file. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.ID_FullName">
-<span class="target" id="structGSM__File_1a8bc8da0d5dd545af3e4cfdbf602c024d"></span>unsigned char <code class="sig-name descname">ID_FullName</code>[2 * (<code class="sig-name descname">GSM_MAX_FILENAME_ID_LENGTH</code> + 1)]<a class="headerlink" href="#c.GSM_File.ID_FullName" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a8bc8da0d5dd545af3e4cfdbf602c024d"></span><span class="pre">unsigned</span> <span class="pre">char</span> <code class="sig-name descname"><span class="pre">ID_FullName</span></code><span class="pre">[</span><span class="pre">2</span> <span class="pre">*</span> <span class="pre">(</span><code class="sig-name descname"><span class="pre">GSM_MAX_FILENAME_ID_LENGTH</span></code> <span class="pre">+</span> <span class="pre">1</span><span class="pre">)</span><span class="pre">]</span><a class="headerlink" href="#c.GSM_File.ID_FullName" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>ID in Unicode </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Buffer">
-<span class="target" id="structGSM__File_1a3226b1967d64138ff08b9a397b1309e6"></span>unsigned char *<code class="sig-name descname">Buffer</code><a class="headerlink" href="#c.GSM_File.Buffer" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a3226b1967d64138ff08b9a397b1309e6"></span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">Buffer</span></code><a class="headerlink" href="#c.GSM_File.Buffer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Pointer to file data. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Modified">
-<span class="target" id="structGSM__File_1af94ade6dda7602ca8b73d1a66096177a"></span><a class="reference internal" href="datetime.html#c.GSM_DateTime" title="GSM_DateTime">GSM_DateTime</a> <code class="sig-name descname">Modified</code><a class="headerlink" href="#c.GSM_File.Modified" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1af94ade6dda7602ca8b73d1a66096177a"></span><a class="reference internal" href="datetime.html#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <code class="sig-name descname"><span class="pre">Modified</span></code><a class="headerlink" href="#c.GSM_File.Modified" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Last modification date. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.ModifiedEmpty">
-<span class="target" id="structGSM__File_1a19de6d492f0e20e6bae633447a3e7e97"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">ModifiedEmpty</code><a class="headerlink" href="#c.GSM_File.ModifiedEmpty" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a19de6d492f0e20e6bae633447a3e7e97"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">ModifiedEmpty</span></code><a class="headerlink" href="#c.GSM_File.ModifiedEmpty" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether modification date is empty. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Protected">
-<span class="target" id="structGSM__File_1a18b44aa81271e43c38a117608b66a713"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">Protected</code><a class="headerlink" href="#c.GSM_File.Protected" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a18b44aa81271e43c38a117608b66a713"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">Protected</span></code><a class="headerlink" href="#c.GSM_File.Protected" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Protected file attribute. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.ReadOnly">
-<span class="target" id="structGSM__File_1abc404e41c321a89f5b932bfbc06858a5"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">ReadOnly</code><a class="headerlink" href="#c.GSM_File.ReadOnly" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1abc404e41c321a89f5b932bfbc06858a5"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">ReadOnly</span></code><a class="headerlink" href="#c.GSM_File.ReadOnly" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read only file attribute. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.Hidden">
-<span class="target" id="structGSM__File_1a855468e158da0417e52d11f14a3ff284"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">Hidden</code><a class="headerlink" href="#c.GSM_File.Hidden" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1a855468e158da0417e52d11f14a3ff284"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">Hidden</span></code><a class="headerlink" href="#c.GSM_File.Hidden" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Hidden file attribute. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt id="c.GSM_File.System">
-<span class="target" id="structGSM__File_1ab8d2cfef3baadb3108c9c0a4092f4a41"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean">gboolean</a> <code class="sig-name descname">System</code><a class="headerlink" href="#c.GSM_File.System" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__File_1ab8d2cfef3baadb3108c9c0a4092f4a41"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">System</span></code><a class="headerlink" href="#c.GSM_File.System" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>System file attribute. </p>
 </dd></dl>
 

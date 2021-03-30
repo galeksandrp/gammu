@@ -254,33 +254,33 @@ script to create tables:</p>
 <cite>NO_ZERO_DATE</cite>, <cite>ANSI</cite> or <cite>STRICT</cite> modes to be set in the server</p></li>
 </ul>
 <p>SQL script <code class="file docutils literal notranslate"><span class="pre">mysql.sql</span></code> for creating tables in MySQL database:</p>
-<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="c1">-- </span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="c1">--</span>
 <span class="c1">-- Database for Gammu SMSD</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- In case you get errors about not supported charset, please</span>
 <span class="c1">-- replace utf8mb4 with utf8.</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `gammu`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `gammu` (</span>
   <span class="n n-Quoted">`Version`</span> <span class="kt">integer</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span> <span class="k">PRIMARY</span> <span class="k">KEY</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `gammu`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">INSERT INTO `gammu` (`Version`) VALUES (17);</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `inbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `inbox` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -299,16 +299,16 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n n-Quoted">`ID`</span> <span class="p">(</span><span class="n n-Quoted">`ID`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">1</span> <span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `inbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `outbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `outbox` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -339,16 +339,16 @@ script to create tables:</p>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">outbox_date</span> <span class="k">ON</span> <span class="n">outbox</span><span class="p">(</span><span class="n">SendingDateTime</span><span class="p">,</span> <span class="n">SendingTimeOut</span><span class="p">);</span>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">outbox_sender</span> <span class="k">ON</span> <span class="n">outbox</span><span class="p">(</span><span class="n">SenderID</span><span class="p">(</span><span class="mi">250</span><span class="p">));</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `outbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `outbox_multipart`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `outbox_multipart` (</span>
   <span class="n n-Quoted">`Text`</span> <span class="kt">text</span><span class="p">,</span>
@@ -363,15 +363,15 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n n-Quoted">`ID`</span><span class="p">,</span> <span class="n n-Quoted">`SequencePosition`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `outbox_multipart`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `phones`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `phones` (</span>
   <span class="n n-Quoted">`ID`</span> <span class="kt">text</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
@@ -392,15 +392,15 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n n-Quoted">`IMEI`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `phones`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `sentitems`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `sentitems` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -431,9 +431,9 @@ script to create tables:</p>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">sentitems_dest</span> <span class="k">ON</span> <span class="n">sentitems</span><span class="p">(</span><span class="n">DestinationNumber</span><span class="p">);</span>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">sentitems_sender</span> <span class="k">ON</span> <span class="n">sentitems</span><span class="p">(</span><span class="n">SenderID</span><span class="p">(</span><span class="mi">250</span><span class="p">));</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `sentitems`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -441,33 +441,33 @@ script to create tables:</p>
 <p>You can find the script in <code class="file docutils literal notranslate"><span class="pre">docs/sql/mysql.sql</span></code> as well.</p>
 </div>
 <p>SQL script <code class="file docutils literal notranslate"><span class="pre">mysql-legacy.sql</span></code> for creating tables in MySQL database:</p>
-<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="c1">-- </span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="c1">--</span>
 <span class="c1">-- Database for Gammu SMSD</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- In case you get errors about not supported charset, please</span>
 <span class="c1">-- replace utf8mb4 with utf8.</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `gammu`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `gammu` (</span>
   <span class="n n-Quoted">`Version`</span> <span class="kt">integer</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span> <span class="k">PRIMARY</span> <span class="k">KEY</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `gammu`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">INSERT INTO `gammu` (`Version`) VALUES (17);</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `inbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `inbox` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -486,16 +486,16 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n n-Quoted">`ID`</span> <span class="p">(</span><span class="n n-Quoted">`ID`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">1</span> <span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `inbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `outbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `outbox` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -526,16 +526,16 @@ script to create tables:</p>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">outbox_date</span> <span class="k">ON</span> <span class="n">outbox</span><span class="p">(</span><span class="n">SendingDateTime</span><span class="p">,</span> <span class="n">SendingTimeOut</span><span class="p">);</span>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">outbox_sender</span> <span class="k">ON</span> <span class="n">outbox</span><span class="p">(</span><span class="n">SenderID</span><span class="p">(</span><span class="mi">250</span><span class="p">));</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `outbox`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `outbox_multipart`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `outbox_multipart` (</span>
   <span class="n n-Quoted">`Text`</span> <span class="kt">text</span><span class="p">,</span>
@@ -550,15 +550,15 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n n-Quoted">`ID`</span><span class="p">,</span> <span class="n n-Quoted">`SequencePosition`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `outbox_multipart`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `phones`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `phones` (</span>
   <span class="n n-Quoted">`ID`</span> <span class="kt">text</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
@@ -579,15 +579,15 @@ script to create tables:</p>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n n-Quoted">`IMEI`</span><span class="p">)</span>
 <span class="p">)</span> <span class="k">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">DEFAULT</span> <span class="k">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `phones`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">-- --------------------------------------------------------</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Table structure for table `sentitems`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">CREATE TABLE `sentitems` (</span>
   <span class="n n-Quoted">`UpdatedInDB`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">default</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">on</span> <span class="k">update</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
@@ -618,14 +618,14 @@ script to create tables:</p>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">sentitems_dest</span> <span class="k">ON</span> <span class="n">sentitems</span><span class="p">(</span><span class="n">DestinationNumber</span><span class="p">);</span>
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">sentitems_sender</span> <span class="k">ON</span> <span class="n">sentitems</span><span class="p">(</span><span class="n">SenderID</span><span class="p">(</span><span class="mi">250</span><span class="p">));</span>
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Dumping data for table `sentitems`</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 
-<span class="c1">-- </span>
+<span class="c1">--</span>
 <span class="c1">-- Triggers for setting default timestamps</span>
-<span class="c1">-- </span>
+<span class="c1">--</span>
 
 <span class="c1">DELIMITER //</span>
 

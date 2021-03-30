@@ -229,9 +229,9 @@ database, which is described below.</p>
 <div class="section" id="creating-tables-for-postgresql">
 <span id="pgsql-create"></span><h2>Creating tables for PostgreSQL<a class="headerlink" href="#creating-tables-for-postgresql" title="Permalink to this headline">¶</a></h2>
 <p>SQL script for creating tables in PostgreSQL database:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>-- 
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>--
 -- Database: &quot;smsd&quot;
--- 
+--
 -- CREATE USER &quot;smsd&quot; WITH NOCREATEDB NOCREATEUSER;
 -- CREATE DATABASE &quot;smsd&quot; WITH OWNER = &quot;smsd&quot; ENCODING = &#39;UTF8&#39;;
 -- \connect &quot;smsd&quot; &quot;smsd&quot;
@@ -280,25 +280,25 @@ $update_timestamp$ LANGUAGE plpgsql;
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;gammu&quot;
--- 
+--
 
 CREATE TABLE gammu (
   &quot;Version&quot; smallint NOT NULL DEFAULT &#39;0&#39; PRIMARY KEY
 );
 
--- 
+--
 -- Dumping data for table &quot;gammu&quot;
--- 
+--
 
 INSERT INTO gammu (&quot;Version&quot;) VALUES (17);
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;inbox&quot;
--- 
+--
 
 CREATE TABLE inbox (
   &quot;UpdatedInDB&quot; timestamp(0) WITHOUT time zone NOT NULL DEFAULT LOCALTIMESTAMP(0),
@@ -314,13 +314,13 @@ CREATE TABLE inbox (
   &quot;RecipientID&quot; text NOT NULL,
   &quot;Processed&quot; boolean NOT NULL DEFAULT &#39;false&#39;,
   &quot;Status&quot; integer NOT NULL DEFAULT &#39;-1&#39;,
-  CHECK (&quot;Coding&quot; IN 
-  (&#39;Default_No_Compression&#39;,&#39;Unicode_No_Compression&#39;,&#39;8bit&#39;,&#39;Default_Compression&#39;,&#39;Unicode_Compression&#39;)) 
+  CHECK (&quot;Coding&quot; IN
+  (&#39;Default_No_Compression&#39;,&#39;Unicode_No_Compression&#39;,&#39;8bit&#39;,&#39;Default_Compression&#39;,&#39;Unicode_Compression&#39;))
 );
 
--- 
+--
 -- Dumping data for table &quot;inbox&quot;
--- 
+--
 
 -- --------------------------------------------------------
 
@@ -332,9 +332,9 @@ CREATE TRIGGER update_timestamp BEFORE UPDATE ON inbox FOR EACH ROW EXECUTE PROC
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;outbox&quot;
--- 
+--
 
 CREATE TABLE outbox (
   &quot;UpdatedInDB&quot; timestamp(0) WITHOUT time zone NOT NULL DEFAULT LOCALTIMESTAMP(0),
@@ -359,10 +359,10 @@ CREATE TABLE outbox (
   &quot;Priority&quot; integer DEFAULT &#39;0&#39;,
   &quot;Status&quot; varchar(255) NOT NULL DEFAULT &#39;Reserved&#39;,
   &quot;StatusCode&quot; integer NOT NULL DEFAULT &#39;-1&#39;,
-  CHECK (&quot;Coding&quot; IN 
+  CHECK (&quot;Coding&quot; IN
   (&#39;Default_No_Compression&#39;,&#39;Unicode_No_Compression&#39;,&#39;8bit&#39;,&#39;Default_Compression&#39;,&#39;Unicode_Compression&#39;)),
   CHECK (&quot;DeliveryReport&quot; IN (&#39;default&#39;,&#39;yes&#39;,&#39;no&#39;)),
-  CHECK (&quot;Status&quot; IN 
+  CHECK (&quot;Status&quot; IN
   (&#39;SendingOK&#39;,&#39;SendingOKNoReport&#39;,&#39;SendingError&#39;,&#39;DeliveryOK&#39;,&#39;DeliveryFailed&#39;,&#39;DeliveryPending&#39;,
   &#39;DeliveryUnknown&#39;,&#39;Error&#39;,&#39;Reserved&#39;))
 );
@@ -370,9 +370,9 @@ CREATE TABLE outbox (
 CREATE INDEX outbox_date ON outbox(&quot;SendingDateTime&quot;, &quot;SendingTimeOut&quot;);
 CREATE INDEX outbox_sender ON outbox(&quot;SenderID&quot;);
 
--- 
+--
 -- Dumping data for table &quot;outbox&quot;
--- 
+--
 
 -- --------------------------------------------------------
 
@@ -384,9 +384,9 @@ CREATE TRIGGER update_timestamp BEFORE UPDATE ON outbox FOR EACH ROW EXECUTE PRO
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;outbox_multipart&quot;
--- 
+--
 
 CREATE TABLE outbox_multipart (
   &quot;Text&quot; text,
@@ -399,23 +399,23 @@ CREATE TABLE outbox_multipart (
   &quot;Status&quot; varchar(255) NOT NULL DEFAULT &#39;Reserved&#39;,
   &quot;StatusCode&quot; integer NOT NULL DEFAULT &#39;-1&#39;,
   PRIMARY KEY (&quot;ID&quot;, &quot;SequencePosition&quot;),
-  CHECK (&quot;Coding&quot; IN 
+  CHECK (&quot;Coding&quot; IN
   (&#39;Default_No_Compression&#39;,&#39;Unicode_No_Compression&#39;,&#39;8bit&#39;,&#39;Default_Compression&#39;,&#39;Unicode_Compression&#39;)),
-  CHECK (&quot;Status&quot; IN 
+  CHECK (&quot;Status&quot; IN
   (&#39;SendingOK&#39;,&#39;SendingOKNoReport&#39;,&#39;SendingError&#39;,&#39;DeliveryOK&#39;,&#39;DeliveryFailed&#39;,&#39;DeliveryPending&#39;,
   &#39;DeliveryUnknown&#39;,&#39;Error&#39;,&#39;Reserved&#39;))
 );
 
--- 
+--
 -- Dumping data for table &quot;outbox_multipart&quot;
--- 
+--
 
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;phones&quot;
--- 
+--
 
 CREATE TABLE phones (
   &quot;ID&quot; text NOT NULL,
@@ -435,9 +435,9 @@ CREATE TABLE phones (
   &quot;Received&quot; integer NOT NULL DEFAULT 0
 );
 
--- 
+--
 -- Dumping data for table &quot;phones&quot;
--- 
+--
 
 -- --------------------------------------------------------
 
@@ -449,9 +449,9 @@ CREATE TRIGGER update_timestamp BEFORE UPDATE ON phones FOR EACH ROW EXECUTE PRO
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Table structure for table &quot;sentitems&quot;
--- 
+--
 
 CREATE TABLE sentitems (
   &quot;UpdatedInDB&quot; timestamp(0) WITHOUT time zone NOT NULL DEFAULT LOCALTIMESTAMP(0),
@@ -474,10 +474,10 @@ CREATE TABLE sentitems (
   &quot;RelativeValidity&quot; integer NOT NULL DEFAULT &#39;-1&#39;,
   &quot;CreatorID&quot; text NOT NULL,
   &quot;StatusCode&quot; integer NOT NULL DEFAULT &#39;-1&#39;,
-  CHECK (&quot;Status&quot; IN 
+  CHECK (&quot;Status&quot; IN
   (&#39;SendingOK&#39;,&#39;SendingOKNoReport&#39;,&#39;SendingError&#39;,&#39;DeliveryOK&#39;,&#39;DeliveryFailed&#39;,&#39;DeliveryPending&#39;,
   &#39;DeliveryUnknown&#39;,&#39;Error&#39;)),
-  CHECK (&quot;Coding&quot; IN 
+  CHECK (&quot;Coding&quot; IN
   (&#39;Default_No_Compression&#39;,&#39;Unicode_No_Compression&#39;,&#39;8bit&#39;,&#39;Default_Compression&#39;,&#39;Unicode_Compression&#39;)),
   PRIMARY KEY (&quot;ID&quot;, &quot;SequencePosition&quot;)
 );
@@ -487,9 +487,9 @@ CREATE INDEX sentitems_tpmr ON sentitems(&quot;TPMR&quot;);
 CREATE INDEX sentitems_dest ON sentitems(&quot;DestinationNumber&quot;);
 CREATE INDEX sentitems_sender ON sentitems(&quot;SenderID&quot;);
 
--- 
+--
 -- Dumping data for table &quot;sentitems&quot;
--- 
+--
 
 -- --------------------------------------------------------
 
@@ -498,7 +498,6 @@ CREATE INDEX sentitems_sender ON sentitems(&quot;SenderID&quot;);
 --
 
 CREATE TRIGGER update_timestamp BEFORE UPDATE ON sentitems FOR EACH ROW EXECUTE PROCEDURE update_timestamp();
-
 </pre></div>
 </div>
 <div class="admonition note">

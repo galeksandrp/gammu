@@ -226,7 +226,7 @@ configuration section to use by giving it’s number (<span class="target" id="i
 parameter to <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a> and it will then use only this section.</p>
 <dl class="config section">
 <dt id="section-[gammu]">
-<code class="sig-name descname">[gammu]</code><a class="headerlink" href="#section-[gammu]" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">[gammu]</span></code><a class="headerlink" href="#section-[gammu]" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>This section is read by default unless you specify other on command line.</p>
@@ -234,7 +234,7 @@ parameter to <a class="reference internal" href="../gammu/index.html#gammu"><spa
 <h3>Device connection parameters<a class="headerlink" href="#device-connection-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-Connection">
-<code class="sig-name descname">Connection</code><a class="headerlink" href="#option-Connection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Connection</span></code><a class="headerlink" href="#option-Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Protocol which will be used to talk to your phone.</p>
 <p>For Nokia cables you want to use one of following:</p>
 <dl class="simple">
@@ -315,7 +315,7 @@ different host. This can be done using proxy connections:</p>
 
 <dl class="config option">
 <dt id="option-Device">
-<code class="sig-name descname">Device</code><a class="headerlink" href="#option-Device" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Device</span></code><a class="headerlink" href="#option-Device" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.27.95.</span></p>
 </div>
@@ -406,7 +406,7 @@ modprobe irtty-sir
 
 <dl class="config option">
 <dt id="option-Port">
-<code class="sig-name descname">Port</code><a class="headerlink" href="#option-Port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Port</span></code><a class="headerlink" href="#option-Port" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 1.27.95: </span>Please use <span class="target" id="index-1"></span><a class="reference internal" href="#option-Device"><code class="xref config config-option docutils literal notranslate"><span class="pre">Device</span></code></a> instead.</p>
 </div>
@@ -415,7 +415,7 @@ modprobe irtty-sir
 
 <dl class="config option">
 <dt id="option-Model">
-<code class="sig-name descname">Model</code><a class="headerlink" href="#option-Model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Model</span></code><a class="headerlink" href="#option-Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do not use this parameter unless really needed! The only use case for this is
 when Gammu does not know your phone and misdetects it’s features.</p>
 <p>The only special case for using model is to force special type of OBEX
@@ -435,7 +435,7 @@ operation:</p>
 
 <dl class="config option">
 <dt id="option-Use_Locking">
-<code class="sig-name descname">Use_Locking</code><a class="headerlink" href="#option-Use_Locking" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Use_Locking</span></code><a class="headerlink" href="#option-Use_Locking" title="Permalink to this definition">¶</a></dt>
 <dd><p>On Posix systems, you might want to lock serial device when it is being used
 using UUCP-style lock files. Enabling this option (setting to yes) will make
 Gammu honor these locks and create it on startup. On most distributions you
@@ -449,13 +449,13 @@ group).</p>
 <h3>Connection options<a class="headerlink" href="#connection-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-SynchronizeTime">
-<code class="sig-name descname">SynchronizeTime</code><a class="headerlink" href="#option-SynchronizeTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">SynchronizeTime</span></code><a class="headerlink" href="#option-SynchronizeTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you want to set time from computer to phone during starting connection.</p>
 </dd></dl>
 
 <dl class="config option">
 <dt id="option-StartInfo">
-<code class="sig-name descname">StartInfo</code><a class="headerlink" href="#option-StartInfo" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">StartInfo</span></code><a class="headerlink" href="#option-StartInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>This option allows one to set, that you want (setting <code class="docutils literal notranslate"><span class="pre">yes</span></code>) to see
 message on the phone screen or phone should enable light for a moment
 during starting connection. Phone will not beep during starting connection
@@ -467,7 +467,7 @@ with this option. This works only with some Nokia phones.</p>
 <h3>Debugging options<a class="headerlink" href="#debugging-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-LogFile">
-<code class="sig-name descname">LogFile</code><a class="headerlink" href="#option-LogFile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">LogFile</span></code><a class="headerlink" href="#option-LogFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to file where information about communication will be stored.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -478,7 +478,7 @@ each execution.</p>
 
 <dl class="config option">
 <dt id="option-LogFormat">
-<code class="sig-name descname">LogFormat</code><a class="headerlink" href="#option-LogFormat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">LogFormat</span></code><a class="headerlink" href="#option-LogFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines what all will be logged to <span class="target" id="index-3"></span><a class="reference internal" href="../smsd/config.html#option-LogFile"><code class="xref config config-option docutils literal notranslate"><span class="pre">LogFile</span></code></a>. Possible values are:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">nothing</span></code></dt><dd><p>no debug level</p>
@@ -502,7 +502,7 @@ needed information to diagnose problems.</p>
 
 <dl class="config option">
 <dt id="option-Features">
-<code class="sig-name descname">Features</code><a class="headerlink" href="#option-Features" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Features</span></code><a class="headerlink" href="#option-Features" title="Permalink to this definition">¶</a></dt>
 <dd><p>Custom features for phone. This can be used as override when values coded
 in <code class="docutils literal notranslate"><span class="pre">common/gsmphones.c</span></code> are bad or missing. Consult
 <code class="docutils literal notranslate"><span class="pre">include/gammu-info.h</span></code> for possible values (all <a class="reference internal" href="../c/info.html#c.GSM_Feature" title="GSM_Feature"><code class="xref c c-type docutils literal notranslate"><span class="pre">GSM_Feature</span></code></a> values
@@ -515,7 +515,7 @@ authors.</p>
 <h3>Locales and character set options<a class="headerlink" href="#locales-and-character-set-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-GammuCoding">
-<code class="sig-name descname">GammuCoding</code><a class="headerlink" href="#option-GammuCoding" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">GammuCoding</span></code><a class="headerlink" href="#option-GammuCoding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forces using specified codepage (for example <code class="docutils literal notranslate"><span class="pre">1250</span></code> will force CP-1250 or
 <code class="docutils literal notranslate"><span class="pre">utf8</span></code> for UTF-8). This should not be needed, Gammu detects it according
 to your locales.</p>
@@ -523,7 +523,7 @@ to your locales.</p>
 
 <dl class="config option">
 <dt id="option-GammuLoc">
-<code class="sig-name descname">GammuLoc</code><a class="headerlink" href="#option-GammuLoc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">GammuLoc</span></code><a class="headerlink" href="#option-GammuLoc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to directory with localisation files (the directory should contain
 <code class="docutils literal notranslate"><span class="pre">LANG/LC_MESSAGES/gammu.mo</span></code>). If gammu is properly installed it should find
 these files automatically.</p>
@@ -537,7 +537,7 @@ user is responsible for ensuring any settings are correct for the target device
 and that they produce the desired behaviour.</p>
 <dl class="config option">
 <dt id="option-atgen_setCNMI">
-<code class="sig-name descname">atgen_setCNMI</code><a class="headerlink" href="#option-atgen_setCNMI" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">atgen_setCNMI</span></code><a class="headerlink" href="#option-atgen_setCNMI" title="Permalink to this definition">¶</a></dt>
 <dd><p>For configurations using the generic AT command protocol it is possible to
 override the default indicators used when a new SMS message is received.</p>
 <p>The value for the setting is a comma delimited list of single digits
@@ -555,7 +555,7 @@ respectively.</p>
 <h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-DataPath">
-<code class="sig-name descname">DataPath</code><a class="headerlink" href="#option-DataPath" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">DataPath</span></code><a class="headerlink" href="#option-DataPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional path where to search for data files. The default path is
 configured on build time (and defaults to <code class="docutils literal notranslate"><span class="pre">/usr/share/data/gammu</span></code> on Unix
 systems). Currently it is used only for searching files to upload to phone
@@ -671,14 +671,14 @@ bi-directional communication with the phone.</p>
 <span class="c1">;startinfo = yes</span>
 <span class="c1">;gammucoding = utf8</span>
 
-<span class="c1">; Step 1. Please find required Connection parameter and look into assigned </span>
+<span class="c1">; Step 1. Please find required Connection parameter and look into assigned</span>
 <span class="c1">; with it device type. With some Connection you must set concrete model</span>
 
 <span class="c1">; ================================================================ cables =====</span>
 <span class="c1">; New Nokia protocol for FBUS/DAU9P</span>
 <span class="c1">;    Connection &quot;fbus&quot;, device type serial</span>
 <span class="c1">; New Nokia protocol for DLR3/DLR3P</span>
-<span class="c1">;    Connection &quot;fbusdlr3&quot;/&quot;dlr3&quot;, device type serial </span>
+<span class="c1">;    Connection &quot;fbusdlr3&quot;/&quot;dlr3&quot;, device type serial</span>
 <span class="c1">; New Nokia protocol for DKU2 (and phone with USB converter on phone mainboard</span>
 <span class="c1">;                              like 6230)</span>
 <span class="c1">;    Connection &quot;dku2phonet&quot;/&quot;dku2&quot;, device type dku2 on Windows</span>
@@ -691,12 +691,12 @@ bi-directional communication with the phone.</p>
 <span class="c1">;    Connection &quot;fbuspl2303&quot;, device type usb</span>
 <span class="c1">; Old Nokia protocol for MBUS/DAU9P</span>
 <span class="c1">;    Connection &quot;mbus&quot;, device type serial</span>
-<span class="c1">; Variants: </span>
+<span class="c1">; Variants:</span>
 <span class="c1">; You can modify a bit behaviour of connection using additional flags</span>
 <span class="c1">; specified just after connection name like connection-variant.</span>
-<span class="c1">; If you&#39;re using ARK3116 cable (or any other which does not like dtr </span>
+<span class="c1">; If you&#39;re using ARK3116 cable (or any other which does not like dtr</span>
 <span class="c1">; handling), you might need -nodtr variant of connection, eg. dlr3-nodtr.</span>
-<span class="c1">; If cable you use is not powered over DTR/RTS, try using -nopower variant of </span>
+<span class="c1">; If cable you use is not powered over DTR/RTS, try using -nopower variant of</span>
 <span class="c1">; connection, eg. fbus-nopower.</span>
 <span class="c1">; -----------------------------------------------------------------------------</span>
 <span class="c1">; AT commands for DLR3, DKU5 or other AT compatible cable (8 bits, None</span>
@@ -732,7 +732,7 @@ bi-directional communication with the phone.</p>
 <span class="c1">;    Connection &quot;bluephonet&quot;, device type BT</span>
 <span class="c1">; -----------------------------------------------------------------------------</span>
 <span class="c1">; AT commands for Bluetooth stack and 6210 / DCT4 Nokia models, which don&#39;t</span>
-<span class="c1">; inform about BT services correctly (6310, 6310i with firmware lower </span>
+<span class="c1">; inform about BT services correctly (6310, 6310i with firmware lower</span>
 <span class="c1">; than 5.50, 8910,..)</span>
 <span class="c1">;    Connection &quot;bluerfat&quot;, device type BT</span>
 <span class="c1">; AT commands for Bluetooth stack with other phones (Siemens, other Nokia,etc.)</span>
@@ -776,7 +776,7 @@ bi-directional communication with the phone.</p>
 <span class="c1">; Parameter name  | Description</span>
 <span class="c1">; ----------------|------------------------------------------------------------</span>
 <span class="c1">; Model           | Should not be used unless you have a good reason to do so.</span>
-<span class="c1">;                 | If Gammu doesn&#39;t recognize your phone model, put it here. </span>
+<span class="c1">;                 | If Gammu doesn&#39;t recognize your phone model, put it here.</span>
 <span class="c1">;                 | Example values: &quot;6110&quot;, &quot;6150&quot;, &quot;6210&quot;, &quot;8210&quot;</span>
 <span class="c1">; SynchronizeTime | if you want to set time from computer to phone during</span>
 <span class="c1">;                 | starting connection. Do not rather use this option when</span>
