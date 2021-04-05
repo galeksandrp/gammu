@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Discovering protocol &mdash; Gammu 1.42.0 documentation</title>
@@ -195,20 +196,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="discovering-protocol">
+  <section id="discovering-protocol">
 <span id="id1"></span><h1>Discovering protocol<a class="headerlink" href="#discovering-protocol" title="Permalink to this headline">¶</a></h1>
 <p>You need to get a communication dump to be able to understand protocol
 or discover new commands. As most vendors provide some software for
 Windows, all following sections assume you do the sniffing on Windows.</p>
-<div class="section" id="usb">
+<section id="usb">
 <h2>USB<a class="headerlink" href="#usb" title="Permalink to this headline">¶</a></h2>
 <p>For USB there exist various tools to dump USB communication. The dumps
 can be later analyzed and used to discover protocol details or unknown
 commands. One of the best free tools available currently is <a class="reference external" href="http://www.pcausa.com/Utilities/UsbSnoop/">UsbSnoop</a>.</p>
 <p>In directory <code class="docutils literal notranslate"><span class="pre">contrib/usbsnoop</span></code> in Gammu sources you can find some tools to
 decode the output.</p>
-</div>
-<div class="section" id="serial-port">
+</section>
+<section id="serial-port">
 <h2>Serial port<a class="headerlink" href="#serial-port" title="Permalink to this headline">¶</a></h2>
 <p>Download <a class="reference external" href="http://technet.microsoft.com/en-us/sysinternals/bb896644.aspx">Portmon</a>, which allows one to capture bytes sent and received by
 ready binary software.</p>
@@ -226,8 +227,8 @@ to add model). Dump file for –decodesniff and MBUS should be specific:</p>
 <li><p>in Hex format (“Options”, “Show Hex”)</p></li>
 <li><p>without Date &amp; Time (“Options”, “Show Time” &amp; “Clock Time”)</p></li>
 </ol>
-</div>
-<div class="section" id="infrared">
+</section>
+<section id="infrared">
 <h2>Infrared<a class="headerlink" href="#infrared" title="Permalink to this headline">¶</a></h2>
 <p>First of all you need two computers with IrDA. One running linux, that will
 sniff and one running windows, which will communicate with the phone and
@@ -260,8 +261,8 @@ hex files. In the hex files you should look for primary frames with
 00 01 00 in it, because this is the FBUS header which is in every valuable
 frame sent to phone. It’s not really joy to do that, but if it brings
 support for a new phone it’s worth it :-)</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>RunOnReceive Directive &mdash; Gammu 1.42.0 documentation</title>
@@ -200,9 +201,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="runonreceive-directive">
+  <section id="runonreceive-directive">
 <span id="gammu-smsd-run"></span><h1>RunOnReceive Directive<a class="headerlink" href="#runonreceive-directive" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Gammu SMSD can be configured by <span class="target" id="index-0"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> directive (see
 <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for details) to run defined program after receiving
@@ -223,8 +224,8 @@ again.</p>
 <p>All input and output file descriptors are closed when this program is
 invoked, so you have to ensure to open files on your own.</p>
 </div>
-</div>
-<div class="section" id="environment">
+</section>
+<section id="environment">
 <h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.28.0.</span></p>
@@ -232,7 +233,7 @@ invoked, so you have to ensure to open files on your own.</p>
 <p>Program is executed with environment which contains lot of information about
 the message. You can use it together with NULL service (see
 <a class="reference internal" href="null.html#gammu-smsd-null"><span class="std std-ref">Null Backend</span></a>) to implement completely own processing of messages.</p>
-<div class="section" id="global-variables">
+<section id="global-variables">
 <h3>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
 <dl class="std envvar">
 <dt id="envvar-SMS_MESSAGES">
@@ -256,8 +257,8 @@ the message. You can use it together with NULL service (see
 (see <a class="reference internal" href="config.html#smsd-multi"><span class="std std-ref">Multiple modems</span></a>).</p>
 </dd></dl>
 
-</div>
-<div class="section" id="per-message-variables">
+</section>
+<section id="per-message-variables">
 <h3>Per message variables<a class="headerlink" href="#per-message-variables" title="Permalink to this headline">¶</a></h3>
 <p>The variables further described as <code class="docutils literal notranslate"><span class="pre">SMS_1_...</span></code> are generated for each physical
 message, where 1 is replaced by current number of message.</p>
@@ -288,8 +289,8 @@ message, where 1 is replaced by current number of message.</p>
 <p>Message Reference. If delivery status received, this variable contains TPMR of original message</p>
 </dd></dl>
 
-</div>
-<div class="section" id="per-part-variables">
+</section>
+<section id="per-part-variables">
 <h3>Per part variables<a class="headerlink" href="#per-part-variables" title="Permalink to this headline">¶</a></h3>
 <p>The variables further described as <code class="docutils literal notranslate"><span class="pre">DECODED_1_...</span></code> are generated for each message
 part, where 1 is replaced by current number of part. Set are only those
@@ -328,11 +329,11 @@ variables whose content is present in the message.</p>
 <dd><p>Size of MMS as specified in MMS indication message.</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="activating-runonreceive">
+<section id="activating-runonreceive">
 <h3>Activating RunOnReceive<a class="headerlink" href="#activating-runonreceive" title="Permalink to this headline">¶</a></h3>
 <p>To activate this feature you need to set <span class="target" id="index-2"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> in
 the <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a>.</p>
@@ -340,8 +341,8 @@ the <a class="reference internal" href="config.html#gammu-smsdrc"><span class="s
 <span class="na">RunOnReceive</span> <span class="o">=</span> <span class="s">/path/to/script.sh</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="processing-messages-from-the-files-backend">
+</section>
+<section id="processing-messages-from-the-files-backend">
 <h3>Processing messages from the files backend<a class="headerlink" href="#processing-messages-from-the-files-backend" title="Permalink to this headline">¶</a></h3>
 <p>Following script (if used as <span class="target" id="index-3"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> handler) passes
 message data to other program. This works only with the <a class="reference internal" href="files.html#gammu-smsd-files"><span class="std std-ref">Files backend</span></a>.</p>
@@ -353,8 +354,8 @@ message data to other program. This works only with the <a class="reference inte
 <span class="k">done</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="invoking-commands-based-on-message-text">
+</section>
+<section id="invoking-commands-based-on-message-text">
 <h3>Invoking commands based on message text<a class="headerlink" href="#invoking-commands-based-on-message-text" title="Permalink to this headline">¶</a></h3>
 <p>Following script (if used as <span class="target" id="index-4"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> handler) executes
 given programs based on message text.</p>
@@ -376,8 +377,8 @@ given programs based on message text.</p>
 <span class="k">esac</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="passing-message-text-to-program">
+</section>
+<section id="passing-message-text-to-program">
 <h3>Passing message text to program<a class="headerlink" href="#passing-message-text-to-program" title="Permalink to this headline">¶</a></h3>
 <p>Following script (if used as <span class="target" id="index-5"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> handler) passes
 message text and sender to external program.</p>
@@ -388,8 +389,8 @@ message text and sender to external program.</p>
 <span class="k">done</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="passing-mms-indication-parameters-to-external-program">
+</section>
+<section id="passing-mms-indication-parameters-to-external-program">
 <h3>Passing MMS indication parameters to external program<a class="headerlink" href="#passing-mms-indication-parameters-to-external-program" title="Permalink to this headline">¶</a></h3>
 <p>Following script (if used as <span class="target" id="index-6"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> handler) will write
 information about each received MMS indication to the log file. Just replace
@@ -404,8 +405,8 @@ echo command with your own program to do custom processing.</p>
 <span class="k">fi</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="processing-message-text-in-python">
+</section>
+<section id="processing-message-text-in-python">
 <h3>Processing message text in Python<a class="headerlink" href="#processing-message-text-in-python" title="Permalink to this headline">¶</a></h3>
 <p>Following script (if used as <span class="target" id="index-7"></span><a class="reference internal" href="config.html#option-RunOnReceive"><code class="xref config config-option docutils literal notranslate"><span class="pre">RunOnReceive</span></code></a> handler) written
 in Python will concatenate all text from received message:</p>
@@ -431,9 +432,9 @@ in Python will concatenate all text from received message:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number </span><span class="si">{}</span><span class="s2"> have sent text: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SMS_1_NUMBER&quot;</span><span class="p">],</span> <span class="n">text</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

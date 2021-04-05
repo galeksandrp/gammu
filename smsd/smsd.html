@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>gammu-smsd &mdash; Gammu 1.42.0 documentation</title>
@@ -196,15 +197,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gammu-smsd">
+  <section id="gammu-smsd">
 <span id="id1"></span><h1>gammu-smsd<a class="headerlink" href="#gammu-smsd" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
+<section id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>gammu-smsd [OPTION]...
 </pre></div>
 </div>
-</div>
-<div class="section" id="description">
+</section>
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>This manual page documents briefly the <strong class="program">gammu-smsd</strong> command.</p>
 <p><strong class="program">gammu-smsd</strong> is a program that periodically scans GSM modem for
@@ -342,8 +343,8 @@ service differently. Default is “GammuSMSD”.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="signals">
+</section>
+<section id="signals">
 <span id="gammu-smsd-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
 <p>SMSD can be controlled using following POSIX signals (if your platform supports this):</p>
 <dl class="simple">
@@ -367,10 +368,10 @@ service differently. Default is “GammuSMSD”.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 1.31.90: </span>Added support for SIGUSR1 and SIGUSR2.</p>
 </div>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="linux-unix-examples">
+<section id="linux-unix-examples">
 <h3>Linux/Unix Examples<a class="headerlink" href="#linux-unix-examples" title="Permalink to this headline">¶</a></h3>
 <p>Start SMSD as a daemon on Linux:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
@@ -380,16 +381,16 @@ service differently. Default is “GammuSMSD”.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon --user gammu --group gammu
 </pre></div>
 </div>
-</div>
-<div class="section" id="smsd-as-a-system-wide-daemon">
+</section>
+<section id="smsd-as-a-system-wide-daemon">
 <h3>SMSD as a system wide daemon<a class="headerlink" href="#smsd-as-a-system-wide-daemon" title="Permalink to this headline">¶</a></h3>
 <p>To use SMSD as a daemon, you might want to use init script which is shipped
 with Gammu in contrib/init directory. It is not installed by default, either
 install it manually or check INSTALL file for instructions.</p>
 <p>Under Windows 7 you might need to disable UAC (user account control) before
 you will be able to install SMSD service.</p>
-</div>
-<div class="section" id="windows-service-examples">
+</section>
+<section id="windows-service-examples">
 <h3>Windows Service Examples<a class="headerlink" href="#windows-service-examples" title="Permalink to this headline">¶</a></h3>
 <p>Install Gammu SMSD Windows service:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc -i
@@ -405,8 +406,8 @@ gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdr
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -u
 </pre></div>
 </div>
-</div>
-<div class="section" id="troubleshooting-windows-service">
+</section>
+<section id="troubleshooting-windows-service">
 <h3>Troubleshooting Windows Service<a class="headerlink" href="#troubleshooting-windows-service" title="Permalink to this headline">¶</a></h3>
 <p>If Gammu fails to start as a Windows service (you will usually get “Error
 1053: The service did not respond to the start or control request in a timely
@@ -419,8 +420,8 @@ service (without -i).</p>
 </div>
 <p>You now should be able to get errors from SMSD even if it fails to start as a
 service.</p>
-</div>
-<div class="section" id="invoking-gammu-and-suspending-smsd">
+</section>
+<section id="invoking-gammu-and-suspending-smsd">
 <span id="gammu-smsd-suspend"></span><h3>Invoking Gammu and suspending SMSD<a class="headerlink" href="#invoking-gammu-and-suspending-smsd" title="Permalink to this headline">¶</a></h3>
 <p>As you can not run Gammu and Gammu SMSD at same time on signle device, you can
 workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</cite> and
@@ -458,9 +459,9 @@ workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</c
 <span class="k">fi</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="known-limitations">
+</section>
+</section>
+<section id="known-limitations">
 <h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
 <p>You can not use same phone by more programs in same time. However in case you
 did not enable locking in <span class="target" id="index-0"></span><a class="reference internal" href="../config/index.html#section-[gammu]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[gammu]</span></code></a> section, it might be able
@@ -470,8 +471,8 @@ workaround.</p>
 <p>There is no way to detect that SMS message is reply to another by looking at
 message headers. The only way to achieve this is to add some token to the
 message and let the user include it in the message on reply.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

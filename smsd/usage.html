@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Usage &mdash; Gammu 1.42.0 documentation</title>
@@ -189,38 +190,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="usage">
+  <section id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <p>This chapter will describe basic ways of using SMSD. It’s use is not limited
 to these, but they can give you overview of SMSD abilities.</p>
-<div class="section" id="storing-messages-in-backend">
+<section id="storing-messages-in-backend">
 <h2>Storing Messages in Backend<a class="headerlink" href="#storing-messages-in-backend" title="Permalink to this headline">¶</a></h2>
 <p>The standard mode of operating SMSD. You simply configure backend service, and
 all received messages will end up in it and any message you put into outbox
 storage will be sent.</p>
-</div>
-<div class="section" id="creating-messages-to-send">
+</section>
+<section id="creating-messages-to-send">
 <h2>Creating Messages to Send<a class="headerlink" href="#creating-messages-to-send" title="Permalink to this headline">¶</a></h2>
 <p>Creating of messages to send heavily depends on service backend you use. Most
 of them support <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, which can be used to construct
 the message, or you can just insert message manually to the backend storage.</p>
 <p>Alternatively you can use <a class="reference internal" href="../c/smsd.html#c.SMSD_InjectSMS" title="SMSD_InjectSMS"><code class="xref c c-func docutils literal notranslate"><span class="pre">SMSD_InjectSMS()</span></code></a> (from C) or using
 <a class="reference internal" href="../python/smsd.html#gammu.smsd.SMSD.InjectSMS" title="gammu.smsd.SMSD.InjectSMS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gammu.smsd.SMSD.InjectSMS()</span></code></a> (from Python).</p>
-</div>
-<div class="section" id="notification-about-received-messages">
+</section>
+<section id="notification-about-received-messages">
 <h2>Notification about Received Messages<a class="headerlink" href="#notification-about-received-messages" title="Permalink to this headline">¶</a></h2>
 <p>Once SMSD receives message and stores it in backend service, it can invoke
 your own program to do any message processing, see <a class="reference internal" href="run.html#gammu-smsd-run"><span class="std std-ref">RunOnReceive Directive</span></a>.</p>
-</div>
-<div class="section" id="monitoring-smsd-status">
+</section>
+<section id="monitoring-smsd-status">
 <h2>Monitoring SMSD Status<a class="headerlink" href="#monitoring-smsd-status" title="Permalink to this headline">¶</a></h2>
 <p>You can use <a class="reference internal" href="monitor.html#gammu-smsd-monitor"><span class="std std-ref">gammu-smsd-monitor</span></a> to monitor status of SMSD. It uses
 shared memory segment to get current status of running SMSD.</p>
 <p>Alternatively you can get the same functionality from libGammu using
 <a class="reference internal" href="../c/smsd.html#c.SMSD_GetStatus" title="SMSD_GetStatus"><code class="xref c c-func docutils literal notranslate"><span class="pre">SMSD_GetStatus()</span></code></a> or python-gammu using
 <a class="reference internal" href="../python/smsd.html#gammu.smsd.SMSD.GetStatus" title="gammu.smsd.SMSD.GetStatus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gammu.smsd.SMSD.GetStatus()</span></code></a>.</p>
-</div>
-<div class="section" id="reporting-bugs">
+</section>
+<section id="reporting-bugs">
 <span id="reporting-bugs-smsd"></span><h2>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h2>
 <p>Please report bugs to &lt;<a class="reference external" href="https://github.com/gammu/gammu/issues">https://github.com/gammu/gammu/issues</a>&gt;.</p>
 <p>Before reporting a bug, please enable verbose logging in SMSD configuration
@@ -236,8 +237,8 @@ by <span class="target" id="index-0"></span><a class="reference internal" href="
 </pre></div>
 </div>
 <p>and include this verbose log within bug report.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

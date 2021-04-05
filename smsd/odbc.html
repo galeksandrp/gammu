@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>ODBC Backend &mdash; Gammu 1.42.0 documentation</title>
@@ -202,9 +203,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="odbc-backend">
+  <section id="odbc-backend">
 <span id="gammu-smsd-odbc"></span><h1>ODBC Backend<a class="headerlink" href="#odbc-backend" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.29.92.</span></p>
@@ -214,13 +215,13 @@ parameters are defined by configuration (see <a class="reference internal" href=
 configuration options).</p>
 <p>For tables description see <a class="reference internal" href="tables.html#gammu-smsd-tables"><span class="std std-ref">SMSD Database Structure</span></a>.</p>
 <p>This backend is based on <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>.</p>
-</div>
-<div class="section" id="supported-drivers">
+</section>
+<section id="supported-drivers">
 <h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this headline">¶</a></h2>
 <p>On Microsoft Windows, Gammu uses native ODBC, on other platforms, <a class="reference external" href="http://www.unixodbc.org/">unixODBC</a>
 can be used.</p>
-</div>
-<div class="section" id="limitations">
+</section>
+<section id="limitations">
 <h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
 <p>Due to limits of the ODBC interface, Gammu can not reliably detect which SQL
 engine it is connected to.</p>
@@ -229,8 +230,8 @@ correct dialect.</p>
 <p>If that fails, you can also tweak the SQL queries to work in used SQL server,
 see <a class="reference internal" href="sql.html#sql-queries"><span class="std std-ref">SQL Queries</span></a> for more details. Still you should set
 <span class="target" id="index-1"></span><a class="reference internal" href="config.html#option-SQL"><code class="xref config config-option docutils literal notranslate"><span class="pre">SQL</span></code></a> to closest matching SQL dialect.</p>
-</div>
-<div class="section" id="configuration">
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database. You can use examples given in database specific backends parts of
@@ -248,8 +249,8 @@ Windows or in global configuration on Linux).</p>
 <a class="reference external" href="https://support.microsoft.com/kb/305599">https://support.microsoft.com/kb/305599</a></p>
 <p>For unixODBC this is documented in the user manual:
 <a class="reference external" href="http://www.unixodbc.org/doc/UserManual/">http://www.unixodbc.org/doc/UserManual/</a></p>
-</div>
-<div class="section" id="creating-tables">
+</section>
+<section id="creating-tables">
 <h2>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h2>
 <p>Prior to starting SMSD you have to create tables it will use. Gammu ships SQL
 scripts for several databases to do that:</p>
@@ -258,8 +259,8 @@ scripts for several databases to do that:</p>
 <li><p><a class="reference internal" href="pgsql.html#pgsql-create"><span class="std std-ref">Creating tables for PostgreSQL</span></a></p></li>
 <li><p><a class="reference internal" href="dbi.html#sqlite-create"><span class="std std-ref">Creating tables for SQLite</span></a></p></li>
 </ul>
-</div>
-<div class="section" id="example">
+</section>
+<section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>Example configuration:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -275,8 +276,8 @@ scripts for several databases to do that:</p>
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a></p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

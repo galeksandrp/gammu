@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Objects &mdash; Gammu 1.42.0 documentation</title>
@@ -202,14 +203,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="objects">
+  <section id="objects">
 <h1>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h1>
 <p>For various (mostly historical) reasons, all objects you get from Gammu are
 not real objects but rather a dictionaries. This has quite a big impact of
 usability and will most likely change in the future.</p>
 <p>All the objects basically map to C structures, so you might also refer to
 <a class="reference internal" href="../c/index.html#libgammu"><span class="std std-ref">libGammu</span></a> chapter.</p>
-<div class="section" id="sms-object">
+<section id="sms-object">
 <span id="sms-obj"></span><h2>SMS Object<a class="headerlink" href="#sms-object" title="Permalink to this headline">¶</a></h2>
 <p>Object describing single SMS message in a way GSM network handles is (140
 bytes of data). You can construct it from <a class="reference internal" href="#sms-info-obj"><span class="std std-ref">SMS Info Object</span></a> using
@@ -375,8 +376,8 @@ long</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="udh-object">
+</section>
+<section id="udh-object">
 <span id="udh-obj"></span><h2>UDH Object<a class="headerlink" href="#udh-object" title="Permalink to this headline">¶</a></h2>
 <p>UDH dictionary can consist of following fields:</p>
 <dl class="py attribute">
@@ -446,8 +447,8 @@ long</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="smsc-object">
+</section>
+<section id="smsc-object">
 <span id="smsc-obj"></span><h2>SMSC Object<a class="headerlink" href="#smsc-object" title="Permalink to this headline">¶</a></h2>
 <p>SMSC dictionary can consist of following fields:</p>
 <dl class="py attribute">
@@ -507,8 +508,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sms-info-object">
+</section>
+<section id="sms-info-object">
 <span id="sms-info-obj"></span><h2>SMS Info Object<a class="headerlink" href="#sms-info-object" title="Permalink to this headline">¶</a></h2>
 <p>Message info dictionary can consist of following fields:</p>
 <dl class="py attribute">
@@ -553,8 +554,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sms-info-part-object">
+</section>
+<section id="sms-info-part-object">
 <span id="sms-info-part-obj"></span><h2>SMS Info Part Object<a class="headerlink" href="#sms-info-part-object" title="Permalink to this headline">¶</a></h2>
 <p>Message component can consist of following fields:</p>
 <dl class="py attribute">
@@ -738,8 +739,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <dd><p>String to encode in message.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="todo-object">
+</section>
+<section id="todo-object">
 <span id="todo-obj"></span><h2>Todo Object<a class="headerlink" href="#todo-object" title="Permalink to this headline">¶</a></h2>
 <p>Todo entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
@@ -815,8 +816,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="todo-entries-object">
+</section>
+<section id="todo-entries-object">
 <span id="todo-entry-obj"></span><h2>Todo Entries Object<a class="headerlink" href="#todo-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt id="id11">
@@ -846,8 +847,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <dd><p>Actual value, corresponding type to Type field.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="calendar-object">
+</section>
+<section id="calendar-object">
 <span id="cal-obj"></span><h2>Calendar Object<a class="headerlink" href="#calendar-object" title="Permalink to this headline">¶</a></h2>
 <p>Calendar entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
@@ -913,8 +914,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="calendar-entries-object">
+</section>
+<section id="calendar-entries-object">
 <span id="cal-entry-obj"></span><h2>Calendar Entries Object<a class="headerlink" href="#calendar-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt id="id15">
@@ -951,8 +952,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <dd><p>Actual value, corresponding type to Type field.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="phonebook-object">
+</section>
+<section id="phonebook-object">
 <span id="pbk-obj"></span><h2>Phonebook Object<a class="headerlink" href="#phonebook-object" title="Permalink to this headline">¶</a></h2>
 <p>Phonebook entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
@@ -984,8 +985,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="phonebook-entries-object">
+</section>
+<section id="phonebook-entries-object">
 <span id="pbk-entry-obj"></span><h2>Phonebook Entries Object<a class="headerlink" href="#phonebook-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt id="id19">
@@ -1067,8 +1068,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <dd><p>Type of picture which is stored in Value field (only for Picture fields).</p>
 </dd></dl>
 
-</div>
-<div class="section" id="file-object">
+</section>
+<section id="file-object">
 <span id="file-obj"></span><h2>File Object<a class="headerlink" href="#file-object" title="Permalink to this headline">¶</a></h2>
 <p>File is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
@@ -1186,8 +1187,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="divert-type">
+</section>
+<section id="divert-type">
 <span id="id27"></span><h2>Divert Type<a class="headerlink" href="#divert-type" title="Permalink to this headline">¶</a></h2>
 <p>The divert type can have one of following values:</p>
 <ul class="simple">
@@ -1196,8 +1197,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">OutOfReach</span></code> - Divert when phone off or no coverage.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AllTypes</span></code> - Divert all calls without ringing.</p></li>
 </ul>
-</div>
-<div class="section" id="call-type">
+</section>
+<section id="call-type">
 <span id="divert-call"></span><h2>Call Type<a class="headerlink" href="#call-type" title="Permalink to this headline">¶</a></h2>
 <p>The call type for diverts can have one of following values:</p>
 <ul class="simple">
@@ -1206,8 +1207,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">Data</span></code> - Data calls.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">All</span></code> - All calls.</p></li>
 </ul>
-</div>
-<div class="section" id="call-divert-objects">
+</section>
+<section id="call-divert-objects">
 <span id="divert-entry"></span><h2>Call Divert Objects<a class="headerlink" href="#call-divert-objects" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt id="DivertType">
@@ -1233,8 +1234,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <dd><p>Timeout after which the divert will happen.</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

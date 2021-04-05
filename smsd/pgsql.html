@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>PostgreSQL Backend &mdash; Gammu 1.42.0 documentation</title>
@@ -200,17 +201,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="postgresql-backend">
+  <section id="postgresql-backend">
 <span id="gammu-smsd-pgsql"></span><h1>PostgreSQL Backend<a class="headerlink" href="#postgresql-backend" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>PGSQL backend stores all data in a <a class="reference external" href="https://www.postgresql.org/">PostgreSQL</a> database server, which
 parameters are defined by configuration (see <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for description of
 configuration options).</p>
 <p>For tables description see <a class="reference internal" href="tables.html#gammu-smsd-tables"><span class="std std-ref">SMSD Database Structure</span></a>.</p>
 <p>This backend is based on <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>.</p>
-</div>
-<div class="section" id="configuration">
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database, which is described below.</p>
@@ -225,8 +226,8 @@ database, which is described below.</p>
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a></p>
 </div>
-</div>
-<div class="section" id="creating-tables-for-postgresql">
+</section>
+<section id="creating-tables-for-postgresql">
 <span id="pgsql-create"></span><h2>Creating tables for PostgreSQL<a class="headerlink" href="#creating-tables-for-postgresql" title="Permalink to this headline">¶</a></h2>
 <p>SQL script for creating tables in PostgreSQL database:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>--
@@ -504,16 +505,16 @@ CREATE TRIGGER update_timestamp BEFORE UPDATE ON sentitems FOR EACH ROW EXECUTE 
 <p class="admonition-title">Note</p>
 <p>You can find the script in <code class="file docutils literal notranslate"><span class="pre">docs/sql/pgsql.sql</span></code> as well.</p>
 </div>
-</div>
-<div class="section" id="upgrading-tables">
+</section>
+<section id="upgrading-tables">
 <h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to upgrade database structure is to backup old one and start
 with creating new one based on example above.</p>
 <p>For upgrading existing database, you can use changes described in
 <a class="reference internal" href="tables.html#smsd-tables-history"><span class="std std-ref">History of database structure</span></a> and then manually update <code class="docutils literal notranslate"><span class="pre">Version</span></code> field in
 <code class="docutils literal notranslate"><span class="pre">gammu</span></code> table.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

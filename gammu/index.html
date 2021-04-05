@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Gammu Utility &mdash; Gammu 1.42.0 documentation</title>
@@ -223,21 +224,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gammu-utility">
+  <section id="gammu-utility">
 <span id="gammu"></span><h1>Gammu Utility<a class="headerlink" href="#gammu-utility" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
+<section id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>gammu [parameters] &lt;command&gt; [options]
 </pre></div>
 </div>
 <p>Commands actually indicate which operation should Gammu perform. They can be
 specified with or without a leading <code class="docutils literal notranslate"><span class="pre">--</span></code>.</p>
-</div>
-<div class="section" id="description">
+</section>
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>This program is a tool for mobile phones. Many vendors and phones
 are supported, for actual listing see <a class="reference external" href="https://wammu.eu/phones/">Gammu Phones Database</a>.</p>
-<div class="section" id="options">
+<section id="options">
 <h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
 <p>Parameters before command configure gammu behaviour:</p>
 <dl class="std option">
@@ -264,8 +265,8 @@ are supported, for actual listing see <a class="reference external" href="https:
 <dd><p>file for logging debug messages</p>
 </dd></dl>
 
-</div>
-<div class="section" id="call-commands">
+</section>
+<section id="call-commands">
 <h3>Call commands<a class="headerlink" href="#call-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-answercall">
@@ -365,15 +366,15 @@ be terminated after <code class="docutils literal notranslate"><span class="pre"
 <dd><p>Unholds call.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="sms-and-ems-commands">
+</section>
+<section id="sms-and-ems-commands">
 <span id="gammu-sms"></span><h3>SMS and EMS commands<a class="headerlink" href="#sms-and-ems-commands" title="Permalink to this headline">¶</a></h3>
 <p>Sending messages might look a bit complicated on first attempt to use.
 But be patient, the command line has been written in order to allow
 almost every usage. See EXAMPLE section for some hints on usage.</p>
 <p>There is also an option to use <a class="reference internal" href="../smsd/smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> when you want to send or
 receive more messages and process them automatically.</p>
-<div class="section" id="introduction-to-sms-formats">
+<section id="introduction-to-sms-formats">
 <h4>Introduction to SMS formats<a class="headerlink" href="#introduction-to-sms-formats" title="Permalink to this headline">¶</a></h4>
 <p>Gammu has support for many SMS formats like:</p>
 <dl class="simple">
@@ -391,11 +392,11 @@ receive more messages and process them automatically.</p>
 <p>You need to ensure that the target phone supports message type you want to
 send. Otherwise the phone will not be able to display it or will even crash,
 because firmware of phone did not expect this possibility.</p>
-</div>
-<div class="section" id="encoding-chars-in-sms-text">
+</section>
+<section id="encoding-chars-in-sms-text">
 <h4>Encoding chars in SMS text<a class="headerlink" href="#encoding-chars-in-sms-text" title="Permalink to this headline">¶</a></h4>
 <p>Text in SMS can be coded using two ways:</p>
-<div class="section" id="gsm-default-alphabet">
+<section id="gsm-default-alphabet">
 <h5>GSM Default Alphabet<a class="headerlink" href="#gsm-default-alphabet" title="Permalink to this headline">¶</a></h5>
 <p>With <cite>GSM Default Alphabet</cite> you can fit at most 160 chars into single SMS
 (Gammu doesn’t support compressing such texts according to GSM standards, but
@@ -409,8 +410,8 @@ from limited set:</p>
 <li><p>some symbols like  &#64; ! ” # &amp; / ( ) % * + = - , . : ; &lt; &gt; ?</p></li>
 <li><p>few others</p></li>
 </ul>
-</div>
-<div class="section" id="unicode">
+</section>
+<section id="unicode">
 <h5>Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h5>
 <p>With <cite>Unicode</cite> single SMS can contain at most 70 chars, but these can be
 any chars including all national and special ones.</p>
@@ -419,8 +420,8 @@ any chars including all national and special ones.</p>
 <p>Please note, that some older phones might have problems displaying such
 message.</p>
 </div>
-</div>
-<div class="section" id="conversion">
+</section>
+<section id="conversion">
 <h5>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h5>
 <p>Gammu tries to do the best to handle non ASCII characters in your message.
 Everything is internally handled in Unicode (the input is converted depending
@@ -432,9 +433,9 @@ encoding for some characters in GSM Default Alphabet (it is needed for <code cla
 <code class="docutils literal notranslate"><span class="pre">\</span></code> <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">~</span></code> <code class="docutils literal notranslate"><span class="pre">|</span></code>). The characters which are not present in GSM Default Alphabet
 are transliterated to closest ASCII equivalent (accents are removed).
 Remaining not known characters are replaced by question mark.</p>
-</div>
-</div>
-<div class="section" id="sms-commands">
+</section>
+</section>
+<section id="sms-commands">
 <h4>SMS commands<a class="headerlink" href="#sms-commands" title="Permalink to this headline">¶</a></h4>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-addsmsfolder">
@@ -1084,11 +1085,11 @@ intact, it just changes the SMSC number.</p>
 <p>Locations are numerated from 1.</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="memory-phonebooks-and-calls-commands">
+</section>
+</section>
+<section id="memory-phonebooks-and-calls-commands">
 <h3>Memory (phonebooks and calls) commands<a class="headerlink" href="#memory-phonebooks-and-calls-commands" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="memory-types">
+<section id="memory-types">
 <span id="id1"></span><h4>Memory types<a class="headerlink" href="#memory-types" title="Permalink to this headline">¶</a></h4>
 <p>Gammu recognizes following memory types:</p>
 <dl class="simple">
@@ -1111,8 +1112,8 @@ intact, it just changes the SMSC number.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">SL</span></code></dt><dd><p>sent SMS log</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="memory-commands">
+</section>
+<section id="memory-commands">
 <h4>Memory commands<a class="headerlink" href="#memory-commands" title="Permalink to this headline">¶</a></h4>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-deleteallmemory">
@@ -1157,9 +1158,9 @@ case insensitive substring lookup. You can interrupt searching by pressing
 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">C</kbd></kbd>.</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="filesystem-commands">
+</section>
+</section>
+<section id="filesystem-commands">
 <h3>Filesystem commands<a class="headerlink" href="#filesystem-commands" title="Permalink to this headline">¶</a></h3>
 <p>Gammu allows one to access phones using native protocol (Nokias) or OBEX. Your
 phone can also support usb storage, which is handled on the operating system
@@ -1298,8 +1299,8 @@ vCalendar, most of phones will offer you to import it.</p>
 <code class="sig-name descname"><span class="pre">setfileattrib</span></code><code class="sig-prename descclassname"> <span class="pre">folderID</span> <span class="pre">[-system]</span> <span class="pre">[-readonly]</span> <span class="pre">[-hidden]</span> <span class="pre">[-protected]</span></code><a class="headerlink" href="#cmdoption-gammu-arg-setfileattrib" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="logo-and-pictures-commands">
+</section>
+<section id="logo-and-pictures-commands">
 <h3>Logo and pictures commands<a class="headerlink" href="#logo-and-pictures-commands" title="Permalink to this headline">¶</a></h3>
 <p>These options are mainly (there are few exceptions) for monochromatic logos and
 images available in older phones. Recognized file formats: xpm (only saving),
@@ -1422,8 +1423,8 @@ supports it, use location 1, 2 or 3 for these).</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="ringtones-commands">
+</section>
+<section id="ringtones-commands">
 <h3>Ringtones commands<a class="headerlink" href="#ringtones-commands" title="Permalink to this headline">¶</a></h3>
 <p>Ringtones are mostly supported only for older phones. For recent phones you
 usually just upload them to some folder in phone filesystem.</p>
@@ -1488,8 +1489,8 @@ will blink later in phone menus.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="calendar-notes-commands">
+</section>
+<section id="calendar-notes-commands">
 <h3>Calendar notes commands<a class="headerlink" href="#calendar-notes-commands" title="Permalink to this headline">¶</a></h3>
 <p>In Nokia 3310, 3315 and 3330 these are named “Reminders” and have some limitations (depending on phone firmware version).</p>
 <dl class="std option">
@@ -1510,8 +1511,8 @@ will blink later in phone menus.</p>
 <dd><p>Retrieves selected calendar entries from phone.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="to-do-list-commands">
+</section>
+<section id="to-do-list-commands">
 <h3>To do list commands<a class="headerlink" href="#to-do-list-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-deletetodo">
@@ -1531,8 +1532,8 @@ will blink later in phone menus.</p>
 <dd><p>Retrieves selected todo entries from phone.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="notes-commands">
+</section>
+<section id="notes-commands">
 <h3>Notes commands<a class="headerlink" href="#notes-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getallnotes">
@@ -1545,8 +1546,8 @@ phones even if they have notes inside phone.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="date-time-and-alarm-commands">
+</section>
+<section id="date-time-and-alarm-commands">
 <h3>Date, time and alarm commands<a class="headerlink" href="#date-time-and-alarm-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getalarm">
@@ -1580,8 +1581,8 @@ phone and use Gammu. See <span class="target" id="index-1"></span><a class="refe
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="categories-commands">
+</section>
+<section id="categories-commands">
 <h3>Categories commands<a class="headerlink" href="#categories-commands" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1612,8 +1613,8 @@ phone and use Gammu. See <span class="target" id="index-1"></span><a class="refe
 <code class="sig-name descname"><span class="pre">listtodocategory</span></code><code class="sig-prename descclassname"> <span class="pre">text|number</span></code><a class="headerlink" href="#cmdoption-gammu-arg-listtodocategory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="backing-up-and-restoring-commands">
+</section>
+<section id="backing-up-and-restoring-commands">
 <h3>Backing up and restoring commands<a class="headerlink" href="#backing-up-and-restoring-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-addnew">
@@ -1761,8 +1762,8 @@ convert, it simply takes converts all what can be saved into output file.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="nokia-specific-commands">
+</section>
+<section id="nokia-specific-commands">
 <h3>Nokia specific commands<a class="headerlink" href="#nokia-specific-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-nokiaaddfile">
@@ -1992,8 +1993,8 @@ phone doesn’t have an internal battery for the clock (like 3xxx).</p>
 <code class="sig-name descname"><span class="pre">nokiavibratest</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-gammu-arg-nokiavibratest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="siemens-specific-commands">
+</section>
+<section id="siemens-specific-commands">
 <h3>Siemens specific commands<a class="headerlink" href="#siemens-specific-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-siemensnetmonact">
@@ -2012,8 +2013,8 @@ are 1 for full and 2 for simple mode.</p>
 <code class="sig-name descname"><span class="pre">siemenssatnetmon</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-gammu-arg-siemenssatnetmon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="network-commands">
+</section>
+<section id="network-commands">
 <h3>Network commands<a class="headerlink" href="#network-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getgprspoint">
@@ -2037,8 +2038,8 @@ are 1 for full and 2 for simple mode.</p>
 <code class="sig-name descname"><span class="pre">setautonetworklogin</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-gammu-arg-setautonetworklogin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="wap-settings-and-bookmarks-commands">
+</section>
+<section id="wap-settings-and-bookmarks-commands">
 <h3>WAP settings and bookmarks commands<a class="headerlink" href="#wap-settings-and-bookmarks-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-deletewapbookmark">
@@ -2071,8 +2072,8 @@ are 1 for full and 2 for simple mode.</p>
 <p>Locations are numerated from 1.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="mms-and-mms-settings-commands">
+</section>
+<section id="mms-and-mms-settings-commands">
 <h3>MMS and MMS settings commands<a class="headerlink" href="#mms-and-mms-settings-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getallmms">
@@ -2099,8 +2100,8 @@ are 1 for full and 2 for simple mode.</p>
 <code class="sig-name descname"><span class="pre">readmmsfile</span></code><code class="sig-prename descclassname"> <span class="pre">file</span> <span class="pre">[-save]</span></code><a class="headerlink" href="#cmdoption-gammu-arg-readmmsfile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="fm-radio-commands">
+</section>
+<section id="fm-radio-commands">
 <h3>FM radio commands<a class="headerlink" href="#fm-radio-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getfmstation">
@@ -2108,8 +2109,8 @@ are 1 for full and 2 for simple mode.</p>
 <dd><p>Show info about FM stations in phone</p>
 </dd></dl>
 
-</div>
-<div class="section" id="phone-information-commands">
+</section>
+<section id="phone-information-commands">
 <h3>Phone information commands<a class="headerlink" href="#phone-information-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-battery">
@@ -2151,8 +2152,8 @@ only given number of iterations is performed.</p>
 </ul>
 </dd></dl>
 
-</div>
-<div class="section" id="phone-settings-commands">
+</section>
+<section id="phone-settings-commands">
 <h3>Phone settings commands<a class="headerlink" href="#phone-settings-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-getcalendarsettings">
@@ -2204,8 +2205,8 @@ week or automatic deleting of old entries.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="dumps-decoding-commands">
+</section>
+<section id="dumps-decoding-commands">
 <h3>Dumps decoding commands<a class="headerlink" href="#dumps-decoding-commands" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2224,8 +2225,8 @@ week or automatic deleting of old entries.</p>
 <dd><p>Allows one to decode sniffs. See <a class="reference internal" href="../protocol/discovering.html#discovering-protocol"><span class="std std-ref">Discovering protocol</span></a> for more details.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="other-commands">
+</section>
+<section id="other-commands">
 <h3>Other commands<a class="headerlink" href="#other-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-entersecuritycode">
@@ -2300,8 +2301,8 @@ week or automatic deleting of old entries.</p>
 automatically appended to filename based on what data phone provides.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="batch-mode-commands">
+</section>
+<section id="batch-mode-commands">
 <h3>Batch mode commands<a class="headerlink" href="#batch-mode-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-batch">
@@ -2314,8 +2315,8 @@ specify a file from where they would be read (special case <code class="docutils
 input).</p>
 </dd></dl>
 
-</div>
-<div class="section" id="configuration-commands">
+</section>
+<section id="configuration-commands">
 <h3>Configuration commands<a class="headerlink" href="#configuration-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-searchphone">
@@ -2339,8 +2340,8 @@ find working setup for Gammu.</p>
 support libraries, this can be useful for updates.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="gammu-information-commands">
+</section>
+<section id="gammu-information-commands">
 <h3>Gammu information commands<a class="headerlink" href="#gammu-information-commands" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt id="cmdoption-gammu-arg-checkversion">
@@ -2369,9 +2370,9 @@ also specify a help category to get more detailed help on some topic.</p>
 <dd><p>Print version information and license.</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="return-values">
+</section>
+</section>
+<section id="return-values">
 <h2>Return values<a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
 <p>gammu returns 0 on success. In case of failure non zero code is
 returned.</p>
@@ -2537,15 +2538,15 @@ values increased by 100:</p>
 <dt>172</dt><dd><p>Entry is read only.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="configuration">
+<section id="configuration">
 <h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
 <p>To check it out, you need to have configuration file for gammu, see
 <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a> for more details about it.</p>
-</div>
-<div class="section" id="sending-messages">
+</section>
+<section id="sending-messages">
 <h3>Sending messages<a class="headerlink" href="#sending-messages" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2579,15 +2580,15 @@ values increased by 100:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms EMS <span class="m">123456</span> -protected <span class="m">2</span> -variablebitmaplong ala.bmp -toneSElong axelf.txt -toneSE ring.txt
 </pre></div>
 </div>
-</div>
-<div class="section" id="retrieving-ussd-replies">
+</section>
+<section id="retrieving-ussd-replies">
 <h3>Retrieving USSD replies<a class="headerlink" href="#retrieving-ussd-replies" title="Permalink to this headline">¶</a></h3>
 <p>For example for retrieving prepaid card status or retrieving various network info:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu getussd <span class="s1">&#39;#555#&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="uploading-files-to-nokia">
+</section>
+<section id="uploading-files-to-nokia">
 <h3>Uploading files to Nokia<a class="headerlink" href="#uploading-files-to-nokia" title="Permalink to this headline">¶</a></h3>
 <p>Add Alien to applications in your phone (you need to have files Alien.JAD and Alien.JAR in current directory):</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu nokiaaddfile APPLICATION Alien
@@ -2597,15 +2598,15 @@ values increased by 100:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu nokiaaddfile TONES file.mid
 </pre></div>
 </div>
-</div>
-<div class="section" id="setting-operator-logo">
+</section>
+<section id="setting-operator-logo">
 <h3>Setting operator logo<a class="headerlink" href="#setting-operator-logo" title="Permalink to this headline">¶</a></h3>
 <p>Set logo for network <code class="docutils literal notranslate"><span class="pre">230</span> <span class="pre">03</span></code> (Vodafone CZ):</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu setbitmap OPERATOR ala.bmp <span class="s2">&quot;230 03&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="converting-file-formats">
+</section>
+<section id="converting-file-formats">
 <span id="converting-formats"></span><h3>Converting file formats<a class="headerlink" href="#converting-file-formats" title="Permalink to this headline">¶</a></h3>
 <p>The formats conversion can done using <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">savefile</span></code> or
 <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">convertbackup</span></code> commands.</p>
@@ -2621,8 +2622,8 @@ values increased by 100:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu convertbackup phone.backup output.vcf
 </pre></div>
 </div>
-</div>
-<div class="section" id="reporting-bugs">
+</section>
+<section id="reporting-bugs">
 <h3>Reporting bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h3>
 <p>There are definitely many bugs, reporting to author is welcome. Please include
 some useful information when sending bug reports (especially debug logs,
@@ -2643,9 +2644,9 @@ phone and stores dump of communication there. You can also find some
 hints for improving support for your phone in this log.</p>
 <p>See &lt;<a class="reference external" href="https://wammu.eu/support/bugs/">https://wammu.eu/support/bugs/</a>&gt; for more information on reporting bugs.</p>
 <p>Please report bugs to <a class="reference external" href="https://github.com/gammu/gammu/issues">Gammu bug tracker</a>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

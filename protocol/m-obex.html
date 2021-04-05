@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>m-obex protocol used by some Samsung mobiles &mdash; Gammu 1.42.0 documentation</title>
@@ -231,23 +232,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="m-obex-protocol-used-by-some-samsung-mobiles">
+  <section id="m-obex-protocol-used-by-some-samsung-mobiles">
 <h1>m-obex protocol used by some Samsung mobiles<a class="headerlink" href="#m-obex-protocol-used-by-some-samsung-mobiles" title="Permalink to this headline">¶</a></h1>
 <p>This document is copied from &lt;<a class="reference external" href="http://code.google.com/p/samsyncro/wiki/mobex">http://code.google.com/p/samsyncro/wiki/mobex</a>&gt; and extended.</p>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This is an attempt to document the m-obex protocol. It is a obex-variation by Samsung used to exchange PIM data and files over bluetooth.</p>
 <p>This documentation is by no means complete but is only a reference for the samsyncro implementation. As I don’t know the obex protocol I can’t say in which parts it differs from the standard-obex. The only thing I found strange is the fact, that you will always get 0xA0 as a response. Which means Ok, success in obex. If there was an error you will find it’s error code in the 0x42 header. If this is a normal behavior: Why are there so many response codes defined?</p>
 <p>The information about the protocol was gained by listening to the transferred data from Samsungs New PC Studio to a SGH-F480i and B2100 mobile.</p>
-</div>
-<div class="section" id="requirements">
+</section>
+<section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Established bluetooth connection to the serial channel of the mobile</p></li>
 <li><p>Some way to access this serial port. For example minicom.</p></li>
 </ul>
-</div>
-<div class="section" id="starting-the-obex-server">
+</section>
+<section id="starting-the-obex-server">
 <h2>Starting the obex server<a class="headerlink" href="#starting-the-obex-server" title="Permalink to this headline">¶</a></h2>
 <p>To start the obex server you have to send this AT command first:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="o">+</span><span class="n">SYNCML</span><span class="o">=</span><span class="n">MOBEXSTART</span>
@@ -257,8 +258,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>AT$TSSPCSW=1
 </pre></div>
 </div>
-</div>
-<div class="section" id="obex-commands">
+</section>
+<section id="obex-commands">
 <h2>Obex commands<a class="headerlink" href="#obex-commands" title="Permalink to this headline">¶</a></h2>
 <p>In the following chapters I will describe the obex packages to read and edit data on the mobile. I think most of them are in standard-obex format and are following this structure:</p>
 <table class="docutils align-default">
@@ -349,12 +350,12 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="contacts">
+</section>
+<section id="contacts">
 <h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="get-contacts-count">
+<section id="get-contacts-count">
 <h3>Get contacts count<a class="headerlink" href="#get-contacts-count" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="request">
+<section id="request">
 <h4>Request<a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 25</dt><dd><p>Obex Get</p>
@@ -366,8 +367,8 @@
 <dt>4C 00 04 01</dt><dd><p>Unknown! Didn’ see PC Studio sending something other than 0x01 as parameter</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="answer">
+</section>
+<section id="answer">
 <h4>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 14</dt><dd><p>Obex ok</p>
@@ -379,11 +380,11 @@
 <dt><em>49</em> 00 07 07 D0 00 18</dt><dd><p>First two data bytes: maximum number of contacts (0x07D0 = 2000). Last two data bytes: Current number of contacts</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="list-all">
+</section>
+</section>
+<section id="list-all">
 <h3>List all<a class="headerlink" href="#list-all" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id1">
+<section id="id1">
 <h4>Request<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 26</dt><dd><p>Obex Get package</p>
@@ -395,8 +396,8 @@
 <dt><em>4C</em> 00 06 01 00 00</dt><dd><p>First Byte unknown. Last two bytes: increment until all contacts received</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h4>Answer<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <dl>
 <dt><em>A0</em> 08 C1</dt><dd><p>Obex Ok</p>
@@ -411,12 +412,12 @@
 </dl>
 <p>To get all contacts the request have to be sent several times. The last two bytes must be incremented by every call.</p>
 <p>The end of the contacts list is reached if the header 0x4C is 0. The header will be 4C 00 05 00 00.</p>
-</div>
-</div>
-<div class="section" id="create-a-contact">
+</section>
+</section>
+<section id="create-a-contact">
 <h3>Create a contact<a class="headerlink" href="#create-a-contact" title="Permalink to this headline">¶</a></h3>
 <p>Beware: This is a put operation and is performed in some obex implementations in several packages (for example 0x02, 0x02, 0x82). But I didn’t get the mobile to accept this. I had to create/update PIM data in exactly one package.</p>
-<div class="section" id="id3">
+<section id="id3">
 <h4>Request<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 88</dt><dd><p>Obex put</p>
@@ -432,8 +433,8 @@
 <dt>49 00 5D 42 45….</dt><dd><p>Contact as vcard</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h4>Answer<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 12</dt><dd><p>Obex ok</p>
@@ -445,12 +446,12 @@
 <dt><em>49</em> 00 05 00 21</dt><dd><p>last two bytes: the id of the newly created contact</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="update-a-contact">
+</section>
+</section>
+<section id="update-a-contact">
 <h3>Update a contact<a class="headerlink" href="#update-a-contact" title="Permalink to this headline">¶</a></h3>
 <p>Beware: This is a put operation and is performed in some obex implementations in several packages (for example 0x02, 0x02, 0x82). But I didn’t get the mobile to accept this. I had to create/update PIM data in exactly one package.</p>
-<div class="section" id="id5">
+<section id="id5">
 <h4>Request<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 8D</dt><dd><p>Obex put</p>
@@ -466,8 +467,8 @@
 <dt>49 00 61 42…</dt><dd><p>Contact as vcard</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h4>Answer<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 08</dt><dd><p>Obex ok</p>
@@ -475,12 +476,12 @@
 <dt><em>4C</em> 00 05 00 00</dt><dd><p>Error code: 0x00 0x00 means successful</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="read-one-contact">
+</section>
+</section>
+<section id="read-one-contact">
 <h3>Read one contact<a class="headerlink" href="#read-one-contact" title="Permalink to this headline">¶</a></h3>
 <p>There is also the possibility to read exactly one contact.</p>
-<div class="section" id="id7">
+<section id="id7">
 <h4>Request<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 26</dt><dd><p>Obex get</p>
@@ -492,8 +493,8 @@
 <dt><em>4C</em> 00 06 01 00 20</dt><dd><p>First byte:? Last two bytes: Id of contact</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h4>Answer<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 C4</dt><dd><p>Obex ok</p>
@@ -505,12 +506,12 @@
 <dt>49 00 B7 42 45 47 49 4E …</dt><dd><p>contact as vcard. TODO: where is id? First two bytes?</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="delete-contact">
+</section>
+</section>
+<section id="delete-contact">
 <h3>Delete contact<a class="headerlink" href="#delete-contact" title="Permalink to this headline">¶</a></h3>
 <p>To delete a contact you only have to know it’s id.</p>
-<div class="section" id="id9">
+<section id="id9">
 <h4>Request<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 28</dt><dd><p>Obex put</p>
@@ -522,8 +523,8 @@
 <dt><em>4C</em> 00 06 01 00 19</dt><dd><p>First byte: ? Last two bytes: Id of contact</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h4>Answer<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 08</dt><dd><p>Obex ok</p>
@@ -531,14 +532,14 @@
 <dt><em>4C</em> 00 05 00 00</dt><dd><p>Error code</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="section" id="calendar">
+</section>
+</section>
+</section>
+<section id="calendar">
 <h2>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="get-count">
+<section id="get-count">
 <h3>Get count<a class="headerlink" href="#get-count" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id11">
+<section id="id11">
 <h4>Request<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 25</dt><dd><p>Obex get</p>
@@ -550,8 +551,8 @@
 <dt><em>4C</em> 00 04 FF</dt><dd><p>?</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h4>Answer<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt>A0 00 1C</dt><dd><p>Obex ok</p>
@@ -563,11 +564,11 @@
 <dt><em>49</em> 00 0F 01 2C 00 06 00 64 00 00 00 64 00 00</dt><dd><p>?TODO?</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id13">
+</section>
+</section>
+<section id="id13">
 <h3>List all<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id14">
+<section id="id14">
 <h4>Request<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 20</dt><dd><p>Obex get</p>
@@ -577,8 +578,8 @@
 <dt><em>42</em> 00 18 6D 2D 6F 62 65 78 2F 63 61 6C 65 6E 64 61 72 2F 69 6E 66 6F 00</dt><dd><p>m-obex/calendar/load</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id15">
+</section>
+<section id="id15">
 <h4>Answer<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 C0</dt><dd><p>Obex ok</p>
@@ -590,11 +591,11 @@
 <dt><em>49</em> 00 B3 01 07 08 00 00 00 00 00 00 00 00 …</dt><dd><p>Calendar items in vcalendar format. TODO: where are the ids?</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="create">
+</section>
+</section>
+<section id="create">
 <h3>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id16">
+<section id="id16">
 <h4>Request<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 CC</dt><dd><p>Obex put</p>
@@ -610,8 +611,8 @@
 <dt><em>49</em> 00 A1 42 45 47 49 4E 3A 56 43 41 4C 45 …</dt><dd><p>vcalendar</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id17">
+</section>
+<section id="id17">
 <h4>Answer<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 12</dt><dd><p>Obex ok</p>
@@ -623,11 +624,11 @@
 <dt><em>49</em> 00 05 00 06</dt><dd><p>Id of the created item</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="update">
+</section>
+</section>
+<section id="update">
 <h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id18">
+<section id="id18">
 <h4>Request<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 F7</dt><dd><p>Obex put</p>
@@ -643,8 +644,8 @@
 <dt><em>49</em> 00 CB 42 45 47 49 4E 3A 56</dt><dd><p>vcalendar item</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id19">
+</section>
+<section id="id19">
 <h4>Answer<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 08</dt><dd><p>Obex ok</p>
@@ -652,11 +653,11 @@
 <dt><em>4C</em> 00 05 00 00</dt><dd><p>Error code</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="read">
+</section>
+</section>
+<section id="read">
 <h3>Read<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id20">
+<section id="id20">
 <h4>Request<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>83</em> 00 26</dt><dd><p>Obex get</p>
@@ -668,8 +669,8 @@
 <dt>4C 00 06 01 00 06</dt><dd><p>Id of calendar item</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id21">
+</section>
+<section id="id21">
 <h4>Answer<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>A0</em> 00 C0</dt><dd><p>Obex ok</p>
@@ -681,11 +682,11 @@
 <dt><em>49</em> 00 B3 42 45 47 49 4E 3A 56 43 41 4C 45 4E 44 41 52 0D 0A 56 45 52 53 49 4F 4E 3A 31 2E 3….</dt><dd><p>vcalendar item. TODO: Where is the id?</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="delete">
+</section>
+</section>
+<section id="delete">
 <h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id22">
+<section id="id22">
 <h4>Request<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
 <dt><em>82</em> 00 28</dt><dd><p>Obex put</p>
@@ -697,53 +698,53 @@
 <dt><em>4C</em> 00 06 01 00 06</dt><dd><p>id of calendar item</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="section" id="notes">
+</section>
+</section>
+</section>
+<section id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tasks">
+</section>
+<section id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="files">
+</section>
+<section id="files">
 <h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
 <p>To get the file structure on the mobile, there are two commands. One that lists all subdirectories and one that lists all files.</p>
-<div class="section" id="list-directories">
+<section id="list-directories">
 <h3>List directories<a class="headerlink" href="#list-directories" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="list-files">
+</section>
+<section id="list-files">
 <h3>List files<a class="headerlink" href="#list-files" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="get-file">
+</section>
+<section id="get-file">
 <h3>Get file<a class="headerlink" href="#get-file" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="create-file">
+</section>
+<section id="create-file">
 <h3>Create file<a class="headerlink" href="#create-file" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="delete-file">
+</section>
+<section id="delete-file">
 <h3>Delete file<a class="headerlink" href="#delete-file" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="sms">
+</section>
+</section>
+<section id="sms">
 <h2>SMS<a class="headerlink" href="#sms" title="Permalink to this headline">¶</a></h2>
 <p>0x01: Inbox
 0x08: Outbox</p>
-<div class="section" id="get-sms-count">
+<section id="get-sms-count">
 <h3>Get sms count<a class="headerlink" href="#get-sms-count" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="list-all-sms">
+</section>
+<section id="list-all-sms">
 <h3>List all sms<a class="headerlink" href="#list-all-sms" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="send-sms">
+</section>
+<section id="send-sms">
 <h3>Send sms<a class="headerlink" href="#send-sms" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="create-sms">
+</section>
+<section id="create-sms">
 <h3>Create sms<a class="headerlink" href="#create-sms" title="Permalink to this headline">¶</a></h3>
 <p>I don’t think this is possible. At least I didn’t find the function in New PC Studio. So sadly there will be no backup of sms messages.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

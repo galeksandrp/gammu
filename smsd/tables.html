@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SMSD Database Structure &mdash; Gammu 1.42.0 documentation</title>
@@ -201,7 +202,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="smsd-database-structure">
+  <section id="smsd-database-structure">
 <span id="gammu-smsd-tables"></span><h1>SMSD Database Structure<a class="headerlink" href="#smsd-database-structure" title="Permalink to this headline">¶</a></h1>
 <p>The backends themselves are described in their sections, this document
 describes general database structure and required tables.</p>
@@ -210,23 +211,23 @@ their configuration, all are treated equally and you have no guarantee which
 one sends outgoing message. If you configure PhoneID and use it when inserting
 message to the <code class="docutils literal notranslate"><span class="pre">outbox</span></code> table (<a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> does this), each SMS
 daemon will have separate outbox queue. See also <a class="reference internal" href="config.html#smsd-multi"><span class="std std-ref">Multiple modems</span></a>.</p>
-<div class="section" id="receiving-of-messages">
+<section id="receiving-of-messages">
 <h2>Receiving of messages<a class="headerlink" href="#receiving-of-messages" title="Permalink to this headline">¶</a></h2>
 <p>Received messages are stored in <a class="reference internal" href="#inbox"><span class="std std-ref">inbox</span></a> table.</p>
-</div>
-<div class="section" id="transmitting-of-messages">
+</section>
+<section id="transmitting-of-messages">
 <h2>Transmitting of messages<a class="headerlink" href="#transmitting-of-messages" title="Permalink to this headline">¶</a></h2>
 <p>Transmitted messages are read from table <a class="reference internal" href="#outbox"><span class="std std-ref">outbox</span></a> and possible subsequent parts
 of the same message from <a class="reference internal" href="#outbox-multipart"><span class="std std-ref">outbox_multipart</span></a>.</p>
-</div>
-<div class="section" id="description-of-tables">
+</section>
+<section id="description-of-tables">
 <h2>Description of tables<a class="headerlink" href="#description-of-tables" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gammu">
+<section id="gammu">
 <span id="gammu-table"></span><h3>gammu<a class="headerlink" href="#gammu" title="Permalink to this headline">¶</a></h3>
 <p>Table holding single field <code class="docutils literal notranslate"><span class="pre">Version</span></code> - version of a database schema. See
 <a class="reference internal" href="#smsd-tables-history"><span class="std std-ref">History of database structure</span></a> for details what has changed.</p>
-</div>
-<div class="section" id="inbox">
+</section>
+<section id="inbox">
 <span id="id1"></span><h3>inbox<a class="headerlink" href="#inbox" title="Permalink to this headline">¶</a></h3>
 <p>Table where received messages will be stored.</p>
 <p>Fields description:</p>
@@ -278,8 +279,8 @@ of the same message from <a class="reference internal" href="#outbox-multipart">
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="outbox">
+</section>
+<section id="outbox">
 <span id="id2"></span><h3>outbox<a class="headerlink" href="#outbox" title="Permalink to this headline">¶</a></h3>
 <p>Messages enqueued for sending should be placed in this table. If message
 is multipart, subsequent parts are stored in table <a class="reference internal" href="#outbox-multipart"><span class="std std-ref">outbox_multipart</span></a>.</p>
@@ -371,8 +372,8 @@ message, Error indicates some other error while processing message.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="outbox-multipart">
+</section>
+<section id="outbox-multipart">
 <span id="id3"></span><h3>outbox_multipart<a class="headerlink" href="#outbox-multipart" title="Permalink to this headline">¶</a></h3>
 <p>Data for outgoing multipart messages.</p>
 <p>Fields description:</p>
@@ -426,8 +427,8 @@ message, Error indicates some other error while processing message.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="phones">
+</section>
+<section id="phones">
 <span id="id4"></span><h3>phones<a class="headerlink" href="#phones" title="Permalink to this headline">¶</a></h3>
 <p>Information about connected phones. This table is periodically refreshed and
 you can get information such as battery or signal level from here.</p>
@@ -462,8 +463,8 @@ overflow).</p>
 overflow).</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="sentitems">
+</section>
+<section id="sentitems">
 <span id="id5"></span><h3>sentitems<a class="headerlink" href="#sentitems" title="Permalink to this headline">¶</a></h3>
 <p>Log of sent messages (and unsent ones with error code). Also if delivery
 reports are enabled, message state is updated after receiving delivery report.</p>
@@ -533,9 +534,9 @@ specification 03.40 section 9.2.3.15 (TP-Status).</p>
 </div>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="history-of-database-structure">
+</section>
+</section>
+<section id="history-of-database-structure">
 <span id="smsd-tables-history"></span><h2>History of database structure<a class="headerlink" href="#history-of-database-structure" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -645,10 +646,10 @@ indexes</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="creating-tables">
+<section id="creating-tables">
 <h3>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h3>
 <p>SQL scripts to create all needed tables for most databases are included in
 Gammu documentation (docs/sql). As well as some PHP scripts interacting with
@@ -657,8 +658,8 @@ the database.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sqlite3 smsd.db &lt; docs/sql/sqlite.sql
 </pre></div>
 </div>
-</div>
-<div class="section" id="injecting-a-message-using-sql">
+</section>
+<section id="injecting-a-message-using-sql">
 <h3>Injecting a message using SQL<a class="headerlink" href="#injecting-a-message-using-sql" title="Permalink to this headline">¶</a></h3>
 <p>To send a message, you can either use <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, which does all the
 magic for you, or you can insert the message manually. The simplest example is
@@ -691,8 +692,8 @@ to hex encode the unicode text:</p>
 <span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="injecting-long-message-using-sql">
+</section>
+<section id="injecting-long-message-using-sql">
 <h3>Injecting long message using SQL<a class="headerlink" href="#injecting-long-message-using-sql" title="Permalink to this headline">¶</a></h3>
 <p>Inserting multipart messages is a bit more tricky, you need to construct also
 UDH header and store it hexadecimally written into UDH field. Unless you have a
@@ -748,9 +749,9 @@ number) and byte for number of current message (<code class="docutils literal no
 <p>Adding UDH means that you have less space for text, in above example you
 can use only 153 characters in single message.</p>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

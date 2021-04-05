@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Dummy Driver &mdash; Gammu 1.42.0 documentation</title>
@@ -190,7 +191,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dummy-driver">
+  <section id="dummy-driver">
 <span id="id1"></span><h1>Dummy Driver<a class="headerlink" href="#dummy-driver" title="Permalink to this headline">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.22.93.</span></p>
@@ -199,7 +200,7 @@
 used by <a class="reference internal" href="testsuite.html"><span class="doc">Gammu Testsuite</span></a>, but it is also very helpful for application
 developers, because they can test the functionality without using real phone
 and avoiding risk of corrupting data in the phone.</p>
-<div class="section" id="filesystem-structure">
+<section id="filesystem-structure">
 <h2>Filesystem structure<a class="headerlink" href="#filesystem-structure" title="Permalink to this headline">¶</a></h2>
 <p>The dummy driver emulates all phone functionality on filesystem. The
 <span class="target" id="index-0"></span><a class="reference internal" href="../config/index.html#option-Device"><code class="xref config config-option docutils literal notranslate"><span class="pre">Device</span></code></a> configuration directive sets top level directory,
@@ -207,35 +208,35 @@ where all data are stored.</p>
 <p>This directory contains file <code class="file docutils literal notranslate"><span class="pre">operations.log</span></code>, where are logged
 operations which do not modify any data in the dummy phone (eg. sending
 message).</p>
-<div class="section" id="messages">
+<section id="messages">
 <h3>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h3>
 <p>Messages are stored in <code class="file docutils literal notranslate"><span class="pre">sms/&lt;FOLDER&gt;</span></code> directories (<code class="docutils literal notranslate"><span class="pre">&lt;FOLDER&gt;</span></code> is in
 range 1-5) in Gammu native smsbackup format.</p>
-</div>
-<div class="section" id="phonebook">
+</section>
+<section id="phonebook">
 <h3>Phonebook<a class="headerlink" href="#phonebook" title="Permalink to this headline">¶</a></h3>
 <p>Phonebook (and calls registers) are stored in <code class="file docutils literal notranslate"><span class="pre">pbk/&lt;MEMORY&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">&lt;MEMORY&gt;</span></code>
 is type of memory like <code class="docutils literal notranslate"><span class="pre">ME</span></code> or <code class="docutils literal notranslate"><span class="pre">SM</span></code>) directories in vCard format.</p>
-</div>
-<div class="section" id="notes">
+</section>
+<section id="notes">
 <h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>Notes are stored in <code class="file docutils literal notranslate"><span class="pre">note</span></code> directory in vNote format.</p>
-</div>
-<div class="section" id="calendar">
+</section>
+<section id="calendar">
 <h3>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h3>
 <p>Calendar entries are stored in <code class="file docutils literal notranslate"><span class="pre">calendar</span></code> directory in vCalendar format.</p>
-</div>
-<div class="section" id="todo">
+</section>
+<section id="todo">
 <h3>Todo<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h3>
 <p>Todo entries are stored in <code class="file docutils literal notranslate"><span class="pre">todo</span></code> directory in vCalendar format.</p>
-</div>
-<div class="section" id="filesystem">
+</section>
+<section id="filesystem">
 <h3>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h3>
 <p>Filesystem is stored in <code class="file docutils literal notranslate"><span class="pre">fs</span></code> directory. You can create another
 subdirectories there.</p>
-</div>
-</div>
-<div class="section" id="other-features">
+</section>
+</section>
+<section id="other-features">
 <h2>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h2>
 <p>By specifying <span class="target" id="index-1"></span><a class="reference internal" href="../config/index.html#option-Features"><code class="xref config config-option docutils literal notranslate"><span class="pre">Features</span></code></a> you can configure some specific behavior:</p>
 <dl class="simple">
@@ -245,8 +246,8 @@ exception of GetNextSMS* and GetNextFile*).</p>
 <dt><code class="docutils literal notranslate"><span class="pre">DISABLE_GETNEXTSMS</span></code></dt><dd><p>Makes the dummy driver fail all GetNextSMS* calls as not supported.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>To use dummy driver, you need something like following in <code class="file docutils literal notranslate"><span class="pre">~/.gammurc</span></code>:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
@@ -263,8 +264,8 @@ exception of GetNextSMS* and GetNextFile*).</p>
 <span class="na">device</span> <span class="o">=</span> <span class="s">/path/to/directory/</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
