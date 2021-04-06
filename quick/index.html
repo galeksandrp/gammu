@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Quick starter guide &mdash; Gammu 1.42.0 documentation</title>
@@ -185,9 +184,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="quick-starter-guide">
+  <div class="section" id="quick-starter-guide">
 <span id="quick"></span><h1>Quick starter guide<a class="headerlink" href="#quick-starter-guide" title="Permalink to this headline">¶</a></h1>
-<section id="gammu-family">
+<div class="section" id="gammu-family">
 <h2>Gammu family<a class="headerlink" href="#gammu-family" title="Permalink to this headline">¶</a></h2>
 <p>Gammu family consists of several programs and libraries:</p>
 <dl class="simple">
@@ -208,16 +207,16 @@ only.</p>
 programs.</p>
 </dd>
 </dl>
-</section>
-<section id="installing-gammu">
+</div>
+<div class="section" id="installing-gammu">
 <h2>Installing Gammu<a class="headerlink" href="#installing-gammu" title="Permalink to this headline">¶</a></h2>
 <p>On most platforms you can install Gammu from binaries - most Linux
 distributions ship Gammu and for Windows you can download binaries from
 <a class="reference external" href="https://wammu.eu/download/">Gammu website</a>. You can find more detailed
 instructions (including instructions for compiling from source) in
 <a class="reference internal" href="../project/install.html#installing"><span class="std std-ref">Installing Gammu</span></a>.</p>
-</section>
-<section id="starting-with-gammu-on-linux">
+</div>
+<div class="section" id="starting-with-gammu-on-linux">
 <h2>Starting with Gammu on Linux<a class="headerlink" href="#starting-with-gammu-on-linux" title="Permalink to this headline">¶</a></h2>
 <p>First you need to find out device name where your phone/modem is connected. In
 most cases you can rely on <a class="reference internal" href="../utils/gammu-detect.html#gammu-detect"><span class="std std-ref">gammu-detect</span></a> to find it (it will also list
@@ -240,8 +239,8 @@ all serial ports in your systems, where probably nothing is connected).</p>
 <span class="go">SIM IMSI             : 987654321098765</span>
 </pre></div>
 </div>
-</section>
-<section id="starting-with-gammu-on-windows">
+</div>
+<div class="section" id="starting-with-gammu-on-windows">
 <h2>Starting with Gammu on Windows<a class="headerlink" href="#starting-with-gammu-on-windows" title="Permalink to this headline">¶</a></h2>
 <p>First you need to find out device name where your phone/modem is connected. The
 easiest way is to look into <span class="guilabel">Device manager</span> under
@@ -265,8 +264,8 @@ easiest way is to look into <span class="guilabel">Device manager</span> under
 <span class="go">SIM IMSI             : 987654321098765</span>
 </pre></div>
 </div>
-</section>
-<section id="starting-with-smsd">
+</div>
+<div class="section" id="starting-with-smsd">
 <h2>Starting with SMSD<a class="headerlink" href="#starting-with-smsd" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -277,7 +276,7 @@ Gammu (see chapters above for guide how to do that).</p>
 need to decide where you want to store messages (see <span class="target" id="index-0"></span><a class="reference internal" href="../smsd/config.html#option-Service"><code class="xref config config-option docutils literal notranslate"><span class="pre">Service</span></code></a>).
 For this example we will stick with MySQL database, but the instructions are
 quite similar for any storage service.</p>
-<section id="configuring-the-storage">
+<div class="section" id="configuring-the-storage">
 <h3>Configuring the storage<a class="headerlink" href="#configuring-the-storage" title="Permalink to this headline">¶</a></h3>
 <p>First we have to setup the actual storage. With MySQL, we need access to the
 MySQL server. Now connect as administrative user to the server (usually
@@ -295,8 +294,8 @@ file (see <a class="reference internal" href="../smsd/mysql.html#mysql-create"><
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mysql -u root -p password smsd &lt; docs/sql/mysql.sql
 </pre></div>
 </div>
-</section>
-<section id="configuring-smsd">
+</div>
+<div class="section" id="configuring-smsd">
 <h3>Configuring SMSD<a class="headerlink" href="#configuring-smsd" title="Permalink to this headline">¶</a></h3>
 <p>Now we just have to tell SMSD what service it is supposed to use. This is done
 in the SMSD configuration file. You can place it anywhere and tell SMSD on
@@ -320,8 +319,8 @@ information).</p>
 <p>There are many ways to customize SMSD, but the defaults should work fine in
 most environments. You can find more information on customizing SMSD in
 <a class="reference internal" href="../smsd/config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a>.</p>
-</section>
-<section id="running-smsd">
+</div>
+<div class="section" id="running-smsd">
 <h3>Running SMSD<a class="headerlink" href="#running-smsd" title="Permalink to this headline">¶</a></h3>
 <p>With configuration file ready, you can actually start SMSD. You can do this
 manually or as a system wide service.</p>
@@ -339,8 +338,8 @@ system wide daemon.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl start gammu-smsd.service
 </pre></div>
 </div>
-</section>
-<section id="sending-message-through-smsd">
+</div>
+<div class="section" id="sending-message-through-smsd">
 <h3>Sending message through SMSD<a class="headerlink" href="#sending-message-through-smsd" title="Permalink to this headline">¶</a></h3>
 <p>Once SMSD is up and running, you can send some messages using it:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd-inject TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
@@ -348,9 +347,9 @@ system wide daemon.</p>
 </div>
 <p>You can find more examples in the <a class="reference internal" href="../smsd/inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> documentation:
 <a class="reference internal" href="../smsd/inject.html#smsd-inject-examples"><span class="std std-ref">Examples</span></a>.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

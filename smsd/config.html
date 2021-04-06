@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SMSD Configuration File &mdash; Gammu 1.42.0 documentation</title>
@@ -202,9 +201,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="smsd-configuration-file">
+  <div class="section" id="smsd-configuration-file">
 <span id="gammu-smsdrc"></span><h1>SMSD Configuration File<a class="headerlink" href="#smsd-configuration-file" title="Permalink to this headline">¶</a></h1>
-<section id="description">
+<div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>gammu-smsd reads configuration from a config file. It’s location can be
 specified on command line, otherwise default path <code class="docutils literal notranslate"><span class="pre">/etc/gammu-smsdrc</span></code>
@@ -270,8 +269,8 @@ then specific parameters for storage backends.</p>
 </div>
 </dd></dl>
 
-</section>
-<section id="general-parameters-of-sms-daemon">
+</div>
+<div class="section" id="general-parameters-of-sms-daemon">
 <h2>General parameters of SMS daemon<a class="headerlink" href="#general-parameters-of-sms-daemon" title="Permalink to this headline">¶</a></h2>
 <dl class="config option">
 <dt id="option-Service">
@@ -711,8 +710,8 @@ it generally means how many times it will try to reconnect to the server.</p>
 <p>Default is True.</p>
 </dd></dl>
 
-</section>
-<section id="database-backends-options">
+</div>
+<div class="section" id="database-backends-options">
 <h2>Database backends options<a class="headerlink" href="#database-backends-options" title="Permalink to this headline">¶</a></h2>
 <p>All DBI, ODBC, MYSQL and PGSQL backends (see <a class="reference internal" href="mysql.html#gammu-smsd-mysql"><span class="std std-ref">MySQL Backend</span></a>,
 <a class="reference internal" href="odbc.html#gammu-smsd-odbc"><span class="std std-ref">ODBC Backend</span></a>, <a class="reference internal" href="pgsql.html#gammu-smsd-pgsql"><span class="std std-ref">PostgreSQL Backend</span></a>, <a class="reference internal" href="dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a> for
@@ -843,7 +842,7 @@ you have properly installed drivers.</p>
 where sqlite database files are stored.</p>
 </dd></dl>
 
-<section id="files-backend-options">
+<div class="section" id="files-backend-options">
 <h3>Files backend options<a class="headerlink" href="#files-backend-options" title="Permalink to this headline">¶</a></h3>
 <p>The FILES backend accepts following configuration options. See
 <a class="reference internal" href="files.html#gammu-smsd-files"><span class="std std-ref">Files backend</span></a> for more detailed service backend description. Please note
@@ -918,9 +917,9 @@ specify it to <a class="reference internal" href="inject.html#gammu-smsd-inject"
 <p>Default is <code class="docutils literal notranslate"><span class="pre">auto</span></code>.</p>
 </dd></dl>
 
-</section>
-</section>
-<section id="message-filtering">
+</div>
+</div>
+<div class="section" id="message-filtering">
 <span id="id1"></span><h2>Message filtering<a class="headerlink" href="#message-filtering" title="Permalink to this headline">¶</a></h2>
 <p>SMSD allows one to process only limited subset of incoming messages. You can define
 filters for sender number in <span class="target" id="index-26"></span><a class="reference internal" href="#section-[include_numbers]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[include_numbers]</span></code></a> and
@@ -940,13 +939,13 @@ accepted.</p>
 different set of configuration options - <span class="target" id="index-32"></span><a class="reference internal" href="#section-[include_smsc]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[include_smsc]</span></code></a> and
 <span class="target" id="index-33"></span><a class="reference internal" href="#section-[exclude_smsc]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[exclude_smsc]</span></code></a> sections or <span class="target" id="index-34"></span><a class="reference internal" href="#option-IncludeSMSCFile"><code class="xref config config-option docutils literal notranslate"><span class="pre">IncludeSMSCFile</span></code></a>
 and <span class="target" id="index-35"></span><a class="reference internal" href="#option-ExcludeSMSCFile"><code class="xref config config-option docutils literal notranslate"><span class="pre">ExcludeSMSCFile</span></code></a> directives.</p>
-</section>
-<section id="examples">
+</div>
+<div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>There is more complete example available in Gammu documentation. Please note
 that for simplicity following examples do not include <span class="target" id="index-36"></span><a class="reference internal" href="../config/index.html#section-[gammu]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[gammu]</span></code></a>
 section, you can look into <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a> for some examples how it can look like.</p>
-<section id="files-service">
+<div class="section" id="files-service">
 <h3>Files service<a class="headerlink" href="#files-service" title="Permalink to this headline">¶</a></h3>
 <p>SMSD configuration file for FILES backend could look like:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -959,8 +958,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">ErrorSMSPath</span> <span class="o">=</span> <span class="s">/var/spool/sms/error/</span>
 </pre></div>
 </div>
-</section>
-<section id="mysql-service">
+</div>
+<div class="section" id="mysql-service">
 <h3>MySQL service<a class="headerlink" href="#mysql-service" title="Permalink to this headline">¶</a></h3>
 <p>If you want to use MYSQL backend, you will need something like this:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -974,8 +973,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">Database</span> <span class="o">=</span> <span class="s">smsd</span>
 </pre></div>
 </div>
-</section>
-<section id="dbi-service-using-sqlite">
+</div>
+<div class="section" id="dbi-service-using-sqlite">
 <h3>DBI service using SQLite<a class="headerlink" href="#dbi-service-using-sqlite" title="Permalink to this headline">¶</a></h3>
 <p>For <a class="reference internal" href="dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a> backend, in this particular case SQLite:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -985,8 +984,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">Database</span> <span class="o">=</span> <span class="s">smsd.db</span>
 </pre></div>
 </div>
-</section>
-<section id="odbc-service-using-mysql">
+</div>
+<div class="section" id="odbc-service-using-mysql">
 <h3>ODBC service using MySQL<a class="headerlink" href="#odbc-service-using-mysql" title="Permalink to this headline">¶</a></h3>
 <p>For <a class="reference internal" href="odbc.html#gammu-smsd-odbc"><span class="std std-ref">ODBC Backend</span></a> backend, in this particular case using DSN <code class="docutils literal notranslate"><span class="pre">smsd</span></code> server:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -1012,8 +1011,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">SERVER</span>              <span class="o">=</span> <span class="s">127.0.0.1</span>
 </pre></div>
 </div>
-</section>
-<section id="numbers-filtering">
+</div>
+<div class="section" id="numbers-filtering">
 <h3>Numbers filtering<a class="headerlink" href="#numbers-filtering" title="Permalink to this headline">¶</a></h3>
 <p>Process only messages from 123456 number:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[include_numbers]</span>
@@ -1025,8 +1024,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">number1</span> <span class="o">=</span> <span class="s">666</span>
 </pre></div>
 </div>
-</section>
-<section id="debugging">
+</div>
+<div class="section" id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
 <p>Enabling debugging:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
@@ -1034,8 +1033,8 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <span class="na">logfile</span> <span class="o">=</span> <span class="s">smsd.log</span>
 </pre></div>
 </div>
-</section>
-<section id="multiple-modems">
+</div>
+<div class="section" id="multiple-modems">
 <span id="smsd-multi"></span><h3>Multiple modems<a class="headerlink" href="#multiple-modems" title="Permalink to this headline">¶</a></h3>
 <p>You can run any number of SMSD instances and they can even share same backend
 database. For routing the messages, you need to set different
@@ -1083,9 +1082,9 @@ especially if all modems are connected using USB.</p>
 gammu-smsd -c /path/to/second-smsdrc
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

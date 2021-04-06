@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SQL Service &mdash; Gammu 1.42.0 documentation</title>
@@ -202,9 +201,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="sql-service">
+  <div class="section" id="sql-service">
 <span id="gammu-smsd-sql"></span><h1>SQL Service<a class="headerlink" href="#sql-service" title="Permalink to this headline">¶</a></h1>
-<section id="description">
+<div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>SQL service stores all its data in database. It can use one of these SQL backends
 (configuration option <span class="target" id="index-0"></span><a class="reference internal" href="config.html#option-Driver"><code class="xref config config-option docutils literal notranslate"><span class="pre">Driver</span></code></a> in smsd section):</p>
@@ -223,8 +222,8 @@
 </dl>
 </li>
 </ul>
-</section>
-<section id="sql-connection-parameters">
+</div>
+<div class="section" id="sql-connection-parameters">
 <h2>SQL connection parameters<a class="headerlink" href="#sql-connection-parameters" title="Permalink to this headline">¶</a></h2>
 <p>Common for all backends:</p>
 <ul class="simple">
@@ -244,8 +243,8 @@
 <p class="admonition-title">See also</p>
 <p>The variables are fully described in <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a> documentation.</p>
 </div>
-</section>
-<section id="tables">
+</div>
+<div class="section" id="tables">
 <span id="configurable-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.37.1.</span></p>
@@ -293,8 +292,8 @@ queries will reflect this, so it’s enough to change table name in this section
 <span class="na">inbox</span> <span class="o">=</span> <span class="s">special_inbox</span>
 </pre></div>
 </div>
-</section>
-<section id="sql-queries">
+</div>
+<div class="section" id="sql-queries">
 <span id="id1"></span><h2>SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this headline">¶</a></h2>
 <p>Almost all queries are configurable. You can edit them in
 <span class="target" id="index-10"></span><a class="reference internal" href="config.html#section-[sql]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[sql]</span></code></a> section. There are several variables used in SQL
@@ -304,7 +303,7 @@ queries. We can separate them into three groups:</p>
 <li><p>SMS specific, which can be used in queries which works with SMS messages, see <a class="reference internal" href="#sms-specific-parameters"><span class="std std-ref">SMS Specific Parameters</span></a></p></li>
 <li><p>query specific, which are numeric and are specific only for given query (or set of queries), see <a class="reference internal" href="#configurable-queries"><span class="std std-ref">Configurable queries</span></a></p></li>
 </ul>
-<section id="phone-specific-parameters">
+<div class="section" id="phone-specific-parameters">
 <span id="id2"></span><h3>Phone Specific Parameters<a class="headerlink" href="#phone-specific-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">%I</span></code></dt><dd><p>IMEI of phone</p>
@@ -320,8 +319,8 @@ queries. We can separate them into three groups:</p>
 <dt><code class="docutils literal notranslate"><span class="pre">%M</span></code></dt><dd><p>network name</p>
 </dd>
 </dl>
-</section>
-<section id="sms-specific-parameters">
+</div>
+<div class="section" id="sms-specific-parameters">
 <span id="id3"></span><h3>SMS Specific Parameters<a class="headerlink" href="#sms-specific-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">%R</span></code></dt><dd><p>remote number <a class="footnote-reference brackets" href="#f1" id="id4">1</a></p>
@@ -356,9 +355,9 @@ queries. We can separate them into three groups:</p>
 <dd><p>Sender number for received messages (insert to inbox or delivery notifications), destination otherwise.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="configurable-queries">
+</div>
+</div>
+<div class="section" id="configurable-queries">
 <span id="id5"></span><h2>Configurable queries<a class="headerlink" href="#configurable-queries" title="Permalink to this headline">¶</a></h2>
 <p>All configurable queries can be set in <span class="target" id="index-11"></span><a class="reference internal" href="config.html#section-[sql]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[sql]</span></code></a> section. Sequence of rows in selects are mandatory.</p>
 <p>All default queries noted here are noted for MySQL. Actual time and time addition
@@ -678,8 +677,8 @@ by <span class="target" id="index-13"></span><a class="reference internal" href=
 </dl>
 </dd></dl>
 
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

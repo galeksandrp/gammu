@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SMS Backup Format &mdash; Gammu 1.42.0 documentation</title>
@@ -186,12 +185,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="sms-backup-format">
+  <div class="section" id="sms-backup-format">
 <span id="gammu-smsbackup"></span><h1>SMS Backup Format<a class="headerlink" href="#sms-backup-format" title="Permalink to this headline">¶</a></h1>
 <p>The SMS backup format is text file encoded in current encoding of platform
 where Gammu is running.</p>
 <p>This file use ini file syntax, see <a class="reference internal" href="ini.html#ini"><span class="std std-ref">INI file format</span></a>.</p>
-<section id="sections">
+<div class="section" id="sections">
 <h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
 <p>The file consists of sections, whose name starts with <code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code>. When
 creating the backup file, three digits are appended to this text defining
@@ -200,11 +199,11 @@ and everything which begins with this is processed. So you can as well give
 the section name <code class="docutils literal notranslate"><span class="pre">SMSBackupFoo</span></code> and it will be processed.</p>
 <p>The number of messages in backup file is currently limited by
 <a class="reference internal" href="../c/backup.html#c.GSM_BACKUP_MAX_SMS" title="GSM_BACKUP_MAX_SMS"><code class="xref c c-data docutils literal notranslate"><span class="pre">GSM_BACKUP_MAX_SMS</span></code></a> (100000 at time of writing this document).</p>
-<section id="smsbackup-section">
+<div class="section" id="smsbackup-section">
 <h3><code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code> section<a class="headerlink" href="#smsbackup-section" title="Permalink to this headline">¶</a></h3>
 <p>Each section interprets one physical SMS message (eg. one message part in case
 of multipart messages).</p>
-<section id="decoded-text">
+<div class="section" id="decoded-text">
 <h4>Decoded text<a class="headerlink" href="#decoded-text" title="Permalink to this headline">¶</a></h4>
 <p>For SMS backups created by Gammu, there is a decoded text as a comment just
 after the section name:</p>
@@ -219,8 +218,8 @@ included new lines.</p>
 <p>This is easiest way to get message text, however also the least reliable
 one, because it is stored in the comments in the file.</p>
 </div>
-</section>
-<section id="variables">
+</div>
+<div class="section" id="variables">
 <h4>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h4>
 <p>The following variables can be defined for each SMS:</p>
 <dl class="simple">
@@ -276,10 +275,10 @@ exists.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">UDH</span></code></dt><dd><p>User defined header of the message.</p>
 </dd>
 </dl>
-</section>
-</section>
-</section>
-<section id="example">
+</div>
+</div>
+</div>
+<div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>The backup of message can look like following:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup000]</span>
@@ -304,8 +303,8 @@ exists.</p>
 <span class="na">MessageReference</span> <span class="o">=</span> <span class="s">0</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

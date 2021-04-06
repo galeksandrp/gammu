@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SAMSUNG Organizer AT commands &mdash; Gammu 1.42.0 documentation</title>
@@ -198,9 +197,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="samsung-organizer-at-commands">
+  <div class="section" id="samsung-organizer-at-commands">
 <h1>SAMSUNG Organizer AT commands<a class="headerlink" href="#samsung-organizer-at-commands" title="Permalink to this headline">¶</a></h1>
-<section id="get-organizer-information">
+<div class="section" id="get-organizer-information">
 <h2>Get organizer information<a class="headerlink" href="#get-organizer-information" title="Permalink to this headline">¶</a></h2>
 <p>Invocation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>AT+ORGI?
@@ -229,8 +228,8 @@ OK
 <dt>par5</dt><dd><p>( 30) Unknown</p>
 </dd>
 </dl>
-</section>
-<section id="get-organizer-details">
+</div>
+<div class="section" id="get-organizer-details">
 <h2>Get organizer details<a class="headerlink" href="#get-organizer-details" title="Permalink to this headline">¶</a></h2>
 <p>Invocation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="o">+</span><span class="n">ORGR</span><span class="o">=</span><span class="n">number</span>
@@ -457,8 +456,8 @@ Returns 24 values:</p>
 <dt>par24</dt><dd><p>Empty</p>
 </dd>
 </dl>
-</section>
-<section id="write-organizer-entry">
+</div>
+<div class="section" id="write-organizer-entry">
 <h2>Write organizer entry<a class="headerlink" href="#write-organizer-entry" title="Permalink to this headline">¶</a></h2>
 <p>Invocation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="o">+</span><span class="n">ORGW</span><span class="o">=</span><span class="n">par0</span><span class="p">,</span><span class="n">par1</span><span class="p">,</span><span class="n">par2</span><span class="o">...</span><span class="n">par24</span>
@@ -473,8 +472,8 @@ Returns 24 values:</p>
 </pre></div>
 </div>
 <p>par1 to par24 has the same significance than in the AT+ORGR command</p>
-</section>
-<section id="delete-organizer-entry">
+</div>
+<div class="section" id="delete-organizer-entry">
 <h2>Delete organizer entry<a class="headerlink" href="#delete-organizer-entry" title="Permalink to this headline">¶</a></h2>
 <p>Invocation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="o">+</span><span class="n">ORGD</span><span class="o">=</span><span class="n">number</span>
@@ -487,15 +486,15 @@ Returns 24 values:</p>
 <span class="n">OK</span>
 </pre></div>
 </div>
-</section>
-<section id="notes">
+</div>
+<div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <p>Read command use index reference.</p>
 <p>Write command uses index and direct memory reference with special 65535 value to locate empty memory position.</p>
 <p>Delete command use direct memory reference, index are automatically reorganized.</p>
 <p>Hint: After create or delete an organizer entry, reread full information to update index table.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

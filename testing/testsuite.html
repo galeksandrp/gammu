@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Gammu Testsuite &mdash; Gammu 1.42.0 documentation</title>
@@ -193,12 +192,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="gammu-testsuite">
+  <div class="section" id="gammu-testsuite">
 <h1>Gammu Testsuite<a class="headerlink" href="#gammu-testsuite" title="Permalink to this headline">¶</a></h1>
 <p>Gammu comes with quite big test suite. It covers some basic low level
 functions, handling replies from the phone and also does testing of command
 line utilities and SMSD.</p>
-<section id="running-the-tests">
+<div class="section" id="running-the-tests">
 <h2>Running the tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h2>
 <p>You can run the test suite this using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code>. CMake build system uses
 for testing CTest, which also includes option to connect to dashboard and
@@ -245,15 +244,15 @@ coverage tests as described above.</p>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="collecting-results">
+</div>
+<div class="section" id="collecting-results">
 <h2>Collecting results<a class="headerlink" href="#collecting-results" title="Permalink to this headline">¶</a></h2>
 <p>The tests are ran daily on several platforms and you can find the
 results on <a class="reference external" href="https://travis-ci.org/gammu/gammu">Travis</a>.</p>
 <p>The coverage reports are at
 <a class="reference external" href="https://coveralls.io/r/gammu/gammu">Coveralls</a>.</p>
-</section>
-<section id="testing-of-smsd">
+</div>
+<div class="section" id="testing-of-smsd">
 <h2>Testing of SMSD<a class="headerlink" href="#testing-of-smsd" title="Permalink to this headline">¶</a></h2>
 <p>SMSD tests are performed using <a class="reference internal" href="dummy-driver.html#dummy-driver"><span class="std std-ref">Dummy Driver</span></a> and uses file backend and
 sqlite database by default. For this you nee Gammu compiled with libdbi, have
@@ -266,8 +265,8 @@ on the system.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">PSQL_TESTING</span></code></dt><dd><p>you need to have setup PostgreSQL server with database where SMSD can play.</p>
 </dd>
 </dl>
-</section>
-<section id="testing-of-command-line-utility">
+</div>
+<div class="section" id="testing-of-command-line-utility">
 <h2>Testing of command line utility<a class="headerlink" href="#testing-of-command-line-utility" title="Permalink to this headline">¶</a></h2>
 <p>Gammu command line tests are performed using <a class="reference internal" href="dummy-driver.html#dummy-driver"><span class="std std-ref">Dummy Driver</span></a> where
 required. It covers most of command line interface, but some parts need to be
@@ -276,27 +275,27 @@ explicitly enabled:</p>
 <dt><code class="docutils literal notranslate"><span class="pre">ONLINE_TESTING</span></code>:</dt><dd><p>enable testing of features which require internet access</p>
 </dd>
 </dl>
-</section>
-<section id="testing-of-python-interface">
+</div>
+<div class="section" id="testing-of-python-interface">
 <h2>Testing of Python interface<a class="headerlink" href="#testing-of-python-interface" title="Permalink to this headline">¶</a></h2>
 <p>Python module tests are performed using <a class="reference internal" href="dummy-driver.html#dummy-driver"><span class="std std-ref">Dummy Driver</span></a> where required. It
 does also cover testing of SMSD interface, which is done using libdbi(sqlite)
 driver.</p>
-</section>
-<section id="testing-of-reply-functions">
+</div>
+<div class="section" id="testing-of-reply-functions">
 <h2>Testing of reply functions<a class="headerlink" href="#testing-of-reply-functions" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="file docutils literal notranslate"><span class="pre">tests</span></code> directory contains various tests which do inject data into
 reply functions and check their response.</p>
-</section>
-<section id="testing-of-data-parsing">
+</div>
+<div class="section" id="testing-of-data-parsing">
 <h2>Testing of data parsing<a class="headerlink" href="#testing-of-data-parsing" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="file docutils literal notranslate"><span class="pre">tests</span></code> directory contains various tests which just try to parse
 various file formats supported by libGammu.</p>
-</section>
-<section id="configuration-of-the-test-suite">
+</div>
+<div class="section" id="configuration-of-the-test-suite">
 <h2>Configuration of the test suite<a class="headerlink" href="#configuration-of-the-test-suite" title="Permalink to this headline">¶</a></h2>
 <p>You can pass various parameters to configure the test suite:</p>
-<section id="programs-used-for-testing">
+<div class="section" id="programs-used-for-testing">
 <h3>Programs used for testing<a class="headerlink" href="#programs-used-for-testing" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">SH_BIN</span></code></dt><dd><p>Path to the <strong class="program">sh</strong> program</p>
@@ -312,8 +311,8 @@ various file formats supported by libGammu.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">PSQL_BIN</span></code></dt><dd><p>Path to the <strong class="program">psql</strong> program</p>
 </dd>
 </dl>
-</section>
-<section id="limiting-testsuite">
+</div>
+<div class="section" id="limiting-testsuite">
 <h3>Limiting testsuite<a class="headerlink" href="#limiting-testsuite" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">ONLINE_TESTING</span></code></dt><dd><p>Enable testing of parts which use remote servers, requires connection to interned</p>
@@ -323,8 +322,8 @@ various file formats supported by libGammu.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">MYSQL_TESTING</span></code></dt><dd><p>Enable testing of MySQL SMSD backend, requires configured MySQL database</p>
 </dd>
 </dl>
-</section>
-<section id="database-backends-configuration">
+</div>
+<div class="section" id="database-backends-configuration">
 <h3>Database backends configuration<a class="headerlink" href="#database-backends-configuration" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">PSQL_HOST</span></code></dt><dd><p>Host to use for PostgreSQL tests (default: <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>)</p>
@@ -347,9 +346,9 @@ various file formats supported by libGammu.</p>
 Currently needs to point to MySQL database.</p>
 </dd>
 </dl>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

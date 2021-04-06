@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Hints for libGammu Novices &mdash; Gammu 1.42.0 documentation</title>
@@ -187,11 +186,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="hints-for-libgammu-novices">
+  <div class="section" id="hints-for-libgammu-novices">
 <h1>Hints for libGammu Novices<a class="headerlink" href="#hints-for-libgammu-novices" title="Permalink to this headline">¶</a></h1>
 <p>This is very short overview of libGammu usage. You will probably need to study
 <a class="reference internal" href="api.html"><span class="doc">libGammu C API</span></a> to find out what functions you want to use.</p>
-<section id="basic-library-usage">
+<div class="section" id="basic-library-usage">
 <h2>Basic library usage<a class="headerlink" href="#basic-library-usage" title="Permalink to this headline">¶</a></h2>
 <p>You need to include main header file:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
@@ -275,8 +274,8 @@ using <a class="reference internal" href="statemachine.html#c.GSM_FreeStateMachi
 </pre></div>
 </div>
 <p>There are also other <a class="reference internal" href="examples.html"><span class="doc">Examples</span></a>.</p>
-</section>
-<section id="compiling-the-code">
+</div>
+<div class="section" id="compiling-the-code">
 <h2>Compiling the code<a class="headerlink" href="#compiling-the-code" title="Permalink to this headline">¶</a></h2>
 <p>To compile program using Gammu library, you need to pass include path to the
 compiler and library name and search path to the linker. This can be easiest
@@ -300,8 +299,8 @@ example:</p>
     <span class="k">$(</span>CC<span class="k">)</span> $&lt; <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="k">$(</span>LDFLAGS<span class="k">)</span> -o <span class="nv">$@</span>
 </pre></div>
 </div>
-</section>
-<section id="unicode">
+</div>
+<div class="section" id="unicode">
 <h2>Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h2>
 <p>Gammu stores all strings internally in UCS-2-BE encoding (terminated by two
 zero bytes). This is used mostly for historical reasons and today the obvious
@@ -322,8 +321,8 @@ are provided (<a class="reference internal" href="unicode.html#c.UnicodeLength" 
 different character set than GUI, what effectively means only Microsoft
 Windows.</p>
 </div>
-</section>
-<section id="debugging">
+</div>
+<div class="section" id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
 <p>You can either enabled debug logging globally or per state machine.</p>
 <p>To enable global debugging use:</p>
@@ -339,8 +338,8 @@ Windows.</p>
 <span class="n">GSM_SetDebugLevel</span><span class="p">(</span><span class="s">&quot;textall&quot;</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="waiting-for-incoming-events">
+</div>
+<div class="section" id="waiting-for-incoming-events">
 <h2>Waiting for incoming events<a class="headerlink" href="#waiting-for-incoming-events" title="Permalink to this headline">¶</a></h2>
 <p>If you expect some incoming events, you need to maintain communication with the
 phone. The best way it can be <a class="reference internal" href="statemachine.html#c.GSM_ReadDevice" title="GSM_ReadDevice"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_ReadDevice()</span></code></a>. For example you can use
@@ -350,8 +349,8 @@ following busy loop:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

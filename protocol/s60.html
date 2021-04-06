@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Series60 Remote Protocol &mdash; Gammu 1.42.0 documentation</title>
@@ -204,7 +203,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="series60-remote-protocol">
+  <div class="section" id="series60-remote-protocol">
 <span id="s60"></span><h1>Series60 Remote Protocol<a class="headerlink" href="#series60-remote-protocol" title="Permalink to this headline">¶</a></h1>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 1.31.90: </span>There were some changes in the protocol and applet has been renamed.</p>
@@ -219,7 +218,7 @@ extended version which is probably not fully compatible with original.</p>
 <p class="admonition-title">Warning</p>
 <p>Connection to S60 phones currently works only using Bluetooth.</p>
 </div>
-<section id="choosing-right-version">
+<div class="section" id="choosing-right-version">
 <h2>Choosing right version<a class="headerlink" href="#choosing-right-version" title="Permalink to this headline">¶</a></h2>
 <p>Before using this connection type, you need to install the applet to the
 phone. The applet can be found in <code class="docutils literal notranslate"><span class="pre">contrib/s60</span></code> directory and there are two
@@ -244,7 +243,7 @@ need to allow installation of unsigned applications.</p>
 access to signing tools costs 200 USD per year, what is something we can
 not afford right now.</p>
 </div>
-<section id="allowing-installation-of-unsigned-applications">
+<div class="section" id="allowing-installation-of-unsigned-applications">
 <span id="s60-unsigned"></span><h3>Allowing installation of unsigned applications<a class="headerlink" href="#allowing-installation-of-unsigned-applications" title="Permalink to this headline">¶</a></h3>
 <p>For security reasons, Symbian defaults to install signed applications only. As
 getting properly signed applet is expensive for non commercial product like
@@ -263,9 +262,9 @@ single phone) or allow installation of unsigned applications:</p>
 consider reverting this change, once you have installed applet required
 for Gammu.</p>
 </div>
-</section>
-</section>
-<section id="installation">
+</div>
+</div>
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>To run the applet you need to install <a class="reference external" href="https://garage.maemo.org/projects/pys60/">Python for S60</a> 2.0 to the phone. You
 can either download it from their website, or just get mirrored installation
@@ -280,7 +279,7 @@ all of them at <a class="reference external" href="https://wammu.eu/s60/">https:
 </div>
 <p>Installing Python for S60 and Series60 remote applet can be done in several
 ways:</p>
-<section id="installation-using-gammu">
+<div class="section" id="installation-using-gammu">
 <h3>Installation using Gammu<a class="headerlink" href="#installation-using-gammu" title="Permalink to this headline">¶</a></h3>
 <p>Gammu can transmit the applet to your phone automatically. Just configure it
 for use of BlueS60 connection (see <a class="reference internal" href="#connecting-s60"><span class="std std-ref">Connecting to Series60 phone</span></a> chapter below) and
@@ -299,19 +298,17 @@ wget http://dl.cihar.com/gammu/s60/Python_2.0.0.sis
 wget http://dl.cihar.com/gammu/s60/pips.sis
 </pre></div>
 </div>
-</section>
-<section id="downloading-from-phone">
+</div>
+<div class="section" id="downloading-from-phone">
 <h3>Downloading from phone<a class="headerlink" href="#downloading-from-phone" title="Permalink to this headline">¶</a></h3>
 <p>Downloading files from the phone and installing them directly. You can
 download all required files from <a class="reference external" href="https://wammu.eu/s60/">https://wammu.eu/s60/</a>.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference external image-reference" href="https://wammu.eu/s60/"><img alt="QR code for download of applet." src="../_images/s60-download-qr.png" /></a>
-<figcaption>
-<p><span class="caption-text">QR code for download of applet.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="manual-installation-using-gammu">
+<p class="caption"><span class="caption-text">QR code for download of applet.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="manual-installation-using-gammu">
 <h3>Manual Installation using Gammu<a class="headerlink" href="#manual-installation-using-gammu" title="Permalink to this headline">¶</a></h3>
 <p>If the above mentioned <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">install</span></code> does not work for you, for
 example when you need to use different applet, you can still use Gammu to send
@@ -330,9 +327,9 @@ gammu sendfile contrib/s60/gammu-s60-remote.sis
 </div>
 <p>Files should appear in inbox in your phone and you can install them from
 there.</p>
-</section>
-</section>
-<section id="connecting-to-series60-phone">
+</div>
+</div>
+<div class="section" id="connecting-to-series60-phone">
 <span id="connecting-s60"></span><h2>Connecting to Series60 phone<a class="headerlink" href="#connecting-to-series60-phone" title="Permalink to this headline">¶</a></h2>
 <p>The Gammu configuration is simple, all you need to specify is correct
 <span class="target" id="index-1"></span><a class="reference internal" href="../config/index.html#option-Connection"><code class="xref config config-option docutils literal notranslate"><span class="pre">Connection</span></code></a>:</p>
@@ -343,8 +340,8 @@ there.</p>
 </div>
 <p>Now you need to start the Series60 applet in the phone and Gammu should be
 able to talk to it.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

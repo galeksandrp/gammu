@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Gammu Configuration File &mdash; Gammu 1.42.0 documentation</title>
@@ -191,9 +190,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="gammu-configuration-file">
+  <div class="section" id="gammu-configuration-file">
 <span id="gammurc"></span><h1>Gammu Configuration File<a class="headerlink" href="#gammu-configuration-file" title="Permalink to this headline">¶</a></h1>
-<section id="synopsis">
+<div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <p>On Linux, MacOS X, BSD and other Unix-like systems, the config file is
 searched in following order:</p>
@@ -208,8 +207,8 @@ searched in following order:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">%PROFILE%\Application</span> <span class="pre">Data\gammurc</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.\gammurc</span></code></p></li>
 </ol>
-</section>
-<section id="description">
+</div>
+<div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Gammu requires configuration to be able to properly talk to your phone.
 <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a> reads configuration from a config file. It’s location is determined
@@ -231,7 +230,7 @@ parameter to <a class="reference internal" href="../gammu/index.html#gammu"><spa
 <dd></dd></dl>
 
 <p>This section is read by default unless you specify other on command line.</p>
-<section id="device-connection-parameters">
+<div class="section" id="device-connection-parameters">
 <h3>Device connection parameters<a class="headerlink" href="#device-connection-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-Connection">
@@ -445,8 +444,8 @@ group).</p>
 <p>This option has no meaning on Windows.</p>
 </dd></dl>
 
-</section>
-<section id="connection-options">
+</div>
+<div class="section" id="connection-options">
 <h3>Connection options<a class="headerlink" href="#connection-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-SynchronizeTime">
@@ -463,8 +462,8 @@ during starting connection. Phone will not beep during starting connection
 with this option. This works only with some Nokia phones.</p>
 </dd></dl>
 
-</section>
-<section id="debugging-options">
+</div>
+<div class="section" id="debugging-options">
 <h3>Debugging options<a class="headerlink" href="#debugging-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-LogFile">
@@ -511,8 +510,8 @@ without leading <code class="docutils literal notranslate"><span class="pre">F_<
 authors.</p>
 </dd></dl>
 
-</section>
-<section id="locales-and-character-set-options">
+</div>
+<div class="section" id="locales-and-character-set-options">
 <h3>Locales and character set options<a class="headerlink" href="#locales-and-character-set-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-GammuCoding">
@@ -530,8 +529,8 @@ to your locales.</p>
 these files automatically.</p>
 </dd></dl>
 
-</section>
-<section id="advanced-options">
+</div>
+<div class="section" id="advanced-options">
 <h3>Advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline">¶</a></h3>
 <p>Advanced options are used to alter default logic, when using these options the
 user is responsible for ensuring any settings are correct for the target device
@@ -551,8 +550,8 @@ default, and <code class="docutils literal notranslate"><span class="pre">atgen_
 respectively.</p>
 </dd></dl>
 
-</section>
-<section id="other-options">
+</div>
+<div class="section" id="other-options">
 <h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
 <dl class="config option">
 <dt id="option-DataPath">
@@ -563,12 +562,12 @@ systems). Currently it is used only for searching files to upload to phone
 using <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">install</span></code>.</p>
 </dd></dl>
 
-</section>
-</section>
-<section id="examples">
+</div>
+</div>
+<div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>There is more complete example available in Gammu documentation, see <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a>.</p>
-<section id="connection-examples">
+<div class="section" id="connection-examples">
 <h3>Connection examples<a class="headerlink" href="#connection-examples" title="Permalink to this headline">¶</a></h3>
 <p>Gammu configuration for Nokia phone using DLR-3 cable:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
@@ -596,8 +595,8 @@ phone) connected using bluetooth:</p>
 <span class="na">connection</span> <span class="o">=</span> <span class="s">blueat</span>
 </pre></div>
 </div>
-</section>
-<section id="working-with-multiple-phones">
+</div>
+<div class="section" id="working-with-multiple-phones">
 <h3>Working with multiple phones<a class="headerlink" href="#working-with-multiple-phones" title="Permalink to this headline">¶</a></h3>
 <p>Gammu can be configured for multiple phones (however only one connection
 is used at one time, you can choose which one to use with <a class="reference external" href="https://docs.python.org/3.9/using/cmdline.html#cmdoption-s" title="(in Python v3.9)"><code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">-s</span></code></a>
@@ -616,8 +615,8 @@ like following:</p>
 <span class="na">connection</span> <span class="o">=</span> <span class="s">at</span>
 </pre></div>
 </div>
-</section>
-<section id="connecting-to-remote-phone">
+</div>
+<div class="section" id="connecting-to-remote-phone">
 <h3>Connecting to remote phone<a class="headerlink" href="#connecting-to-remote-phone" title="Permalink to this headline">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.36.7.</span></p>
@@ -632,8 +631,8 @@ bi-directional communication with the phone.</p>
 </div>
 <p>You can find sample script which can be used on the remote side in
 <code class="file docutils literal notranslate"><span class="pre">contrib/proxy/gammu-backend</span></code>.</p>
-</section>
-<section id="fully-documented-example">
+</div>
+<div class="section" id="fully-documented-example">
 <span id="id1"></span><h3>Fully documented example<a class="headerlink" href="#fully-documented-example" title="Permalink to this headline">¶</a></h3>
 <p>You can find this sample file as <code class="file docutils literal notranslate"><span class="pre">docs/config/gammurc</span></code> in Gammu sources.</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; This is a sample ~/.gammurc file.</span>
@@ -811,9 +810,9 @@ bi-directional communication with the phone.</p>
 <span class="c1">; vim: et ts=4 sw=4 sts=4 tw=78 spell spelllang=en_us</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

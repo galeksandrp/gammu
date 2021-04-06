@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Developer documentation &mdash; Gammu 1.42.0 documentation</title>
@@ -192,9 +191,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="developer-documentation">
+  <div class="section" id="developer-documentation">
 <h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline">¶</a></h1>
-<section id="backend-services">
+<div class="section" id="backend-services">
 <h2>Backend services<a class="headerlink" href="#backend-services" title="Permalink to this headline">¶</a></h2>
 <p>The backend service is responsible for storing received messages and giving
 the SMSD core messages to send. It is solely up to them how the message will
@@ -202,7 +201,7 @@ be stored, for example currently Gammu includes backends to store messages on
 filesystem (<a class="reference internal" href="files.html#gammu-smsd-files"><span class="std std-ref">Files backend</span></a>), various databases (<a class="reference internal" href="mysql.html#gammu-smsd-mysql"><span class="std std-ref">MySQL Backend</span></a>,
 <a class="reference internal" href="pgsql.html#gammu-smsd-pgsql"><span class="std std-ref">PostgreSQL Backend</span></a>, <a class="reference internal" href="dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a>) or backend which does not store anything
 at all (<a class="reference internal" href="null.html#gammu-smsd-null"><span class="std std-ref">Null Backend</span></a>).</p>
-<section id="backend-interface">
+<div class="section" id="backend-interface">
 <h3>Backend interface<a class="headerlink" href="#backend-interface" title="Permalink to this headline">¶</a></h3>
 <p>Each backend service needs to support several operations, which are exported
 in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService</span></code> structure:</p>
@@ -401,8 +400,8 @@ this check.</p></li>
 </dl>
 </dd></dl>
 
-</section>
-<section id="message-id">
+</div>
+<div class="section" id="message-id">
 <h3>Message ID<a class="headerlink" href="#message-id" title="Permalink to this headline">¶</a></h3>
 <p>You might have noticed that message ID is often used in the API. The primary
 reason for this is that it is usually easier for backend to handle message
@@ -432,9 +431,9 @@ ID to sent items</p></li>
 <li><p><a class="reference internal" href="run.html#gammu-smsd-run"><span class="std std-ref">RunOnReceive Directive</span></a> uses this ID</p></li>
 </ul>
 </div></blockquote>
-</section>
-</section>
-<section id="message-sending-workflow">
+</div>
+</div>
+<div class="section" id="message-sending-workflow">
 <h2>Message Sending Workflow<a class="headerlink" href="#message-sending-workflow" title="Permalink to this headline">¶</a></h2>
 <div class="graphviz"><object data="../_images/graphviz-7f51ada41d60c0c9ecd4bb828cd70e03fff45aad.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph smsdsending {
@@ -463,8 +462,8 @@ ID to sent items</p></li>
    &quot;MoveSMS(noforce, OK)&quot; -&gt; &quot;message sent&quot;;
    &quot;MoveSMS(force, ERR)&quot; -&gt; &quot;error sending message&quot;;
 }</p></object></div>
-</section>
-<section id="message-receiving-workflow">
+</div>
+<div class="section" id="message-receiving-workflow">
 <h2>Message Receiving Workflow<a class="headerlink" href="#message-receiving-workflow" title="Permalink to this headline">¶</a></h2>
 <div class="graphviz"><object data="../_images/graphviz-96ea05f688c063742e0d814333dc5ca7ea08dc64.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph smsdreceiving {
@@ -486,8 +485,8 @@ ID to sent items</p></li>
     &quot;GSM_DeleteSMS&quot; -&gt; &quot;processed message&quot;
     &quot;GSM_DeleteSMS&quot; -&gt; &quot;failed message&quot; [label=&quot;Error&quot;, style=dotted];
 }</p></object></div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
