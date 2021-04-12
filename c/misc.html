@@ -215,17 +215,18 @@
 <dt id="c.GetLine">
 <span class="target" id="gammu-misc_8h_1a3572aba78b6ebddaf282eb1b101f7e4b"></span><span class="pre">size_t</span> <code class="sig-name descname"><span class="pre">GetLine</span></code><span class="sig-paren">(</span><span class="pre">FILE</span> <span class="pre">*</span><em><span class="pre">File</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Line</span></em>, <span class="pre">int</span> <em><span class="pre">count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GetLine" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads single line from file.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Length of read line, -1 on error. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">File</span></code>: File descriptor to read from. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Line</span></code>: Buffer where t ostore result. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code>: Maximal length of text which can be stored in buffer.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>File</strong> – File descriptor to read from. </p></li>
+<li><p><strong>Line</strong> – Buffer where t ostore result. </p></li>
+<li><p><strong>count</strong> – Maximal length of text which can be stored in buffer.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Length of read line, -1 on error. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -256,13 +257,13 @@
 <dt id="c.GSM_InitLocales">
 <span class="target" id="gammu-misc_8h_1a85f78c92707a64b2bde4ffd08ffe5f42"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_InitLocales</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_InitLocales" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initializes locales. This sets up things needed for proper string conversion from local charset as well as initializes gettext based translation.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code>: Path to gettext translation. If NULL compiled in default is used. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – Path to gettext translation. If NULL compiled in default is used. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -275,16 +276,17 @@
 <dt id="c.GSM_IsNewerVersion">
 <span class="target" id="gammu-misc_8h_1a4c4c60ed8a09fe011d4886f6b2354223"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">GSM_IsNewerVersion</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">latest_version</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">current_version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IsNewerVersion" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns TRUE if firmware version is newer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>True if latest_version &gt; current_version. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">latest_version</span></code>: String containing version (eg. latest available). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">current_version</span></code>: String containing version (eg. current one).</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>latest_version</strong> – String containing version (eg. latest available). </p></li>
+<li><p><strong>current_version</strong> – String containing version (eg. current one).</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if latest_version &gt; current_version. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 </div>

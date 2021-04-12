@@ -215,177 +215,185 @@
 <dt id="c.DayOfWeek">
 <span class="target" id="group__DateTime_1gae9ab2ace56f49ea42df31595d8573b37"></span><span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">DayOfWeek</span></code><span class="sig-paren">(</span><span class="pre">unsigned</span> <span class="pre">int</span> <em><span class="pre">year</span></em>, <span class="pre">unsigned</span> <span class="pre">int</span> <em><span class="pre">month</span></em>, <span class="pre">unsigned</span> <span class="pre">int</span> <em><span class="pre">day</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.DayOfWeek" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns string for current day of week.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to static buffer containing day of week string. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code>: Year. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code>: Month. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code>: Day.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> – Year. </p></li>
+<li><p><strong>month</strong> – Month. </p></li>
+<li><p><strong>day</strong> – Day.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to static buffer containing day of week string. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetCurrentDateTime">
 <span class="target" id="group__DateTime_1ga5b7cdeb34e60ecf56f393d5fdbfcaa49"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_GetCurrentDateTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">Date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetCurrentDateTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns current timestamp.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>: Storage for date time structure. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Date</strong> – Storage for date time structure. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.Fill_Time_T">
 <span class="target" id="group__DateTime_1ga7481f05c39e3d5c7d9c0363e8a9c2579"></span><span class="pre">time_t</span> <code class="sig-name descname"><span class="pre">Fill_Time_T</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <em><span class="pre">DT</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.Fill_Time_T" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts <a class="reference internal" href="#structGSM__DateTime"><span class="std std-ref">GSM_DateTime</span></a> to time_t.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>time_t value. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DT</span></code>: Input timestamp.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DT</strong> – Input timestamp.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>time_t value. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetLocalTimezoneOffset">
 <span class="target" id="group__DateTime_1ga8f86cb1a4f49397a8676f5ebb0dd5107"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">GSM_GetLocalTimezoneOffset</span></code><span class="sig-paren">(</span><span class="pre">void</span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetLocalTimezoneOffset" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the local timezone offset in seconds. For example 7200 for CEST.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Timezone offset seconds. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Timezone offset seconds. </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.Fill_GSM_DateTime">
 <span class="target" id="group__DateTime_1gaf33a905e392068b5ecb9a1791e11bc44"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">Fill_GSM_DateTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">Date</span></em>, <span class="pre">time_t</span> <em><span class="pre">timet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.Fill_GSM_DateTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts time_t to gammu <a class="reference internal" href="#structGSM__DateTime"><span class="std std-ref">GSM_DateTime</span></a> structure.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>: Storage for date. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timet</span></code>: Input date. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Date</strong> – Storage for date. </p></li>
+<li><p><strong>timet</strong> – Input date. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DateTimeFromTimestamp">
 <span class="target" id="group__DateTime_1ga2d6ad1f29e7e974ecee0f32f9e88253c"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_DateTimeFromTimestamp</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">Date</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DateTimeFromTimestamp" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts string (seconds since epoch) to gammu <a class="reference internal" href="#structGSM__DateTime"><span class="std std-ref">GSM_DateTime</span></a> structure.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>: Storage for date. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: Input date. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Date</strong> – Storage for date. </p></li>
+<li><p><strong>str</strong> – Input date. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.OSDateTime">
 <span class="target" id="group__DateTime_1ga543305e499b850d9c99b3173e8ee0da0"></span><span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">OSDateTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <em><span class="pre">dt</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">TimeZone</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.OSDateTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts timestamp to string according to OS settings.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to static buffer containing string. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dt</span></code>: Input timestamp. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TimeZone</span></code>: Whether to include time zone.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> – Input timestamp. </p></li>
+<li><p><strong>TimeZone</strong> – Whether to include time zone.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to static buffer containing string. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.OSDate">
 <span class="target" id="group__DateTime_1ga3e00bce8f943bb0c800956db69622ce3"></span><span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">OSDate</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <em><span class="pre">dt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.OSDate" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts date from timestamp to string according to OS settings.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to static buffer containing string. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dt</span></code>: Input timestamp.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> – Input timestamp.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to static buffer containing string. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.CheckDate">
 <span class="target" id="group__DateTime_1ga584f1825e657f3f3797b43355ac9d9b3"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">CheckDate</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.CheckDate" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Checks whether date is valid. This does not check time, see <a class="reference internal" href="#group__DateTime_1ga3e576808ca9767d2b464bc86805960b5"><span class="std std-ref">CheckTime</span></a> for this.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>True if date is correct. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code>: Structure where to check date.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date</strong> – Structure where to check date.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if date is correct. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.CheckTime">
 <span class="target" id="group__DateTime_1ga3e576808ca9767d2b464bc86805960b5"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">CheckTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.CheckTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Checks whether time is valid. This does not check date, see <a class="reference internal" href="#group__DateTime_1ga584f1825e657f3f3797b43355ac9d9b3"><span class="std std-ref">CheckDate</span></a> for this.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>True if time is correct. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code>: Structure where to check time.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date</strong> – Structure where to check time.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if time is correct. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetDateTime">
 <span class="target" id="group__Category_1gaa7570b1688ae60c5df3a629d07de3944"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetDateTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">date_time</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetDateTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads date and time from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date_time</span></code>: Storage for date.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>date_time</strong> – Storage for date.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetDateTime">
 <span class="target" id="group__Category_1gaa9f62dcfb9ff579dca4489cc6ff6f856"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetDateTime</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_DateTime" title="GSM_DateTime"><span class="pre">GSM_DateTime</span></a> <span class="pre">*</span><em><span class="pre">date_time</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetDateTime" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets date and time in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date_time</span></code>: Date to set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>date_time</strong> – Date to set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c struct">

@@ -221,511 +221,542 @@
 <dt id="c.GSM_EncodeVTODO">
 <span class="target" id="group__Todo_1gad87ea1eab13da85b9589a041f78232ef"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_EncodeVTODO</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">size_t</span> <em><span class="pre">buff_len</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Length</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">note</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">header</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_VToDoVersion" title="GSM_VToDoVersion"><span class="pre">GSM_VToDoVersion</span></a> <em><span class="pre">Version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeVTODO" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes vTodo to buffer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Storage for data. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buff_len</span></code>: Size of output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Length</span></code>: Pointer to current position in data (will be incremented). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code>: Note to encode. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code>: Whether to include vCalendar header. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Version</span></code>: Format of vTodo to create.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Buffer</strong> – Storage for data. </p></li>
+<li><p><strong>buff_len</strong> (<em>[in]</em>) – Size of output buffer. </p></li>
+<li><p><strong>Length</strong> – Pointer to current position in data (will be incremented). </p></li>
+<li><p><strong>note</strong> – Note to encode. </p></li>
+<li><p><strong>header</strong> – Whether to include vCalendar header. </p></li>
+<li><p><strong>Version</strong> – Format of vTodo to create.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_EncodeVCALENDAR">
 <span class="target" id="group__Calendar_1gae90d399aa1e0b2deaeed33059e2b73b5"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_EncodeVCALENDAR</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">size_t</span> <em><span class="pre">buff_len</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Length</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">note</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">header</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_VCalendarVersion" title="GSM_VCalendarVersion"><span class="pre">GSM_VCalendarVersion</span></a> <em><span class="pre">Version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeVCALENDAR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes vCalendar to buffer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Storage for data. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buff_len</span></code>: Size of output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Length</span></code>: Pointer to current position in data (will be incremented). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code>: Note to encode. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code>: Whether to include vCalendar header. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Version</span></code>: Format of vCalendar to create.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Buffer</strong> – Storage for data. </p></li>
+<li><p><strong>buff_len</strong> (<em>[in]</em>) – Size of output buffer. </p></li>
+<li><p><strong>Length</strong> – Pointer to current position in data (will be incremented). </p></li>
+<li><p><strong>note</strong> – Note to encode. </p></li>
+<li><p><strong>header</strong> – Whether to include vCalendar header. </p></li>
+<li><p><strong>Version</strong> – Format of vCalendar to create.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DecodeVNOTE">
 <span class="target" id="group__Note_1ga73cae122039ff8502d6ec1be1078ffdf"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DecodeVNOTE</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DecodeVNOTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes vNote from buffer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Buffer to decode. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Pos</span></code>: Current position in buffer (will be updated). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Storage for note entry.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Buffer</strong> – Buffer to decode. </p></li>
+<li><p><strong>Pos</strong> – Current position in buffer (will be updated). </p></li>
+<li><p><strong>Note</strong> – Storage for note entry.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_EncodeVNTFile">
 <span class="target" id="group__Note_1gabc0624e19e49a04a5a240f743990660a"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_EncodeVNTFile</span></code><span class="sig-paren">(</span><span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">size_t</span> <em><span class="pre">buff_len</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Length</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeVNTFile" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes vNote to buffer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Storage for data. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buff_len</span></code>: Size of output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Length</span></code>: Pointer to current position in data (will be incremented). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Note to encode.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Buffer</strong> – Storage for data. </p></li>
+<li><p><strong>buff_len</strong> (<em>[in]</em>) – Size of output buffer. </p></li>
+<li><p><strong>Length</strong> – Pointer to current position in data (will be incremented). </p></li>
+<li><p><strong>Note</strong> – Note to encode.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DecodeVCALENDAR_VTODO">
 <span class="target" id="group__Calendar_1gab4689fde9c4181c452e5b6dc25ecd5e0"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DecodeVCALENDAR_VTODO</span></code><span class="sig-paren">(</span><a class="reference internal" href="debug.html#c.GSM_Debug_Info" title="GSM_Debug_Info"><span class="pre">GSM_Debug_Info</span></a> <span class="pre">*</span><em><span class="pre">di</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Calendar</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em>, <a class="reference internal" href="#c.GSM_VCalendarVersion" title="GSM_VCalendarVersion"><span class="pre">GSM_VCalendarVersion</span></a> <em><span class="pre">CalVer</span></em>, <a class="reference internal" href="#c.GSM_VToDoVersion" title="GSM_VToDoVersion"><span class="pre">GSM_VToDoVersion</span></a> <em><span class="pre">ToDoVer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DecodeVCALENDAR_VTODO" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes vCalendar and vTodo buffer.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">di</span></code>: Pointer to debugging description. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span></code>: Buffer to decode. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Pos</span></code>: Current position in buffer (will be updated). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Calendar</span></code>: Storage for calendar entry. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: Storage for todo entry. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CalVer</span></code>: Format of vCalendar. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDoVer</span></code>: Format of vTodo.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>di</strong> – Pointer to debugging description. </p></li>
+<li><p><strong>Buffer</strong> – Buffer to decode. </p></li>
+<li><p><strong>Pos</strong> – Current position in buffer (will be updated). </p></li>
+<li><p><strong>Calendar</strong> – Storage for calendar entry. </p></li>
+<li><p><strong>ToDo</strong> – Storage for todo entry. </p></li>
+<li><p><strong>CalVer</strong> – Format of vCalendar. </p></li>
+<li><p><strong>ToDoVer</strong> – Format of vTodo.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_IsCalendarNoteFromThePast">
 <span class="target" id="group__Calendar_1ga9cc89b8465c0ca496929f4604a9cd04c"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">GSM_IsCalendarNoteFromThePast</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IsCalendarNoteFromThePast" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Detects whether calendar note is in past.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Whether entry is in past. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code>: Note to check.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>note</strong> – Note to check.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether entry is in past. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetAlarm">
 <span class="target" id="group__Calendar_1ga079b75b995abd97141118b4e01bb98b8"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetAlarm</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_Alarm" title="GSM_Alarm"><span class="pre">GSM_Alarm</span></a> <span class="pre">*</span><em><span class="pre">Alarm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetAlarm" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads alarm set in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Alarm</span></code>: Storage for alarm.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Alarm</strong> – Storage for alarm.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetAlarm">
 <span class="target" id="group__Calendar_1gae28d7bd49120b093464a936957c7d474"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetAlarm</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_Alarm" title="GSM_Alarm"><span class="pre">GSM_Alarm</span></a> <span class="pre">*</span><em><span class="pre">Alarm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetAlarm" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets alarm in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Alarm</span></code>: Alarm to set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Alarm</strong> – Alarm to set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetToDoStatus">
 <span class="target" id="group__Todo_1ga921a170f0c337ba08de532fde059a338"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetToDoStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoStatus" title="GSM_ToDoStatus"><span class="pre">GSM_ToDoStatus</span></a> <span class="pre">*</span><em><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetToDoStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets status of ToDos (count of used entries).</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Storage for todo status.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>status</strong> – Storage for todo status.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetToDo">
 <span class="target" id="group__Todo_1ga9a4397bc950c71470a218949f88b8f6f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads ToDo from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: Storage for note.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>ToDo</strong> – Storage for note.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNextToDo">
 <span class="target" id="group__Todo_1ga5a0267a50ec02cc91ea5997d222a89bd"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads ToDo from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Whether we’re doing initial read or continue in reading.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>ToDo</strong> – Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
+<li><p><strong>start</strong> – Whether we’re doing initial read or continue in reading.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetToDo">
 <span class="target" id="group__Todo_1ga3729b06d39671a42869f6edf7f46dd32"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets ToDo in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: ToDo to set, should contain valid location.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>ToDo</strong> – ToDo to set, should contain valid location.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_AddToDo">
 <span class="target" id="group__Todo_1ga282ee5b91074431cb5ea3b8c3a20f578"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds ToDo in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: ToDo to add.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>ToDo</strong> – ToDo to add.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteToDo">
 <span class="target" id="group__Todo_1gad31fca22077f9f680465e9da1eec97ef"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoEntry" title="GSM_ToDoEntry"><span class="pre">GSM_ToDoEntry</span></a> <span class="pre">*</span><em><span class="pre">ToDo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes ToDo entry in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ToDo</span></code>: ToDo to delete, only location is actually used.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>ToDo</strong> – ToDo to delete, only location is actually used.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteAllToDo">
 <span class="target" id="group__Todo_1ga54742ec392161b73304fa7ac66769266"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteAllToDo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteAllToDo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes all todo entries in phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetCalendarStatus">
 <span class="target" id="group__Calendar_1ga132d219302bd1f6b1f9f84f04cc49c34"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetCalendarStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarStatus" title="GSM_CalendarStatus"><span class="pre">GSM_CalendarStatus</span></a> <span class="pre">*</span><em><span class="pre">Status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetCalendarStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves calendar status (number of used entries).</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Status</span></code>: Storage for status.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Status</strong> – Storage for status.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetCalendar">
 <span class="target" id="group__Calendar_1ga426ef9cfddb3bfb0c91fc1f5bdae02c1"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves calendar entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Storage for note.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Storage for note.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNextCalendar">
 <span class="target" id="group__Calendar_1ga8a7856517ef3196dbbe90149e6ec7cc1"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves calendar entry. This is useful for continuous reading of all calendar entries.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Whether we’re doing initial read or continue in reading.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
+<li><p><strong>start</strong> – Whether we’re doing initial read or continue in reading.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetCalendar">
 <span class="target" id="group__Calendar_1ga058971bd0158c87481a5abf93a1d910e"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets calendar entry</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: New note values, needs to contain valid position.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – New note values, needs to contain valid position.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_AddCalendar">
 <span class="target" id="group__Calendar_1ga07a5063f947477936277c6392a4d4344"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds calendar entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Note to add.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Note to add.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteCalendar">
 <span class="target" id="group__Calendar_1gae46dff8ef05330a6a872d8103f55b9b3"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarEntry" title="GSM_CalendarEntry"><span class="pre">GSM_CalendarEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes calendar entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Note to delete, must contain position.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Note to delete, must contain position.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteAllCalendar">
 <span class="target" id="group__Calendar_1gae4be456e22c6c6774d7efa0e65eb7d0d"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteAllCalendar</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteAllCalendar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes all calendar entries.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetCalendarSettings">
 <span class="target" id="group__Calendar_1ga8951977ea5a4209f103d651e27afca54"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetCalendarSettings</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarSettings" title="GSM_CalendarSettings"><span class="pre">GSM_CalendarSettings</span></a> <span class="pre">*</span><em><span class="pre">settings</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetCalendarSettings" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads calendar settings.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code>: Storage for settings.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>settings</strong> – Storage for settings.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetCalendarSettings">
 <span class="target" id="group__Calendar_1ga030fae223613727138190a1ab845a286"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetCalendarSettings</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_CalendarSettings" title="GSM_CalendarSettings"><span class="pre">GSM_CalendarSettings</span></a> <span class="pre">*</span><em><span class="pre">settings</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetCalendarSettings" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets calendar settings.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code>: New calendar settings.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>settings</strong> – New calendar settings.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNotesStatus">
 <span class="target" id="group__Note_1gaea54a840fd2efffb42fc452223cb974c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNotesStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_ToDoStatus" title="GSM_ToDoStatus"><span class="pre">GSM_ToDoStatus</span></a> <span class="pre">*</span><em><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNotesStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves notes status (number of used entries).</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Storage for status.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>status</strong> – Storage for status.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNote">
 <span class="target" id="group__Note_1ga15eab020caf7f2da797453bd2b437033"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNote</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNote" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves notes entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Storage for note.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Storage for note.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNextNote">
 <span class="target" id="group__Note_1ga4e58a215dbb6935a8dd5802672e25565"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextNote</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextNote" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Retrieves note entry. This is useful for continuous reading of all notes entries.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Whether we’re doing initial read or continue in reading.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Storage for note, if start is FALSE, should contain data from previous read (at least position). </p></li>
+<li><p><strong>start</strong> – Whether we’re doing initial read or continue in reading.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetNote">
 <span class="target" id="group__Note_1gab67544d155cb710d8f55f8c92d3fe544"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetNote</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetNote" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets note entry</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: New note values, needs to contain valid position.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – New note values, needs to contain valid position.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_AddNote">
 <span class="target" id="group__Note_1ga0b309d6370fb930792f982a516e9f56b"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddNote</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddNote" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds note entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Note to add.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Note to add.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteNote">
 <span class="target" id="group__Note_1gab44af74c6f0f6cde0d9a6ec15b4e1c6f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteNote</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_NoteEntry" title="GSM_NoteEntry"><span class="pre">GSM_NoteEntry</span></a> <span class="pre">*</span><em><span class="pre">Note</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteNote" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes note entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: Note to delete, must contain position.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Note</strong> – Note to delete, must contain position.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteAllNotes">
 <span class="target" id="group__Note_1ga025e03aba15c3af2cba8cd31dbc3e33d"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteAllNotes</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteAllNotes" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes all notes entries.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c struct">

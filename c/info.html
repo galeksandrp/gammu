@@ -227,143 +227,152 @@
 <dt id="c.GSM_FeatureToString">
 <span class="target" id="group__Info_1gac7006b65578cb37decb648bb0b142c1b"></span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">GSM_FeatureToString</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="pre">GSM_Feature</span></a> <em><span class="pre">feature</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FeatureToString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts feature value to string.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to static string with string for specified feature, NULL on failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">feature</span></code>: GSM_Feature to convert.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature</strong> – GSM_Feature to convert.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to static string with string for specified feature, NULL on failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_FeatureFromString">
 <span class="target" id="group__Info_1ga1836ae030afe98b81f1ebddd106b89d5"></span><a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="pre">GSM_Feature</span></a> <code class="sig-name descname"><span class="pre">GSM_FeatureFromString</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">feature</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FeatureFromString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts feature string to value.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>GSM_Feature value, 0 on failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">feature</span></code>: GSM_Feature string to convert.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature</strong> – GSM_Feature string to convert.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>GSM_Feature value, 0 on failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_IsPhoneFeatureAvailable">
 <span class="target" id="group__Info_1ga4782f3a1f914bc2ccb0bbe97f185cae6"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">GSM_IsPhoneFeatureAvailable</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="pre">GSM_PhoneModel</span></a> <span class="pre">*</span><em><span class="pre">model</span></em>, <a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="pre">GSM_Feature</span></a> <em><span class="pre">feature</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IsPhoneFeatureAvailable" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Checks whether phone supports features.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>True if phone has defined this feature. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">feature</span></code>: GSM_Feature to check for.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
+<li><p><strong>feature</strong> – GSM_Feature to check for.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if phone has defined this feature. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_AddPhoneFeature">
 <span class="target" id="group__Info_1gae90ab1b976c29f17db0c4492c4b521f6"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">GSM_AddPhoneFeature</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="pre">GSM_PhoneModel</span></a> <span class="pre">*</span><em><span class="pre">model</span></em>, <a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="pre">GSM_Feature</span></a> <em><span class="pre">feature</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddPhoneFeature" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds feature to phone configuration.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>True if phone has defined this feature. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">feature</span></code>: GSM_Feature to check for.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
+<li><p><strong>feature</strong> – GSM_Feature to check for.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if phone has defined this feature. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetManufacturer">
 <span class="target" id="group__Info_1ga80bfce0fe93ee05533e5b15d33512bf7"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetManufacturer</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetManufacturer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads manufacturer from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: Pointer where to store manufacturer name</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>value</strong> – Pointer where to store manufacturer name</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetModel">
 <span class="target" id="group__Info_1ga4aac959d9baf0ef2ff5a1f7de34df71c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetModel</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetModel" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads model from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: Pointer where to store model name</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>value</strong> – Pointer where to store model name</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetModelInfo">
 <span class="target" id="group__Info_1gadc32e8fcd4386331a0434bba52acb390"></span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="pre">GSM_PhoneModel</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">GSM_GetModelInfo</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetModelInfo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads model info from state machine.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to phone information structure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to phone information structure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetFirmware">
 <span class="target" id="group__Info_1ga10ecdd81b151d0c682c6b361ca315ca9"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetFirmware</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">value</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">date</span></em>, <span class="pre">double</span> <span class="pre">*</span><em><span class="pre">num</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFirmware" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads firmware information from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: Pointer where to store revision text </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code>: Pointer where to store revision date </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num</span></code>: Pointer where to store revision number</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>value</strong> – Pointer where to store revision text </p></li>
+<li><p><strong>date</strong> – Pointer where to store revision date </p></li>
+<li><p><strong>num</strong> – Pointer where to store revision number</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetIMEI">
 <span class="target" id="group__Info_1ga02f4772bf770b4af786f8a72a36cd9a2"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetIMEI</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetIMEI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads IMEI/serial number from phone.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: Pointer where to store IMEI, NULL to ignore.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>value</strong> – Pointer where to store IMEI, NULL to ignore.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">

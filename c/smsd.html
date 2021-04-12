@@ -215,65 +215,69 @@
 <dt id="c.SMSD_InjectSMS">
 <span class="target" id="group__SMSD_1ga316b34be7ee8c7a1779084d5de9d0022"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_InjectSMS</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="message.html#c.GSM_MultiSMSMessage" title="GSM_MultiSMSMessage"><span class="pre">GSM_MultiSMSMessage</span></a> <span class="pre">*</span><em><span class="pre">sms</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">NewID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_InjectSMS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Enqueues SMS message in SMS daemon queue.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Config</span></code>: SMSD configuration pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sms</span></code>: Message data to send. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">NewID</span></code>: Pointer to string where ID of new message will be written. Can be NULL and then it is ignored.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Config</strong> – SMSD configuration pointer. </p></li>
+<li><p><strong>sms</strong> – Message data to send. </p></li>
+<li><p><strong>NewID</strong> – Pointer to string where ID of new message will be written. Can be NULL and then it is ignored.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.SMSD_GetStatus">
 <span class="target" id="group__SMSD_1ga21560b7a7aad8f6b34e4ce15800e20de"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_GetStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="#c.GSM_SMSDStatus" title="GSM_SMSDStatus"><span class="pre">GSM_SMSDStatus</span></a> <span class="pre">*</span><em><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_GetStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets SMSD status via shared memory.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Config</span></code>: SMSD configuration pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: pointer where status will be copied</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Config</strong> – SMSD configuration pointer. </p></li>
+<li><p><strong>status</strong> – pointer where status will be copied</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.SMSD_Shutdown">
 <span class="target" id="group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_Shutdown</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_Shutdown" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Flags SMSD daemon to terminate itself gracefully.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Config</span></code>: Pointer to SMSD configuration data.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Config</strong> – Pointer to SMSD configuration data.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.SMSD_ReadConfig">
 <span class="target" id="group__SMSD_1ga38d0fa63d2abbe998420a56ea3bf6b32"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">SMSD_ReadConfig</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">filename</span></em>, <a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">Config</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">uselog</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_ReadConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads SMSD configuration.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: File name of configuration. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Config</span></code>: Pointer to SMSD configuration data. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uselog</span></code>: Whether to log errors to configured log.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – File name of configuration. </p></li>
+<li><p><strong>Config</strong> – Pointer to SMSD configuration data. </p></li>
+<li><p><strong>uselog</strong> – Whether to log errors to configured log.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -283,44 +287,49 @@
 <p><dl class="simple">
 <dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"><span class="std std-ref">SMSD_Shutdown</span></a></p>
 </dd>
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Config</span></code>: Pointer to SMSD configuration data. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exit_on_failure</span></code>: Whether failure should lead to terminaton of program. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_failures</span></code>: Maximal number of failures after which SMSD will terminate. Use 0 to not terminate on failures.</p></li>
-</ul>
-</dd>
 </dl>
 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Config</strong> – Pointer to SMSD configuration data. </p></li>
+<li><p><strong>exit_on_failure</strong> – Whether failure should lead to terminaton of program. </p></li>
+<li><p><strong>max_failures</strong> – Maximal number of failures after which SMSD will terminate. Use 0 to not terminate on failures.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.SMSD_NewConfig">
 <span class="target" id="group__SMSD_1gaaec8b0889c17f7bd4725c7e7ab68389e"></span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">SMSD_NewConfig</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_NewConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates new SMSD configuration.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Pointer to SMSD configuration data block. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: Name of process, will be used for logging. If NULL, gammu-smsd text is used.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of process, will be used for logging. If NULL, gammu-smsd text is used.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pointer to SMSD configuration data block. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.SMSD_FreeConfig">
 <span class="target" id="group__SMSD_1gaa2129fb770cc8df44a8168ea483d93ab"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">SMSD_FreeConfig</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="pre">GSM_SMSDConfig</span></a> <span class="pre">*</span><em><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_FreeConfig" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Frees SMSD configuration.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code>: Pointer to SMSD configuration data. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> – Pointer to SMSD configuration data. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c struct">

@@ -215,244 +215,257 @@
 <dt id="c.GSM_StringToMemoryType">
 <span class="target" id="gammu-memory_8h_1a858f5d9f061ad669ef02b16f29108efa"></span><a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType"><span class="pre">GSM_MemoryType</span></a> <code class="sig-name descname"><span class="pre">GSM_StringToMemoryType</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_StringToMemoryType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts memory type from string.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Parsed memory type or 0 on failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: String with memory type.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – String with memory type.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parsed memory type or 0 on failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetMemoryStatus">
 <span class="target" id="group__Memory_1ga145a1156190ea04a1f56e5c73a54a3d5"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetMemoryStatus</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryStatus" title="GSM_MemoryStatus"><span class="pre">GSM_MemoryStatus</span></a> <span class="pre">*</span><em><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetMemoryStatus" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets memory (phonebooks or calls) status (eg. number of used and free entries).</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Storage for status information, MemoryType has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>status</strong> – Storage for status information, MemoryType has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetMemory">
 <span class="target" id="group__Memory_1ga31a30715b54f37896bdca2223df7d3ce"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads entry from memory (phonebooks or calls). Which entry should be read is defined in entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Storage for retrieved entry, MemoryType and Location has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>entry</strong> – Storage for retrieved entry, MemoryType and Location has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetNextMemory">
 <span class="target" id="group__Memory_1ga517e66d31e7ad9e0058da6df823d0703"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetNextMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetNextMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads entry from memory (phonebooks or calls). Which entry should be read is defined in entry. This can be easily used for reading all entries.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Storage for retrieved entry. MemoryType has to be set for first call (with start set to TRUE), for subsequent calls Location has to stay intact from previous reading. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: Whether we should start from beginning.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>entry</strong> – Storage for retrieved entry. MemoryType has to be set for first call (with start set to TRUE), for subsequent calls Location has to stay intact from previous reading. </p></li>
+<li><p><strong>start</strong> – Whether we should start from beginning.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetMemory">
 <span class="target" id="group__Memory_1gaeb08d144ac1b695b00f46102df6dda96"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets memory (phonebooks or calls) entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to set, Location and MemoryType has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>entry</strong> – Entry to set, Location and MemoryType has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_AddMemory">
 <span class="target" id="group__Memory_1ga81c4c549acd5879206f04c5e15ae279a"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_AddMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds memory (phonebooks or calls) entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to add, Location is ignored, MemoryType has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>entry</strong> – Entry to add, Location is ignored, MemoryType has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteMemory">
 <span class="target" id="group__Memory_1gae1a656293f043e897fa130b7efe1bff3"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes memory (phonebooks or calls) entry.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to delete, Location and MemoryType has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>entry</strong> – Entry to delete, Location and MemoryType has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DeleteAllMemory">
 <span class="target" id="group__Memory_1gaa9bbae079304374cf0182a70e0931f8f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DeleteAllMemory</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_MemoryType" title="GSM_MemoryType"><span class="pre">GSM_MemoryType</span></a> <em><span class="pre">MemoryType</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteAllMemory" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes all memory (phonebooks or calls) entries of specified type.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MemoryType</span></code>: Where to delete all entries.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>MemoryType</strong> – Where to delete all entries.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_GetSpeedDial">
 <span class="target" id="group__Memory_1gab60bb85031c604889182e9f92e596dc3"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_GetSpeedDial</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_SpeedDial" title="GSM_SpeedDial"><span class="pre">GSM_SpeedDial</span></a> <span class="pre">*</span><em><span class="pre">Speed</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetSpeedDial" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets speed dial.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Speed</span></code>: Storage for speed dial, Location has to be set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Speed</strong> – Storage for speed dial, Location has to be set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_SetSpeedDial">
 <span class="target" id="group__Memory_1gaddb5f9b58e9f414d2c1174968cbc1044"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_SetSpeedDial</span></code><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><em><span class="pre">s</span></em>, <a class="reference internal" href="#c.GSM_SpeedDial" title="GSM_SpeedDial"><span class="pre">GSM_SpeedDial</span></a> <span class="pre">*</span><em><span class="pre">Speed</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetSpeedDial" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets speed dial.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: State machine pointer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Speed</span></code>: Sspeed dial to set.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – State machine pointer. </p></li>
+<li><p><strong>Speed</strong> – Sspeed dial to set.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_PhonebookGetEntryName">
 <span class="target" id="group__Memory_1ga4a0fc699fb94cd155f0c5d00cf46d182"></span><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">GSM_PhonebookGetEntryName</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PhonebookGetEntryName" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns name of entry. It might be possibly concatenated from first and last names.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Static unicode string containing name. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to process.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entry</strong> – Entry to process.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Static unicode string containing name. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_PhonebookFindDefaultNameNumberGroup">
 <span class="target" id="group__Memory_1gaf9be792548d0a5626fbb2a6f5ab188cc"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_PhonebookFindDefaultNameNumberGroup</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">entry</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Name</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Number</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">Group</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PhonebookFindDefaultNameNumberGroup" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Finds default name, number and group for entry.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Entry to process. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Name</span></code>: Output index of name. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Number</span></code>: Output index of number. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Group</span></code>: Output index of group. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entry</strong> – Entry to process. </p></li>
+<li><p><strong>Name</strong> – Output index of name. </p></li>
+<li><p><strong>Number</strong> – Output index of number. </p></li>
+<li><p><strong>Group</strong> – Output index of group. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_EncodeVCARD">
 <span class="target" id="group__Memory_1ga4622f269a8c0c6be7fd6a1874582bf61"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_EncodeVCARD</span></code><span class="sig-paren">(</span><a class="reference internal" href="debug.html#c.GSM_Debug_Info" title="GSM_Debug_Info"><span class="pre">GSM_Debug_Info</span></a> <span class="pre">*</span><em><span class="pre">di</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">size_t</span> <em><span class="pre">buff_len</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">pbk</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">header</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_VCardVersion" title="GSM_VCardVersion"><span class="pre">GSM_VCardVersion</span></a> <em><span class="pre">Version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeVCARD" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encodes memory entry to vCard.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">di</span></code>: Pointer to debugging description. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">Buffer</span></code>: Buffer to store vCard text. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">buff_len</span></code>: Size of output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">Pos</span></code>: Position in output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">pbk</span></code>: Phonebook data, AddError will be set on non converted entries. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">header</span></code>: Whether to include vCard header in output. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Version</span></code>: What vCard version to create.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>di</strong> – Pointer to debugging description. </p></li>
+<li><p><strong>Buffer</strong> (<em>[out]</em>) – Buffer to store vCard text. </p></li>
+<li><p><strong>buff_len</strong> (<em>[in]</em>) – Size of output buffer. </p></li>
+<li><p><strong>Pos</strong> (<em>[inout]</em>) – Position in output buffer. </p></li>
+<li><p><strong>pbk</strong> (<em>[inout]</em>) – Phonebook data, AddError will be set on non converted entries. </p></li>
+<li><p><strong>header</strong> (<em>[in]</em>) – Whether to include vCard header in output. </p></li>
+<li><p><strong>Version</strong> (<em>[in]</em>) – What vCard version to create.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_DecodeVCARD">
 <span class="target" id="group__Memory_1gada934dd19e3c8562b675ec4ff188943e"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">GSM_DecodeVCARD</span></code><span class="sig-paren">(</span><a class="reference internal" href="debug.html#c.GSM_Debug_Info" title="GSM_Debug_Info"><span class="pre">GSM_Debug_Info</span></a> <span class="pre">*</span><em><span class="pre">di</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">Buffer</span></em>, <span class="pre">size_t</span> <span class="pre">*</span><em><span class="pre">Pos</span></em>, <a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">Pbk</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.GSM_VCardVersion" title="GSM_VCardVersion"><span class="pre">GSM_VCardVersion</span></a> <em><span class="pre">Version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DecodeVCARD" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Decodes memory entry from vCard.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">di</span></code>: Pointer to debugging description. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Buffer</span></code>: Buffer to readCard text. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[inout]</span> <span class="pre">Pos</span></code>: Position in output buffer. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">Pbk</span></code>: Phonebook data read from vCard. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Version</span></code>: What vCard version to parse.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>di</strong> – Pointer to debugging description. </p></li>
+<li><p><strong>Buffer</strong> (<em>[in]</em>) – Buffer to readCard text. </p></li>
+<li><p><strong>Pos</strong> (<em>[inout]</em>) – Position in output buffer. </p></li>
+<li><p><strong>Pbk</strong> (<em>[out]</em>) – Phonebook data read from vCard. </p></li>
+<li><p><strong>Version</strong> (<em>[in]</em>) – What vCard version to parse.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.GSM_FreeMemoryEntry">
 <span class="target" id="gammu-memory_8h_1a9d544e416a543f71b2bcff66278a5cb2"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">GSM_FreeMemoryEntry</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_MemoryEntry" title="GSM_MemoryEntry"><span class="pre">GSM_MemoryEntry</span></a> <span class="pre">*</span><em><span class="pre">Entry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FreeMemoryEntry" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Frees any dynamically allocated memory inside memory entry structure.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">Entry</span></code>: Pointer to memory entry to process. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Entry</strong> (<em>[in]</em>) – Pointer to memory entry to process. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c enum">

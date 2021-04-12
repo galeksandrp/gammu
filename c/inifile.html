@@ -215,30 +215,31 @@
 <dt id="c.INI_Free">
 <span class="target" id="group__INI_1ga25f7c03b7adb0e870f42ffa5d19982a4"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">INI_Free</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="pre">INI_Section</span></a> <span class="pre">*</span><em><span class="pre">head</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_Free" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Free INI data.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code>: INI section data. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – INI section data. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.INI_ReadFile">
 <span class="target" id="group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <code class="sig-name descname"><span class="pre">INI_ReadFile</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">FileName</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">Unicode</span></em>, <a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="pre">INI_Section</span></a> <span class="pre">*</span><span class="pre">*</span><em><span class="pre">result</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_ReadFile" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reads INI data.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Error code </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">FileName</span></code>: File to read. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Unicode</span></code>: Whether file shoul be treated like unicode. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code>: Pointer where file will be read.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileName</strong> – File to read. </p></li>
+<li><p><strong>Unicode</strong> – Whether file shoul be treated like unicode. </p></li>
+<li><p><strong>result</strong> – Pointer where file will be read.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Error code </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -251,17 +252,19 @@
 <dd><p>Unicode should be part of file_info. </p>
 </dd></dl>
 
-<dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Last entry in section.</p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">file_info</span></code>: File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code>: Section to scan. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Unicode</span></code>: Whether file is unicode.</p></li>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_info</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
+<li><p><strong>section</strong> – Section to scan. </p></li>
+<li><p><strong>Unicode</strong> – Whether file is unicode.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Last entry in section.</p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -274,54 +277,58 @@
 <dd><p>Unicode should be part of file_info. </p>
 </dd></dl>
 
-<dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Entry value.</p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">file_info</span></code>: File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code>: Section to scan. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: Name of key to read. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Unicode</span></code>: Whether file is unicode.</p></li>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_info</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
+<li><p><strong>section</strong> – Section to scan. </p></li>
+<li><p><strong>key</strong> – Name of key to read. </p></li>
+<li><p><strong>Unicode</strong> – Whether file is unicode.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Entry value.</p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.INI_GetInt">
 <span class="target" id="gammu-inifile_8h_1a57f62642357c8954b1fc7d729934f384"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">INI_GetInt</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="pre">INI_Section</span></a> <span class="pre">*</span><em><span class="pre">cfg</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">section</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">key</span></em>, <span class="pre">int</span> <em><span class="pre">fallback</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetInt" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns integer value from configuration. The file is automatically handled as not unicode.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Key value or fallback in case of failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cfg</span></code>: File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code>: Section to scan. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: Name of key to read. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fallback</span></code>: Fallback value.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
+<li><p><strong>section</strong> – Section to scan. </p></li>
+<li><p><strong>key</strong> – Name of key to read. </p></li>
+<li><p><strong>fallback</strong> – Fallback value.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Key value or fallback in case of failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
 <dt id="c.INI_GetBool">
 <span class="target" id="gammu-inifile_8h_1a6820d35258a52f51f3317bcc1bdfd852"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">INI_GetBool</span></code><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="pre">INI_Section</span></a> <span class="pre">*</span><em><span class="pre">cfg</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">section</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">key</span></em>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <em><span class="pre">fallback</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetBool" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns boolean value from configuration. The file is automatically handled as not unicode.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Key value or fallback in case of failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cfg</span></code>: File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code>: Section to scan. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: Name of key to read. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fallback</span></code>: Fallback value.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
+<li><p><strong>section</strong> – Section to scan. </p></li>
+<li><p><strong>key</strong> – Name of key to read. </p></li>
+<li><p><strong>fallback</strong> – Fallback value.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Key value or fallback in case of failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c function">
@@ -329,15 +336,16 @@
 <span class="target" id="group__INI_1ga7d44a441ec1ac8ec486887a19e8dc00d"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="pre">gboolean</span></a> <code class="sig-name descname"><span class="pre">GSM_StringToBool</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_StringToBool" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Converts value to boolean.</p>
 <p>It just takes the string and checks whether there is true/yes/t/y/1 or false/no/f/n/0.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Boolean value, -1 on failure. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: String to parse.</p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – String to parse.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Boolean value, -1 on failure. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="c type">
