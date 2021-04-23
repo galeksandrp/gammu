@@ -374,7 +374,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>smsc</strong> (<em>[inout]</em>) – SMSC structure, should contain location.</p></li>
+<li><p><strong>smsc</strong> – <strong>[inout]</strong> SMSC structure, should contain location.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -391,7 +391,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>smsc</strong> (<em>[in]</em>) – SMSC structure.</p></li>
+<li><p><strong>smsc</strong> – <strong>[in]</strong> SMSC structure.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -408,7 +408,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>status</strong> (<em>[out]</em>) – Pointer to SMS status structure.</p></li>
+<li><p><strong>status</strong> – <strong>[out]</strong> Pointer to SMS status structure.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -425,7 +425,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[inout]</em>) – SMS message data read from phone, location and folder should be set.</p></li>
+<li><p><strong>sms</strong> – <strong>[inout]</strong> SMS message data read from phone, location and folder should be set.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -443,8 +443,8 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[inout]</em>) – SMS message data read from phone, for subsequent reads, location and folder might be used by phone driver to determine reading state. </p></li>
-<li><p><strong>start</strong> (<em>[in]</em>) – Whether we start reading from beginning.</p></li>
+<li><p><strong>sms</strong> – <strong>[inout]</strong> SMS message data read from phone, for subsequent reads, location and folder might be used by phone driver to determine reading state. </p></li>
+<li><p><strong>start</strong> – <strong>[in]</strong> Whether we start reading from beginning.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -461,7 +461,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[in]</em>) – SMS message data.</p></li>
+<li><p><strong>sms</strong> – <strong>[in]</strong> SMS message data.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -478,7 +478,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[inout]</em>) – SMS message data, location will be updated.</p></li>
+<li><p><strong>sms</strong> – <strong>[inout]</strong> SMS message data, location will be updated.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -495,7 +495,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[in]</em>) – SMS structure with SMS location and folder.</p></li>
+<li><p><strong>sms</strong> – <strong>[in]</strong> SMS structure with SMS location and folder.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -512,7 +512,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>sms</strong> (<em>[in]</em>) – SMS structure with SMS data to send.</p></li>
+<li><p><strong>sms</strong> – <strong>[in]</strong> SMS structure with SMS data to send.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -529,8 +529,8 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>Folder</strong> (<em>[in]</em>) – Folder, where message is stored. </p></li>
-<li><p><strong>Location</strong> (<em>[in]</em>) – Location, where message is stored.</p></li>
+<li><p><strong>Folder</strong> – <strong>[in]</strong> Folder, where message is stored. </p></li>
+<li><p><strong>Location</strong> – <strong>[in]</strong> Location, where message is stored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -547,7 +547,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>enable</strong> (<em>[in]</em>) – Whether to enable notifications.</p></li>
+<li><p><strong>enable</strong> – <strong>[in]</strong> Whether to enable notifications.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -564,7 +564,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>enable</strong> (<em>[in]</em>) – Whether to enable notifications.</p></li>
+<li><p><strong>enable</strong> – <strong>[in]</strong> Whether to enable notifications.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -581,7 +581,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>enable</strong> (<em>[in]</em>) – Whether to enable notifications.</p></li>
+<li><p><strong>enable</strong> – <strong>[in]</strong> Whether to enable notifications.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -598,7 +598,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>folders</strong> (<em>[out]</em>) – folders Pointer to folders structure, which will be filled in.</p></li>
+<li><p><strong>folders</strong> – <strong>[out]</strong> folders Pointer to folders structure, which will be filled in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -615,7 +615,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>name</strong> (<em>[in]</em>) – Name of SMS folder which should be created.</p></li>
+<li><p><strong>name</strong> – <strong>[in]</strong> Name of SMS folder which should be created.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -632,7 +632,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>ID</strong> (<em>[in]</em>) – ID of SMS folder to delete.</p></li>
+<li><p><strong>ID</strong> – <strong>[in]</strong> ID of SMS folder to delete.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -666,9 +666,9 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>FileID</strong> (<em>[inout]</em>) – File ID will be stored here, might be used for consequent reads. </p></li>
-<li><p><strong>MMSFolder</strong> (<em>[inout]</em>) – MMS folder ID will be stored here, might be used for consequent reads. </p></li>
-<li><p><strong>start</strong> (<em>[in]</em>) – Whether to start reading.</p></li>
+<li><p><strong>FileID</strong> – <strong>[inout]</strong> File ID will be stored here, might be used for consequent reads. </p></li>
+<li><p><strong>MMSFolder</strong> – <strong>[inout]</strong> MMS folder ID will be stored here, might be used for consequent reads. </p></li>
+<li><p><strong>start</strong> – <strong>[in]</strong> Whether to start reading.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -685,7 +685,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
-<li><p><strong>enable</strong> (<em>[in]</em>) – Whether to enable notifications.</p></li>
+<li><p><strong>enable</strong> – <strong>[in]</strong> Whether to enable notifications.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -702,11 +702,11 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>di</strong> – Debug settings. </p></li>
-<li><p><strong>MessageBuffer</strong> (<em>[in]</em>) – Actual message text in unicode. </p></li>
-<li><p><strong>UDHType</strong> (<em>[in]</em>) – UDH type. </p></li>
-<li><p><strong>Coding</strong> (<em>[in]</em>) – GSM Encoding type. </p></li>
-<li><p><strong>SMSNum</strong> (<em>[out]</em>) – Number of messages needed to store the text. </p></li>
-<li><p><strong>CharsLeft</strong> (<em>[out]</em>) – Number of free chars in the message. </p></li>
+<li><p><strong>MessageBuffer</strong> – <strong>[in]</strong> Actual message text in unicode. </p></li>
+<li><p><strong>UDHType</strong> – <strong>[in]</strong> UDH type. </p></li>
+<li><p><strong>Coding</strong> – <strong>[in]</strong> GSM Encoding type. </p></li>
+<li><p><strong>SMSNum</strong> – <strong>[out]</strong> Number of messages needed to store the text. </p></li>
+<li><p><strong>CharsLeft</strong> – <strong>[out]</strong> Number of free chars in the message. </p></li>
 </ul>
 </dd>
 </dl>
