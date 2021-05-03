@@ -262,7 +262,7 @@ type is performed.</p>
 <h2>Requests<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h2>
 <p>This is how GSM_Reply_Function is filled. Now how to make phone requests ?</p>
 <p>Example:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">GSM_Error</span> <span class="n">N6110_GetMemory</span> <span class="p">(</span><span class="n">GSM_StateMachine</span>   <span class="o">*</span><span class="n">s</span><span class="p">,</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">GSM_Error</span> <span class="nf">N6110_GetMemory</span> <span class="p">(</span><span class="n">GSM_StateMachine</span>   <span class="o">*</span><span class="n">s</span><span class="p">,</span>
                                  <span class="n">GSM_PhonebookEntry</span> <span class="o">*</span><span class="n">entry</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">req</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
@@ -278,7 +278,7 @@ type is performed.</p>
 
   <span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Memory</span><span class="o">=</span><span class="n">entry</span><span class="p">;</span>
   <span class="n">dprintf</span><span class="p">(</span><span class="s">&quot;Getting phonebook entry</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nf">GSM_WaitFor</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ID_GetMemory</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">GSM_WaitFor</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ID_GetMemory</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
