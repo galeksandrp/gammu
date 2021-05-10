@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -216,99 +219,99 @@ bytes of data). You can construct it from <a class="reference internal" href="#s
 <a class="reference internal" href="gammu.html#gammu.EncodeSMS" title="gammu.EncodeSMS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gammu.EncodeSMS()</span></code></a>.</p>
 <p>Message dictionary can consist of following fields:</p>
 <dl class="py attribute">
-<dt id="SMSC">
-<code class="sig-name descname"><span class="pre">SMSC</span></code><a class="headerlink" href="#SMSC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="SMSC">
+<span class="sig-name descname"><span class="pre">SMSC</span></span><a class="headerlink" href="#SMSC" title="Permalink to this definition">¶</a></dt>
 <dd><p>SMSC information, see <a class="reference internal" href="#smsc-obj"><span class="std std-ref">SMSC Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Number">
-<code class="sig-name descname"><span class="pre">Number</span></code><a class="headerlink" href="#Number" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Number">
+<span class="sig-name descname"><span class="pre">Number</span></span><a class="headerlink" href="#Number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recipient number, needs to be set for sending.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Name">
-<code class="sig-name descname"><span class="pre">Name</span></code><a class="headerlink" href="#Name" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Name">
+<span class="sig-name descname"><span class="pre">Name</span></span><a class="headerlink" href="#Name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the message, does not make any effect on sending, some phones might
 store it.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="UDH">
-<code class="sig-name descname"><span class="pre">UDH</span></code><a class="headerlink" href="#UDH" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="UDH">
+<span class="sig-name descname"><span class="pre">UDH</span></span><a class="headerlink" href="#UDH" title="Permalink to this definition">¶</a></dt>
 <dd><p>User defined headers for SMS, see <a class="reference internal" href="#udh-obj"><span class="std std-ref">UDH Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Text">
-<code class="sig-name descname"><span class="pre">Text</span></code><a class="headerlink" href="#Text" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Text">
+<span class="sig-name descname"><span class="pre">Text</span></span><a class="headerlink" href="#Text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message text</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Folder">
-<code class="sig-name descname"><span class="pre">Folder</span></code><a class="headerlink" href="#Folder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Folder">
+<span class="sig-name descname"><span class="pre">Folder</span></span><a class="headerlink" href="#Folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Folder where the message is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Location">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#Location" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Location">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location where the message is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="InboxFolder">
-<code class="sig-name descname"><span class="pre">InboxFolder</span></code><a class="headerlink" href="#InboxFolder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="InboxFolder">
+<span class="sig-name descname"><span class="pre">InboxFolder</span></span><a class="headerlink" href="#InboxFolder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indication whether folder is an inbox</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="DeliveryStatus">
-<code class="sig-name descname"><span class="pre">DeliveryStatus</span></code><a class="headerlink" href="#DeliveryStatus" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="DeliveryStatus">
+<span class="sig-name descname"><span class="pre">DeliveryStatus</span></span><a class="headerlink" href="#DeliveryStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message delivery status, used only for received messages</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ReplyViaSameSMSC">
-<code class="sig-name descname"><span class="pre">ReplyViaSameSMSC</span></code><a class="headerlink" href="#ReplyViaSameSMSC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ReplyViaSameSMSC">
+<span class="sig-name descname"><span class="pre">ReplyViaSameSMSC</span></span><a class="headerlink" href="#ReplyViaSameSMSC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating whether reply using same SMSC is requested</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Class">
-<code class="sig-name descname"><span class="pre">Class</span></code><a class="headerlink" href="#Class" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Class">
+<span class="sig-name descname"><span class="pre">Class</span></span><a class="headerlink" href="#Class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message class</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="MessageReference">
-<code class="sig-name descname"><span class="pre">MessageReference</span></code><a class="headerlink" href="#MessageReference" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="MessageReference">
+<span class="sig-name descname"><span class="pre">MessageReference</span></span><a class="headerlink" href="#MessageReference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message reference number, used mostly to identify delivery reports</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ReplaceMessage">
-<code class="sig-name descname"><span class="pre">ReplaceMessage</span></code><a class="headerlink" href="#ReplaceMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ReplaceMessage">
+<span class="sig-name descname"><span class="pre">ReplaceMessage</span></span><a class="headerlink" href="#ReplaceMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Id of message which this message is supposed to replace</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="RejectDuplicates">
-<code class="sig-name descname"><span class="pre">RejectDuplicates</span></code><a class="headerlink" href="#RejectDuplicates" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="RejectDuplicates">
+<span class="sig-name descname"><span class="pre">RejectDuplicates</span></span><a class="headerlink" href="#RejectDuplicates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to reject duplicates</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Memory">
-<code class="sig-name descname"><span class="pre">Memory</span></code><a class="headerlink" href="#Memory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Memory">
+<span class="sig-name descname"><span class="pre">Memory</span></span><a class="headerlink" href="#Memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Memory where the message is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Type">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#Type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Type">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#Type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message type, one of:</p>
 </dd></dl>
 
@@ -319,8 +322,8 @@ store it.</p>
 with request for delivery report</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="Coding">
-<code class="sig-name descname"><span class="pre">Coding</span></code><a class="headerlink" href="#Coding" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Coding">
+<span class="sig-name descname"><span class="pre">Coding</span></span><a class="headerlink" href="#Coding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message encoding, one of:</p>
 </dd></dl>
 
@@ -334,21 +337,21 @@ long</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">8bit</span></code> - for binary messages</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="DateTime">
-<code class="sig-name descname"><span class="pre">DateTime</span></code><a class="headerlink" href="#DateTime" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="DateTime">
+<span class="sig-name descname"><span class="pre">DateTime</span></span><a class="headerlink" href="#DateTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp when the message was received or sent.</p>
 <p>Please note that most phones do no record timestamp of sent messages.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="SMSCDateTime">
-<code class="sig-name descname"><span class="pre">SMSCDateTime</span></code><a class="headerlink" href="#SMSCDateTime" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="SMSCDateTime">
+<span class="sig-name descname"><span class="pre">SMSCDateTime</span></span><a class="headerlink" href="#SMSCDateTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp when the message was at SMSC.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="State">
-<code class="sig-name descname"><span class="pre">State</span></code><a class="headerlink" href="#State" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="State">
+<span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#State" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message state, one of:</p>
 </dd></dl>
 
@@ -380,32 +383,32 @@ long</p></li>
 <span id="udh-obj"></span><h2>UDH Object<a class="headerlink" href="#udh-object" title="Permalink to this headline">¶</a></h2>
 <p>UDH dictionary can consist of following fields:</p>
 <dl class="py attribute">
-<dt id="ID8bit">
-<code class="sig-name descname"><span class="pre">ID8bit</span></code><a class="headerlink" href="#ID8bit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ID8bit">
+<span class="sig-name descname"><span class="pre">ID8bit</span></span><a class="headerlink" href="#ID8bit" title="Permalink to this definition">¶</a></dt>
 <dd><p>8-bit ID of the message, not required</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ID16bit">
-<code class="sig-name descname"><span class="pre">ID16bit</span></code><a class="headerlink" href="#ID16bit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ID16bit">
+<span class="sig-name descname"><span class="pre">ID16bit</span></span><a class="headerlink" href="#ID16bit" title="Permalink to this definition">¶</a></dt>
 <dd><p>16-bit ID of the message, not required</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="PartNumber">
-<code class="sig-name descname"><span class="pre">PartNumber</span></code><a class="headerlink" href="#PartNumber" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PartNumber">
+<span class="sig-name descname"><span class="pre">PartNumber</span></span><a class="headerlink" href="#PartNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of current part</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="AllParts">
-<code class="sig-name descname"><span class="pre">AllParts</span></code><a class="headerlink" href="#AllParts" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="AllParts">
+<span class="sig-name descname"><span class="pre">AllParts</span></span><a class="headerlink" href="#AllParts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Count of all message parts</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id0">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd><p>UDH type, one of predefined strings:</p>
 </dd></dl>
 
@@ -432,8 +435,8 @@ long</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">UserUDH</span></code></p></li>
 </ul>
 <dl class="py attribute">
-<dt id="id1">
-<code class="sig-name descname"><span class="pre">Text</span></code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">Text</span></span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
 <dd><p>UDH content</p>
 </dd></dl>
 
@@ -451,32 +454,32 @@ long</p></li>
 <span id="smsc-obj"></span><h2>SMSC Object<a class="headerlink" href="#smsc-object" title="Permalink to this headline">¶</a></h2>
 <p>SMSC dictionary can consist of following fields:</p>
 <dl class="py attribute">
-<dt id="id2">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location where the SMSC is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id3">
-<code class="sig-name descname"><span class="pre">Number</span></code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">Number</span></span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd><p>SMSC number</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id4">
-<code class="sig-name descname"><span class="pre">Name</span></code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">Name</span></span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the SMSC configuration</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="DefaultNumber">
-<code class="sig-name descname"><span class="pre">DefaultNumber</span></code><a class="headerlink" href="#DefaultNumber" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="DefaultNumber">
+<span class="sig-name descname"><span class="pre">DefaultNumber</span></span><a class="headerlink" href="#DefaultNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default recipient number, ignored on most phones</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Format">
-<code class="sig-name descname"><span class="pre">Format</span></code><a class="headerlink" href="#Format" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Format">
+<span class="sig-name descname"><span class="pre">Format</span></span><a class="headerlink" href="#Format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default message format, one of:</p>
 </dd></dl>
 
@@ -487,8 +490,8 @@ long</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Email</span></code></p></li>
 </ul>
 <dl class="py attribute">
-<dt id="Validity">
-<code class="sig-name descname"><span class="pre">Validity</span></code><a class="headerlink" href="#Validity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Validity">
+<span class="sig-name descname"><span class="pre">Validity</span></span><a class="headerlink" href="#Validity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default message validity as a string</p>
 </dd></dl>
 
@@ -512,32 +515,32 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="sms-info-obj"></span><h2>SMS Info Object<a class="headerlink" href="#sms-info-object" title="Permalink to this headline">¶</a></h2>
 <p>Message info dictionary can consist of following fields:</p>
 <dl class="py attribute">
-<dt id="Unicode">
-<code class="sig-name descname"><span class="pre">Unicode</span></code><a class="headerlink" href="#Unicode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Unicode">
+<span class="sig-name descname"><span class="pre">Unicode</span></span><a class="headerlink" href="#Unicode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use Unicode for the message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id5">
-<code class="sig-name descname"><span class="pre">ReplaceMessage</span></code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">ReplaceMessage</span></span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>Id of message which this message is supposed to replace</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Unknown">
-<code class="sig-name descname"><span class="pre">Unknown</span></code><a class="headerlink" href="#Unknown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><a class="headerlink" href="#Unknown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean flag indicating there was some part which Gammu could not decode.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id6">
-<code class="sig-name descname"><span class="pre">Class</span></code><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">Class</span></span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message class</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Entries">
-<code class="sig-name descname"><span class="pre">Entries</span></code><a class="headerlink" href="#Entries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Entries">
+<span class="sig-name descname"><span class="pre">Entries</span></span><a class="headerlink" href="#Entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual message data, see <a class="reference internal" href="#sms-info-part-obj"><span class="std std-ref">SMS Info Part Object</span></a>.</p>
 </dd></dl>
 
@@ -558,8 +561,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="sms-info-part-obj"></span><h2>SMS Info Part Object<a class="headerlink" href="#sms-info-part-object" title="Permalink to this headline">¶</a></h2>
 <p>Message component can consist of following fields:</p>
 <dl class="py attribute">
-<dt id="ID">
-<code class="sig-name descname"><span class="pre">ID</span></code><a class="headerlink" href="#ID" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ID">
+<span class="sig-name descname"><span class="pre">ID</span></span><a class="headerlink" href="#ID" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identification of the part type:</p>
 </dd></dl>
 
@@ -613,128 +616,128 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">SiemensFile</span></code> - Siemens OTA</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="Left">
-<code class="sig-name descname"><span class="pre">Left</span></code><a class="headerlink" href="#Left" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Left">
+<span class="sig-name descname"><span class="pre">Left</span></span><a class="headerlink" href="#Left" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Right">
-<code class="sig-name descname"><span class="pre">Right</span></code><a class="headerlink" href="#Right" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Right">
+<span class="sig-name descname"><span class="pre">Right</span></span><a class="headerlink" href="#Right" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Center">
-<code class="sig-name descname"><span class="pre">Center</span></code><a class="headerlink" href="#Center" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Center">
+<span class="sig-name descname"><span class="pre">Center</span></span><a class="headerlink" href="#Center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Large">
-<code class="sig-name descname"><span class="pre">Large</span></code><a class="headerlink" href="#Large" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Large">
+<span class="sig-name descname"><span class="pre">Large</span></span><a class="headerlink" href="#Large" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Small">
-<code class="sig-name descname"><span class="pre">Small</span></code><a class="headerlink" href="#Small" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Small">
+<span class="sig-name descname"><span class="pre">Small</span></span><a class="headerlink" href="#Small" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Bold">
-<code class="sig-name descname"><span class="pre">Bold</span></code><a class="headerlink" href="#Bold" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Bold">
+<span class="sig-name descname"><span class="pre">Bold</span></span><a class="headerlink" href="#Bold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Italic">
-<code class="sig-name descname"><span class="pre">Italic</span></code><a class="headerlink" href="#Italic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Italic">
+<span class="sig-name descname"><span class="pre">Italic</span></span><a class="headerlink" href="#Italic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Underlined">
-<code class="sig-name descname"><span class="pre">Underlined</span></code><a class="headerlink" href="#Underlined" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Underlined">
+<span class="sig-name descname"><span class="pre">Underlined</span></span><a class="headerlink" href="#Underlined" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Strikethrough">
-<code class="sig-name descname"><span class="pre">Strikethrough</span></code><a class="headerlink" href="#Strikethrough" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Strikethrough">
+<span class="sig-name descname"><span class="pre">Strikethrough</span></span><a class="headerlink" href="#Strikethrough" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text formatting</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Protected">
-<code class="sig-name descname"><span class="pre">Protected</span></code><a class="headerlink" href="#Protected" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Protected">
+<span class="sig-name descname"><span class="pre">Protected</span></span><a class="headerlink" href="#Protected" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether message part should be protected (DRM)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id7">
-<code class="sig-name descname"><span class="pre">Number</span></code><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">Number</span></span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Ringtone">
-<code class="sig-name descname"><span class="pre">Ringtone</span></code><a class="headerlink" href="#Ringtone" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Ringtone">
+<span class="sig-name descname"><span class="pre">Ringtone</span></span><a class="headerlink" href="#Ringtone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ringtone to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Bitmap">
-<code class="sig-name descname"><span class="pre">Bitmap</span></code><a class="headerlink" href="#Bitmap" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Bitmap">
+<span class="sig-name descname"><span class="pre">Bitmap</span></span><a class="headerlink" href="#Bitmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bitmap to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Bookmark">
-<code class="sig-name descname"><span class="pre">Bookmark</span></code><a class="headerlink" href="#Bookmark" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Bookmark">
+<span class="sig-name descname"><span class="pre">Bookmark</span></span><a class="headerlink" href="#Bookmark" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bookmark to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Settings">
-<code class="sig-name descname"><span class="pre">Settings</span></code><a class="headerlink" href="#Settings" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Settings">
+<span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#Settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="MMSIndicator">
-<code class="sig-name descname"><span class="pre">MMSIndicator</span></code><a class="headerlink" href="#MMSIndicator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="MMSIndicator">
+<span class="sig-name descname"><span class="pre">MMSIndicator</span></span><a class="headerlink" href="#MMSIndicator" title="Permalink to this definition">¶</a></dt>
 <dd><p>MMS indication to encode in message.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Phonebook">
-<code class="sig-name descname"><span class="pre">Phonebook</span></code><a class="headerlink" href="#Phonebook" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Phonebook">
+<span class="sig-name descname"><span class="pre">Phonebook</span></span><a class="headerlink" href="#Phonebook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Phonebook entry to encode in message, see <a class="reference internal" href="#pbk-obj"><span class="std std-ref">Phonebook Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Calendar">
-<code class="sig-name descname"><span class="pre">Calendar</span></code><a class="headerlink" href="#Calendar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Calendar">
+<span class="sig-name descname"><span class="pre">Calendar</span></span><a class="headerlink" href="#Calendar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calendar entry to encode in message, see <a class="reference internal" href="#cal-obj"><span class="std std-ref">Calendar Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ToDo">
-<code class="sig-name descname"><span class="pre">ToDo</span></code><a class="headerlink" href="#ToDo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ToDo">
+<span class="sig-name descname"><span class="pre">ToDo</span></span><a class="headerlink" href="#ToDo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Todo entry to encode in message, see <a class="reference internal" href="#todo-obj"><span class="std std-ref">Todo Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="File">
-<code class="sig-name descname"><span class="pre">File</span></code><a class="headerlink" href="#File" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="File">
+<span class="sig-name descname"><span class="pre">File</span></span><a class="headerlink" href="#File" title="Permalink to this definition">¶</a></dt>
 <dd><p>File to encode in message, see <a class="reference internal" href="#file-obj"><span class="std std-ref">File Object</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Buffer">
-<code class="sig-name descname"><span class="pre">Buffer</span></code><a class="headerlink" href="#Buffer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Buffer">
+<span class="sig-name descname"><span class="pre">Buffer</span></span><a class="headerlink" href="#Buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>String to encode in message.</p>
 </dd></dl>
 
@@ -743,14 +746,14 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="todo-obj"></span><h2>Todo Object<a class="headerlink" href="#todo-object" title="Permalink to this headline">¶</a></h2>
 <p>Todo entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
-<dt id="id8">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location where the entry is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id9">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of entry, one of:</p>
 </dd></dl>
 
@@ -785,8 +788,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">DAILY_ALARM</span></code> - Alarm repeating each day.</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="Priority">
-<code class="sig-name descname"><span class="pre">Priority</span></code><a class="headerlink" href="#Priority" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Priority">
+<span class="sig-name descname"><span class="pre">Priority</span></span><a class="headerlink" href="#Priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry priority, one of:</p>
 </dd></dl>
 
@@ -797,8 +800,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
 </ul>
 <dl class="py attribute">
-<dt id="id10">
-<code class="sig-name descname"><span class="pre">Entries</span></code><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">Entries</span></span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual entries, see <a class="reference internal" href="#todo-entry-obj"><span class="std std-ref">Todo Entries Object</span></a></p>
 </dd></dl>
 
@@ -819,8 +822,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <div class="section" id="todo-entries-object">
 <span id="todo-entry-obj"></span><h2>Todo Entries Object<a class="headerlink" href="#todo-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
-<dt id="id11">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of entry, one of:</p>
 </dd></dl>
 
@@ -841,8 +844,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">START_DATETIME</span></code> - Start date (Date).</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="Value">
-<code class="sig-name descname"><span class="pre">Value</span></code><a class="headerlink" href="#Value" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Value">
+<span class="sig-name descname"><span class="pre">Value</span></span><a class="headerlink" href="#Value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual value, corresponding type to Type field.</p>
 </dd></dl>
 
@@ -851,14 +854,14 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="cal-obj"></span><h2>Calendar Object<a class="headerlink" href="#calendar-object" title="Permalink to this headline">¶</a></h2>
 <p>Calendar entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
-<dt id="id12">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location where the entry is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id13">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id13" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id13" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of entry, one of:</p>
 </dd></dl>
 
@@ -893,8 +896,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">DAILY_ALARM</span></code> - Alarm repeating each day.</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="id14">
-<code class="sig-name descname"><span class="pre">Entries</span></code><a class="headerlink" href="#id14" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">Entries</span></span><a class="headerlink" href="#id14" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual entries, see <a class="reference internal" href="#cal-entry-obj"><span class="std std-ref">Calendar Entries Object</span></a></p>
 </dd></dl>
 
@@ -917,8 +920,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <div class="section" id="calendar-entries-object">
 <span id="cal-entry-obj"></span><h2>Calendar Entries Object<a class="headerlink" href="#calendar-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
-<dt id="id15">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id15" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id15" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of entry, one of:</p>
 </dd></dl>
 
@@ -946,8 +949,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">LAST_MODIFIED</span></code> - Date and time of last modification.</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="id16">
-<code class="sig-name descname"><span class="pre">Value</span></code><a class="headerlink" href="#id16" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">Value</span></span><a class="headerlink" href="#id16" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual value, corresponding type to Type field.</p>
 </dd></dl>
 
@@ -956,20 +959,20 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="pbk-obj"></span><h2>Phonebook Object<a class="headerlink" href="#phonebook-object" title="Permalink to this headline">¶</a></h2>
 <p>Phonebook entry is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
-<dt id="id17">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#id17" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#id17" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location where the entry is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="MemoryType">
-<code class="sig-name descname"><span class="pre">MemoryType</span></code><a class="headerlink" href="#MemoryType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="MemoryType">
+<span class="sig-name descname"><span class="pre">MemoryType</span></span><a class="headerlink" href="#MemoryType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Memory where the message is stored</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id18">
-<code class="sig-name descname"><span class="pre">Entries</span></code><a class="headerlink" href="#id18" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">Entries</span></span><a class="headerlink" href="#id18" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual entries, see <a class="reference internal" href="#pbk-entry-obj"><span class="std std-ref">Phonebook Entries Object</span></a></p>
 </dd></dl>
 
@@ -988,8 +991,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <div class="section" id="phonebook-entries-object">
 <span id="pbk-entry-obj"></span><h2>Phonebook Entries Object<a class="headerlink" href="#phonebook-entries-object" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
-<dt id="id19">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id19" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id19" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of entry, one of:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Number_General</span></code> - General number. (Text)</p></li>
@@ -1045,8 +1048,8 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id20">
-<code class="sig-name descname"><span class="pre">Location</span></code><a class="headerlink" href="#id20" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#id20" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location for the field:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Unknown</span></code> - not define</p></li>
@@ -1056,14 +1059,14 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id21">
-<code class="sig-name descname"><span class="pre">Value</span></code><a class="headerlink" href="#id21" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">Value</span></span><a class="headerlink" href="#id21" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actual value, corresponding type to Type field.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="PictureType">
-<code class="sig-name descname"><span class="pre">PictureType</span></code><a class="headerlink" href="#PictureType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PictureType">
+<span class="sig-name descname"><span class="pre">PictureType</span></span><a class="headerlink" href="#PictureType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of picture which is stored in Value field (only for Picture fields).</p>
 </dd></dl>
 
@@ -1072,32 +1075,32 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <span id="file-obj"></span><h2>File Object<a class="headerlink" href="#file-object" title="Permalink to this headline">¶</a></h2>
 <p>File is a dictionary consisting of following fields:</p>
 <dl class="py attribute">
-<dt id="Used">
-<code class="sig-name descname"><span class="pre">Used</span></code><a class="headerlink" href="#Used" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Used">
+<span class="sig-name descname"><span class="pre">Used</span></span><a class="headerlink" href="#Used" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of bytes used by this file.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id22">
-<code class="sig-name descname"><span class="pre">Name</span></code><a class="headerlink" href="#id22" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">Name</span></span><a class="headerlink" href="#id22" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id23">
-<code class="sig-name descname"><span class="pre">Folder</span></code><a class="headerlink" href="#id23" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">Folder</span></span><a class="headerlink" href="#id23" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating whether this is a folder.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Level">
-<code class="sig-name descname"><span class="pre">Level</span></code><a class="headerlink" href="#Level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Level">
+<span class="sig-name descname"><span class="pre">Level</span></span><a class="headerlink" href="#Level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Depth of file on the filesystem.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id24">
-<code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#id24" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#id24" title="Permalink to this definition">¶</a></dt>
 <dd><p>File type, one of:</p>
 </dd></dl>
 
@@ -1116,56 +1119,56 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <li><p><code class="docutils literal notranslate"><span class="pre">MMS</span></code></p></li>
 </ul>
 <dl class="py attribute">
-<dt id="ID_FullName">
-<code class="sig-name descname"><span class="pre">ID_FullName</span></code><a class="headerlink" href="#ID_FullName" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ID_FullName">
+<span class="sig-name descname"><span class="pre">ID_FullName</span></span><a class="headerlink" href="#ID_FullName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full file name including path.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id25">
-<code class="sig-name descname"><span class="pre">Buffer</span></code><a class="headerlink" href="#id25" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">Buffer</span></span><a class="headerlink" href="#id25" title="Permalink to this definition">¶</a></dt>
 <dd><p>Content of the file.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Modified">
-<code class="sig-name descname"><span class="pre">Modified</span></code><a class="headerlink" href="#Modified" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Modified">
+<span class="sig-name descname"><span class="pre">Modified</span></span><a class="headerlink" href="#Modified" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp of last change</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id26">
-<code class="sig-name descname"><span class="pre">Protected</span></code><a class="headerlink" href="#id26" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">Protected</span></span><a class="headerlink" href="#id26" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating whether file is protected (DRM).</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="ReadOnly">
-<code class="sig-name descname"><span class="pre">ReadOnly</span></code><a class="headerlink" href="#ReadOnly" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ReadOnly">
+<span class="sig-name descname"><span class="pre">ReadOnly</span></span><a class="headerlink" href="#ReadOnly" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating whether file is read only.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Hidden">
-<code class="sig-name descname"><span class="pre">Hidden</span></code><a class="headerlink" href="#Hidden" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Hidden">
+<span class="sig-name descname"><span class="pre">Hidden</span></span><a class="headerlink" href="#Hidden" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating whether file is hidden.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="System">
-<code class="sig-name descname"><span class="pre">System</span></code><a class="headerlink" href="#System" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="System">
+<span class="sig-name descname"><span class="pre">System</span></span><a class="headerlink" href="#System" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating whether file is system.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Pos">
-<code class="sig-name descname"><span class="pre">Pos</span></code><a class="headerlink" href="#Pos" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Pos">
+<span class="sig-name descname"><span class="pre">Pos</span></span><a class="headerlink" href="#Pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current position of file upload</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Finished">
-<code class="sig-name descname"><span class="pre">Finished</span></code><a class="headerlink" href="#Finished" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Finished">
+<span class="sig-name descname"><span class="pre">Finished</span></span><a class="headerlink" href="#Finished" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value indicating completed file transfer.</p>
 </dd></dl>
 
@@ -1210,26 +1213,26 @@ weeks, eg. <code class="docutils literal notranslate"><span class="pre">3W</span
 <div class="section" id="call-divert-objects">
 <span id="divert-entry"></span><h2>Call Divert Objects<a class="headerlink" href="#call-divert-objects" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
-<dt id="DivertType">
-<code class="sig-name descname"><span class="pre">DivertType</span></code><a class="headerlink" href="#DivertType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="DivertType">
+<span class="sig-name descname"><span class="pre">DivertType</span></span><a class="headerlink" href="#DivertType" title="Permalink to this definition">¶</a></dt>
 <dd><p>When to do the divert, see <a class="reference internal" href="#divert-type"><span class="std std-ref">Divert Type</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="CallType">
-<code class="sig-name descname"><span class="pre">CallType</span></code><a class="headerlink" href="#CallType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="CallType">
+<span class="sig-name descname"><span class="pre">CallType</span></span><a class="headerlink" href="#CallType" title="Permalink to this definition">¶</a></dt>
 <dd><p>What call types to divert, see <a class="reference internal" href="#divert-call"><span class="std std-ref">Call Type</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="id28">
-<code class="sig-name descname"><span class="pre">Number</span></code><a class="headerlink" href="#id28" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id28">
+<span class="sig-name descname"><span class="pre">Number</span></span><a class="headerlink" href="#id28" title="Permalink to this definition">¶</a></dt>
 <dd><p>Phone number where to divert.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Timeout">
-<code class="sig-name descname"><span class="pre">Timeout</span></code><a class="headerlink" href="#Timeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Timeout">
+<span class="sig-name descname"><span class="pre">Timeout</span></span><a class="headerlink" href="#Timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timeout after which the divert will happen.</p>
 </dd></dl>
 

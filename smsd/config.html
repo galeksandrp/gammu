@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -218,40 +221,40 @@ and is same as described in <a class="reference internal" href="../config/index.
 SMS daemon is used. However the <span class="target" id="index-6"></span><a class="reference internal" href="../config/index.html#option-LogFormat"><code class="xref config config-option docutils literal notranslate"><span class="pre">LogFormat</span></code></a> directive still
 configures how much messages gammu emits.</p>
 <dl class="config section">
-<dt id="section-[smsd]">
-<code class="sig-name descname"><span class="pre">[smsd]</span></code><a class="headerlink" href="#section-[smsd]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[smsd]">
+<span class="sig-name descname"><span class="pre">[smsd]</span></span><a class="headerlink" href="#section-[smsd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <span class="target" id="index-7"></span><a class="reference internal" href="#section-[smsd]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[smsd]</span></code></a> section configures SMS daemon itself, which are described in
 following subsections. First general parameters of SMS daemon are listed and
 then specific parameters for storage backends.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[include_numbers]">
-<code class="sig-name descname"><span class="pre">[include_numbers]</span></code><a class="headerlink" href="#section-[include_numbers]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[include_numbers]">
+<span class="sig-name descname"><span class="pre">[include_numbers]</span></span><a class="headerlink" href="#section-[include_numbers]" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of numbers from which accept messages, see <a class="reference internal" href="#message-filtering"><span class="std std-ref">Message filtering</span></a>.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[exclude_numbers]">
-<code class="sig-name descname"><span class="pre">[exclude_numbers]</span></code><a class="headerlink" href="#section-[exclude_numbers]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[exclude_numbers]">
+<span class="sig-name descname"><span class="pre">[exclude_numbers]</span></span><a class="headerlink" href="#section-[exclude_numbers]" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of numbers from which reject messages, see <a class="reference internal" href="#message-filtering"><span class="std std-ref">Message filtering</span></a>.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[include_smsc]">
-<code class="sig-name descname"><span class="pre">[include_smsc]</span></code><a class="headerlink" href="#section-[include_smsc]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[include_smsc]">
+<span class="sig-name descname"><span class="pre">[include_smsc]</span></span><a class="headerlink" href="#section-[include_smsc]" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of SMSC numbers from which accept messages, see <a class="reference internal" href="#message-filtering"><span class="std std-ref">Message filtering</span></a>.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[exclude_smsc]">
-<code class="sig-name descname"><span class="pre">[exclude_smsc]</span></code><a class="headerlink" href="#section-[exclude_smsc]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[exclude_smsc]">
+<span class="sig-name descname"><span class="pre">[exclude_smsc]</span></span><a class="headerlink" href="#section-[exclude_smsc]" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of SMSC numbers from which reject messages, see <a class="reference internal" href="#message-filtering"><span class="std std-ref">Message filtering</span></a>.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[sql]">
-<code class="sig-name descname"><span class="pre">[sql]</span></code><a class="headerlink" href="#section-[sql]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[sql]">
+<span class="sig-name descname"><span class="pre">[sql]</span></span><a class="headerlink" href="#section-[sql]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure SQL queries used by <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>, you usually don’t have to modify them.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -260,8 +263,8 @@ then specific parameters for storage backends.</p>
 </dd></dl>
 
 <dl class="config section">
-<dt id="section-[tables]">
-<code class="sig-name descname"><span class="pre">[tables]</span></code><a class="headerlink" href="#section-[tables]" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="section-[tables]">
+<span class="sig-name descname"><span class="pre">[tables]</span></span><a class="headerlink" href="#section-[tables]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure SQL table names used by <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>, you usually don’t have to modify them.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -273,8 +276,8 @@ then specific parameters for storage backends.</p>
 <div class="section" id="general-parameters-of-sms-daemon">
 <h2>General parameters of SMS daemon<a class="headerlink" href="#general-parameters-of-sms-daemon" title="Permalink to this headline">¶</a></h2>
 <dl class="config option">
-<dt id="option-Service">
-<code class="sig-name descname"><span class="pre">Service</span></code><a class="headerlink" href="#option-Service" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Service">
+<span class="sig-name descname"><span class="pre">Service</span></span><a class="headerlink" href="#option-Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>SMSD service to use, one of following choices:</p>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">FILES</span></code></dt><dd><p>Stores messages in files, see <a class="reference internal" href="files.html#gammu-smsd-files"><span class="std std-ref">Files backend</span></a> for details.</p>
@@ -313,29 +316,29 @@ any database supported by libdbi, see <a class="reference internal" href="dbi.ht
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-PIN">
-<code class="sig-name descname"><span class="pre">PIN</span></code><a class="headerlink" href="#option-PIN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-PIN">
+<span class="sig-name descname"><span class="pre">PIN</span></span><a class="headerlink" href="#option-PIN" title="Permalink to this definition">¶</a></dt>
 <dd><p>PIN for SIM card. This is optional, but you should set it if your phone after
 power on requires PIN.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-NetworkCode">
-<code class="sig-name descname"><span class="pre">NetworkCode</span></code><a class="headerlink" href="#option-NetworkCode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-NetworkCode">
+<span class="sig-name descname"><span class="pre">NetworkCode</span></span><a class="headerlink" href="#option-NetworkCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Network personalisation password. This is optional, but some phones require it
 after power on.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-PhoneCode">
-<code class="sig-name descname"><span class="pre">PhoneCode</span></code><a class="headerlink" href="#option-PhoneCode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-PhoneCode">
+<span class="sig-name descname"><span class="pre">PhoneCode</span></span><a class="headerlink" href="#option-PhoneCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Phone lock password. This is optional, but some phones require it after power
 on.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-LogFile">
-<code class="sig-name descname"><span class="pre">LogFile</span></code><a class="headerlink" href="#option-LogFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-LogFile">
+<span class="sig-name descname"><span class="pre">LogFile</span></span><a class="headerlink" href="#option-LogFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>File where SMSD actions are being logged. You can also use special value
 <code class="docutils literal notranslate"><span class="pre">syslog</span></code> which will send all messages to syslog daemon. On Windows another
 special value <code class="docutils literal notranslate"><span class="pre">eventlog</span></code> exists, which will send logs to Windows Event Log.</p>
@@ -352,8 +355,8 @@ installation of Gammu).</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-LogFacility">
-<code class="sig-name descname"><span class="pre">LogFacility</span></code><a class="headerlink" href="#option-LogFacility" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-LogFacility">
+<span class="sig-name descname"><span class="pre">LogFacility</span></span><a class="headerlink" href="#option-LogFacility" title="Permalink to this definition">¶</a></dt>
 <dd><p>Facility to use on logging backends which support it (currently only
 syslog). One of following chouces:</p>
 <ul class="simple">
@@ -374,8 +377,8 @@ syslog). One of following chouces:</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-DebugLevel">
-<code class="sig-name descname"><span class="pre">DebugLevel</span></code><a class="headerlink" href="#option-DebugLevel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-DebugLevel">
+<span class="sig-name descname"><span class="pre">DebugLevel</span></span><a class="headerlink" href="#option-DebugLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Debug level for SMSD. The integer value should be sum of all flags you
 want to enable.</p>
 <dl class="simple">
@@ -391,32 +394,32 @@ want to enable.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-CommTimeout">
-<code class="sig-name descname"><span class="pre">CommTimeout</span></code><a class="headerlink" href="#option-CommTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-CommTimeout">
+<span class="sig-name descname"><span class="pre">CommTimeout</span></span><a class="headerlink" href="#option-CommTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>How many seconds should SMSD wait after there is no message in outbox
 before scanning it again.</p>
 <p>Default is 30.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-SendTimeout">
-<code class="sig-name descname"><span class="pre">SendTimeout</span></code><a class="headerlink" href="#option-SendTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-SendTimeout">
+<span class="sig-name descname"><span class="pre">SendTimeout</span></span><a class="headerlink" href="#option-SendTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shows how many seconds SMSD should wait for network answer during sending
 sms. If nothing happen during this time, sms will be resent.</p>
 <p>Default is 30.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-MaxRetries">
-<code class="sig-name descname"><span class="pre">MaxRetries</span></code><a class="headerlink" href="#option-MaxRetries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-MaxRetries">
+<span class="sig-name descname"><span class="pre">MaxRetries</span></span><a class="headerlink" href="#option-MaxRetries" title="Permalink to this definition">¶</a></dt>
 <dd><p>How many times will SMSD try to resend message if sending fails. This
 is tracked per message and currently supported only with SQL backends.</p>
 <p>Default is 1.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-RetryTimeout">
-<code class="sig-name descname"><span class="pre">RetryTimeout</span></code><a class="headerlink" href="#option-RetryTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-RetryTimeout">
+<span class="sig-name descname"><span class="pre">RetryTimeout</span></span><a class="headerlink" href="#option-RetryTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>How long to wait before resending failed message (needs to be enabled by
 <span class="target" id="index-15"></span><a class="reference internal" href="#option-MaxRetries"><code class="xref config config-option docutils literal notranslate"><span class="pre">MaxRetries</span></code></a>).</p>
 <p>Is used in <span class="target" id="index-16"></span><a class="reference internal" href="sql.html#option-update_retries"><code class="xref config config-option docutils literal notranslate"><span class="pre">update_retries</span></code></a>.</p>
@@ -424,8 +427,8 @@ is tracked per message and currently supported only with SQL backends.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-ReceiveFrequency">
-<code class="sig-name descname"><span class="pre">ReceiveFrequency</span></code><a class="headerlink" href="#option-ReceiveFrequency" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-ReceiveFrequency">
+<span class="sig-name descname"><span class="pre">ReceiveFrequency</span></span><a class="headerlink" href="#option-ReceiveFrequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds between testing for received SMSes, when the phone is
 busy sending SMSes. Normally a test for received SMSes is done every
 <span class="target" id="index-17"></span><a class="reference internal" href="#option-CommTimeout"><code class="xref config config-option docutils literal notranslate"><span class="pre">CommTimeout</span></code></a> seconds and after each sent SMS.</p>
@@ -433,8 +436,8 @@ busy sending SMSes. Normally a test for received SMSes is done every
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-StatusFrequency">
-<code class="sig-name descname"><span class="pre">StatusFrequency</span></code><a class="headerlink" href="#option-StatusFrequency" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-StatusFrequency">
+<span class="sig-name descname"><span class="pre">StatusFrequency</span></span><a class="headerlink" href="#option-StatusFrequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds between refreshing phone status (battery, signal) stored
 in shared memory and possibly in service backends. Use 0 to disable.</p>
 <p>You might want to increase this for higher throughput.</p>
@@ -442,8 +445,8 @@ in shared memory and possibly in service backends. Use 0 to disable.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-LoopSleep">
-<code class="sig-name descname"><span class="pre">LoopSleep</span></code><a class="headerlink" href="#option-LoopSleep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-LoopSleep">
+<span class="sig-name descname"><span class="pre">LoopSleep</span></span><a class="headerlink" href="#option-LoopSleep" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds how long will SMSD sleep before checking for some
 activity. Please note that setting this to higher value than 1 will have
 effects to other time based configurations, because they will be effectively
@@ -459,8 +462,8 @@ the already processed time.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-MultipartTimeout">
-<code class="sig-name descname"><span class="pre">MultipartTimeout</span></code><a class="headerlink" href="#option-MultipartTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-MultipartTimeout">
+<span class="sig-name descname"><span class="pre">MultipartTimeout</span></span><a class="headerlink" href="#option-MultipartTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds how long will SMSD wait for all parts of multipart
 message. If all parts won’t arrive in time, parts will be processed as separate
 messages.</p>
@@ -468,15 +471,15 @@ messages.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-CheckSecurity">
-<code class="sig-name descname"><span class="pre">CheckSecurity</span></code><a class="headerlink" href="#option-CheckSecurity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-CheckSecurity">
+<span class="sig-name descname"><span class="pre">CheckSecurity</span></span><a class="headerlink" href="#option-CheckSecurity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to check if phone wants to enter PIN.</p>
 <p>Default is 1 (enabled).</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-HangupCalls">
-<code class="sig-name descname"><span class="pre">HangupCalls</span></code><a class="headerlink" href="#option-HangupCalls" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-HangupCalls">
+<span class="sig-name descname"><span class="pre">HangupCalls</span></span><a class="headerlink" href="#option-HangupCalls" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.34.0.</span></p>
 </div>
@@ -485,22 +488,22 @@ messages.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-CheckBattery">
-<code class="sig-name descname"><span class="pre">CheckBattery</span></code><a class="headerlink" href="#option-CheckBattery" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-CheckBattery">
+<span class="sig-name descname"><span class="pre">CheckBattery</span></span><a class="headerlink" href="#option-CheckBattery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to check phone battery state periodically.</p>
 <p>Default is 1 (enabled).</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-CheckSignal">
-<code class="sig-name descname"><span class="pre">CheckSignal</span></code><a class="headerlink" href="#option-CheckSignal" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-CheckSignal">
+<span class="sig-name descname"><span class="pre">CheckSignal</span></span><a class="headerlink" href="#option-CheckSignal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to check signal level periodically.</p>
 <p>Default is 1 (enabled).</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-CheckNetwork">
-<code class="sig-name descname"><span class="pre">CheckNetwork</span></code><a class="headerlink" href="#option-CheckNetwork" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-CheckNetwork">
+<span class="sig-name descname"><span class="pre">CheckNetwork</span></span><a class="headerlink" href="#option-CheckNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.37.90.</span></p>
 </div>
@@ -511,8 +514,8 @@ tries to power it on.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-ResetFrequency">
-<code class="sig-name descname"><span class="pre">ResetFrequency</span></code><a class="headerlink" href="#option-ResetFrequency" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-ResetFrequency">
+<span class="sig-name descname"><span class="pre">ResetFrequency</span></span><a class="headerlink" href="#option-ResetFrequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds between performing a preventive soft reset in order to
 minimize the cases of hanging phones e.g. Nokia 5110 will sometimes freeze to
 a state when only after unmounting the battery the phone will be functional
@@ -521,8 +524,8 @@ again.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-HardResetFrequency">
-<code class="sig-name descname"><span class="pre">HardResetFrequency</span></code><a class="headerlink" href="#option-HardResetFrequency" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-HardResetFrequency">
+<span class="sig-name descname"><span class="pre">HardResetFrequency</span></span><a class="headerlink" href="#option-HardResetFrequency" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.28.92.</span></p>
 </div>
@@ -538,8 +541,8 @@ minimize the cases of hanging phones.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-DeliveryReport">
-<code class="sig-name descname"><span class="pre">DeliveryReport</span></code><a class="headerlink" href="#option-DeliveryReport" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-DeliveryReport">
+<span class="sig-name descname"><span class="pre">DeliveryReport</span></span><a class="headerlink" href="#option-DeliveryReport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether delivery reports should be used, one of <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">sms</span></code>.</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">log</span></code></dt><dd><p>one line log entry,</p>
@@ -553,8 +556,8 @@ minimize the cases of hanging phones.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-DeliveryReportDelay">
-<code class="sig-name descname"><span class="pre">DeliveryReportDelay</span></code><a class="headerlink" href="#option-DeliveryReportDelay" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-DeliveryReportDelay">
+<span class="sig-name descname"><span class="pre">DeliveryReportDelay</span></span><a class="headerlink" href="#option-DeliveryReportDelay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delay in seconds how long is still delivery report considered valid. This
 depends on brokenness of your network (delivery report should have same
 timestamp as sent message). Increase this if delivery reports are not paired
@@ -563,8 +566,8 @@ with sent messages.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-PhoneID">
-<code class="sig-name descname"><span class="pre">PhoneID</span></code><a class="headerlink" href="#option-PhoneID" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-PhoneID">
+<span class="sig-name descname"><span class="pre">PhoneID</span></span><a class="headerlink" href="#option-PhoneID" title="Permalink to this definition">¶</a></dt>
 <dd><p>String with info about phone used for sending/receiving. This can be useful if
 you want to run several SMS daemons (see <a class="reference internal" href="#smsd-multi"><span class="std std-ref">Multiple modems</span></a>).</p>
 <p>When you set PhoneID, all messages (including injected ones) will be marked
@@ -576,8 +579,8 @@ matching or empty SenderID.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-SMSC">
-<code class="sig-name descname"><span class="pre">SMSC</span></code><a class="headerlink" href="#option-SMSC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-SMSC">
+<span class="sig-name descname"><span class="pre">SMSC</span></span><a class="headerlink" href="#option-SMSC" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.36.2.</span></p>
 </div>
@@ -588,8 +591,8 @@ SMSC from phone, but sometimes this fails (try <code class="xref std std-option 
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-RunOnReceive">
-<code class="sig-name descname"><span class="pre">RunOnReceive</span></code><a class="headerlink" href="#option-RunOnReceive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-RunOnReceive">
+<span class="sig-name descname"><span class="pre">RunOnReceive</span></span><a class="headerlink" href="#option-RunOnReceive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a program after receiving message.</p>
 <p>This parameter is executed through shell, so you might need to escape some
 special characters and you can include any number of parameters. Additionally
@@ -606,8 +609,8 @@ environment, check <a class="reference internal" href="run.html#gammu-smsd-run">
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-RunOnFailure">
-<code class="sig-name descname"><span class="pre">RunOnFailure</span></code><a class="headerlink" href="#option-RunOnFailure" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-RunOnFailure">
+<span class="sig-name descname"><span class="pre">RunOnFailure</span></span><a class="headerlink" href="#option-RunOnFailure" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.28.93.</span></p>
 </div>
@@ -624,8 +627,8 @@ which would indicate error while sending the message.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-RunOnSent">
-<code class="sig-name descname"><span class="pre">RunOnSent</span></code><a class="headerlink" href="#option-RunOnSent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-RunOnSent">
+<span class="sig-name descname"><span class="pre">RunOnSent</span></span><a class="headerlink" href="#option-RunOnSent" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.36.4.</span></p>
 </div>
@@ -635,8 +638,8 @@ with message details as described in <a class="reference internal" href="run.htm
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-RunOnIncomingCall">
-<code class="sig-name descname"><span class="pre">RunOnIncomingCall</span></code><a class="headerlink" href="#option-RunOnIncomingCall" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-RunOnIncomingCall">
+<span class="sig-name descname"><span class="pre">RunOnIncomingCall</span></span><a class="headerlink" href="#option-RunOnIncomingCall" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.38.5.</span></p>
 </div>
@@ -646,8 +649,8 @@ This requires <span class="target" id="index-20"></span><a class="reference inte
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-IncludeNumbersFile">
-<code class="sig-name descname"><span class="pre">IncludeNumbersFile</span></code><a class="headerlink" href="#option-IncludeNumbersFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-IncludeNumbersFile">
+<span class="sig-name descname"><span class="pre">IncludeNumbersFile</span></span><a class="headerlink" href="#option-IncludeNumbersFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>File with list of numbers which are accepted by SMSD. The file contains one
 number per line, blank lines are ignored. The file is read at startup and is
 reread only when configuration is being reread. See Message filtering for
@@ -655,8 +658,8 @@ details.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-ExcludeNumbersFile">
-<code class="sig-name descname"><span class="pre">ExcludeNumbersFile</span></code><a class="headerlink" href="#option-ExcludeNumbersFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-ExcludeNumbersFile">
+<span class="sig-name descname"><span class="pre">ExcludeNumbersFile</span></span><a class="headerlink" href="#option-ExcludeNumbersFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>File with list of numbers which are not accepted by SMSD. The file contains
 one number per line, blank lines are ignored. The file is read at startup and
 is reread only when configuration is being reread. See Message filtering for
@@ -664,8 +667,8 @@ details.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-IncludeSMSCFile">
-<code class="sig-name descname"><span class="pre">IncludeSMSCFile</span></code><a class="headerlink" href="#option-IncludeSMSCFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-IncludeSMSCFile">
+<span class="sig-name descname"><span class="pre">IncludeSMSCFile</span></span><a class="headerlink" href="#option-IncludeSMSCFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>File with list of SMSC numbers which are accepted by SMSD. The file contains
 one number per line, blank lines are ignored. The file is read at startup and
 is reread only when configuration is being reread. See Message filtering for
@@ -673,8 +676,8 @@ details.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-ExcludeSMSCFile">
-<code class="sig-name descname"><span class="pre">ExcludeSMSCFile</span></code><a class="headerlink" href="#option-ExcludeSMSCFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-ExcludeSMSCFile">
+<span class="sig-name descname"><span class="pre">ExcludeSMSCFile</span></span><a class="headerlink" href="#option-ExcludeSMSCFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>File with list of SMSC numbers which are not accepted by SMSD. The file
 contains one number per line, blank lines are ignored. The file is read at
 startup and is reread only when configuration is being reread. See Message
@@ -682,8 +685,8 @@ filtering for details.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-BackendRetries">
-<code class="sig-name descname"><span class="pre">BackendRetries</span></code><a class="headerlink" href="#option-BackendRetries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-BackendRetries">
+<span class="sig-name descname"><span class="pre">BackendRetries</span></span><a class="headerlink" href="#option-BackendRetries" title="Permalink to this definition">¶</a></dt>
 <dd><p>How many times will SMSD backend retry operation.</p>
 <p>The implementation on different backends is different, for database backends
 it generally means how many times it will try to reconnect to the server.</p>
@@ -691,8 +694,8 @@ it generally means how many times it will try to reconnect to the server.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Send">
-<code class="sig-name descname"><span class="pre">Send</span></code><a class="headerlink" href="#option-Send" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Send">
+<span class="sig-name descname"><span class="pre">Send</span></span><a class="headerlink" href="#option-Send" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.28.91.</span></p>
 </div>
@@ -701,8 +704,8 @@ it generally means how many times it will try to reconnect to the server.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Receive">
-<code class="sig-name descname"><span class="pre">Receive</span></code><a class="headerlink" href="#option-Receive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Receive">
+<span class="sig-name descname"><span class="pre">Receive</span></span><a class="headerlink" href="#option-Receive" title="Permalink to this definition">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.28.91.</span></p>
 </div>
@@ -718,20 +721,20 @@ it generally means how many times it will try to reconnect to the server.</p>
 their documentation) supports same options for configuring connection to a
 database:</p>
 <dl class="config option">
-<dt id="option-User">
-<code class="sig-name descname"><span class="pre">User</span></code><a class="headerlink" href="#option-User" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-User">
+<span class="sig-name descname"><span class="pre">User</span></span><a class="headerlink" href="#option-User" title="Permalink to this definition">¶</a></dt>
 <dd><p>User name used for connection to a database.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Password">
-<code class="sig-name descname"><span class="pre">Password</span></code><a class="headerlink" href="#option-Password" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Password">
+<span class="sig-name descname"><span class="pre">Password</span></span><a class="headerlink" href="#option-Password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Password used for connection to a database.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Host">
-<code class="sig-name descname"><span class="pre">Host</span></code><a class="headerlink" href="#option-Host" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Host">
+<span class="sig-name descname"><span class="pre">Host</span></span><a class="headerlink" href="#option-Host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database server address. It can also contain port or socket path after
 semicolon, for example <code class="docutils literal notranslate"><span class="pre">localhost:/path/to/socket</span></code> or
 <code class="docutils literal notranslate"><span class="pre">192.168.1.1:8000</span></code>.</p>
@@ -748,8 +751,8 @@ Please make sure your SMSD settings match the database server ones.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-PC">
-<code class="sig-name descname"><span class="pre">PC</span></code><a class="headerlink" href="#option-PC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-PC">
+<span class="sig-name descname"><span class="pre">PC</span></span><a class="headerlink" href="#option-PC" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 1.28.92: </span>Please use <span class="target" id="index-21"></span><a class="reference internal" href="#option-Host"><code class="xref config config-option docutils literal notranslate"><span class="pre">Host</span></code></a> instead.</p>
 </div>
@@ -757,8 +760,8 @@ Please make sure your SMSD settings match the database server ones.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Database">
-<code class="sig-name descname"><span class="pre">Database</span></code><a class="headerlink" href="#option-Database" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Database">
+<span class="sig-name descname"><span class="pre">Database</span></span><a class="headerlink" href="#option-Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of database (or schema) to use and where SMSD can find it’s tables.</p>
 <p>Please note that you should create tables in this database before using
 gammu-smsd. SQL files for creating needed tables are included in
@@ -767,16 +770,16 @@ documentation for individual database backends: <a class="reference internal" hr
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-SkipSMSCNumber">
-<code class="sig-name descname"><span class="pre">SkipSMSCNumber</span></code><a class="headerlink" href="#option-SkipSMSCNumber" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-SkipSMSCNumber">
+<span class="sig-name descname"><span class="pre">SkipSMSCNumber</span></span><a class="headerlink" href="#option-SkipSMSCNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>When you send sms from some SMS centers you can have delivery reports from
 other SMSC number. You can set here number of this SMSC used by you and Gammu
 will not check it’s number during assigning reports to sent SMS.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-Driver">
-<code class="sig-name descname"><span class="pre">Driver</span></code><a class="headerlink" href="#option-Driver" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-Driver">
+<span class="sig-name descname"><span class="pre">Driver</span></span><a class="headerlink" href="#option-Driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>SQL driver to use, Gammu supports several native drivers and generic
 interface using ODBC and DBI. Availability of the backends depends on
 compile time options.</p>
@@ -804,8 +807,8 @@ installed appropriate DBI driver to make it work. See
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-SQL">
-<code class="sig-name descname"><span class="pre">SQL</span></code><a class="headerlink" href="#option-SQL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-SQL">
+<span class="sig-name descname"><span class="pre">SQL</span></span><a class="headerlink" href="#option-SQL" title="Permalink to this definition">¶</a></dt>
 <dd><p>SQL dialect to use. This is specially useful with <a class="reference internal" href="odbc.html#gammu-smsd-odbc"><span class="std std-ref">ODBC Backend</span></a> where SMSD
 does not know which server it is actually talking to.</p>
 <p>Possible values:</p>
@@ -829,15 +832,15 @@ does not know which server it is actually talking to.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-DriversPath">
-<code class="sig-name descname"><span class="pre">DriversPath</span></code><a class="headerlink" href="#option-DriversPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-DriversPath">
+<span class="sig-name descname"><span class="pre">DriversPath</span></span><a class="headerlink" href="#option-DriversPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path, where DBI drivers are stored, this usually does not have to be set if
 you have properly installed drivers.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-DBDir">
-<code class="sig-name descname"><span class="pre">DBDir</span></code><a class="headerlink" href="#option-DBDir" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-DBDir">
+<span class="sig-name descname"><span class="pre">DBDir</span></span><a class="headerlink" href="#option-DBDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database directory for some (currently only sqlite) DBI drivers. Set here path
 where sqlite database files are stored.</p>
 </dd></dl>
@@ -848,37 +851,37 @@ where sqlite database files are stored.</p>
 <a class="reference internal" href="files.html#gammu-smsd-files"><span class="std std-ref">Files backend</span></a> for more detailed service backend description. Please note
 that all path should contain trailing path separator (/ on Unix systems):</p>
 <dl class="config option">
-<dt id="option-InboxPath">
-<code class="sig-name descname"><span class="pre">InboxPath</span></code><a class="headerlink" href="#option-InboxPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-InboxPath">
+<span class="sig-name descname"><span class="pre">InboxPath</span></span><a class="headerlink" href="#option-InboxPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Where the received SMSes are stored.</p>
 <p>Default is current directory.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-OutboxPath">
-<code class="sig-name descname"><span class="pre">OutboxPath</span></code><a class="headerlink" href="#option-OutboxPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-OutboxPath">
+<span class="sig-name descname"><span class="pre">OutboxPath</span></span><a class="headerlink" href="#option-OutboxPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Where SMSes to be sent should be placed.</p>
 <p>Default is current directory.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-SentSMSPath">
-<code class="sig-name descname"><span class="pre">SentSMSPath</span></code><a class="headerlink" href="#option-SentSMSPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-SentSMSPath">
+<span class="sig-name descname"><span class="pre">SentSMSPath</span></span><a class="headerlink" href="#option-SentSMSPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Where the transmitted SMSes are placed, if same as <span class="target" id="index-23"></span><a class="reference internal" href="#option-OutboxPath"><code class="xref config config-option docutils literal notranslate"><span class="pre">OutboxPath</span></code></a> transmitted
 messages are deleted.</p>
 <p>Default is to delete transmitted messages.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-ErrorSMSPath">
-<code class="sig-name descname"><span class="pre">ErrorSMSPath</span></code><a class="headerlink" href="#option-ErrorSMSPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-ErrorSMSPath">
+<span class="sig-name descname"><span class="pre">ErrorSMSPath</span></span><a class="headerlink" href="#option-ErrorSMSPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Where SMSes with error in transmission is placed.</p>
 <p>Default is same as <span class="target" id="index-24"></span><a class="reference internal" href="#option-SentSMSPath"><code class="xref config config-option docutils literal notranslate"><span class="pre">SentSMSPath</span></code></a>.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-InboxFormat">
-<code class="sig-name descname"><span class="pre">InboxFormat</span></code><a class="headerlink" href="#option-InboxFormat" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-InboxFormat">
+<span class="sig-name descname"><span class="pre">InboxFormat</span></span><a class="headerlink" href="#option-InboxFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>The format in which the SMS will be stored: <code class="docutils literal notranslate"><span class="pre">detail</span></code>, <code class="docutils literal notranslate"><span class="pre">unicode</span></code>, <code class="docutils literal notranslate"><span class="pre">standard</span></code>.</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">detail</span></code></dt><dd><p>format used for message backup by <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a>, see <a class="reference internal" href="../formats/smsbackup.html#gammu-smsbackup"><span class="std std-ref">SMS Backup Format</span></a>.</p>
@@ -899,8 +902,8 @@ for all others each message part is saved separately.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-OutboxFormat">
-<code class="sig-name descname"><span class="pre">OutboxFormat</span></code><a class="headerlink" href="#option-OutboxFormat" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-OutboxFormat">
+<span class="sig-name descname"><span class="pre">OutboxFormat</span></span><a class="headerlink" href="#option-OutboxFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>The format in which messages created by <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> will be stored,
 it accepts same values as InboxFormat.</p>
 <p>Default is <code class="docutils literal notranslate"><span class="pre">detail</span></code> if Gammu is compiled in with backup functions, <code class="docutils literal notranslate"><span class="pre">unicode</span></code>
@@ -908,8 +911,8 @@ otherwise.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-TransmitFormat">
-<code class="sig-name descname"><span class="pre">TransmitFormat</span></code><a class="headerlink" href="#option-TransmitFormat" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-TransmitFormat">
+<span class="sig-name descname"><span class="pre">TransmitFormat</span></span><a class="headerlink" href="#option-TransmitFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>The format for transmitting the SMS: <code class="docutils literal notranslate"><span class="pre">auto</span></code>, <code class="docutils literal notranslate"><span class="pre">unicode</span></code>, <code class="docutils literal notranslate"><span class="pre">7bit</span></code>.</p>
 <p>This option is used only if <span class="target" id="index-25"></span><a class="reference internal" href="#option-OutboxFormat"><code class="xref config config-option docutils literal notranslate"><span class="pre">OutboxFormat</span></code></a> is not set to
 <code class="docutils literal notranslate"><span class="pre">detail</span></code>. In such case encoding specified in the message is used (you can

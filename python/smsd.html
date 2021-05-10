@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -193,8 +196,8 @@
 <div class="section" id="smsd">
 <h2><a class="reference internal" href="#gammu.smsd.SMSD" title="gammu.smsd.SMSD"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMSD</span></code></a><a class="headerlink" href="#smsd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="gammu.smsd.SMSD">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gammu.smsd.</span></code><code class="sig-name descname"><span class="pre">SMSD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gammu.smsd.SMSD">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.smsd.</span></span><span class="sig-name descname"><span class="pre">SMSD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD" title="Permalink to this definition">¶</a></dt>
 <dd><p>SMSD main class, that is used for communication with phone.</p>
 <p>You don’t need to run the SMS daemon itself to control or ask it for
 status, this can be also done on separately running instances. All you
@@ -206,8 +209,8 @@ using.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="gammu.smsd.SMSD.MainLoop">
-<code class="sig-name descname"><span class="pre">MainLoop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MaxFailures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.MainLoop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gammu.smsd.SMSD.MainLoop">
+<span class="sig-name descname"><span class="pre">MainLoop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MaxFailures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.MainLoop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs SMS daemon main loop.</p>
 <p>Please note that this will run until some serious error occurs or until
 terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" title="gammu.smsd.SMSD.Shutdown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Shutdown()</span></code></a>.</p>
@@ -225,8 +228,8 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 </dd></dl>
 
 <dl class="py method">
-<dt id="gammu.smsd.SMSD.Shutdown">
-<code class="sig-name descname"><span class="pre">Shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.Shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gammu.smsd.SMSD.Shutdown">
+<span class="sig-name descname"><span class="pre">Shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.Shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Signals SMS daemon to stop.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -239,8 +242,8 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 </dd></dl>
 
 <dl class="py method">
-<dt id="gammu.smsd.SMSD.GetStatus">
-<code class="sig-name descname"><span class="pre">GetStatus</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.GetStatus" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gammu.smsd.SMSD.GetStatus">
+<span class="sig-name descname"><span class="pre">GetStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.GetStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns SMSD status.</p>
 <p>The following values are set in resulting dictionary:</p>
 <p>Client</p>
@@ -286,8 +289,8 @@ terminated by <a class="reference internal" href="#gammu.smsd.SMSD.Shutdown" tit
 </dd></dl>
 
 <dl class="py method">
-<dt id="gammu.smsd.SMSD.InjectSMS">
-<code class="sig-name descname"><span class="pre">InjectSMS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.InjectSMS" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gammu.smsd.SMSD.InjectSMS">
+<span class="sig-name descname"><span class="pre">InjectSMS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD.InjectSMS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Injects SMS message into outgoing messages queue in SMSD.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

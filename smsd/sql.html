@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -252,38 +255,38 @@
 <p>You can customize name of all tables in the <span class="target" id="index-9"></span><a class="reference internal" href="config.html#section-[tables]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[tables]</span></code></a>. The SQL
 queries will reflect this, so it’s enough to change table name in this section.</p>
 <dl class="config option">
-<dt id="option-gammu">
-<code class="sig-name descname"><span class="pre">gammu</span></code><a class="headerlink" href="#option-gammu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-gammu">
+<span class="sig-name descname"><span class="pre">gammu</span></span><a class="headerlink" href="#option-gammu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#gammu-table"><span class="std std-ref">gammu</span></a> table.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-inbox">
-<code class="sig-name descname"><span class="pre">inbox</span></code><a class="headerlink" href="#option-inbox" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-inbox">
+<span class="sig-name descname"><span class="pre">inbox</span></span><a class="headerlink" href="#option-inbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#inbox"><span class="std std-ref">inbox</span></a> table.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-sentitems">
-<code class="sig-name descname"><span class="pre">sentitems</span></code><a class="headerlink" href="#option-sentitems" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-sentitems">
+<span class="sig-name descname"><span class="pre">sentitems</span></span><a class="headerlink" href="#option-sentitems" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#sentitems"><span class="std std-ref">sentitems</span></a> table.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-outbox">
-<code class="sig-name descname"><span class="pre">outbox</span></code><a class="headerlink" href="#option-outbox" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-outbox">
+<span class="sig-name descname"><span class="pre">outbox</span></span><a class="headerlink" href="#option-outbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#outbox"><span class="std std-ref">outbox</span></a> table.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-outbox_multipart">
-<code class="sig-name descname"><span class="pre">outbox_multipart</span></code><a class="headerlink" href="#option-outbox_multipart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-outbox_multipart">
+<span class="sig-name descname"><span class="pre">outbox_multipart</span></span><a class="headerlink" href="#option-outbox_multipart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#outbox-multipart"><span class="std std-ref">outbox_multipart</span></a> table.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-phones">
-<code class="sig-name descname"><span class="pre">phones</span></code><a class="headerlink" href="#option-phones" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-phones">
+<span class="sig-name descname"><span class="pre">phones</span></span><a class="headerlink" href="#option-phones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the <a class="reference internal" href="tables.html#phones"><span class="std std-ref">phones</span></a> table.</p>
 </dd></dl>
 
@@ -363,8 +366,8 @@ queries. We can separate them into three groups:</p>
 <p>All default queries noted here are noted for MySQL. Actual time and time addition
 are selected for default queries during initialization.</p>
 <dl class="config option">
-<dt id="option-delete_phone">
-<code class="sig-name descname"><span class="pre">delete_phone</span></code><a class="headerlink" href="#option-delete_phone" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-delete_phone">
+<span class="sig-name descname"><span class="pre">delete_phone</span></span><a class="headerlink" href="#option-delete_phone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes phone from database.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">phones</span> <span class="k">WHERE</span> <span class="n">IMEI</span> <span class="o">=</span> <span class="o">%</span><span class="n">I</span>
@@ -373,8 +376,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-insert_phone">
-<code class="sig-name descname"><span class="pre">insert_phone</span></code><a class="headerlink" href="#option-insert_phone" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-insert_phone">
+<span class="sig-name descname"><span class="pre">insert_phone</span></span><a class="headerlink" href="#option-insert_phone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inserts phone to database.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">phones</span> <span class="p">(</span><span class="n">IMEI</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">Send</span><span class="p">,</span> <span class="n">Receive</span><span class="p">,</span> <span class="n">InsertIntoDB</span><span class="p">,</span> <span class="n">TimeOut</span><span class="p">,</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Battery</span><span class="p">,</span> <span class="n">Signal</span><span class="p">)</span>
@@ -391,8 +394,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-save_inbox_sms_select">
-<code class="sig-name descname"><span class="pre">save_inbox_sms_select</span></code><a class="headerlink" href="#option-save_inbox_sms_select" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-save_inbox_sms_select">
+<span class="sig-name descname"><span class="pre">save_inbox_sms_select</span></span><a class="headerlink" href="#option-save_inbox_sms_select" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select message for update delivery status.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">ID</span><span class="p">,</span> <span class="n">Status</span><span class="p">,</span> <span class="n">SendingDateTime</span><span class="p">,</span> <span class="n">DeliveryDateTime</span><span class="p">,</span> <span class="n">SMSCNumber</span> <span class="k">FROM</span> <span class="n">sentitems</span>
@@ -402,8 +405,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-save_inbox_sms_update_delivered">
-<code class="sig-name descname"><span class="pre">save_inbox_sms_update_delivered</span></code><a class="headerlink" href="#option-save_inbox_sms_update_delivered" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-save_inbox_sms_update_delivered">
+<span class="sig-name descname"><span class="pre">save_inbox_sms_update_delivered</span></span><a class="headerlink" href="#option-save_inbox_sms_update_delivered" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update message delivery status if message was delivered.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">sentitems</span> <span class="k">SET</span> <span class="n">DeliveryDateTime</span> <span class="o">=</span> <span class="o">%</span><span class="k">C</span><span class="p">,</span> <span class="n">Status</span> <span class="o">=</span> <span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="n">StatusError</span> <span class="o">=</span> <span class="o">%</span><span class="n">e</span> <span class="k">WHERE</span> <span class="n">ID</span> <span class="o">=</span> <span class="o">%</span><span class="mi">2</span> <span class="k">AND</span> <span class="n">TPMR</span> <span class="o">=</span> <span class="o">%</span><span class="n">t</span>
@@ -419,8 +422,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-save_inbox_sms_update">
-<code class="sig-name descname"><span class="pre">save_inbox_sms_update</span></code><a class="headerlink" href="#option-save_inbox_sms_update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-save_inbox_sms_update">
+<span class="sig-name descname"><span class="pre">save_inbox_sms_update</span></span><a class="headerlink" href="#option-save_inbox_sms_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update message if there is an delivery error.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">sentitems</span> <span class="k">SET</span> <span class="n">Status</span> <span class="o">=</span> <span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="n">StatusError</span> <span class="o">=</span> <span class="o">%</span><span class="n">e</span> <span class="k">WHERE</span> <span class="n">ID</span> <span class="o">=</span> <span class="o">%</span><span class="mi">2</span> <span class="k">AND</span> <span class="n">TPMR</span> <span class="o">=</span> <span class="o">%</span><span class="n">t</span>
@@ -436,8 +439,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-save_inbox_sms_insert">
-<code class="sig-name descname"><span class="pre">save_inbox_sms_insert</span></code><a class="headerlink" href="#option-save_inbox_sms_insert" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-save_inbox_sms_insert">
+<span class="sig-name descname"><span class="pre">save_inbox_sms_insert</span></span><a class="headerlink" href="#option-save_inbox_sms_insert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert received message.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">inbox</span> <span class="p">(</span><span class="n">ReceivingDateTime</span><span class="p">,</span> <span class="nb">Text</span><span class="p">,</span> <span class="n">SenderNumber</span><span class="p">,</span> <span class="n">Coding</span><span class="p">,</span> <span class="n">SMSCNumber</span><span class="p">,</span> <span class="n">UDH</span><span class="p">,</span>
@@ -447,8 +450,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-update_received">
-<code class="sig-name descname"><span class="pre">update_received</span></code><a class="headerlink" href="#option-update_received" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-update_received">
+<span class="sig-name descname"><span class="pre">update_received</span></span><a class="headerlink" href="#option-update_received" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update statistics after receiving message.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">phones</span> <span class="k">SET</span> <span class="n">Received</span> <span class="o">=</span> <span class="n">Received</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">WHERE</span> <span class="n">IMEI</span> <span class="o">=</span> <span class="o">%</span><span class="n">I</span>
@@ -457,8 +460,8 @@ are selected for default queries during initialization.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-refresh_send_status">
-<code class="sig-name descname"><span class="pre">refresh_send_status</span></code><a class="headerlink" href="#option-refresh_send_status" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-refresh_send_status">
+<span class="sig-name descname"><span class="pre">refresh_send_status</span></span><a class="headerlink" href="#option-refresh_send_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update messages in outbox.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">outbox</span> <span class="k">SET</span> <span class="n">SendingTimeOut</span> <span class="o">=</span> <span class="p">(</span><span class="n">NOW</span><span class="p">()</span> <span class="o">+</span> <span class="nb">INTERVAL</span> <span class="mi">60</span> <span class="k">SECOND</span><span class="p">)</span> <span class="o">+</span> <span class="mi">0</span>
@@ -475,8 +478,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-find_outbox_sms_id">
-<code class="sig-name descname"><span class="pre">find_outbox_sms_id</span></code><a class="headerlink" href="#option-find_outbox_sms_id" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-find_outbox_sms_id">
+<span class="sig-name descname"><span class="pre">find_outbox_sms_id</span></span><a class="headerlink" href="#option-find_outbox_sms_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find sms messages for sending.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">ID</span><span class="p">,</span> <span class="n">InsertIntoDB</span><span class="p">,</span> <span class="n">SendingDateTime</span><span class="p">,</span> <span class="n">SenderID</span> <span class="k">FROM</span> <span class="n">outbox</span>
@@ -493,8 +496,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-find_outbox_body">
-<code class="sig-name descname"><span class="pre">find_outbox_body</span></code><a class="headerlink" href="#option-find_outbox_body" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-find_outbox_body">
+<span class="sig-name descname"><span class="pre">find_outbox_body</span></span><a class="headerlink" href="#option-find_outbox_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select body of message.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="nb">Text</span><span class="p">,</span> <span class="n">Coding</span><span class="p">,</span> <span class="n">UDH</span><span class="p">,</span> <span class="k">Class</span><span class="p">,</span> <span class="n">TextDecoded</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">DestinationNumber</span><span class="p">,</span> <span class="n">MultiPart</span><span class="p">,</span>
@@ -509,8 +512,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-find_outbox_multipart">
-<code class="sig-name descname"><span class="pre">find_outbox_multipart</span></code><a class="headerlink" href="#option-find_outbox_multipart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-find_outbox_multipart">
+<span class="sig-name descname"><span class="pre">find_outbox_multipart</span></span><a class="headerlink" href="#option-find_outbox_multipart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select remaining parts of sms message.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="nb">Text</span><span class="p">,</span> <span class="n">Coding</span><span class="p">,</span> <span class="n">UDH</span><span class="p">,</span> <span class="k">Class</span><span class="p">,</span> <span class="n">TextDecoded</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">SequencePosition</span>
@@ -527,8 +530,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-delete_outbox">
-<code class="sig-name descname"><span class="pre">delete_outbox</span></code><a class="headerlink" href="#option-delete_outbox" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-delete_outbox">
+<span class="sig-name descname"><span class="pre">delete_outbox</span></span><a class="headerlink" href="#option-delete_outbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove messages from outbox after threir successful send.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">outbox</span> <span class="k">WHERE</span> <span class="n">ID</span><span class="o">=%</span><span class="mi">1</span>
@@ -542,8 +545,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-delete_outbox_multipart">
-<code class="sig-name descname"><span class="pre">delete_outbox_multipart</span></code><a class="headerlink" href="#option-delete_outbox_multipart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-delete_outbox_multipart">
+<span class="sig-name descname"><span class="pre">delete_outbox_multipart</span></span><a class="headerlink" href="#option-delete_outbox_multipart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove messages from outbox_multipart after threir successful send.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">outbox_multipart</span> <span class="k">WHERE</span> <span class="n">ID</span><span class="o">=%</span><span class="mi">1</span>
@@ -557,8 +560,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-create_outbox">
-<code class="sig-name descname"><span class="pre">create_outbox</span></code><a class="headerlink" href="#option-create_outbox" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-create_outbox">
+<span class="sig-name descname"><span class="pre">create_outbox</span></span><a class="headerlink" href="#option-create_outbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create message (insert to outbox).</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox</span> <span class="p">(</span><span class="n">CreatorID</span><span class="p">,</span> <span class="n">SenderID</span><span class="p">,</span> <span class="n">DeliveryReport</span><span class="p">,</span> <span class="n">MultiPart</span><span class="p">,</span>
@@ -582,8 +585,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-create_outbox_multipart">
-<code class="sig-name descname"><span class="pre">create_outbox_multipart</span></code><a class="headerlink" href="#option-create_outbox_multipart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-create_outbox_multipart">
+<span class="sig-name descname"><span class="pre">create_outbox_multipart</span></span><a class="headerlink" href="#option-create_outbox_multipart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create message remaining parts.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox_multipart</span> <span class="p">(</span><span class="n">SequencePosition</span><span class="p">,</span> <span class="nb">Text</span><span class="p">,</span> <span class="n">Coding</span><span class="p">,</span> <span class="n">UDH</span><span class="p">,</span> <span class="k">Class</span><span class="p">,</span>
@@ -606,8 +609,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-add_sent_info">
-<code class="sig-name descname"><span class="pre">add_sent_info</span></code><a class="headerlink" href="#option-add_sent_info" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-add_sent_info">
+<span class="sig-name descname"><span class="pre">add_sent_info</span></span><a class="headerlink" href="#option-add_sent_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert to sentitems.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">sentitems</span> <span class="p">(</span><span class="n">CreatorID</span><span class="p">,</span><span class="n">ID</span><span class="p">,</span><span class="n">SequencePosition</span><span class="p">,</span><span class="n">Status</span><span class="p">,</span><span class="n">SendingDateTime</span><span class="p">,</span>
@@ -632,8 +635,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-update_sent">
-<code class="sig-name descname"><span class="pre">update_sent</span></code><a class="headerlink" href="#option-update_sent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-update_sent">
+<span class="sig-name descname"><span class="pre">update_sent</span></span><a class="headerlink" href="#option-update_sent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update sent statistics after sending message.</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">phones</span> <span class="k">SET</span> <span class="n">Sent</span><span class="o">=</span> <span class="n">Sent</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">WHERE</span> <span class="n">IMEI</span> <span class="o">=</span> <span class="o">%</span><span class="n">I</span>
@@ -642,8 +645,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-refresh_phone_status">
-<code class="sig-name descname"><span class="pre">refresh_phone_status</span></code><a class="headerlink" href="#option-refresh_phone_status" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-refresh_phone_status">
+<span class="sig-name descname"><span class="pre">refresh_phone_status</span></span><a class="headerlink" href="#option-refresh_phone_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update phone status (battery, signal).</p>
 <p>Default value:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">phones</span> <span class="k">SET</span> <span class="n">TimeOut</span><span class="o">=</span> <span class="p">(</span><span class="n">NOW</span><span class="p">()</span> <span class="o">+</span> <span class="nb">INTERVAL</span> <span class="mi">10</span> <span class="k">SECOND</span><span class="p">)</span> <span class="o">+</span> <span class="mi">0</span><span class="p">,</span>
@@ -660,8 +663,8 @@ value.</p>
 </dd></dl>
 
 <dl class="config option">
-<dt id="option-update_retries">
-<code class="sig-name descname"><span class="pre">update_retries</span></code><a class="headerlink" href="#option-update_retries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object config" id="option-update_retries">
+<span class="sig-name descname"><span class="pre">update_retries</span></span><a class="headerlink" href="#option-update_retries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update number of retries for outbox message. The interval can be configured
 by <span class="target" id="index-13"></span><a class="reference internal" href="config.html#option-RetryTimeout"><code class="xref config config-option docutils literal notranslate"><span class="pre">RetryTimeout</span></code></a>.</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">outbox</span> <span class="k">SET</span> <span class="n">SendngTimeOut</span> <span class="o">=</span> <span class="p">(</span><span class="n">NOW</span><span class="p">()</span> <span class="o">+</span> <span class="nb">INTERVAL</span> <span class="mi">600</span> <span class="k">SECOND</span><span class="p">)</span> <span class="o">+</span> <span class="mi">0</span><span class="p">,</span>

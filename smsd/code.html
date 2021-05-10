@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -206,8 +209,8 @@ at all (<a class="reference internal" href="null.html#gammu-smsd-null"><span cla
 <p>Each backend service needs to support several operations, which are exported
 in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService</span></code> structure:</p>
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::Init</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::Init</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></span></dt>
 <dd><p>Initializes internal state, connect to backend storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -222,8 +225,8 @@ in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService<
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::Free</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::Free</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></span></dt>
 <dd><p>Freeing internal data, disconnect from backend storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -238,8 +241,8 @@ in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService<
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::InitAfterConnect</span>&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::InitAfterConnect</span>&#160;&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></span></dt>
 <dd><p>Optional hook called after SMSD is connected to phone, can be used for storing information about phone in backend.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -254,8 +257,8 @@ in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService<
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::SaveInboxSMS</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">**Locations)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::SaveInboxSMS</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">**Locations)</span></span></dt>
 <dd><p>Saves message into inbox.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -272,8 +275,8 @@ in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService<
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::FindOutboxSMS</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::FindOutboxSMS</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID)</span></span></dt>
 <dd><p>Finds message in outbox suitable for sending.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -293,8 +296,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::MoveSMS</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID,</span> <span class="pre">gboolean</span> <span class="pre">alwaysDelete,</span> <span class="pre">gboolean</span> <span class="pre">sent)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::MoveSMS</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID,</span> <span class="pre">gboolean</span> <span class="pre">alwaysDelete,</span> <span class="pre">gboolean</span> <span class="pre">sent)</span></span></dt>
 <dd><p>Moves sent message from outbox to sent items.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -313,8 +316,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::CreateOutboxSMS</span>&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*NewID)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::CreateOutboxSMS</span>&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*NewID)</span></span></dt>
 <dd><p>Saves message into outbox queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -331,8 +334,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::AddSentSMSInfo</span>&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID,</span> <span class="pre">int</span> <span class="pre">Part,</span> <span class="pre">GSM_SMSDSendingError</span> <span class="pre">err,</span> <span class="pre">int</span> <span class="pre">TPMR)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::AddSentSMSInfo</span>&#160;&#160;&#160;&#160; <span class="pre">(GSM_MultiSMSMessage</span> <span class="pre">*sms,</span> <span class="pre">GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID,</span> <span class="pre">int</span> <span class="pre">Part,</span> <span class="pre">GSM_SMSDSendingError</span> <span class="pre">err,</span> <span class="pre">int</span> <span class="pre">TPMR)</span></span></dt>
 <dd><p>Logs information about sent message (eg. delivery report).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,8 +355,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::RefreshSendStatus</span>&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::RefreshSendStatus</span>&#160; <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config,</span> <span class="pre">char</span> <span class="pre">*ID)</span></span></dt>
 <dd><p>Updates sending status in service backend.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -369,8 +372,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::RefreshPhoneStatus</span> <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::RefreshPhoneStatus</span> <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></span></dt>
 <dd><p>Updates information about phone in database (network status, battery, etc.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -385,8 +388,8 @@ this check.</p></li>
 </dd></dl>
 
 <dl class="c function">
-<dt>
-<code class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::ReadConfiguration</span> <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></code></dt>
+<dt class="sig sig-object c">
+<span class="sig-name descname"><span class="pre">GSM_Error</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">GSM_SMSDService::ReadConfiguration</span> <span class="pre">(GSM_SMSDConfig</span> <span class="pre">*Config)</span></span></dt>
 <dd><p>Reads configuration specific for this backend.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

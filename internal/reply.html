@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -191,36 +194,36 @@ redirect it to concrete reply function, which will decode it. Different
 phone answers can go to one reply function let’s say responsible for
 getting sms status.</p>
 <dl class="c type">
-<dt id="c.GSM_Reply_Function">
-<em class="property"><span class="pre">type</span> </em><code class="sig-name descname"><span class="pre">GSM_Reply_Function</span></code><a class="headerlink" href="#c.GSM_Reply_Function" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Reply_Function</span></span></span><a class="headerlink" href="#c.GSM_Reply_Function" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Defines reply function for phone driver.</p>
 <dl class="c member">
-<dt id="c.GSM_Reply_Function.Function">
-<a class="reference internal" href="../c/error.html#c.GSM_Error" title="GSM_Error"><span class="pre">GSM_Error</span></a> <span class="pre">(</span><span class="pre">*</span><code class="sig-name descname"><span class="pre">Function</span></code><span class="pre">)</span><span class="sig-paren">(</span><span class="pre">GSM_Protocol_Message</span> <span class="pre">*</span><span class="pre">msg</span>, <a class="reference internal" href="../c/statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="pre">GSM_StateMachine</span></a> <span class="pre">*</span><span class="pre">s</span><span class="sig-paren">)</span><span class="pre">;</span><a class="headerlink" href="#c.GSM_Reply_Function.Function" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function.Function">
+<a class="reference internal" href="../c/error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">GSM_Protocol_Message</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../c/statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#c.GSM_Reply_Function.Function" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Callback on reply match.</p>
 </dd></dl>
 
 <dl class="c member">
-<dt id="c.GSM_Reply_Function.msgtype">
-<em class="property"><span class="pre">const</span></em> <span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">msgtype</span></code><span class="pre">;</span><a class="headerlink" href="#c.GSM_Reply_Function.msgtype" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function.msgtype">
+<span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">msgtype</span></span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#c.GSM_Reply_Function.msgtype" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>String match on the message.</p>
 </dd></dl>
 
 <dl class="c member">
-<dt id="c.GSM_Reply_Function.subtypechar">
-<em class="property"><span class="pre">const</span></em> <span class="pre">size_t</span> <code class="sig-name descname"><span class="pre">subtypechar</span></code><span class="pre">;</span><a class="headerlink" href="#c.GSM_Reply_Function.subtypechar" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function.subtypechar">
+<span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subtypechar</span></span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#c.GSM_Reply_Function.subtypechar" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Position for char match inside reply. If 0, message type is checked.</p>
 </dd></dl>
 
 <dl class="c member">
-<dt id="c.GSM_Reply_Function.subtype">
-<em class="property"><span class="pre">const</span></em> <span class="pre">int</span> <code class="sig-name descname"><span class="pre">subtype</span></code><span class="pre">;</span><a class="headerlink" href="#c.GSM_Reply_Function.subtype" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function.subtype">
+<span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subtype</span></span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#c.GSM_Reply_Function.subtype" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Match for char/message type check (see above).</p>
 </dd></dl>
 
 <dl class="c member">
-<dt id="c.GSM_Reply_Function.requestID">
-<em class="property"><span class="pre">const</span></em> <span class="pre">GSM_Phone_RequestID</span> <code class="sig-name descname"><span class="pre">requestID</span></code><span class="pre">;</span><a class="headerlink" href="#c.GSM_Reply_Function.requestID" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.GSM_Reply_Function.requestID">
+<span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">GSM_Phone_RequestID</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestID</span></span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#c.GSM_Reply_Function.requestID" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Match for request ID. this is filled in when calling <code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_WaitFor()</span></code>.</p>
 </dd></dl>
 
