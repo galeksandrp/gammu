@@ -196,7 +196,7 @@
 <div class="section" id="basic-library-usage">
 <h2>Basic library usage<a class="headerlink" href="#basic-library-usage" title="Permalink to this headline">¶</a></h2>
 <p>You need to include main header file:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 </pre></div>
 </div>
 <p>To compile you need to pass flags from pkg-config:</p>
@@ -209,71 +209,71 @@
 </div>
 <p>Gammu stores all its data in a <a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><code class="xref c c-type docutils literal notranslate"><span class="pre">GSM_StateMachine</span></code></a>. This structure is not
 public, so all you can define is a pointer to it:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_StateMachine</span> <span class="o">*</span><span class="n">state_machine</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_StateMachine</span><span class="w"> </span><span class="o">*</span><span class="n">state_machine</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You’ll want to check for errors from time to time.  Do it using a
 function something like this with help of <a class="reference internal" href="error.html#c.GSM_ErrorString" title="GSM_ErrorString"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_ErrorString()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">check_error</span><span class="p">(</span><span class="n">GSM_Error</span> <span class="n">err</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERR_NONE</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Gammu failure: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">GSM_ErrorString</span><span class="p">(</span><span class="n">error</span><span class="p">));</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">check_error</span><span class="p">(</span><span class="n">GSM_Error</span><span class="w"> </span><span class="n">err</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ERR_NONE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gammu failure: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">GSM_ErrorString</span><span class="p">(</span><span class="n">error</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>As libGammu does interact with strings in your local encoding, it is good idea
 to initialize locales subsystem first (otherwise you would get broken non
 ASCII characters) by calling <a class="reference internal" href="misc.html#c.GSM_InitLocales" title="GSM_InitLocales"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_InitLocales()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_InitLocales</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_InitLocales</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You first need to allocate a state machine structure
 using <a class="reference internal" href="statemachine.html#c.GSM_AllocStateMachine" title="GSM_AllocStateMachine"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_AllocStateMachine()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">state_machine</span> <span class="o">=</span> <span class="n">GSM_AllocStateMachine</span><span class="p">();</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">state_machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_AllocStateMachine</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Now think about the configuration file.  To use the default
 <code class="file docutils literal notranslate"><span class="pre">~/.gammurc</span></code>, do this:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INI_Section</span> <span class="o">*</span><span class="n">cfg</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INI_Section</span><span class="w"> </span><span class="o">*</span><span class="n">cfg</span><span class="p">;</span><span class="w"></span>
 
-<span class="cm">/* Find it */</span>
-<span class="n">error</span> <span class="o">=</span> <span class="n">GSM_FindGammuRC</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cfg</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<span class="cm">/* Find it */</span><span class="w"></span>
+<span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_FindGammuRC</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cfg</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 
-<span class="cm">/* Read it */</span>
-<span class="n">error</span> <span class="o">=</span> <span class="n">GSM_ReadConfig</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">GSM_GetConfig</span><span class="p">(</span><span class="n">state_machine</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<span class="cm">/* Read it */</span><span class="w"></span>
+<span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_ReadConfig</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span><span class="w"> </span><span class="n">GSM_GetConfig</span><span class="p">(</span><span class="n">state_machine</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 
-<span class="cm">/* Free allocated memory */</span>
-<span class="n">INI_Free</span><span class="p">(</span><span class="n">cfg</span><span class="p">);</span>
+<span class="cm">/* Free allocated memory */</span><span class="w"></span>
+<span class="n">INI_Free</span><span class="p">(</span><span class="n">cfg</span><span class="p">);</span><span class="w"></span>
 
-<span class="cm">/* We care onlu about first configuration */</span>
-<span class="n">GSM_SetConfigNum</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="cm">/* We care onlu about first configuration */</span><span class="w"></span>
+<span class="n">GSM_SetConfigNum</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>OK, now initialise the connection (1 means number of replies you want to wait
 for in case of failure) by <a class="reference internal" href="statemachine.html#c.GSM_InitConnection" title="GSM_InitConnection"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_InitConnection()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="n">GSM_InitConnection</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_InitConnection</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Now you are ready to communicate with the phone, for example you can read
 manufacturer name by <a class="reference internal" href="info.html#c.GSM_GetManufacturer" title="GSM_GetManufacturer"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_GetManufacturer()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="n">GSM_GetManufacturer</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_GetManufacturer</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>When you’re finished, you need to disconnect and free allocated memory
 using <a class="reference internal" href="statemachine.html#c.GSM_FreeStateMachine" title="GSM_FreeStateMachine"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_FreeStateMachine()</span></code></a>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="n">GSM_TerminateConnection</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_TerminateConnection</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 
-<span class="cm">/* Free up used memory */</span>
-<span class="n">GSM_FreeStateMachine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<span class="cm">/* Free up used memory */</span><span class="w"></span>
+<span class="n">GSM_FreeStateMachine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="n">check_error</span><span class="p">(</span><span class="n">error</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>There are also other <a class="reference internal" href="examples.html"><span class="doc">Examples</span></a>.</p>
@@ -311,11 +311,11 @@ choice would be <code class="docutils literal notranslate"><span class="pre">wch
 are provided (<a class="reference internal" href="unicode.html#c.UnicodeLength" title="UnicodeLength"><code class="xref c c-func docutils literal notranslate"><span class="pre">UnicodeLength()</span></code></a>, <a class="reference internal" href="unicode.html#c.DecodeUnicode" title="DecodeUnicode"><code class="xref c c-func docutils literal notranslate"><span class="pre">DecodeUnicode()</span></code></a>,
 <a class="reference internal" href="unicode.html#c.EncodeUnicode" title="EncodeUnicode"><code class="xref c c-func docutils literal notranslate"><span class="pre">EncodeUnicode()</span></code></a>, <a class="reference internal" href="unicode.html#c.CopyUnicodeString" title="CopyUnicodeString"><code class="xref c c-func docutils literal notranslate"><span class="pre">CopyUnicodeString()</span></code></a>, etc.).</p>
 <p>For printing on console you should use:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">DecodeUnicodeConsole</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">));</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DecodeUnicodeConsole</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For giving string to some GUI toolkit:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">DecodeUnicodeString</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">));</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DecodeUnicodeString</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -329,16 +329,16 @@ Windows.</p>
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
 <p>You can either enabled debug logging globally or per state machine.</p>
 <p>To enable global debugging use:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">debug_info</span> <span class="o">=</span> <span class="n">GSM_GetGlobalDebug</span><span class="p">();</span>
-<span class="n">GSM_SetDebugFileDescriptor</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
-<span class="n">GSM_SetDebugLevel</span><span class="p">(</span><span class="s">&quot;textall&quot;</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">debug_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_GetGlobalDebug</span><span class="p">();</span><span class="w"></span>
+<span class="n">GSM_SetDebugFileDescriptor</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">debug_info</span><span class="p">);</span><span class="w"></span>
+<span class="n">GSM_SetDebugLevel</span><span class="p">(</span><span class="s">&quot;textall&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">debug_info</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For per state machine configuration:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">debug_info</span> <span class="o">=</span> <span class="n">GSM_GetDebug</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="n">GSM_SetDebugGlobal</span><span class="p">(</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
-<span class="n">GSM_SetDebugFileDescriptor</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
-<span class="n">GSM_SetDebugLevel</span><span class="p">(</span><span class="s">&quot;textall&quot;</span><span class="p">,</span> <span class="n">debug_info</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">debug_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_GetDebug</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="n">GSM_SetDebugGlobal</span><span class="p">(</span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">debug_info</span><span class="p">);</span><span class="w"></span>
+<span class="n">GSM_SetDebugFileDescriptor</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">debug_info</span><span class="p">);</span><span class="w"></span>
+<span class="n">GSM_SetDebugLevel</span><span class="p">(</span><span class="s">&quot;textall&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">debug_info</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -347,9 +347,9 @@ Windows.</p>
 <p>If you expect some incoming events, you need to maintain communication with the
 phone. The best way it can be <a class="reference internal" href="statemachine.html#c.GSM_ReadDevice" title="GSM_ReadDevice"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_ReadDevice()</span></code></a>. For example you can use
 following busy loop:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">gshutdown</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">GSM_ReadDevice</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gshutdown</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">GSM_ReadDevice</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">TRUE</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

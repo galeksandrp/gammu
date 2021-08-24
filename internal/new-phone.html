@@ -212,40 +212,40 @@ This can be done on first invocation of affected operation or on connecting to
 phone. As we want to avoid lengthy connecting to phone, in most cases you
 should probe for support on first attempt to use given functionality. The code
 might look like following:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span> <span class="nf">ATGEN_GetFoo</span><span class="p">(</span><span class="n">GSM_StateMachine</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">GSM_Phone_ATGENData</span>     <span class="o">*</span><span class="n">Priv</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span><span class="w"> </span><span class="nf">ATGEN_GetFoo</span><span class="p">(</span><span class="n">GSM_StateMachine</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Phone_ATGENData</span><span class="w">     </span><span class="o">*</span><span class="n">Priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ATGEN_CheckXXXX</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ATGEN_CheckXXXX</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span> <span class="o">==</span> <span class="n">AT_AVAILABLE</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* Perform reading */</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">AT_AVAILABLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="cm">/* Perform reading */</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="cm">/* Fail with error or fallback to other methods */</span>
-    <span class="k">return</span> <span class="n">ERR_NOTSUPPORTED</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="cm">/* Fail with error or fallback to other methods */</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_NOTSUPPORTED</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">GSM_Error</span> <span class="nf">ATGEN_CheckXXXX</span><span class="p">(</span><span class="n">GSM_StateMachine</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">GSM_Error</span>       <span class="n">error</span><span class="p">;</span>
-    <span class="n">GSM_Phone_ATGENData</span>     <span class="o">*</span><span class="n">Priv</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span>
+<span class="n">GSM_Error</span><span class="w"> </span><span class="nf">ATGEN_CheckXXXX</span><span class="p">(</span><span class="n">GSM_StateMachine</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Error</span><span class="w">       </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Phone_ATGENData</span><span class="w">     </span><span class="o">*</span><span class="n">Priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span><span class="w"></span>
 
-    <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;Checking availability of XXXX</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">ATGEN_WaitForAutoLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;AT+XXXX=?</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ID_GetProtocol</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="n">ERR_NONE</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span> <span class="o">=</span> <span class="n">AT_AVAILABLE</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span> <span class="o">=</span> <span class="n">AT_NOTAVAILABLE</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">error</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Checking availability of XXXX</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ATGEN_WaitForAutoLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AT+XXXX=?</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">ID_GetProtocol</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ERR_NONE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AT_AVAILABLE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Foo_XXXX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AT_NOTAVAILABLE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
 
-<span class="n">GSM_Reply_Function</span> <span class="n">ATGENReplyFunctions</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="p">{</span><span class="n">ATGEN_GenericReply</span><span class="p">,</span>        <span class="s">&quot;AT+XXXX=?&quot;</span>             <span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="n">ID_GetProtocol</span>                <span class="p">},</span>
-<span class="p">...</span>
+<span class="n">GSM_Reply_Function</span><span class="w"> </span><span class="n">ATGENReplyFunctions</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">{</span><span class="n">ATGEN_GenericReply</span><span class="p">,</span><span class="w">        </span><span class="s">&quot;AT+XXXX=?&quot;</span><span class="w">             </span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="n">ID_GetProtocol</span><span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Alternatively (if detection is not possible), you can use features and phones
@@ -259,16 +259,16 @@ some commands.</p>
 text commands and automatically sets error variable.</p>
 <p>Generally you need to construct buffer and then invoke it. For some simple
 functions it is pretty straight forward:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span> <span class="nf">ATGEN_GetBatteryCharge</span><span class="p">(</span><span class="n">GSM_StateMachine</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="n">GSM_BatteryCharge</span> <span class="o">*</span><span class="n">bat</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">GSM_Error</span> <span class="n">error</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span><span class="w"> </span><span class="nf">ATGEN_GetBatteryCharge</span><span class="p">(</span><span class="n">GSM_StateMachine</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">GSM_BatteryCharge</span><span class="w"> </span><span class="o">*</span><span class="n">bat</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Error</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
 
-    <span class="n">GSM_ClearBatteryCharge</span><span class="p">(</span><span class="n">bat</span><span class="p">);</span>
-    <span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">BatteryCharge</span> <span class="o">=</span> <span class="n">bat</span><span class="p">;</span>
-    <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;Getting battery charge</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">ATGEN_WaitForAutoLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;AT+CBC</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ID_GetBatteryCharge</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">error</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">GSM_ClearBatteryCharge</span><span class="p">(</span><span class="n">bat</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">BatteryCharge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Getting battery charge</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ATGEN_WaitForAutoLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AT+CBC</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">ID_GetBatteryCharge</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>As you can see, it is often required to store pointer to data store somewhere,
@@ -283,58 +283,58 @@ reply using <code class="xref c c-func docutils literal notranslate"><span class
 is invoked when reply is received from the phone.</p>
 <p>Continuing in above example for getting battery status, the (simplified)
 function would look like:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span> <span class="nf">ATGEN_ReplyGetBatteryCharge</span><span class="p">(</span><span class="n">GSM_Protocol_Message</span> <span class="o">*</span><span class="n">msg</span><span class="p">,</span> <span class="n">GSM_StateMachine</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">GSM_Error</span> <span class="n">error</span><span class="p">;</span>
-    <span class="n">GSM_Phone_ATGENData</span> <span class="o">*</span><span class="n">Priv</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span>
-    <span class="n">GSM_BatteryCharge</span> <span class="o">*</span><span class="n">BatteryCharge</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">BatteryCharge</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">bcs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bcl</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GSM_Error</span><span class="w"> </span><span class="nf">ATGEN_ReplyGetBatteryCharge</span><span class="p">(</span><span class="n">GSM_Protocol_Message</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="n">GSM_StateMachine</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Error</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_Phone_ATGENData</span><span class="w"> </span><span class="o">*</span><span class="n">Priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM_BatteryCharge</span><span class="w"> </span><span class="o">*</span><span class="n">BatteryCharge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">BatteryCharge</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bcs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">bcl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-    <span class="k">switch</span> <span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">.</span><span class="n">ReplyState</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="nl">AT_Reply_OK</span><span class="p">:</span>
-            <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;Battery level received</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-            <span class="n">error</span> <span class="o">=</span> <span class="n">ATGEN_ParseReply</span><span class="p">(</span><span class="n">s</span><span class="p">,</span>
-                <span class="n">GetLineString</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">Buffer</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Lines</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-                <span class="s">&quot;+CBC: @i, @i&quot;</span><span class="p">,</span>
-                <span class="o">&amp;</span><span class="n">bcs</span><span class="p">,</span>
-                <span class="o">&amp;</span><span class="n">bcl</span><span class="p">);</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">.</span><span class="n">ReplyState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_OK</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Battery level received</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ATGEN_ParseReply</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="n">GetLineString</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">Buffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Lines</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="s">&quot;+CBC: @i, @i&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="o">&amp;</span><span class="n">bcs</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="o">&amp;</span><span class="n">bcl</span><span class="p">);</span><span class="w"></span>
 
-            <span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">BatteryPercent</span> <span class="o">=</span> <span class="n">bcl</span><span class="p">;</span>
+<span class="w">            </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">BatteryPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bcl</span><span class="p">;</span><span class="w"></span>
 
-            <span class="k">switch</span> <span class="p">(</span><span class="n">bcs</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-                    <span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span> <span class="o">=</span> <span class="n">GSM_BatteryPowered</span><span class="p">;</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-                    <span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span> <span class="o">=</span> <span class="n">GSM_BatteryConnected</span><span class="p">;</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-                    <span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span> <span class="o">=</span> <span class="n">GSM_BatteryCharging</span><span class="p">;</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="k">default</span><span class="o">:</span>
-                    <span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-                    <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;WARNING: Unknown battery state: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bcs</span><span class="p">);</span>
-                    <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="n">ERR_NONE</span><span class="p">;</span>
-        <span class="k">case</span> <span class="nl">AT_Reply_Error</span><span class="p">:</span>
-            <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">ERR_NOTSUPPORTED</span><span class="p">;</span>
-        <span class="k">case</span> <span class="nl">AT_Reply_CMSError</span><span class="p">:</span>
-            <span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">ATGEN_HandleCMSError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-        <span class="k">case</span> <span class="nl">AT_Reply_CMEError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">ATGEN_HandleCMEError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-        <span class="k">default</span><span class="o">:</span>
-            <span class="k">return</span> <span class="n">ERR_UNKNOWNRESPONSE</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">bcs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="o">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryPowered</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryConnected</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="o">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryCharging</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;WARNING: Unknown battery state: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bcs</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_NONE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_Error</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_NOTSUPPORTED</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_CMSError</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ATGEN_HandleCMSError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_CMEError</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ATGEN_HandleCMEError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_UNKNOWNRESPONSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
 
-<span class="n">GSM_Reply_Function</span> <span class="n">ATGENReplyFunctions</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="p">{</span><span class="n">ATGEN_ReplyGetBatteryCharge</span><span class="p">,</span>       <span class="s">&quot;AT+CBC&quot;</span>                <span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="n">ID_GetBatteryCharge</span>   <span class="p">},</span>
-<span class="p">...</span>
+<span class="n">GSM_Reply_Function</span><span class="w"> </span><span class="n">ATGENReplyFunctions</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">{</span><span class="n">ATGEN_ReplyGetBatteryCharge</span><span class="p">,</span><span class="w">       </span><span class="s">&quot;AT+CBC&quot;</span><span class="w">                </span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="n">ID_GetBatteryCharge</span><span class="w">   </span><span class="p">},</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 <p>As you can see, all reply function first need to handle which error code did
