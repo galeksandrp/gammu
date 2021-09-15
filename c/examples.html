@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Examples &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="libGammu C API" href="api.html" />
     <link rel="prev" title="Hints for libGammu Novices" href="hints.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -123,79 +72,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">libGammu</a> &raquo;</li>
-        
       <li>Examples</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/c/examples.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h1>
 <p>All these examples are also available in docs/examples/
 directory in Gammu sources.</p>
-<div class="section" id="getting-phone-information">
-<h2>Getting phone information<a class="headerlink" href="#getting-phone-information" title="Permalink to this headline">¶</a></h2>
+<section id="getting-phone-information">
+<h2>Getting phone information<a class="headerlink" href="#getting-phone-information" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -298,9 +205,9 @@ directory in Gammu sources.</p>
 <span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="reading-sms-message">
-<h2>Reading SMS message<a class="headerlink" href="#reading-sms-message" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reading-sms-message">
+<h2>Reading SMS message<a class="headerlink" href="#reading-sms-message" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -434,9 +341,9 @@ directory in Gammu sources.</p>
 <span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sending-sms-message">
-<h2>Sending SMS message<a class="headerlink" href="#sending-sms-message" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sending-sms-message">
+<h2>Sending SMS message<a class="headerlink" href="#sending-sms-message" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -609,9 +516,9 @@ directory in Gammu sources.</p>
 <span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sending-long-sms-message">
-<h2>Sending Long SMS message<a class="headerlink" href="#sending-long-sms-message" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sending-long-sms-message">
+<h2>Sending Long SMS message<a class="headerlink" href="#sending-long-sms-message" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -803,9 +710,9 @@ directory in Gammu sources.</p>
 <span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="smsd-example">
-<h2>SMSD example<a class="headerlink" href="#smsd-example" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="smsd-example">
+<h2>SMSD example<a class="headerlink" href="#smsd-example" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Simple C program to start SMSD without all magic normal gammu-smsd does */</span><span class="w"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu-smsd.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span><span class="cp"></span>
@@ -854,9 +761,9 @@ directory in Gammu sources.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="custom-configuration">
-<h2>Custom configuration<a class="headerlink" href="#custom-configuration" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="custom-configuration">
+<h2>Custom configuration<a class="headerlink" href="#custom-configuration" title="Permalink to this headline"></a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * libGammu example to show how to set configuration manually instead</span>
 <span class="cm"> * of parsing ~/.gammurc</span>
@@ -966,55 +873,38 @@ directory in Gammu sources.</p>
 <span class="cm"> */</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="api.html" class="btn btn-neutral float-right" title="libGammu C API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="hints.html" class="btn btn-neutral float-left" title="Hints for libGammu Novices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-right" title="libGammu C API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

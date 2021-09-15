@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>INI files &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Keys" href="keys.html" />
     <link rel="prev" title="Info" href="info.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -143,80 +92,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">libGammu</a> &raquo;</li>
-        
           <li><a href="api.html">libGammu C API</a> &raquo;</li>
-        
       <li>INI files</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/c/inifile.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="ini-files">
-<h1>INI files<a class="headerlink" href="#ini-files" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="ini-files">
+<h1>INI files<a class="headerlink" href="#ini-files" title="Permalink to this headline"></a></h1>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_Free">
-<span class="target" id="group__INI_1ga25f7c03b7adb0e870f42ffa5d19982a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Free</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_Free" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1ga25f7c03b7adb0e870f42ffa5d19982a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Free</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_Free" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Free INI data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -229,7 +135,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_ReadFile">
-<span class="target" id="group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_ReadFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span>, <a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_ReadFile" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_ReadFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span>, <a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_ReadFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads INI data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,7 +153,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_FindLastSectionEntry">
-<span class="target" id="group__INI_1gabf51f1af400da755e68ea3f4866c9883"></span><a class="reference internal" href="#c.INI_Entry" title="INI_Entry"><span class="n"><span class="pre">INI_Entry</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">INI_FindLastSectionEntry</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">file_info</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_FindLastSectionEntry" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1gabf51f1af400da755e68ea3f4866c9883"></span><a class="reference internal" href="#c.INI_Entry" title="INI_Entry"><span class="n"><span class="pre">INI_Entry</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">INI_FindLastSectionEntry</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">file_info</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_FindLastSectionEntry" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns pointer to last INI entry of given section.</p>
 <p><dl>
 <dt class="sig sig-object cpp">
@@ -272,7 +178,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_GetValue">
-<span class="target" id="group__INI_1gac04bff40287015773b7d30903d18725e"></span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetValue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">file_info</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetValue" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1gac04bff40287015773b7d30903d18725e"></span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetValue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">file_info</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetValue" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns value of INI file entry.</p>
 <p><dl>
 <dt class="sig sig-object cpp">
@@ -298,7 +204,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_GetInt">
-<span class="target" id="gammu-inifile_8h_1a57f62642357c8954b1fc7d729934f384"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetInt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetInt" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="gammu-inifile_8h_1a57f62642357c8954b1fc7d729934f384"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetInt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetInt" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns integer value from configuration. The file is automatically handled as not unicode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -317,7 +223,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.INI_GetBool">
-<span class="target" id="gammu-inifile_8h_1a6820d35258a52f51f3317bcc1bdfd852"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetBool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetBool" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="gammu-inifile_8h_1a6820d35258a52f51f3317bcc1bdfd852"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetBool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span> <span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetBool" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns boolean value from configuration. The file is automatically handled as not unicode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -336,7 +242,7 @@
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.GSM_StringToBool">
-<span class="target" id="group__INI_1ga7d44a441ec1ac8ec486887a19e8dc00d"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_StringToBool</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_StringToBool" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1ga7d44a441ec1ac8ec486887a19e8dc00d"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_StringToBool</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_StringToBool" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Converts value to boolean.</p>
 <p>It just takes the string and checks whether there is true/yes/t/y/1 or false/no/f/n/0.</p>
 <dl class="field-list simple">
@@ -353,19 +259,19 @@
 
 <dl class="c type">
 <dt class="sig sig-object c" id="c.INI_Entry">
-<span class="target" id="group__INI_1ga0872ee89704849deaa4ab3bf7808af4a"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#c._INI_Entry" title="_INI_Entry"><span class="n"><span class="pre">_INI_Entry</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Entry</span></span></span><a class="headerlink" href="#c.INI_Entry" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1ga0872ee89704849deaa4ab3bf7808af4a"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#c._INI_Entry" title="_INI_Entry"><span class="n"><span class="pre">_INI_Entry</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Entry</span></span></span><a class="headerlink" href="#c.INI_Entry" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Private structure holding information INI entry. </p>
 </dd></dl>
 
 <dl class="c type">
 <dt class="sig sig-object c" id="c.INI_Section">
-<span class="target" id="group__INI_1ga2379ca90fc178a1802a7e6a0d0876e0f"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#c._INI_Section" title="_INI_Section"><span class="n"><span class="pre">_INI_Section</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Section</span></span></span><a class="headerlink" href="#c.INI_Section" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__INI_1ga2379ca90fc178a1802a7e6a0d0876e0f"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#c._INI_Section" title="_INI_Section"><span class="n"><span class="pre">_INI_Section</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Section</span></span></span><a class="headerlink" href="#c.INI_Section" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Private structure holding information INI section. </p>
 </dd></dl>
 
 <dl class="c struct">
 <dt class="sig sig-object c" id="c._INI_Entry">
-<span class="target" id="struct__INI__Entry"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_INI_Entry</span></span></span><a class="headerlink" href="#c._INI_Entry" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="struct__INI__Entry"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_INI_Entry</span></span></span><a class="headerlink" href="#c._INI_Entry" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Structure used to save value for single key in INI style file</p>
 <p><dl>
 <dt class="sig sig-object cpp">
@@ -378,7 +284,7 @@
 
 <dl class="c struct">
 <dt class="sig sig-object c" id="c._INI_Section">
-<span class="target" id="struct__INI__Section"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_INI_Section</span></span></span><a class="headerlink" href="#c._INI_Section" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="struct__INI__Section"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_INI_Section</span></span></span><a class="headerlink" href="#c._INI_Section" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Structure used to save section in INI style file</p>
 <p><dl>
 <dt class="sig sig-object cpp">
@@ -389,54 +295,37 @@
 </p>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="keys.html" class="btn btn-neutral float-right" title="Keys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="info.html" class="btn btn-neutral float-left" title="Info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="keys.html" class="btn btn-neutral float-right" title="Keys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

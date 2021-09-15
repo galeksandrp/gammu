@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>SMSD Database Structure &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Developer documentation" href="code.html" />
     <link rel="prev" title="Null Backend" href="null.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -135,77 +84,34 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">SMS Daemon</a> &raquo;</li>
-        
           <li><a href="backends.html">Backend services</a> &raquo;</li>
-        
       <li>SMSD Database Structure</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/smsd/tables.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="smsd-database-structure">
-<span id="gammu-smsd-tables"></span><h1>SMSD Database Structure<a class="headerlink" href="#smsd-database-structure" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="smsd-database-structure">
+<span id="gammu-smsd-tables"></span><h1>SMSD Database Structure<a class="headerlink" href="#smsd-database-structure" title="Permalink to this headline"></a></h1>
 <p>The backends themselves are described in their sections, this document
 describes general database structure and required tables.</p>
 <p>More SMS daemons can share single database. If you do not specify PhoneID in
@@ -213,24 +119,24 @@ their configuration, all are treated equally and you have no guarantee which
 one sends outgoing message. If you configure PhoneID and use it when inserting
 message to the <code class="docutils literal notranslate"><span class="pre">outbox</span></code> table (<a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> does this), each SMS
 daemon will have separate outbox queue. See also <a class="reference internal" href="config.html#smsd-multi"><span class="std std-ref">Multiple modems</span></a>.</p>
-<div class="section" id="receiving-of-messages">
-<h2>Receiving of messages<a class="headerlink" href="#receiving-of-messages" title="Permalink to this headline">¶</a></h2>
+<section id="receiving-of-messages">
+<h2>Receiving of messages<a class="headerlink" href="#receiving-of-messages" title="Permalink to this headline"></a></h2>
 <p>Received messages are stored in <a class="reference internal" href="#inbox"><span class="std std-ref">inbox</span></a> table.</p>
-</div>
-<div class="section" id="transmitting-of-messages">
-<h2>Transmitting of messages<a class="headerlink" href="#transmitting-of-messages" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="transmitting-of-messages">
+<h2>Transmitting of messages<a class="headerlink" href="#transmitting-of-messages" title="Permalink to this headline"></a></h2>
 <p>Transmitted messages are read from table <a class="reference internal" href="#outbox"><span class="std std-ref">outbox</span></a> and possible subsequent parts
 of the same message from <a class="reference internal" href="#outbox-multipart"><span class="std std-ref">outbox_multipart</span></a>.</p>
-</div>
-<div class="section" id="description-of-tables">
-<h2>Description of tables<a class="headerlink" href="#description-of-tables" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gammu">
-<span id="gammu-table"></span><h3>gammu<a class="headerlink" href="#gammu" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="description-of-tables">
+<h2>Description of tables<a class="headerlink" href="#description-of-tables" title="Permalink to this headline"></a></h2>
+<section id="gammu">
+<span id="gammu-table"></span><h3>gammu<a class="headerlink" href="#gammu" title="Permalink to this headline"></a></h3>
 <p>Table holding single field <code class="docutils literal notranslate"><span class="pre">Version</span></code> - version of a database schema. See
 <a class="reference internal" href="#smsd-tables-history"><span class="std std-ref">History of database structure</span></a> for details what has changed.</p>
-</div>
-<div class="section" id="inbox">
-<span id="id1"></span><h3>inbox<a class="headerlink" href="#inbox" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="inbox">
+<span id="id1"></span><h3>inbox<a class="headerlink" href="#inbox" title="Permalink to this headline"></a></h3>
 <p>Table where received messages will be stored.</p>
 <p>Fields description:</p>
 <dl>
@@ -281,9 +187,9 @@ of the same message from <a class="reference internal" href="#outbox-multipart">
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="outbox">
-<span id="id2"></span><h3>outbox<a class="headerlink" href="#outbox" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="outbox">
+<span id="id2"></span><h3>outbox<a class="headerlink" href="#outbox" title="Permalink to this headline"></a></h3>
 <p>Messages enqueued for sending should be placed in this table. If message
 is multipart, subsequent parts are stored in table <a class="reference internal" href="#outbox-multipart"><span class="std std-ref">outbox_multipart</span></a>.</p>
 <p>Fields description:</p>
@@ -374,9 +280,9 @@ message, Error indicates some other error while processing message.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="outbox-multipart">
-<span id="id3"></span><h3>outbox_multipart<a class="headerlink" href="#outbox-multipart" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="outbox-multipart">
+<span id="id3"></span><h3>outbox_multipart<a class="headerlink" href="#outbox-multipart" title="Permalink to this headline"></a></h3>
 <p>Data for outgoing multipart messages.</p>
 <p>Fields description:</p>
 <dl>
@@ -429,9 +335,9 @@ message, Error indicates some other error while processing message.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="phones">
-<span id="id4"></span><h3>phones<a class="headerlink" href="#phones" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="phones">
+<span id="id4"></span><h3>phones<a class="headerlink" href="#phones" title="Permalink to this headline"></a></h3>
 <p>Information about connected phones. This table is periodically refreshed and
 you can get information such as battery or signal level from here.</p>
 <p>Fields description:</p>
@@ -465,9 +371,9 @@ overflow).</p>
 overflow).</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="sentitems">
-<span id="id5"></span><h3>sentitems<a class="headerlink" href="#sentitems" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sentitems">
+<span id="id5"></span><h3>sentitems<a class="headerlink" href="#sentitems" title="Permalink to this headline"></a></h3>
 <p>Log of sent messages (and unsent ones with error code). Also if delivery
 reports are enabled, message state is updated after receiving delivery report.</p>
 <p>Fields description:</p>
@@ -536,10 +442,10 @@ specification 03.40 section 9.2.3.15 (TP-Status).</p>
 </div>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="history-of-database-structure">
-<span id="smsd-tables-history"></span><h2>History of database structure<a class="headerlink" href="#history-of-database-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="history-of-database-structure">
+<span id="smsd-tables-history"></span><h2>History of database structure<a class="headerlink" href="#history-of-database-structure" title="Permalink to this headline"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Testing versions (see <a class="reference internal" href="../project/versioning.html#versioning"><span class="std std-ref">Versioning</span></a>) do not have to keep same table
@@ -648,11 +554,11 @@ indexes</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="creating-tables">
-<h3>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<section id="creating-tables">
+<h3>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline"></a></h3>
 <p>SQL scripts to create all needed tables for most databases are included in
 Gammu documentation (docs/sql). As well as some PHP scripts interacting with
 the database.</p>
@@ -660,9 +566,9 @@ the database.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sqlite3 smsd.db &lt; docs/sql/sqlite.sql
 </pre></div>
 </div>
-</div>
-<div class="section" id="injecting-a-message-using-sql">
-<h3>Injecting a message using SQL<a class="headerlink" href="#injecting-a-message-using-sql" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="injecting-a-message-using-sql">
+<h3>Injecting a message using SQL<a class="headerlink" href="#injecting-a-message-using-sql" title="Permalink to this headline"></a></h3>
 <p>To send a message, you can either use <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, which does all the
 magic for you, or you can insert the message manually. The simplest example is
 short text message:</p>
@@ -694,9 +600,9 @@ to hex encode the unicode text:</p>
 <span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="injecting-long-message-using-sql">
-<h3>Injecting long message using SQL<a class="headerlink" href="#injecting-long-message-using-sql" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="injecting-long-message-using-sql">
+<h3>Injecting long message using SQL<a class="headerlink" href="#injecting-long-message-using-sql" title="Permalink to this headline"></a></h3>
 <p>Inserting multipart messages is a bit more tricky, you need to construct also
 UDH header and store it hexadecimally written into UDH field. Unless you have a
 good reason to do this manually, use <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, C library
@@ -751,56 +657,39 @@ number) and byte for number of current message (<code class="docutils literal no
 <p>Adding UDH means that you have less space for text, in above example you
 can use only 153 characters in single message.</p>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="code.html" class="btn btn-neutral float-right" title="Developer documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="null.html" class="btn btn-neutral float-left" title="Null Backend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="code.html" class="btn btn-neutral float-right" title="Developer documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

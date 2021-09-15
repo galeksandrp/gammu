@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>DBI Backend &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ODBC Backend" href="odbc.html" />
     <link rel="prev" title="PostgreSQL Backend" href="pgsql.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -135,79 +84,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">SMS Daemon</a> &raquo;</li>
-        
           <li><a href="backends.html">Backend services</a> &raquo;</li>
-        
       <li>DBI Backend</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/smsd/dbi.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="dbi-backend">
-<span id="gammu-smsd-dbi"></span><h1>DBI Backend<a class="headerlink" href="#dbi-backend" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="dbi-backend">
+<span id="gammu-smsd-dbi"></span><h1>DBI Backend<a class="headerlink" href="#dbi-backend" title="Permalink to this headline"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
 <p>DBI backend stores all data in any database supported by <a class="reference external" href="http://libdbi.sourceforge.net/">libdbi</a>, which
 parameters are defined by configuration (see <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for description of
 configuration options).</p>
@@ -218,9 +124,9 @@ configuration options).</p>
 <p>The DBI driver is currently not supported on Windows because libdbi
 library does not support this platform.</p>
 </div>
-</div>
-<div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database. You can use examples given in database specific backends parts of
 this manual to do that.</p>
@@ -235,9 +141,9 @@ this manual to do that.</p>
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a></p>
 </div>
-</div>
-<div class="section" id="supported-drivers">
-<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="supported-drivers">
+<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this headline"></a></h2>
 <p>For complete list of drivers for <a class="reference external" href="http://libdbi.sourceforge.net/">libdbi</a> see <a class="reference external" href="http://libdbi-drivers.sourceforge.net/">libdbi-drivers</a> project. The
 drivers for example include:</p>
 <ul class="simple">
@@ -246,9 +152,9 @@ drivers for example include:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">pgsql</span></code> - for PostgeSQL</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">freetds</span></code> - for MS SQL Server or Sybase</p></li>
 </ul>
-</div>
-<div class="section" id="creating-tables-for-sqlite">
-<span id="sqlite-create"></span><h2>Creating tables for SQLite<a class="headerlink" href="#creating-tables-for-sqlite" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creating-tables-for-sqlite">
+<span id="sqlite-create"></span><h2>Creating tables for SQLite<a class="headerlink" href="#creating-tables-for-sqlite" title="Permalink to this headline"></a></h2>
 <p>SQL script for creating tables in SQLite database:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">gammu</span> <span class="p">(</span>
   <span class="k">Version</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;0&#39;</span> <span class="k">PRIMARY</span> <span class="k">KEY</span>
@@ -404,63 +310,46 @@ drivers for example include:</p>
 <p>You can find the script in <code class="file docutils literal notranslate"><span class="pre">docs/sql/sqlite.sql</span></code> as well. There are
 also scripts for other databases in same folder.</p>
 </div>
-</div>
-<div class="section" id="upgrading-tables">
-<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="upgrading-tables">
+<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this headline"></a></h2>
 <p>The easiest way to upgrade database structure is to backup old one and start
 with creating new one based on example above.</p>
 <p>For upgrading existing database, you can use changes described in
 <a class="reference internal" href="tables.html#smsd-tables-history"><span class="std std-ref">History of database structure</span></a> and then manually update <code class="docutils literal notranslate"><span class="pre">Version</span></code> field in
 <code class="docutils literal notranslate"><span class="pre">gammu</span></code> table.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="odbc.html" class="btn btn-neutral float-right" title="ODBC Backend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pgsql.html" class="btn btn-neutral float-left" title="PostgreSQL Backend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="odbc.html" class="btn btn-neutral float-right" title="ODBC Backend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

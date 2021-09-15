@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Security &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Settings" href="settings.html" />
     <link rel="prev" title="Ringtone" href="ringtone.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -143,139 +92,96 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">libGammu</a> &raquo;</li>
-        
           <li><a href="api.html">libGammu C API</a> &raquo;</li>
-        
       <li>Security</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/c/security.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="security">
-<h1>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="security">
+<h1>Security<a class="headerlink" href="#security" title="Permalink to this headline"></a></h1>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.GSM_EnterSecurityCode">
-<span class="target" id="group__Security_1ga93117cc8cd1733436b75af65c0192e66"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_EnterSecurityCode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_SecurityCode" title="GSM_SecurityCode"><span class="n"><span class="pre">GSM_SecurityCode</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Code</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EnterSecurityCode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ga93117cc8cd1733436b75af65c0192e66"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_EnterSecurityCode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_SecurityCode" title="GSM_SecurityCode"><span class="n"><span class="pre">GSM_SecurityCode</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Code</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EnterSecurityCode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Enters security code (PIN, PUK,…) . </p>
 </dd></dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.GSM_GetSecurityStatus">
-<span class="target" id="group__Security_1gaff225c907c9a1d96bf70259cf3c8a9c7"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetSecurityStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_SecurityCodeType" title="GSM_SecurityCodeType"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetSecurityStatus" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1gaff225c907c9a1d96bf70259cf3c8a9c7"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetSecurityStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_SecurityCodeType" title="GSM_SecurityCodeType"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetSecurityStatus" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Queries whether some security code needs to be entered. </p>
 </dd></dl>
 
 <dl class="c enum">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType">
-<span class="target" id="group__Security_1gaf9b8e1760cfbfe163d7a5ded8bb5693c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1gaf9b8e1760cfbfe163d7a5ded8bb5693c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Definition of security codes. </p>
 <p><em>Values:</em></p>
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_SecurityCode">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca87f7270dee4b1943f1318ef1a4be8883"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_SecurityCode</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_SecurityCode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca87f7270dee4b1943f1318ef1a4be8883"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_SecurityCode</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_SecurityCode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Security code. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Pin">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693caf665ff5a41bdfa135d232bf5a2ffd69f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Pin</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Pin" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693caf665ff5a41bdfa135d232bf5a2ffd69f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Pin</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Pin" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PIN. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Pin2">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693caf6c086ba339c39d48882b0b8abe316e3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Pin2</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Pin2" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693caf6c086ba339c39d48882b0b8abe316e3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Pin2</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Pin2" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PIN 2. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Puk">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693cacda693218e159e1499656326a87ac048"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Puk</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Puk" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693cacda693218e159e1499656326a87ac048"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Puk</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Puk" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PUK. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Puk2">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693cad4090c012199b95e3cda6ceff8873147"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Puk2</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Puk2" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693cad4090c012199b95e3cda6ceff8873147"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Puk2</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Puk2" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PUK 2. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_None">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca903af516e91fa28431b7525147ba193e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_None</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_None" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca903af516e91fa28431b7525147ba193e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_None</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_None" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Code not needed. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Phone">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca0dae5cd1e8aea1570de815c19c4d95c6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Phone</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Phone" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca0dae5cd1e8aea1570de815c19c4d95c6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Phone</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Phone" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Phone code needed. </p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.GSM_SecurityCodeType.SEC_Network">
-<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca8cbe542c17f7cef0a8e04ac309ddae46"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Network</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Network" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="group__Security_1ggaf9b8e1760cfbfe163d7a5ded8bb5693ca8cbe542c17f7cef0a8e04ac309ddae46"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEC_Network</span></span></span><a class="headerlink" href="#c.GSM_SecurityCodeType.SEC_Network" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Network code needed. </p>
 </dd></dl>
 
@@ -283,25 +189,25 @@
 
 <dl class="c struct">
 <dt class="sig sig-object c" id="c.GSM_SecurityCode">
-<span class="target" id="structGSM__SecurityCode"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SecurityCode</span></span></span><a class="headerlink" href="#c.GSM_SecurityCode" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SecurityCode"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SecurityCode</span></span></span><a class="headerlink" href="#c.GSM_SecurityCode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Security code definition. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="c var">
 <dt class="sig sig-object c" id="c.GSM_SecurityCode.Type">
-<span class="target" id="structGSM__SecurityCode_1a759fc215c406652ca5256a4678d01178"></span><a class="reference internal" href="#c.GSM_SecurityCodeType" title="GSM_SecurityCodeType"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Type</span></span></span><a class="headerlink" href="#c.GSM_SecurityCode.Type" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SecurityCode_1a759fc215c406652ca5256a4678d01178"></span><a class="reference internal" href="#c.GSM_SecurityCodeType" title="GSM_SecurityCodeType"><span class="n"><span class="pre">GSM_SecurityCodeType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Type</span></span></span><a class="headerlink" href="#c.GSM_SecurityCode.Type" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Type of the code. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt class="sig sig-object c" id="c.GSM_SecurityCode.Code">
-<span class="target" id="structGSM__SecurityCode_1af7d144614c2681ef185fe1c12e711acd"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Code</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">GSM_SECURITY_CODE_LEN</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#c.GSM_SecurityCode.Code" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SecurityCode_1af7d144614c2681ef185fe1c12e711acd"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Code</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">GSM_SECURITY_CODE_LEN</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#c.GSM_SecurityCode.Code" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Actual code. </p>
 </dd></dl>
 
 <dl class="c var">
 <dt class="sig sig-object c" id="c.GSM_SecurityCode.NewPIN">
-<span class="target" id="structGSM__SecurityCode_1ad630243288d7bd4871d5f87e141f8acd"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NewPIN</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">GSM_SECURITY_CODE_LEN</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#c.GSM_SecurityCode.NewPIN" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structGSM__SecurityCode_1ad630243288d7bd4871d5f87e141f8acd"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NewPIN</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">GSM_SECURITY_CODE_LEN</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#c.GSM_SecurityCode.NewPIN" title="Permalink to this definition"></a><br /></dt>
 <dd><p>New PIN code.</p>
 <p>Some phones require to set PIN on entering PUK, you can provide it here. </p>
 </dd></dl>
@@ -309,54 +215,37 @@
 </div>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="settings.html" class="btn btn-neutral float-right" title="Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ringtone.html" class="btn btn-neutral float-left" title="Ringtone" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="settings.html" class="btn btn-neutral float-right" title="Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

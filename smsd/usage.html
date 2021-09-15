@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Usage &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Program Manuals" href="manual.html" />
     <link rel="prev" title="Overview" href="overview.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -125,106 +74,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">SMS Daemon</a> &raquo;</li>
-        
       <li>Usage</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/smsd/usage.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
 <p>This chapter will describe basic ways of using SMSD. It’s use is not limited
 to these, but they can give you overview of SMSD abilities.</p>
-<div class="section" id="storing-messages-in-backend">
-<h2>Storing Messages in Backend<a class="headerlink" href="#storing-messages-in-backend" title="Permalink to this headline">¶</a></h2>
+<section id="storing-messages-in-backend">
+<h2>Storing Messages in Backend<a class="headerlink" href="#storing-messages-in-backend" title="Permalink to this headline"></a></h2>
 <p>The standard mode of operating SMSD. You simply configure backend service, and
 all received messages will end up in it and any message you put into outbox
 storage will be sent.</p>
-</div>
-<div class="section" id="creating-messages-to-send">
-<h2>Creating Messages to Send<a class="headerlink" href="#creating-messages-to-send" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creating-messages-to-send">
+<h2>Creating Messages to Send<a class="headerlink" href="#creating-messages-to-send" title="Permalink to this headline"></a></h2>
 <p>Creating of messages to send heavily depends on service backend you use. Most
 of them support <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, which can be used to construct
 the message, or you can just insert message manually to the backend storage.</p>
 <p>Alternatively you can use <a class="reference internal" href="../c/smsd.html#c.SMSD_InjectSMS" title="SMSD_InjectSMS"><code class="xref c c-func docutils literal notranslate"><span class="pre">SMSD_InjectSMS()</span></code></a> (from C) or using
 <a class="reference internal" href="../python/smsd.html#gammu.smsd.SMSD.InjectSMS" title="gammu.smsd.SMSD.InjectSMS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gammu.smsd.SMSD.InjectSMS()</span></code></a> (from Python).</p>
-</div>
-<div class="section" id="notification-about-received-messages">
-<h2>Notification about Received Messages<a class="headerlink" href="#notification-about-received-messages" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="notification-about-received-messages">
+<h2>Notification about Received Messages<a class="headerlink" href="#notification-about-received-messages" title="Permalink to this headline"></a></h2>
 <p>Once SMSD receives message and stores it in backend service, it can invoke
 your own program to do any message processing, see <a class="reference internal" href="run.html#gammu-smsd-run"><span class="std std-ref">RunOnReceive Directive</span></a>.</p>
-</div>
-<div class="section" id="monitoring-smsd-status">
-<h2>Monitoring SMSD Status<a class="headerlink" href="#monitoring-smsd-status" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="monitoring-smsd-status">
+<h2>Monitoring SMSD Status<a class="headerlink" href="#monitoring-smsd-status" title="Permalink to this headline"></a></h2>
 <p>You can use <a class="reference internal" href="monitor.html#gammu-smsd-monitor"><span class="std std-ref">gammu-smsd-monitor</span></a> to monitor status of SMSD. It uses
 shared memory segment to get current status of running SMSD.</p>
 <p>Alternatively you can get the same functionality from libGammu using
 <a class="reference internal" href="../c/smsd.html#c.SMSD_GetStatus" title="SMSD_GetStatus"><code class="xref c c-func docutils literal notranslate"><span class="pre">SMSD_GetStatus()</span></code></a> or python-gammu using
 <a class="reference internal" href="../python/smsd.html#gammu.smsd.SMSD.GetStatus" title="gammu.smsd.SMSD.GetStatus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gammu.smsd.SMSD.GetStatus()</span></code></a>.</p>
-</div>
-<div class="section" id="reporting-bugs">
-<span id="reporting-bugs-smsd"></span><h2>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reporting-bugs">
+<span id="reporting-bugs-smsd"></span><h2>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline"></a></h2>
 <p>Please report bugs to &lt;<a class="reference external" href="https://github.com/gammu/gammu/issues">https://github.com/gammu/gammu/issues</a>&gt;.</p>
 <p>Before reporting a bug, please enable verbose logging in SMSD configuration
 by <span class="target" id="index-0"></span><a class="reference internal" href="config.html#option-DebugLevel"><code class="xref config config-option docutils literal notranslate"><span class="pre">DebugLevel</span></code></a> and <span class="target" id="index-1"></span><a class="reference internal" href="config.html#option-LogFile"><code class="xref config config-option docutils literal notranslate"><span class="pre">LogFile</span></code></a>:</p>
@@ -239,55 +146,38 @@ by <span class="target" id="index-0"></span><a class="reference internal" href="
 </pre></div>
 </div>
 <p>and include this verbose log within bug report.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="manual.html" class="btn btn-neutral float-right" title="Program Manuals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="manual.html" class="btn btn-neutral float-right" title="Program Manuals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

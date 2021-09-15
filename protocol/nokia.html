@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Nokia protocols &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Nokia S40 filesystem SMS format" href="nokia-s40-sms.html" />
     <link rel="prev" title="Discovering protocol" href="discovering.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -138,75 +87,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Phone Protocols</a> &raquo;</li>
-        
       <li>Nokia protocols</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/protocol/nokia.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="nokia-protocols">
-<h1>Nokia protocols<a class="headerlink" href="#nokia-protocols" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="nokia-protocols">
+<h1>Nokia protocols<a class="headerlink" href="#nokia-protocols" title="Permalink to this headline"></a></h1>
 <p>Document describing protocol used in Nokia phones.</p>
 <p>The data provided is for information purposes only.
 Some of the frames might be hazardous to your phone. Be careful!!!
@@ -236,8 +143,8 @@ and authors of some WWW pages.</p>
 about features not listed here or you noticed a bug in this list, please
 notify us via e-mail.  Thank you.</p>
 </div>
-<div class="section" id="frame-format-for-mbus-version-1">
-<h2>Frame format for MBUS version 1<a class="headerlink" href="#frame-format-for-mbus-version-1" title="Permalink to this headline">¶</a></h2>
+<section id="frame-format-for-mbus-version-1">
+<h2>Frame format for MBUS version 1<a class="headerlink" href="#frame-format-for-mbus-version-1" title="Permalink to this headline"></a></h2>
 <p>Request from Computer/Answer from Phone:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="n">DestDEV</span><span class="p">,</span> <span class="n">SrcDEV</span><span class="p">,</span> <span class="n">FrameLength</span><span class="p">,</span> <span class="n">MsgType</span><span class="p">,</span> <span class="p">{</span><span class="n">block</span><span class="p">},</span> <span class="nb">id</span><span class="p">,</span> <span class="n">ChkSum</span> <span class="p">}</span>
 
@@ -310,9 +217,9 @@ collision.</p>
 <p>You should wait for bus to be free for 3 miliseconds before normal
 message, and for 2.5 miliseconds before acknowledge. You should wait
 for acknowledge for 200 miliseconds, then retransmit.</p>
-</div>
-<div class="section" id="frame-format-for-fbus-version-1">
-<h2>Frame format for FBUS version 1<a class="headerlink" href="#frame-format-for-fbus-version-1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="frame-format-for-fbus-version-1">
+<h2>Frame format for FBUS version 1<a class="headerlink" href="#frame-format-for-fbus-version-1" title="Permalink to this headline"></a></h2>
 <p>All frames:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{ FrameID, FrameLength, MsgType, {block}, SeqNo, ChkSum }
 
@@ -334,9 +241,9 @@ for acknowledge for 200 miliseconds, then retransmit.</p>
                               CRC ^= frame[i];
 </pre></div>
 </div>
-</div>
-<div class="section" id="frame-format-for-fbus-version-2-direct-irda">
-<h2>Frame format for FBUS version 2/Direct IRDA<a class="headerlink" href="#frame-format-for-fbus-version-2-direct-irda" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="frame-format-for-fbus-version-2-direct-irda">
+<h2>Frame format for FBUS version 2/Direct IRDA<a class="headerlink" href="#frame-format-for-fbus-version-2-direct-irda" title="Permalink to this headline"></a></h2>
 <p>All frames:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{ FrameID, DestDEV, SrcDEV, MsgType, 0x00, FrameLength, {block}, FramesToGo,
   SeqNo, PaddingByte?, ChkSum1, ChkSum2 }
@@ -358,9 +265,9 @@ for acknowledge for 200 miliseconds, then retransmit.</p>
            ChkSum2?:        XOR on frame&#39;s even numbers
 </pre></div>
 </div>
-</div>
-<div class="section" id="frame-format-for-mbus-version-2">
-<h2>Frame format for MBUS version 2<a class="headerlink" href="#frame-format-for-mbus-version-2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="frame-format-for-mbus-version-2">
+<h2>Frame format for MBUS version 2<a class="headerlink" href="#frame-format-for-mbus-version-2" title="Permalink to this headline"></a></h2>
 <p>Cable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{ FrameID, DestDEV, SrcDEV, MsgType, FrameLengthLO, FrameLengthHI, {block},
   SeqNo, ChkSum }
@@ -419,11 +326,11 @@ for acknowledge for 200 miliseconds, then retransmit.</p>
            <span class="p">{</span><span class="o">+...</span> <span class="p">}:</span> <span class="n">raw</span> <span class="n">data</span> <span class="p">(</span><span class="n">without</span> <span class="n">header</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="misc-about-mbus-version-2">
-<h2>Misc (about MBUS version 2)<a class="headerlink" href="#misc-about-mbus-version-2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="x4e-commands">
-<h3>0x4E commands<a class="headerlink" href="#x4e-commands" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="misc-about-mbus-version-2">
+<h2>Misc (about MBUS version 2)<a class="headerlink" href="#misc-about-mbus-version-2" title="Permalink to this headline"></a></h2>
+<section id="x4e-commands">
+<h3>0x4E commands<a class="headerlink" href="#x4e-commands" title="Permalink to this headline"></a></h3>
 <p>(sent from a 5160i TDMA / 6160i TDMA / 6185 CDMA or 7110 GSM
 phone to the uC in the DLR-3 cable)</p>
 <p>DLR-3 req:</p>
@@ -443,9 +350,9 @@ DSR,DCD,CTS flow control data is coded into the 2nd databyte</p>
 </ul>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="x78-0x79-commands">
-<h3>0x78 / 0x79 commands<a class="headerlink" href="#x78-0x79-commands" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="x78-0x79-commands">
+<h3>0x78 / 0x79 commands<a class="headerlink" href="#x78-0x79-commands" title="Permalink to this headline"></a></h3>
 <p>(used by handsfree carkit) Works also on GSM phones (5110 / 6110 / etc)</p>
 <p>These commands are used by the Nokia Carkits to switch the phone audio path to
 XMiC and XEAR , turn the phone on/off according to the car ignition, and
@@ -525,9 +432,9 @@ Ignition and Hook are coded into one byte</p>
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="xd0-commands">
-<h3>0xD0 commands<a class="headerlink" href="#xd0-commands" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="xd0-commands">
+<h3>0xD0 commands<a class="headerlink" href="#xd0-commands" title="Permalink to this headline"></a></h3>
 <dl class="simple">
 <dt>init:</dt><dd><dl class="simple">
 <dt>1F 00 1D D0 00 01 04 SQ CS</dt><dd><p>sent by the Service Software or HFU-2 on startup</p>
@@ -540,56 +447,39 @@ Ignition and Hook are coded into one byte</p>
 </dl>
 </dd>
 </dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nokia-s40-sms.html" class="btn btn-neutral float-right" title="Nokia S40 filesystem SMS format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="discovering.html" class="btn btn-neutral float-left" title="Discovering protocol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nokia-s40-sms.html" class="btn btn-neutral float-right" title="Nokia S40 filesystem SMS format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,78 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Gammu Configuration File &mdash; Gammu 1.42.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Gammu Utility" href="../gammu/index.html" />
     <link rel="prev" title="Backup Format" href="../formats/backup.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Gammu
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.42.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">Gammu project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
@@ -128,75 +77,34 @@
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Gammu</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Gammu Configuration File</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/config/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="gammu-configuration-file">
-<span id="gammurc"></span><h1>Gammu Configuration File<a class="headerlink" href="#gammu-configuration-file" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="gammu-configuration-file">
+<span id="gammurc"></span><h1>Gammu Configuration File<a class="headerlink" href="#gammu-configuration-file" title="Permalink to this headline"></a></h1>
+<section id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline"></a></h2>
 <p>On Linux, MacOS X, BSD and other Unix-like systems, the config file is
 searched in following order:</p>
 <ol class="arabic simple">
@@ -210,9 +118,9 @@ searched in following order:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">%PROFILE%\Application</span> <span class="pre">Data\gammurc</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.\gammurc</span></code></p></li>
 </ol>
-</div>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
 <p>Gammu requires configuration to be able to properly talk to your phone.
 <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a> reads configuration from a config file. It’s location is determined
 on runtime, see above for search paths.</p>
@@ -229,15 +137,15 @@ configuration section to use by giving it’s number (<span class="target" id="i
 parameter to <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a> and it will then use only this section.</p>
 <dl class="config section">
 <dt class="sig sig-object config" id="section-[gammu]">
-<span class="sig-name descname"><span class="pre">[gammu]</span></span><a class="headerlink" href="#section-[gammu]" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">[gammu]</span></span><a class="headerlink" href="#section-[gammu]" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <p>This section is read by default unless you specify other on command line.</p>
-<div class="section" id="device-connection-parameters">
-<h3>Device connection parameters<a class="headerlink" href="#device-connection-parameters" title="Permalink to this headline">¶</a></h3>
+<section id="device-connection-parameters">
+<h3>Device connection parameters<a class="headerlink" href="#device-connection-parameters" title="Permalink to this headline"></a></h3>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Connection">
-<span class="sig-name descname"><span class="pre">Connection</span></span><a class="headerlink" href="#option-Connection" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Connection</span></span><a class="headerlink" href="#option-Connection" title="Permalink to this definition"></a></dt>
 <dd><p>Protocol which will be used to talk to your phone.</p>
 <p>For Nokia cables you want to use one of following:</p>
 <dl class="simple">
@@ -318,7 +226,7 @@ different host. This can be done using proxy connections:</p>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Device">
-<span class="sig-name descname"><span class="pre">Device</span></span><a class="headerlink" href="#option-Device" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Device</span></span><a class="headerlink" href="#option-Device" title="Permalink to this definition"></a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">New in version 1.27.95.</span></p>
 </div>
@@ -409,7 +317,7 @@ modprobe irtty-sir
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Port">
-<span class="sig-name descname"><span class="pre">Port</span></span><a class="headerlink" href="#option-Port" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Port</span></span><a class="headerlink" href="#option-Port" title="Permalink to this definition"></a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 1.27.95: </span>Please use <span class="target" id="index-1"></span><a class="reference internal" href="#option-Device"><code class="xref config config-option docutils literal notranslate"><span class="pre">Device</span></code></a> instead.</p>
 </div>
@@ -418,7 +326,7 @@ modprobe irtty-sir
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Model">
-<span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#option-Model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#option-Model" title="Permalink to this definition"></a></dt>
 <dd><p>Do not use this parameter unless really needed! The only use case for this is
 when Gammu does not know your phone and misdetects it’s features.</p>
 <p>The only special case for using model is to force special type of OBEX
@@ -438,7 +346,7 @@ operation:</p>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Use_Locking">
-<span class="sig-name descname"><span class="pre">Use_Locking</span></span><a class="headerlink" href="#option-Use_Locking" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Use_Locking</span></span><a class="headerlink" href="#option-Use_Locking" title="Permalink to this definition"></a></dt>
 <dd><p>On Posix systems, you might want to lock serial device when it is being used
 using UUCP-style lock files. Enabling this option (setting to yes) will make
 Gammu honor these locks and create it on startup. On most distributions you
@@ -447,30 +355,30 @@ group).</p>
 <p>This option has no meaning on Windows.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="connection-options">
-<h3>Connection options<a class="headerlink" href="#connection-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connection-options">
+<h3>Connection options<a class="headerlink" href="#connection-options" title="Permalink to this headline"></a></h3>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-SynchronizeTime">
-<span class="sig-name descname"><span class="pre">SynchronizeTime</span></span><a class="headerlink" href="#option-SynchronizeTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SynchronizeTime</span></span><a class="headerlink" href="#option-SynchronizeTime" title="Permalink to this definition"></a></dt>
 <dd><p>If you want to set time from computer to phone during starting connection.</p>
 </dd></dl>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-StartInfo">
-<span class="sig-name descname"><span class="pre">StartInfo</span></span><a class="headerlink" href="#option-StartInfo" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">StartInfo</span></span><a class="headerlink" href="#option-StartInfo" title="Permalink to this definition"></a></dt>
 <dd><p>This option allows one to set, that you want (setting <code class="docutils literal notranslate"><span class="pre">yes</span></code>) to see
 message on the phone screen or phone should enable light for a moment
 during starting connection. Phone will not beep during starting connection
 with this option. This works only with some Nokia phones.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="debugging-options">
-<h3>Debugging options<a class="headerlink" href="#debugging-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="debugging-options">
+<h3>Debugging options<a class="headerlink" href="#debugging-options" title="Permalink to this headline"></a></h3>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-LogFile">
-<span class="sig-name descname"><span class="pre">LogFile</span></span><a class="headerlink" href="#option-LogFile" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">LogFile</span></span><a class="headerlink" href="#option-LogFile" title="Permalink to this definition"></a></dt>
 <dd><p>Path to file where information about communication will be stored.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -481,7 +389,7 @@ each execution.</p>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-LogFormat">
-<span class="sig-name descname"><span class="pre">LogFormat</span></span><a class="headerlink" href="#option-LogFormat" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">LogFormat</span></span><a class="headerlink" href="#option-LogFormat" title="Permalink to this definition"></a></dt>
 <dd><p>Determines what all will be logged to <span class="target" id="index-3"></span><a class="reference internal" href="../smsd/config.html#option-LogFile"><code class="xref config config-option docutils literal notranslate"><span class="pre">LogFile</span></code></a>. Possible values are:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">nothing</span></code></dt><dd><p>no debug level</p>
@@ -505,7 +413,7 @@ needed information to diagnose problems.</p>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-Features">
-<span class="sig-name descname"><span class="pre">Features</span></span><a class="headerlink" href="#option-Features" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Features</span></span><a class="headerlink" href="#option-Features" title="Permalink to this definition"></a></dt>
 <dd><p>Custom features for phone. This can be used as override when values coded
 in <code class="docutils literal notranslate"><span class="pre">common/gsmphones.c</span></code> are bad or missing. Consult
 <code class="docutils literal notranslate"><span class="pre">include/gammu-info.h</span></code> for possible values (all <a class="reference internal" href="../c/info.html#c.GSM_Feature" title="GSM_Feature"><code class="xref c c-type docutils literal notranslate"><span class="pre">GSM_Feature</span></code></a> values
@@ -513,12 +421,12 @@ without leading <code class="docutils literal notranslate"><span class="pre">F_<
 authors.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="locales-and-character-set-options">
-<h3>Locales and character set options<a class="headerlink" href="#locales-and-character-set-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="locales-and-character-set-options">
+<h3>Locales and character set options<a class="headerlink" href="#locales-and-character-set-options" title="Permalink to this headline"></a></h3>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-GammuCoding">
-<span class="sig-name descname"><span class="pre">GammuCoding</span></span><a class="headerlink" href="#option-GammuCoding" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">GammuCoding</span></span><a class="headerlink" href="#option-GammuCoding" title="Permalink to this definition"></a></dt>
 <dd><p>Forces using specified codepage (for example <code class="docutils literal notranslate"><span class="pre">1250</span></code> will force CP-1250 or
 <code class="docutils literal notranslate"><span class="pre">utf8</span></code> for UTF-8). This should not be needed, Gammu detects it according
 to your locales.</p>
@@ -526,21 +434,21 @@ to your locales.</p>
 
 <dl class="config option">
 <dt class="sig sig-object config" id="option-GammuLoc">
-<span class="sig-name descname"><span class="pre">GammuLoc</span></span><a class="headerlink" href="#option-GammuLoc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">GammuLoc</span></span><a class="headerlink" href="#option-GammuLoc" title="Permalink to this definition"></a></dt>
 <dd><p>Path to directory with localisation files (the directory should contain
 <code class="docutils literal notranslate"><span class="pre">LANG/LC_MESSAGES/gammu.mo</span></code>). If gammu is properly installed it should find
 these files automatically.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="advanced-options">
-<h3>Advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="advanced-options">
+<h3>Advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline"></a></h3>
 <p>Advanced options are used to alter default logic, when using these options the
 user is responsible for ensuring any settings are correct for the target device
 and that they produce the desired behaviour.</p>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-atgen_setCNMI">
-<span class="sig-name descname"><span class="pre">atgen_setCNMI</span></span><a class="headerlink" href="#option-atgen_setCNMI" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">atgen_setCNMI</span></span><a class="headerlink" href="#option-atgen_setCNMI" title="Permalink to this definition"></a></dt>
 <dd><p>For configurations using the generic AT command protocol it is possible to
 override the default indicators used when a new SMS message is received.</p>
 <p>The value for the setting is a comma delimited list of single digits
@@ -553,25 +461,25 @@ default, and <code class="docutils literal notranslate"><span class="pre">atgen_
 respectively.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="other-options">
-<h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="other-options">
+<h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline"></a></h3>
 <dl class="config option">
 <dt class="sig sig-object config" id="option-DataPath">
-<span class="sig-name descname"><span class="pre">DataPath</span></span><a class="headerlink" href="#option-DataPath" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DataPath</span></span><a class="headerlink" href="#option-DataPath" title="Permalink to this definition"></a></dt>
 <dd><p>Additional path where to search for data files. The default path is
 configured on build time (and defaults to <code class="docutils literal notranslate"><span class="pre">/usr/share/data/gammu</span></code> on Unix
 systems). Currently it is used only for searching files to upload to phone
 using <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">install</span></code>.</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
 <p>There is more complete example available in Gammu documentation, see <a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a>.</p>
-<div class="section" id="connection-examples">
-<h3>Connection examples<a class="headerlink" href="#connection-examples" title="Permalink to this headline">¶</a></h3>
+<section id="connection-examples">
+<h3>Connection examples<a class="headerlink" href="#connection-examples" title="Permalink to this headline"></a></h3>
 <p>Gammu configuration for Nokia phone using DLR-3 cable:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
 <span class="na">device</span> <span class="o">=</span> <span class="s">/dev/ttyACM0</span>
@@ -598,9 +506,9 @@ phone) connected using bluetooth:</p>
 <span class="na">connection</span> <span class="o">=</span> <span class="s">blueat</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="working-with-multiple-phones">
-<h3>Working with multiple phones<a class="headerlink" href="#working-with-multiple-phones" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="working-with-multiple-phones">
+<h3>Working with multiple phones<a class="headerlink" href="#working-with-multiple-phones" title="Permalink to this headline"></a></h3>
 <p>Gammu can be configured for multiple phones (however only one connection
 is used at one time, you can choose which one to use with <a class="reference external" href="https://docs.python.org/3.9/using/cmdline.html#cmdoption-s" title="(in Python v3.9)"><code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">-s</span></code></a>
 parameter). Configuration for phones on three serial ports would look
@@ -618,9 +526,9 @@ like following:</p>
 <span class="na">connection</span> <span class="o">=</span> <span class="s">at</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="connecting-to-remote-phone">
-<h3>Connecting to remote phone<a class="headerlink" href="#connecting-to-remote-phone" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connecting-to-remote-phone">
+<h3>Connecting to remote phone<a class="headerlink" href="#connecting-to-remote-phone" title="Permalink to this headline"></a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.36.7.</span></p>
 </div>
@@ -634,9 +542,9 @@ bi-directional communication with the phone.</p>
 </div>
 <p>You can find sample script which can be used on the remote side in
 <code class="file docutils literal notranslate"><span class="pre">contrib/proxy/gammu-backend</span></code>.</p>
-</div>
-<div class="section" id="fully-documented-example">
-<span id="id1"></span><h3>Fully documented example<a class="headerlink" href="#fully-documented-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fully-documented-example">
+<span id="id1"></span><h3>Fully documented example<a class="headerlink" href="#fully-documented-example" title="Permalink to this headline"></a></h3>
 <p>You can find this sample file as <code class="file docutils literal notranslate"><span class="pre">docs/config/gammurc</span></code> in Gammu sources.</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; This is a sample ~/.gammurc file.</span>
 <span class="c1">; In Unix/Linux  copy it into your home directory and name it .gammurc</span>
@@ -813,56 +721,39 @@ bi-directional communication with the phone.</p>
 <span class="c1">; vim: et ts=4 sw=4 sts=4 tw=78 spell spelllang=en_us</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../gammu/index.html" class="btn btn-neutral float-right" title="Gammu Utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../formats/backup.html" class="btn btn-neutral float-left" title="Backup Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../gammu/index.html" class="btn btn-neutral float-right" title="Gammu Utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.
-
-    </p>
+    <p>&#169; Copyright 2009-2015, Michal Čihař &lt;michal@cihar.com&gt;.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
