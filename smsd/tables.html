@@ -614,7 +614,7 @@ for each message</strong>, <code class="docutils literal notranslate"><span clas
 (<code class="docutils literal notranslate"><span class="pre">02</span></code> in example, it should be unique for each message you send to same phone
 number) and byte for number of current message (<code class="docutils literal notranslate"><span class="pre">01</span></code> for first message,
 <code class="docutils literal notranslate"><span class="pre">02</span></code> for second, etc.).</p>
-<p>I most cases, the mutlipart message has to be class 1.</p>
+<p>In most cases, the mutltipart message has to be class 1.</p>
 <p>For example long text message of two parts could look like following:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox</span> <span class="p">(</span>
     <span class="n">CreatorID</span><span class="p">,</span>
