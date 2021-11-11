@@ -101,7 +101,7 @@
 which are used by this class.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="gammu.worker.GammuCommand">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuCommand" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuCommand" title="Permalink to this definition"></a></dt>
 <dd><p>Storage of single command for gammu.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gammu.worker.GammuCommand.get_command">
@@ -125,7 +125,7 @@ which are used by this class.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gammu.worker.GammuTask">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuTask" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuTask" title="Permalink to this definition"></a></dt>
 <dd><p>Storage of task for gammu.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gammu.worker.GammuTask.get_name">
@@ -143,7 +143,7 @@ which are used by this class.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gammu.worker.GammuThread">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuThread" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuThread" title="Permalink to this definition"></a></dt>
 <dd><p>Thread for phone communication.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gammu.worker.GammuThread.join">
@@ -168,7 +168,7 @@ be used from outside.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gammu.worker.GammuWorker">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuWorker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuWorker" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">GammuWorker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.GammuWorker" title="Permalink to this definition"></a></dt>
 <dd><p>Wrapper class for asynchronous communication with Gammu. It spawns
 own thread and then passes all commands to this thread. When task is
 done, caller is notified via callback.</p>
@@ -248,7 +248,7 @@ done, caller is notified via callback.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="gammu.worker.InvalidCommand">
-<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">InvalidCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.InvalidCommand" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.worker.</span></span><span class="sig-name descname"><span class="pre">InvalidCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.worker.InvalidCommand" title="Permalink to this definition"></a></dt>
 <dd><p>Exception indicating invalid command.</p>
 </dd></dl>
 
