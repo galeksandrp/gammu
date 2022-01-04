@@ -858,89 +858,89 @@ section, you can look into <a class="reference internal" href="../config/index.h
 <section id="files-service">
 <h3>Files service<a class="headerlink" href="#files-service" title="Permalink to this headline"></a></h3>
 <p>SMSD configuration file for FILES backend could look like:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">files</span>
-<span class="na">PIN</span> <span class="o">=</span> <span class="s">1234</span>
-<span class="na">LogFile</span> <span class="o">=</span> <span class="s">syslog</span>
-<span class="na">InboxPath</span> <span class="o">=</span> <span class="s">/var/spool/sms/inbox/</span>
-<span class="na">OutboxPath</span> <span class="o">=</span> <span class="s">/var/spool/sms/outbox/</span>
-<span class="na">SentSMSPath</span> <span class="o">=</span> <span class="s">/var/spool/sms/sent/</span>
-<span class="na">ErrorSMSPath</span> <span class="o">=</span> <span class="s">/var/spool/sms/error/</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">files</span><span class="w"></span>
+<span class="na">PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1234</span><span class="w"></span>
+<span class="na">LogFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">syslog</span><span class="w"></span>
+<span class="na">InboxPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/spool/sms/inbox/</span><span class="w"></span>
+<span class="na">OutboxPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/spool/sms/outbox/</span><span class="w"></span>
+<span class="na">SentSMSPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/spool/sms/sent/</span><span class="w"></span>
+<span class="na">ErrorSMSPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/spool/sms/error/</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="mysql-service">
 <h3>MySQL service<a class="headerlink" href="#mysql-service" title="Permalink to this headline"></a></h3>
 <p>If you want to use MYSQL backend, you will need something like this:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">sql</span>
-<span class="na">Driver</span> <span class="o">=</span> <span class="s">native_mysql</span>
-<span class="na">PIN</span> <span class="o">=</span> <span class="s">1234</span>
-<span class="na">LogFile</span> <span class="o">=</span> <span class="s">syslog</span>
-<span class="na">User</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">Password</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">PC</span> <span class="o">=</span> <span class="s">localhost</span>
-<span class="na">Database</span> <span class="o">=</span> <span class="s">smsd</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>
+<span class="na">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">native_mysql</span><span class="w"></span>
+<span class="na">PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1234</span><span class="w"></span>
+<span class="na">LogFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">syslog</span><span class="w"></span>
+<span class="na">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">Password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">PC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+<span class="na">Database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="dbi-service-using-sqlite">
 <h3>DBI service using SQLite<a class="headerlink" href="#dbi-service-using-sqlite" title="Permalink to this headline"></a></h3>
 <p>For <a class="reference internal" href="dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a> backend, in this particular case SQLite:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">sql</span>
-<span class="na">Driver</span> <span class="o">=</span> <span class="s">sqlite3</span>
-<span class="na">DBDir</span> <span class="o">=</span> <span class="s">/var/lib/sqlite3</span>
-<span class="na">Database</span> <span class="o">=</span> <span class="s">smsd.db</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>
+<span class="na">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sqlite3</span><span class="w"></span>
+<span class="na">DBDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/lib/sqlite3</span><span class="w"></span>
+<span class="na">Database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd.db</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="odbc-service-using-mysql">
 <h3>ODBC service using MySQL<a class="headerlink" href="#odbc-service-using-mysql" title="Permalink to this headline"></a></h3>
 <p>For <a class="reference internal" href="odbc.html#gammu-smsd-odbc"><span class="std std-ref">ODBC Backend</span></a> backend, in this particular case using DSN <code class="docutils literal notranslate"><span class="pre">smsd</span></code> server:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">sql</span>
-<span class="na">Driver</span> <span class="o">=</span> <span class="s">odbc</span>
-<span class="na">Host</span> <span class="o">=</span> <span class="s">smsd</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>
+<span class="na">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">odbc</span><span class="w"></span>
+<span class="na">Host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The DSN definition (in <code class="file docutils literal notranslate"><span class="pre">~/.odbc.ini</span></code> on UNIX) for using MySQL server would look like:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">Description</span>         <span class="o">=</span> <span class="s">MySQL</span>
-<span class="na">Driver</span>              <span class="o">=</span> <span class="s">MySQL</span>
-<span class="na">Server</span>              <span class="o">=</span> <span class="s">127.0.0.1</span>
-<span class="na">Database</span>            <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">Port</span>                <span class="o">=</span>
-<span class="na">Socket</span>              <span class="o">=</span>
-<span class="na">Option</span>              <span class="o">=</span>
-<span class="na">Stmt</span>                <span class="o">=</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Description</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">MySQL</span><span class="w"></span>
+<span class="na">Driver</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">MySQL</span><span class="w"></span>
+<span class="na">Server</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">127.0.0.1</span><span class="w"></span>
+<span class="na">Database</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">Port</span><span class="w">                </span><span class="o">=</span><span class="w"></span>
+<span class="na">Socket</span><span class="w">              </span><span class="o">=</span><span class="w"></span>
+<span class="na">Option</span><span class="w">              </span><span class="o">=</span><span class="w"></span>
+<span class="na">Stmt</span><span class="w">                </span><span class="o">=</span><span class="w"></span>
 
-<span class="k">[smsdsuse]</span>
-<span class="na">Driver</span>              <span class="o">=</span> <span class="s">MySQL ODBC 3.51.27r695 Driver</span>
-<span class="na">DATABASE</span>            <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">SERVER</span>              <span class="o">=</span> <span class="s">127.0.0.1</span>
+<span class="k">[smsdsuse]</span><span class="w"></span>
+<span class="na">Driver</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">MySQL ODBC 3.51.27r695 Driver</span><span class="w"></span>
+<span class="na">DATABASE</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">SERVER</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">127.0.0.1</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="numbers-filtering">
 <h3>Numbers filtering<a class="headerlink" href="#numbers-filtering" title="Permalink to this headline"></a></h3>
 <p>Process only messages from 123456 number:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[include_numbers]</span>
-<span class="na">number1</span> <span class="o">=</span> <span class="s">123456</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[include_numbers]</span><span class="w"></span>
+<span class="na">number1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">123456</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Do not process messages from evil number 666:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[exclude_numbers]</span>
-<span class="na">number1</span> <span class="o">=</span> <span class="s">666</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[exclude_numbers]</span><span class="w"></span>
+<span class="na">number1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">666</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline"></a></h3>
 <p>Enabling debugging:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span>
-<span class="na">debuglevel</span> <span class="o">=</span> <span class="s">255</span>
-<span class="na">logfile</span> <span class="o">=</span> <span class="s">smsd.log</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
+<span class="na">debuglevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">255</span><span class="w"></span>
+<span class="na">logfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd.log</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -954,37 +954,37 @@ database. For routing the messages, you need to set different
 number of SMSD instances. The only limitation is performance of your hardware,
 especially if all modems are connected using USB.</p>
 <p>Configuration for first SMSD:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
-<span class="na">device</span> <span class="o">=</span> <span class="s">/dev/ttyACM0</span>
-<span class="na">connection</span> <span class="o">=</span> <span class="s">at</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM0</span><span class="w"></span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
 
-<span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">sql</span>
-<span class="na">Driver</span> <span class="o">=</span> <span class="s">native_mysql</span>
-<span class="na">PIN</span> <span class="o">=</span> <span class="s">1234</span>
-<span class="na">LogFile</span> <span class="o">=</span> <span class="s">syslog</span>
-<span class="na">User</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">Password</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">PC</span> <span class="o">=</span> <span class="s">localhost</span>
-<span class="na">Database</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">PhoneID</span> <span class="o">=</span> <span class="s">first</span>
+<span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>
+<span class="na">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">native_mysql</span><span class="w"></span>
+<span class="na">PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1234</span><span class="w"></span>
+<span class="na">LogFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">syslog</span><span class="w"></span>
+<span class="na">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">Password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">PC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+<span class="na">Database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">PhoneID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">first</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Configuration for second SMSD:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
-<span class="na">device</span> <span class="o">=</span> <span class="s">/dev/ttyACM1</span>
-<span class="na">connection</span> <span class="o">=</span> <span class="s">at</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM1</span><span class="w"></span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
 
-<span class="k">[smsd]</span>
-<span class="na">Service</span> <span class="o">=</span> <span class="s">sql</span>
-<span class="na">Driver</span> <span class="o">=</span> <span class="s">native_mysql</span>
-<span class="na">PIN</span> <span class="o">=</span> <span class="s">1234</span>
-<span class="na">LogFile</span> <span class="o">=</span> <span class="s">syslog</span>
-<span class="na">User</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">Password</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">PC</span> <span class="o">=</span> <span class="s">localhost</span>
-<span class="na">Database</span> <span class="o">=</span> <span class="s">smsd</span>
-<span class="na">PhoneID</span> <span class="o">=</span> <span class="s">second</span>
+<span class="k">[smsd]</span><span class="w"></span>
+<span class="na">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>
+<span class="na">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">native_mysql</span><span class="w"></span>
+<span class="na">PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1234</span><span class="w"></span>
+<span class="na">LogFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">syslog</span><span class="w"></span>
+<span class="na">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">Password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">PC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+<span class="na">Database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
+<span class="na">PhoneID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">second</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can then start two separate instances of SMSD:</p>

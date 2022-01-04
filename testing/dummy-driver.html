@@ -159,18 +159,18 @@ exception of GetNextSMS* and GetNextFile*).</p>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
 <p>To use dummy driver, you need something like following in <code class="file docutils literal notranslate"><span class="pre">~/.gammurc</span></code>:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
-<span class="na">model</span> <span class="o">=</span> <span class="s">dummy</span>
-<span class="na">connection</span> <span class="o">=</span> <span class="s">none</span>
-<span class="na">device</span> <span class="o">=</span> <span class="s">/path/to/directory/</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
+<span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dummy</span><span class="w"></span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/path/to/directory/</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For disabling GetNext* functions within dummy driver, you need something like following in <code class="file docutils literal notranslate"><span class="pre">~/.gammurc</span></code>:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
-<span class="na">model</span> <span class="o">=</span> <span class="s">dummy</span>
-<span class="na">connection</span> <span class="o">=</span> <span class="s">none</span>
-<span class="na">features</span> <span class="o">=</span> <span class="s">DISABLE_GETNEXT</span>
-<span class="na">device</span> <span class="o">=</span> <span class="s">/path/to/directory/</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
+<span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dummy</span><span class="w"></span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+<span class="na">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DISABLE_GETNEXT</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/path/to/directory/</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

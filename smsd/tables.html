@@ -572,32 +572,32 @@ the database.</p>
 <p>To send a message, you can either use <a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a>, which does all the
 magic for you, or you can insert the message manually. The simplest example is
 short text message:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox</span> <span class="p">(</span>
-    <span class="n">DestinationNumber</span><span class="p">,</span>
-    <span class="n">TextDecoded</span><span class="p">,</span>
-    <span class="n">CreatorID</span><span class="p">,</span>
-    <span class="n">Coding</span>
-<span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span>
-    <span class="s1">&#39;800123465&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;This is a SQL test message&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Program&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Default_No_Compression&#39;</span>
-<span class="p">);</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">outbox</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">DestinationNumber</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">TextDecoded</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">CreatorID</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Coding</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;800123465&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;This is a SQL test message&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Program&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Default_No_Compression&#39;</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Please note usage of <code class="docutils literal notranslate"><span class="pre">TextDecoded</span></code> field, for <code class="docutils literal notranslate"><span class="pre">Text</span></code> field, you would have
 to hex encode the unicode text:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox</span> <span class="p">(</span>
-    <span class="n">DestinationNumber</span><span class="p">,</span>
-    <span class="nb">Text</span><span class="p">,</span>
-    <span class="n">CreatorID</span><span class="p">,</span>
-    <span class="n">Coding</span>
-<span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span>
-    <span class="s1">&#39;800123465&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;005400680069007300200069007300200061002000530051004c002000740065007300740020006d006500730073006100670065&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Program&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Default_No_Compression&#39;</span>
-<span class="p">);</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">outbox</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">DestinationNumber</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nb">Text</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">CreatorID</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Coding</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;800123465&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;005400680069007300200069007300200061002000530051004c002000740065007300740020006d006500730073006100670065&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Program&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Default_No_Compression&#39;</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -616,40 +616,40 @@ number) and byte for number of current message (<code class="docutils literal no
 <code class="docutils literal notranslate"><span class="pre">02</span></code> for second, etc.).</p>
 <p>In most cases, the mutltipart message has to be class 1.</p>
 <p>For example long text message of two parts could look like following:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox</span> <span class="p">(</span>
-    <span class="n">CreatorID</span><span class="p">,</span>
-    <span class="n">MultiPart</span><span class="p">,</span>
-    <span class="n">DestinationNumber</span><span class="p">,</span>
-    <span class="n">UDH</span><span class="p">,</span>
-    <span class="n">TextDecoded</span><span class="p">,</span>
-    <span class="n">Coding</span><span class="p">,</span>
-    <span class="k">Class</span>
-<span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span>
-    <span class="s1">&#39;Gammu 1.23.91&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;true&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;123465&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;050003D30201&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Mqukqirip ya konej eqniu rejropocejor hugiygydewl tfej nrupxujob xuemymiyliralj. Te tvyjuh qaxumur ibewfoiws zuucoz tdygu gelum L ejqigqesykl kya jdytbez&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Default_No_Compression&#39;</span><span class="p">,</span>
-    <span class="mi">1</span>
-<span class="p">)</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">outbox</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">CreatorID</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">MultiPart</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">DestinationNumber</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">UDH</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">TextDecoded</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Coding</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">Class</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Gammu 1.23.91&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;true&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;123465&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;050003D30201&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Mqukqirip ya konej eqniu rejropocejor hugiygydewl tfej nrupxujob xuemymiyliralj. Te tvyjuh qaxumur ibewfoiws zuucoz tdygu gelum L ejqigqesykl kya jdytbez&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Default_No_Compression&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">1</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
 
-<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">outbox_multipart</span> <span class="p">(</span>
-    <span class="n">SequencePosition</span><span class="p">,</span>
-    <span class="n">UDH</span><span class="p">,</span>
-    <span class="k">Class</span><span class="p">,</span>
-    <span class="n">TextDecoded</span><span class="p">,</span>
-    <span class="n">ID</span><span class="p">,</span>
-    <span class="n">Coding</span><span class="p">,</span>
-    <span class="k">Class</span>
-<span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span>
-    <span class="mi">2</span><span class="p">,</span>
-    <span class="s1">&#39;050003D30202&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;u xewz qisubevumxyzk ufuylehyzc. Nse xobq dfolizygqysj t bvowsyhyhyemim ovutpapeaempye giuuwbib.&#39;</span><span class="p">,</span>
-    <span class="o">&lt;</span><span class="n">ID_OF_INSERTED_RECORD_IN_OUBOX_TABLE</span><span class="o">&gt;</span><span class="p">,</span>
-    <span class="s1">&#39;Default_No_Compression&#39;</span><span class="p">,</span>
-    <span class="mi">1</span>
-<span class="p">)</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">outbox_multipart</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">SequencePosition</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">UDH</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">Class</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">TextDecoded</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">ID</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Coding</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">Class</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;050003D30202&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;u xewz qisubevumxyzk ufuylehyzc. Nse xobq dfolizygqysj t bvowsyhyhyemim ovutpapeaempye giuuwbib.&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">ID_OF_INSERTED_RECORD_IN_OUBOX_TABLE</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;Default_No_Compression&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">1</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
