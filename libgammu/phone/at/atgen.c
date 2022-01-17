@@ -315,7 +315,7 @@ GSM_Error ATGEN_HandleCMEError(GSM_StateMachine *s)
 	GSM_Phone_ATGENData *Priv = &s->Phone.Data.Priv.ATGEN;
 
 	if (Priv->ErrorCode == 0) {
-		smprintf(s, "CME Error occured, but it's type not detected\n");
+		smprintf(s, "CME Error occurred, but it's type not detected\n");
 	} else if (Priv->ErrorText == NULL) {
 		smprintf(s, "CME Error %i, no description available\n", Priv->ErrorCode);
 	} else {
@@ -378,7 +378,7 @@ GSM_Error ATGEN_HandleCMSError(GSM_StateMachine *s)
 	GSM_Phone_ATGENData *Priv = &s->Phone.Data.Priv.ATGEN;
 
 	if (Priv->ErrorCode == 0) {
-		smprintf(s, "CMS Error occured, but it's type not detected\n");
+		smprintf(s, "CMS Error occurred, but it's type not detected\n");
 	} else if (Priv->ErrorText == NULL) {
 		smprintf(s, "CMS Error %i, no description available\n", Priv->ErrorCode);
 	} else {
@@ -2559,7 +2559,7 @@ GSM_Error ATGEN_SetCharset(GSM_StateMachine *s, GSM_AT_Charset_Preference Prefer
 {
 	GSM_Phone_ATGENData	*Priv = &s->Phone.Data.Priv.ATGEN;
 	GSM_Error		error;
-	char			buffer[100];
+	char			buffer[120];
 	char			buffer2[100];
 	char			buffer3[100];
 	int			i = 0;
@@ -3783,7 +3783,7 @@ GSM_Error ATGEN_ReplyGetCPBRMemoryStatus(GSM_Protocol_Message *msg, GSM_StateMac
 GSM_Error ATGEN_GetMemoryInfo(GSM_StateMachine *s, GSM_MemoryStatus *Status, GSM_AT_NeededMemoryInfo NeededInfo)
 {
 	GSM_Error		error;
-	char			req[20]={'\0'};
+	char			req[30]={'\0'};
 	int			start = 0,end = 0,memory_end = 0;
 	GSM_Phone_ATGENData 	*Priv = &s->Phone.Data.Priv.ATGEN;
 	gboolean		free_read = FALSE;
@@ -4252,7 +4252,7 @@ GSM_Error ATGEN_ReplyGetMemory(GSM_Protocol_Message *msg, GSM_StateMachine *s)
 GSM_Error ATGEN_PrivGetMemory (GSM_StateMachine *s, GSM_MemoryEntry *entry, int endlocation)
 {
 	GSM_Error 		error;
-	char		req[20];
+	char		req[40];
 	GSM_Phone_ATGENData	*Priv = &s->Phone.Data.Priv.ATGEN;
 	size_t len;
 

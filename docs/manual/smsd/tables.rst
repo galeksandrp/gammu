@@ -26,7 +26,7 @@ of the same message from :ref:`outbox_multipart`.
 Description of tables
 ---------------------
 
-.. _gammu-table: 
+.. _gammu-table:
 
 gammu
 +++++
@@ -475,7 +475,7 @@ History of schema versions:
 11
     all fields for storing message text are no longer limited to 160 chars,
     but are arbitrary length text fields.
-    
+
     .. versionchanged:: 1.25.92
 10
     ``DeliveryDateTime`` is now NULL when message is not delivered, added several
@@ -578,7 +578,7 @@ for each message**, ``D3`` in following example), byte for number of messages
 number) and byte for number of current message (``01`` for first message,
 ``02`` for second, etc.).
 
-I most cases, the mutlipart message has to be class 1.
+In most cases, the mutltipart message has to be class 1.
 
 For example long text message of two parts could look like following:
 
