@@ -59,6 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#python-gammu-examples">python-gammu Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../c/index.html">libGammu</a></li>
@@ -106,10 +107,11 @@
 <dt class="sig sig-object py" id="gammu.smsd.SMSD">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammu.smsd.</span></span><span class="sig-name descname"><span class="pre">SMSD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammu.smsd.SMSD" title="Permalink to this definition"></a></dt>
 <dd><p>SMSD main class, that is used for communication with phone.</p>
-<p>You don’t need to run the SMS daemon itself to control or ask it for
-status, this can be also done on separately running instances. All you
+<p>You don’t need to run the SMS daemon in the python script to control or ask it for
+status, this can be also done on separately running instances (<code class="docutils literal notranslate"><span class="pre">gammu-smsd</span></code>). All you
 need to do for this is to give same configuration file as that instance is
-using.</p>
+using.
+For more infos look into <a class="reference internal" href="../smsd/overview.html#gammu-smsd-overview"><span class="std std-ref">Gammu SMSD Overview</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>Config</strong> (<em>string</em>) – Path to SMSD configuration file.</p>

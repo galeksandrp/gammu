@@ -47,8 +47,7 @@
 <li class="toctree-l2"><a class="reference internal" href="motivation.html">Motivation to fork Gnokii</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installing Gammu</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sending-patches">Sending patches</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-patches">Creating patches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-pull-requests">Creating Pull Requests</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="localization.html">Localization</a></li>
@@ -109,44 +108,19 @@ interested in fixing some code, please read <a class="reference internal" href="
 understand structure of Gammu code. We also maintain list of
 <a class="reference external" href="https://wammu.eu/contribute/wanted/">wanted skills</a> where you can find in
 which areas we currently mostly lack manpower.</p>
-<section id="sending-patches">
-<h2>Sending patches<a class="headerlink" href="#sending-patches" title="Permalink to this headline"></a></h2>
-<p>As we use <a class="reference external" href="http://git-scm.com/">Git</a> for development, the preferred way to
-get patches is in form which can be directly applied to Git. So start with
-cloning our Git repository:</p>
+<section id="creating-pull-requests">
+<h2>Creating Pull Requests<a class="headerlink" href="#creating-pull-requests" title="Permalink to this headline"></a></h2>
+<p>The Gammu project is hosted on <a class="reference external" href="https://github.com/gammu">Github</a> which uses
+<a class="reference external" href="http://git-scm.com/">Git</a> as version control system in the Background.</p>
+<p>So start with forking &amp; cloning our Git repository:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gammu</span><span class="o">/</span><span class="n">gammu</span><span class="o">.</span><span class="n">git</span> <span class="n">gammu</span>
 </pre></div>
 </div>
 <p>Once you have done that, do some fixes and commit them (see
-<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">Git tutorial</a>
-for information how to work with Git). Once you’re satisfied with your
-results, you can send the patches (all changes you’ve made so far) to us:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">send</span><span class="o">-</span><span class="n">email</span> <span class="o">--</span><span class="n">to</span><span class="o">=</span><span class="n">gammu</span><span class="o">-</span><span class="n">users</span><span class="nd">@lists</span><span class="o">.</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span> <span class="n">origin</span>
-</pre></div>
-</div>
-<p>Please note that <a class="reference external" href="https://lists.sourceforge.net/lists/listinfo/gammu-users">mailing list</a>
-requires you to subscribe before posting. This is anyway good idea in case you
-want to contribute. However if you don’t want to do that, just send the mails
-directly to one of authors:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">send</span><span class="o">-</span><span class="n">email</span> <span class="o">--</span><span class="n">to</span><span class="o">=</span><span class="n">michal</span><span class="nd">@cihar</span><span class="o">.</span><span class="n">com</span> <span class="n">origin</span>
-</pre></div>
-</div>
-</section>
-<section id="creating-patches">
-<h2>Creating patches<a class="headerlink" href="#creating-patches" title="Permalink to this headline"></a></h2>
-<p>If for whatever reason you don’t want to use Git, you can also manually create
-patches using <strong class="program">diff</strong>. Also we can handle if you send us just the file
-you have changed with reference where did you take it.</p>
-<p>To manually create patch you can use following steps:</p>
-<ol class="arabic simple">
-<li><p>Copy source with Gammu, you start from, into <code class="docutils literal notranslate"><span class="pre">gammu</span></code> directory.</p></li>
-<li><p>Copy source with Gammu, you want to modify, into <code class="docutils literal notranslate"><span class="pre">work</span></code> directory.</p></li>
-<li><p>Make your changes in <code class="docutils literal notranslate"><span class="pre">work</span></code> directory.</p></li>
-<li><p>Go into parent directory, where <code class="docutils literal notranslate"><span class="pre">gammu</span></code> and <code class="docutils literal notranslate"><span class="pre">work</span></code> directories are
-placed.</p></li>
-<li><p>Call <code class="docutils literal notranslate"><span class="pre">diff</span> <span class="pre">-rup</span> <span class="pre">-X</span> <span class="pre">.git</span> <span class="pre">gammu</span> <span class="pre">work</span> <span class="pre">&gt;</span> <span class="pre">patchfile</span></code>.</p></li>
-<li><p>Send <code class="docutils literal notranslate"><span class="pre">patchfile</span></code> to us (you can use bug tracker or mailing list).</p></li>
-</ol>
+<a class="reference external" href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gittutorial.html">Git tutorial</a>
+for information how to work with Git).</p>
+<p>Once you’re satisfied with your results, you can share your changes
+as <a class="reference external" href="https://github.com/gammu/gammu/pulls">Pull Request</a> with us.</p>
 </section>
 </section>
 

@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="More python-gammu Examples" href="examples.html" />
+    <link rel="next" title="gammu – Mobile phone access" href="gammu.html" />
     <link rel="prev" title="Python-gammu FAQ" href="../faq/python.html" /> 
 </head>
 
@@ -46,10 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../quick/index.html">Quick starter guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">python-gammu</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#a-taste-of-python-gammu">A taste of python-gammu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples.html">More python-gammu Examples</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#a-taste-of-python-gammu">A taste of python-gammu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#api-documentation">API documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gammu.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu</span></code> – Mobile phone access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smsd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.smsd</span></code> – SMSD access</a></li>
@@ -57,6 +54,13 @@
 <li class="toctree-l3"><a class="reference internal" href="worker.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exceptions.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a></li>
 <li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-gammu-examples">python-gammu Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sending-a-message">Sending a message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending-a-long-message">Sending a long message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initiating-a-voice-call">Initiating a voice call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reading-calendar-from-phone">Reading calendar from phone</a></li>
 </ul>
 </li>
 </ul>
@@ -126,17 +130,6 @@ to phone based on your Gammu configuration (usually stored in
 <span class="nb">print</span> <span class="s1">&#39;CID: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">netinfo</span><span class="p">[</span><span class="s1">&#39;CID&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">More python-gammu Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sending-a-message">Sending a message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sending-a-long-message">Sending a long message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#initiating-a-voice-call">Initiating a voice call</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#reading-calendar-from-phone">Reading calendar from phone</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </section>
 <section id="api-documentation">
 <h2>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h2>
@@ -180,6 +173,191 @@ to phone based on your Gammu configuration (usually stored in
 </ul>
 </div>
 </section>
+<section id="python-gammu-examples">
+<span id="id1"></span><h2>python-gammu Examples<a class="headerlink" href="#python-gammu-examples" title="Permalink to this headline"></a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Many examples are available in <a class="reference external" href="https://github.com/gammu/python-gammu/tree/master/examples">/examples</a> directory in the python-gammu git repository.</p>
+</div>
+<section id="sending-a-message">
+<h3>Sending a message<a class="headerlink" href="#sending-a-message" title="Permalink to this headline"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># Sample script to show how to send SMS</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">gammu</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Create object for talking with phone</span>
+<span class="n">state_machine</span> <span class="o">=</span> <span class="n">gammu</span><span class="o">.</span><span class="n">StateMachine</span><span class="p">()</span>
+
+<span class="c1"># Optionally load config file as defined by first parameter</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="c1"># Read the configuration from given file</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">(</span><span class="n">Filename</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Remove file name from args list</span>
+    <span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Read the configuration (~/.gammurc)</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">()</span>
+
+<span class="c1"># Check parameters</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: sendsms.py [configfile] RECIPIENT_NUMBER&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Connect to the phone</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">Init</span><span class="p">()</span>
+
+<span class="c1"># Prepare message data</span>
+<span class="c1"># We tell that we want to use first SMSC number stored in phone</span>
+<span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;python-gammu testing message&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SMSC&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Location&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="s2">&quot;Number&quot;</span><span class="p">:</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="c1"># Actually send the message</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">SendSMS</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="sending-a-long-message">
+<h3>Sending a long message<a class="headerlink" href="#sending-a-long-message" title="Permalink to this headline"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># Sample script to show how to send long (multipart) SMS</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">gammu</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Create object for talking with phone</span>
+<span class="n">state_machine</span> <span class="o">=</span> <span class="n">gammu</span><span class="o">.</span><span class="n">StateMachine</span><span class="p">()</span>
+
+<span class="c1"># Optionally load config file as defined by first parameter</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="c1"># Read the configuration from given file</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">(</span><span class="n">Filename</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Remove file name from args list</span>
+    <span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Read the configuration (~/.gammurc)</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">()</span>
+
+<span class="c1"># Check parameters</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: sendlongsms.py [configfile] RECIPIENT_NUMBER&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Connect to the phone</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">Init</span><span class="p">()</span>
+
+
+<span class="c1"># Create SMS info structure</span>
+<span class="n">smsinfo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Class&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;Unicode&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;Entries&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;ConcatenatedTextLong&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Buffer&quot;</span><span class="p">:</span> <span class="s2">&quot;Very long python-gammu testing message &quot;</span>
+            <span class="s2">&quot;sent from example python script. &quot;</span>
+            <span class="s2">&quot;Very long python-gammu testing message &quot;</span>
+            <span class="s2">&quot;sent from example python script. &quot;</span>
+            <span class="s2">&quot;Very long python-gammu testing message &quot;</span>
+            <span class="s2">&quot;sent from example python script. &quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="c1"># Encode messages</span>
+<span class="n">encoded</span> <span class="o">=</span> <span class="n">gammu</span><span class="o">.</span><span class="n">EncodeSMS</span><span class="p">(</span><span class="n">smsinfo</span><span class="p">)</span>
+
+<span class="c1"># Send messages</span>
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">encoded</span><span class="p">:</span>
+    <span class="c1"># Fill in numbers</span>
+    <span class="n">message</span><span class="p">[</span><span class="s2">&quot;SMSC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Location&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+    <span class="n">message</span><span class="p">[</span><span class="s2">&quot;Number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Actually send the message</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">SendSMS</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="initiating-a-voice-call">
+<h3>Initiating a voice call<a class="headerlink" href="#initiating-a-voice-call" title="Permalink to this headline"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">gammu</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Create object for talking with phone</span>
+<span class="n">state_machine</span> <span class="o">=</span> <span class="n">gammu</span><span class="o">.</span><span class="n">StateMachine</span><span class="p">()</span>
+
+<span class="c1"># Read the configuration (~/.gammurc or from command line)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">(</span><span class="n">Filename</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">()</span>
+
+<span class="c1"># Connect to the phone</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">Init</span><span class="p">()</span>
+
+<span class="c1"># Check whether we have a number to dial</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: dialvoice.py NUMBER&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Dial a number</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">DialVoice</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-calendar-from-phone">
+<h3>Reading calendar from phone<a class="headerlink" href="#reading-calendar-from-phone" title="Permalink to this headline"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># Example for reading calendar from phone</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">gammu</span>
+
+<span class="c1"># Create object for talking with phone</span>
+<span class="n">state_machine</span> <span class="o">=</span> <span class="n">gammu</span><span class="o">.</span><span class="n">StateMachine</span><span class="p">()</span>
+
+<span class="c1"># Read the configuration (~/.gammurc)</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">ReadConfig</span><span class="p">()</span>
+
+<span class="c1"># Connect to the phone</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">Init</span><span class="p">()</span>
+
+<span class="c1"># Get number of calendar entries</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">state_machine</span><span class="o">.</span><span class="n">GetCalendarStatus</span><span class="p">()</span>
+
+<span class="n">remain</span> <span class="o">=</span> <span class="n">status</span><span class="p">[</span><span class="s2">&quot;Used&quot;</span><span class="p">]</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">remain</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># Read the entry</span>
+    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+        <span class="n">entry</span> <span class="o">=</span> <span class="n">state_machine</span><span class="o">.</span><span class="n">GetNextCalendar</span><span class="p">(</span><span class="n">Start</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">entry</span> <span class="o">=</span> <span class="n">state_machine</span><span class="o">.</span><span class="n">GetNextCalendar</span><span class="p">(</span><span class="n">Location</span><span class="o">=</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span>
+    <span class="n">remain</span> <span class="o">=</span> <span class="n">remain</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="c1"># Display it</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-20s</span><span class="s2">: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;Location&quot;</span><span class="p">,</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-20s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;Type&quot;</span><span class="p">,</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;Type&quot;</span><span class="p">]))</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;Entries&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-20s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;Type&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">])))</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
@@ -187,7 +365,7 @@ to phone based on your Gammu configuration (usually stored in
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../faq/python.html" class="btn btn-neutral float-left" title="Python-gammu FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="examples.html" class="btn btn-neutral float-right" title="More python-gammu Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gammu.html" class="btn btn-neutral float-right" title="gammu – Mobile phone access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

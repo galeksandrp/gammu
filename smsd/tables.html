@@ -119,6 +119,11 @@ their configuration, all are treated equally and you have no guarantee which
 one sends outgoing message. If you configure PhoneID and use it when inserting
 message to the <code class="docutils literal notranslate"><span class="pre">outbox</span></code> table (<a class="reference internal" href="inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> does this), each SMS
 daemon will have separate outbox queue. See also <a class="reference internal" href="config.html#smsd-multi"><span class="std std-ref">Multiple modems</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SQL scripts to create all needed tables for most databases are included in
+Gammu documentation <a class="reference external" href="https://github.com/gammu/gammu/tree/master/docs/sql">docs/sql</a>.</p>
+</div>
 <section id="receiving-of-messages">
 <h2>Receiving of messages<a class="headerlink" href="#receiving-of-messages" title="Permalink to this headline"></a></h2>
 <p>Received messages are stored in <a class="reference internal" href="#inbox"><span class="std std-ref">inbox</span></a> table.</p>
@@ -560,8 +565,7 @@ indexes</p>
 <section id="creating-tables">
 <h3>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline"></a></h3>
 <p>SQL scripts to create all needed tables for most databases are included in
-Gammu documentation (docs/sql). As well as some PHP scripts interacting with
-the database.</p>
+Gammu documentation <a class="reference external" href="https://github.com/gammu/gammu/tree/master/docs/sql">docs/sql</a>.</p>
 <p>For example to create SQLite tables, issue following command:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sqlite3 smsd.db &lt; docs/sql/sqlite.sql
 </pre></div>

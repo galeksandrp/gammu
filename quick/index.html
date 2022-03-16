@@ -110,6 +110,9 @@ only.</p>
 </dd>
 <dt><a class="reference internal" href="../smsd/inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a></dt><dd><p>Injects outgoing messages into <a class="reference internal" href="../smsd/smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> queue.</p>
 </dd>
+<dt><a class="reference internal" href="../smsd/monitor.html#gammu-smsd-monitor"><span class="std std-ref">gammu-smsd-monitor</span></a></dt><dd><p>Monitors state of Gammu SMS Daemon. It periodically displays information about
+phone and number of processed messages.</p>
+</dd>
 <dt><a class="reference internal" href="../utils/gammu-detect.html#gammu-detect"><span class="std std-ref">gammu-detect</span></a></dt><dd><p>Simple utility to detect phones or modems connected to computer.</p>
 </dd>
 <dt><a class="reference internal" href="../python/index.html#python"><span class="std std-ref">python-gammu</span></a></dt><dd><p>Python bindings for Gammu, use it from Python scripts.</p>
@@ -187,6 +190,12 @@ Gammu (see chapters above for guide how to do that).</p>
 need to decide where you want to store messages (see <span class="target" id="index-0"></span><a class="reference internal" href="../smsd/config.html#option-Service"><code class="xref config config-option docutils literal notranslate"><span class="pre">Service</span></code></a>).
 For this example we will stick with MySQL database, but the instructions are
 quite similar for any storage service.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can not run Gammu and Gammu SMSD at same time on single device, you can
+workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</cite> and
+<cite>SIGUSR2</cite> signals (see also <a class="reference internal" href="../smsd/smsd.html#gammu-smsd-signals"><span class="std std-ref">Signals</span></a> and <a class="reference internal" href="../smsd/smsd.html#gammu-smsd-suspend"><span class="std std-ref">Invoking Gammu and suspending SMSD</span></a>):</p>
+</div>
 <section id="configuring-the-storage">
 <h3>Configuring the storage<a class="headerlink" href="#configuring-the-storage" title="Permalink to this headline"></a></h3>
 <p>First we have to setup the actual storage. With MySQL, we need access to the

@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phone-information-commands">Phone information commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#call-commands">Call commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sms-and-ems-commands">SMS and EMS commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction-to-sms-formats">Introduction to SMS formats</a></li>
@@ -81,7 +82,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#wap-settings-and-bookmarks-commands">WAP settings and bookmarks commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mms-and-mms-settings-commands">MMS and MMS settings commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fm-radio-commands">FM radio commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#phone-information-commands">Phone information commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#phone-settings-commands">Phone settings commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dumps-decoding-commands">Dumps decoding commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-commands">Other commands</a></li>
@@ -173,6 +173,49 @@ are supported, for actual listing see <a class="reference external" href="https:
 <dt class="sig sig-object std" id="cmdoption-gammu-f">
 <span id="cmdoption-gammu-debug-file"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;filename&gt;</span></span><a class="headerlink" href="#cmdoption-gammu-f" title="Permalink to this definition"></a></dt>
 <dd><p>file for logging debug messages</p>
+</dd></dl>
+
+</section>
+<section id="phone-information-commands">
+<h3>Phone information commands<a class="headerlink" href="#phone-information-commands" title="Permalink to this headline"></a></h3>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gammu-arg-battery">
+<span class="sig-name descname"><span class="pre">battery</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-battery" title="Permalink to this definition"></a></dt>
+<dd><p>Displays information about battery and power source.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gammu-arg-getdisplaystatus">
+<span class="sig-name descname"><span class="pre">getdisplaystatus</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-getdisplaystatus" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gammu-arg-getsecuritystatus">
+<span class="sig-name descname"><span class="pre">getsecuritystatus</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-getsecuritystatus" title="Permalink to this definition"></a></dt>
+<dd><p>Show, if phone wait for security code (like PIN, PUK, etc.) or not</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gammu-arg-identify">
+<span class="sig-name descname"><span class="pre">identify</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-identify" title="Permalink to this definition"></a></dt>
+<dd><p>Show the most important phone data.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gammu-arg-monitor">
+<span class="sig-name descname"><span class="pre">monitor</span></span><span class="sig-prename descclassname"> <span class="pre">[times]</span></span><a class="headerlink" href="#cmdoption-gammu-arg-monitor" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves phone status and writes it continuously to standard output. Press
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">C</kbd></kbd> to interrupt this command.</p>
+<p>If no parameter is given, the program runs until interrupted, otherwise
+only given number of iterations is performed.</p>
+<p>This command outputs almost all information Gammu supports:</p>
+<ul class="simple">
+<li><p>Number of contacts, calendar and todo entries, messages, calls, etc.</p></li>
+<li><p>Signal strength.</p></li>
+<li><p>Battery state.</p></li>
+<li><p>Currently used network.</p></li>
+<li><p>Notifications of incoming messages and calls.</p></li>
+</ul>
 </dd></dl>
 
 </section>
@@ -2017,49 +2060,6 @@ are 1 for full and 2 for simple mode.</p>
 <dt class="sig sig-object std" id="cmdoption-gammu-arg-getfmstation">
 <span class="sig-name descname"><span class="pre">getfmstation</span></span><span class="sig-prename descclassname"> <span class="pre">start</span> <span class="pre">[stop]</span></span><a class="headerlink" href="#cmdoption-gammu-arg-getfmstation" title="Permalink to this definition"></a></dt>
 <dd><p>Show info about FM stations in phone</p>
-</dd></dl>
-
-</section>
-<section id="phone-information-commands">
-<h3>Phone information commands<a class="headerlink" href="#phone-information-commands" title="Permalink to this headline"></a></h3>
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-gammu-arg-battery">
-<span class="sig-name descname"><span class="pre">battery</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-battery" title="Permalink to this definition"></a></dt>
-<dd><p>Displays information about battery and power source.</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-gammu-arg-getdisplaystatus">
-<span class="sig-name descname"><span class="pre">getdisplaystatus</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-getdisplaystatus" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-gammu-arg-getsecuritystatus">
-<span class="sig-name descname"><span class="pre">getsecuritystatus</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-getsecuritystatus" title="Permalink to this definition"></a></dt>
-<dd><p>Show, if phone wait for security code (like PIN, PUK, etc.) or not</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-gammu-arg-identify">
-<span class="sig-name descname"><span class="pre">identify</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-identify" title="Permalink to this definition"></a></dt>
-<dd><p>Show the most important phone data.</p>
-</dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-gammu-arg-monitor">
-<span class="sig-name descname"><span class="pre">monitor</span></span><span class="sig-prename descclassname"> <span class="pre">[times]</span></span><a class="headerlink" href="#cmdoption-gammu-arg-monitor" title="Permalink to this definition"></a></dt>
-<dd><p>Retrieves phone status and writes it continuously to standard output. Press
-<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">C</kbd></kbd> to interrupt this command.</p>
-<p>If no parameter is given, the program runs until interrupted, otherwise
-only given number of iterations is performed.</p>
-<p>This command outputs almost all information Gammu supports:</p>
-<ul class="simple">
-<li><p>Number of contacts, calendar and todo entries, messages, calls, etc.</p></li>
-<li><p>Signal strength.</p></li>
-<li><p>Battery state.</p></li>
-<li><p>Currently used network.</p></li>
-<li><p>Notifications of incoming messages and calls.</p></li>
-</ul>
 </dd></dl>
 
 </section>
