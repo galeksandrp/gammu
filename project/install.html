@@ -94,7 +94,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#debugging-crashes">Debugging crashes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#compiling-python-gammu">Compiling python-gammu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-python-gammu">Installing python-gammu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-python-gammu">Compiling python-gammu</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
@@ -636,8 +639,16 @@ possibly fix these errors.</p>
 with protections GCC makes and produce bogus back traces.</p>
 </section>
 </section>
+<section id="installing-python-gammu">
+<h2>Installing python-gammu<a class="headerlink" href="#installing-python-gammu" title="Permalink to this headline"></a></h2>
+<p>You need to have <code class="docutils literal notranslate"><span class="pre">gammu</span></code> and <code class="docutils literal notranslate"><span class="pre">libgammu-dev</span></code> installed for using python-gammu.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>apt-get install gammu libgammu-dev
+pip3 install python-gammu
+</pre></div>
+</div>
+<p>The location of the libraries is discovered using <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code>, <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code> environment variable and falls back to generic locations. In case it does not work, either install <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code> or set <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code>. <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code> is recommended when building on Windows.</p>
 <section id="compiling-python-gammu">
-<h2>Compiling python-gammu<a class="headerlink" href="#compiling-python-gammu" title="Permalink to this headline"></a></h2>
+<h3>Compiling python-gammu<a class="headerlink" href="#compiling-python-gammu" title="Permalink to this headline"></a></h3>
 <p>Currently python-gammu is distributed as a separate package, which follows
 Python usual method for building modules - distutils, so use <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code>
 is placed in the top level directory:</p>
@@ -645,13 +656,17 @@ is placed in the top level directory:</p>
 sudo ./setup.py install
 </pre></div>
 </div>
-<p>You can install it using pip installer:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install python-gammu
+<p>Running with <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code>:</p>
+<p>On Linux something like this should work:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">GAMMU_PATH</span><span class="o">=</span>/opt/gammu python setup.py build
 </pre></div>
 </div>
-<p>You need to have Gammu installed for compiling python-gammu. It’s location is
-discovered using pkg-config or by GAMMU_PATH environment variable. The latter
-is recommended when building on Windows.</p>
+<p>On Windows:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>SET <span class="nv">GAMMU_PATH</span><span class="o">=</span><span class="s2">&quot;C:\Gammu&quot;</span>
+python setup.py build
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
