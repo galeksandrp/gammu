@@ -198,7 +198,7 @@ function would look like:</p>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bcs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">bcl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">Phone</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Priv</span><span class="p">.</span><span class="n">ATGEN</span><span class="p">.</span><span class="n">ReplyState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_OK</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">AT_Reply_OK</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Battery level received</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ATGEN_ParseReply</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"></span>
 <span class="w">                </span><span class="n">GetLineString</span><span class="p">(</span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">Buffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Priv</span><span class="o">-&gt;</span><span class="n">Lines</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"></span>
@@ -209,13 +209,13 @@ function would look like:</p>
 <span class="w">            </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">BatteryPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bcl</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">bcs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"></span>
 <span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryPowered</span><span class="p">;</span><span class="w"></span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"></span>
 <span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryConnected</span><span class="p">;</span><span class="w"></span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"></span>
 <span class="w">                    </span><span class="n">BatteryCharge</span><span class="o">-&gt;</span><span class="n">ChargeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_BatteryCharging</span><span class="p">;</span><span class="w"></span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">                </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
@@ -224,13 +224,13 @@ function would look like:</p>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="p">}</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_NONE</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_Error</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">AT_Reply_Error</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_NOTSUPPORTED</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_CMSError</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">AT_Reply_CMSError</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="n">smprintf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Can&#39;t get battery level</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ATGEN_HandleCMSError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">AT_Reply_CMEError</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">AT_Reply_CMEError</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ATGEN_HandleCMEError</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ERR_UNKNOWNRESPONSE</span><span class="p">;</span><span class="w"></span>
