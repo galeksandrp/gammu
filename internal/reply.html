@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -95,7 +96,7 @@
            <div itemprop="articleBody">
              
   <section id="reply-functions">
-<span id="id1"></span><h1>Reply functions<a class="headerlink" href="#reply-functions" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Reply functions<a class="headerlink" href="#reply-functions" title="Permalink to this heading"></a></h1>
 <p>When phone gives answers, we check if we requested received info and we
 redirect it to concrete reply function, which will decode it. Different
 phone answers can go to one reply function let’s say responsible for
@@ -138,7 +139,7 @@ getting sms status.</p>
 
 <p>There are three types of answer matching:</p>
 <section id="binary">
-<h2>Binary<a class="headerlink" href="#binary" title="Permalink to this headline"></a></h2>
+<h2>Binary<a class="headerlink" href="#binary" title="Permalink to this heading"></a></h2>
 <p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">N6110_ReplySaveSMSMessage</span><span class="p">,</span><span class="s">&quot;</span><span class="se">\x14</span><span class="s">&quot;</span><span class="p">,</span><span class="mh">0x03</span><span class="p">,</span><span class="mh">0x05</span><span class="p">,</span><span class="n">ID_SaveSMSMessage</span><span class="p">},</span><span class="w"></span>
 </pre></div>
@@ -150,7 +151,7 @@ etc.) functions. If don’t need anything more than frame type, 0x03,0x05
 should be 0x00, 0x00 - it means then, that we check only frame type.</p>
 </section>
 <section id="text">
-<h2>Text<a class="headerlink" href="#text" title="Permalink to this headline"></a></h2>
+<h2>Text<a class="headerlink" href="#text" title="Permalink to this heading"></a></h2>
 <p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">ATGEN_ReplyIncomingCallInfo</span><span class="p">,</span><span class="s">&quot;+CLIP&quot;</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="n">ID_IncomingFrame</span><span class="p">},</span><span class="w"></span>
 </pre></div>
@@ -160,7 +161,7 @@ likes us - ID_IncomingFrame) responses starting from “+CLIP” will go
 to the ATGEN_ReplyIncomingCallInfo.</p>
 </section>
 <section id="numeric">
-<h2>Numeric<a class="headerlink" href="#numeric" title="Permalink to this headline"></a></h2>
+<h2>Numeric<a class="headerlink" href="#numeric" title="Permalink to this heading"></a></h2>
 <p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">S60_Reply_Generic</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="n">NUM_QUIT</span><span class="p">,</span><span class="w"> </span><span class="n">ID_Terminate</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
 </pre></div>
@@ -169,7 +170,7 @@ to the ATGEN_ReplyIncomingCallInfo.</p>
 type is performed.</p>
 </section>
 <section id="requests">
-<h2>Requests<a class="headerlink" href="#requests" title="Permalink to this headline"></a></h2>
+<h2>Requests<a class="headerlink" href="#requests" title="Permalink to this heading"></a></h2>
 <p>This is how GSM_Reply_Function is filled. Now how to make phone requests ?</p>
 <p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">GSM_Error</span><span class="w"> </span><span class="nf">N6110_GetMemory</span><span class="w"> </span><span class="p">(</span><span class="n">GSM_StateMachine</span><span class="w">   </span><span class="o">*</span><span class="n">s</span><span class="p">,</span><span class="w"></span>

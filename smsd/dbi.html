@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -111,9 +112,9 @@
            <div itemprop="articleBody">
              
   <section id="dbi-backend">
-<span id="gammu-smsd-dbi"></span><h1>DBI Backend<a class="headerlink" href="#dbi-backend" title="Permalink to this headline"></a></h1>
+<span id="gammu-smsd-dbi"></span><h1>DBI Backend<a class="headerlink" href="#dbi-backend" title="Permalink to this heading"></a></h1>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p>DBI backend stores all data in any database supported by <a class="reference external" href="http://libdbi.sourceforge.net/">libdbi</a>, which
 parameters are defined by configuration (see <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for description of
 configuration options).</p>
@@ -126,7 +127,7 @@ library does not support this platform.</p>
 </div>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database. You can use examples given in database specific backends parts of
 this manual to do that.</p>
@@ -143,7 +144,7 @@ this manual to do that.</p>
 </div>
 </section>
 <section id="supported-drivers">
-<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this headline"></a></h2>
+<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this heading"></a></h2>
 <p>For complete list of drivers for <a class="reference external" href="http://libdbi.sourceforge.net/">libdbi</a> see <a class="reference external" href="http://libdbi-drivers.sourceforge.net/">libdbi-drivers</a> project. The
 drivers for example include:</p>
 <ul class="simple">
@@ -154,7 +155,7 @@ drivers for example include:</p>
 </ul>
 </section>
 <section id="creating-tables-for-sqlite">
-<span id="sqlite-create"></span><h2>Creating tables for SQLite<a class="headerlink" href="#creating-tables-for-sqlite" title="Permalink to this headline"></a></h2>
+<span id="sqlite-create"></span><h2>Creating tables for SQLite<a class="headerlink" href="#creating-tables-for-sqlite" title="Permalink to this heading"></a></h2>
 <p>SQL script for creating tables in SQLite database:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">gammu</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="k">Version</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"></span>
@@ -312,7 +313,7 @@ also scripts for other databases in same folder.</p>
 </div>
 </section>
 <section id="upgrading-tables">
-<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this headline"></a></h2>
+<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this heading"></a></h2>
 <p>The easiest way to upgrade database structure is to backup old one and start
 with creating new one based on example above.</p>
 <p>For upgrading existing database, you can use changes described in

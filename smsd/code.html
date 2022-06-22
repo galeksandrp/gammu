@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -102,9 +103,9 @@
            <div itemprop="articleBody">
              
   <section id="developer-documentation">
-<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline"></a></h1>
+<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this heading"></a></h1>
 <section id="backend-services">
-<h2>Backend services<a class="headerlink" href="#backend-services" title="Permalink to this headline"></a></h2>
+<h2>Backend services<a class="headerlink" href="#backend-services" title="Permalink to this heading"></a></h2>
 <p>The backend service is responsible for storing received messages and giving
 the SMSD core messages to send. It is solely up to them how the message will
 be stored, for example currently Gammu includes backends to store messages on
@@ -112,7 +113,7 @@ filesystem (<a class="reference internal" href="files.html#gammu-smsd-files"><sp
 <a class="reference internal" href="pgsql.html#gammu-smsd-pgsql"><span class="std std-ref">PostgreSQL Backend</span></a>, <a class="reference internal" href="dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a>) or backend which does not store anything
 at all (<a class="reference internal" href="null.html#gammu-smsd-null"><span class="std std-ref">Null Backend</span></a>).</p>
 <section id="backend-interface">
-<h3>Backend interface<a class="headerlink" href="#backend-interface" title="Permalink to this headline"></a></h3>
+<h3>Backend interface<a class="headerlink" href="#backend-interface" title="Permalink to this heading"></a></h3>
 <p>Each backend service needs to support several operations, which are exported
 in <code class="docutils literal notranslate"><span class="pre">GSM_SMSDService</span></code> structure:</p>
 <dl class="c function">
@@ -312,7 +313,7 @@ this check.</p></li>
 
 </section>
 <section id="message-id">
-<h3>Message ID<a class="headerlink" href="#message-id" title="Permalink to this headline"></a></h3>
+<h3>Message ID<a class="headerlink" href="#message-id" title="Permalink to this heading"></a></h3>
 <p>You might have noticed that message ID is often used in the API. The primary
 reason for this is that it is usually easier for backend to handle message
 just by it’s internal identification instead of handling message data from
@@ -344,7 +345,7 @@ ID to sent items</p></li>
 </section>
 </section>
 <section id="message-sending-workflow">
-<h2>Message Sending Workflow<a class="headerlink" href="#message-sending-workflow" title="Permalink to this headline"></a></h2>
+<h2>Message Sending Workflow<a class="headerlink" href="#message-sending-workflow" title="Permalink to this heading"></a></h2>
 <div class="graphviz"><object data="../_images/graphviz-7f51ada41d60c0c9ecd4bb828cd70e03fff45aad.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph smsdsending {
    &quot;new message&quot; [shape=box];
@@ -374,7 +375,7 @@ ID to sent items</p></li>
 }</p></object></div>
 </section>
 <section id="message-receiving-workflow">
-<h2>Message Receiving Workflow<a class="headerlink" href="#message-receiving-workflow" title="Permalink to this headline"></a></h2>
+<h2>Message Receiving Workflow<a class="headerlink" href="#message-receiving-workflow" title="Permalink to this heading"></a></h2>
 <div class="graphviz"><object data="../_images/graphviz-96ea05f688c063742e0d814333dc5ca7ea08dc64.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph smsdreceiving {
     &quot;received message&quot; [shape=box];

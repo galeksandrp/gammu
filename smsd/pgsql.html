@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -110,9 +111,9 @@
            <div itemprop="articleBody">
              
   <section id="postgresql-backend">
-<span id="gammu-smsd-pgsql"></span><h1>PostgreSQL Backend<a class="headerlink" href="#postgresql-backend" title="Permalink to this headline"></a></h1>
+<span id="gammu-smsd-pgsql"></span><h1>PostgreSQL Backend<a class="headerlink" href="#postgresql-backend" title="Permalink to this heading"></a></h1>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p>PGSQL backend stores all data in a <a class="reference external" href="https://www.postgresql.org/">PostgreSQL</a> database server, which
 parameters are defined by configuration (see <a class="reference internal" href="config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for description of
 configuration options).</p>
@@ -120,7 +121,7 @@ configuration options).</p>
 <p>This backend is based on <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database, which is described below.</p>
 <p>The configuration file then can look like:</p>
@@ -136,7 +137,7 @@ database, which is described below.</p>
 </div>
 </section>
 <section id="creating-tables-for-postgresql">
-<span id="pgsql-create"></span><h2>Creating tables for PostgreSQL<a class="headerlink" href="#creating-tables-for-postgresql" title="Permalink to this headline"></a></h2>
+<span id="pgsql-create"></span><h2>Creating tables for PostgreSQL<a class="headerlink" href="#creating-tables-for-postgresql" title="Permalink to this heading"></a></h2>
 <p>SQL script for creating tables in PostgreSQL database:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>--
 -- Database: &quot;smsd&quot;
@@ -415,7 +416,7 @@ CREATE TRIGGER update_timestamp BEFORE UPDATE ON sentitems FOR EACH ROW EXECUTE 
 </div>
 </section>
 <section id="upgrading-tables">
-<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this headline"></a></h2>
+<h2>Upgrading tables<a class="headerlink" href="#upgrading-tables" title="Permalink to this heading"></a></h2>
 <p>The easiest way to upgrade database structure is to backup old one and start
 with creating new one based on example above.</p>
 <p>For upgrading existing database, you can use changes described in

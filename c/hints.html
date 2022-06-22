@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -97,11 +98,11 @@
            <div itemprop="articleBody">
              
   <section id="hints-for-libgammu-novices">
-<h1>Hints for libGammu Novices<a class="headerlink" href="#hints-for-libgammu-novices" title="Permalink to this headline"></a></h1>
+<h1>Hints for libGammu Novices<a class="headerlink" href="#hints-for-libgammu-novices" title="Permalink to this heading"></a></h1>
 <p>This is very short overview of libGammu usage. You will probably need to study
 <a class="reference internal" href="api.html"><span class="doc">libGammu C API</span></a> to find out what functions you want to use.</p>
 <section id="basic-library-usage">
-<h2>Basic library usage<a class="headerlink" href="#basic-library-usage" title="Permalink to this headline"></a></h2>
+<h2>Basic library usage<a class="headerlink" href="#basic-library-usage" title="Permalink to this heading"></a></h2>
 <p>You need to include main header file:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gammu.h&gt;</span><span class="cp"></span>
 </pre></div>
@@ -186,7 +187,7 @@ using <a class="reference internal" href="statemachine.html#c.GSM_FreeStateMachi
 <p>There are also other <a class="reference internal" href="examples.html"><span class="doc">Examples</span></a>.</p>
 </section>
 <section id="compiling-the-code">
-<h2>Compiling the code<a class="headerlink" href="#compiling-the-code" title="Permalink to this headline"></a></h2>
+<h2>Compiling the code<a class="headerlink" href="#compiling-the-code" title="Permalink to this heading"></a></h2>
 <p>To compile program using Gammu library, you need to pass include path to the
 compiler and library name and search path to the linker. This can be easiest
 achieved by using <strong class="program">pkg-config</strong>. See following <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> for
@@ -211,7 +212,7 @@ example:</p>
 </div>
 </section>
 <section id="unicode">
-<h2>Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline"></a></h2>
+<h2>Unicode<a class="headerlink" href="#unicode" title="Permalink to this heading"></a></h2>
 <p>Gammu stores all strings internally in UCS-2-BE encoding (terminated by two
 zero bytes). This is used mostly for historical reasons and today the obvious
 choice would be <code class="docutils literal notranslate"><span class="pre">wchar_t</span></code>.  To work with these strings, various functions
@@ -233,7 +234,7 @@ Windows.</p>
 </div>
 </section>
 <section id="debugging">
-<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline"></a></h2>
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading"></a></h2>
 <p>You can either enabled debug logging globally or per state machine.</p>
 <p>To enable global debugging use:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">debug_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GSM_GetGlobalDebug</span><span class="p">();</span><span class="w"></span>
@@ -250,7 +251,7 @@ Windows.</p>
 </div>
 </section>
 <section id="waiting-for-incoming-events">
-<h2>Waiting for incoming events<a class="headerlink" href="#waiting-for-incoming-events" title="Permalink to this headline"></a></h2>
+<h2>Waiting for incoming events<a class="headerlink" href="#waiting-for-incoming-events" title="Permalink to this heading"></a></h2>
 <p>If you expect some incoming events, you need to maintain communication with the
 phone. The best way it can be <a class="reference internal" href="statemachine.html#c.GSM_ReadDevice" title="GSM_ReadDevice"><code class="xref c c-func docutils literal notranslate"><span class="pre">GSM_ReadDevice()</span></code></a>. For example you can use
 following busy loop:</p>

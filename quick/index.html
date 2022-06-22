@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -96,9 +97,9 @@
            <div itemprop="articleBody">
              
   <section id="quick-starter-guide">
-<span id="quick"></span><h1>Quick starter guide<a class="headerlink" href="#quick-starter-guide" title="Permalink to this headline"></a></h1>
+<span id="quick"></span><h1>Quick starter guide<a class="headerlink" href="#quick-starter-guide" title="Permalink to this heading"></a></h1>
 <section id="gammu-family">
-<h2>Gammu family<a class="headerlink" href="#gammu-family" title="Permalink to this headline"></a></h2>
+<h2>Gammu family<a class="headerlink" href="#gammu-family" title="Permalink to this heading"></a></h2>
 <p>Gammu family consists of several programs and libraries:</p>
 <dl class="simple">
 <dt><a class="reference internal" href="../gammu/index.html#gammu"><span class="std std-ref">Gammu Utility</span></a></dt><dd><p>Command line utility to talk to the phone. It performs one time operations
@@ -123,7 +124,7 @@ programs.</p>
 </dl>
 </section>
 <section id="installing-gammu">
-<h2>Installing Gammu<a class="headerlink" href="#installing-gammu" title="Permalink to this headline"></a></h2>
+<h2>Installing Gammu<a class="headerlink" href="#installing-gammu" title="Permalink to this heading"></a></h2>
 <p>On most platforms you can install Gammu from binaries - most Linux
 distributions ship Gammu and for Windows you can download binaries from
 <a class="reference external" href="https://wammu.eu/download/">Gammu website</a>. You can find more detailed
@@ -131,7 +132,7 @@ instructions (including instructions for compiling from source) in
 <a class="reference internal" href="../project/install.html#installing"><span class="std std-ref">Installing Gammu</span></a>.</p>
 </section>
 <section id="starting-with-gammu-on-linux">
-<h2>Starting with Gammu on Linux<a class="headerlink" href="#starting-with-gammu-on-linux" title="Permalink to this headline"></a></h2>
+<h2>Starting with Gammu on Linux<a class="headerlink" href="#starting-with-gammu-on-linux" title="Permalink to this heading"></a></h2>
 <p>First you need to find out device name where your phone/modem is connected. In
 most cases you can rely on <a class="reference internal" href="../utils/gammu-detect.html#gammu-detect"><span class="std std-ref">gammu-detect</span></a> to find it (it will also list
 all serial ports in your systems, where probably nothing is connected).</p>
@@ -155,7 +156,7 @@ all serial ports in your systems, where probably nothing is connected).</p>
 </div>
 </section>
 <section id="starting-with-gammu-on-windows">
-<h2>Starting with Gammu on Windows<a class="headerlink" href="#starting-with-gammu-on-windows" title="Permalink to this headline"></a></h2>
+<h2>Starting with Gammu on Windows<a class="headerlink" href="#starting-with-gammu-on-windows" title="Permalink to this heading"></a></h2>
 <p>First you need to find out device name where your phone/modem is connected. The
 easiest way is to look into <span class="guilabel">Device manager</span> under
 <span class="guilabel">Ports (COM &amp; LPT)</span> and lookup correct COM port there.</p>
@@ -180,7 +181,7 @@ easiest way is to look into <span class="guilabel">Device manager</span> under
 </div>
 </section>
 <section id="starting-with-smsd">
-<h2>Starting with SMSD<a class="headerlink" href="#starting-with-smsd" title="Permalink to this headline"></a></h2>
+<h2>Starting with SMSD<a class="headerlink" href="#starting-with-smsd" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before starting with SMSD, make sure you can connect to your phone using
@@ -197,7 +198,7 @@ workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</c
 <cite>SIGUSR2</cite> signals (see also <a class="reference internal" href="../smsd/smsd.html#gammu-smsd-signals"><span class="std std-ref">Signals</span></a> and <a class="reference internal" href="../smsd/smsd.html#gammu-smsd-suspend"><span class="std std-ref">Invoking Gammu and suspending SMSD</span></a>):</p>
 </div>
 <section id="configuring-the-storage">
-<h3>Configuring the storage<a class="headerlink" href="#configuring-the-storage" title="Permalink to this headline"></a></h3>
+<h3>Configuring the storage<a class="headerlink" href="#configuring-the-storage" title="Permalink to this heading"></a></h3>
 <p>First we have to setup the actual storage. With MySQL, we need access to the
 MySQL server. Now connect as administrative user to the server (usually
 <code class="docutils literal notranslate"><span class="pre">root</span></code>), grant privileges to the <code class="docutils literal notranslate"><span class="pre">smsd</span></code> user and create <code class="docutils literal notranslate"><span class="pre">smsd</span></code> database:</p>
@@ -216,7 +217,7 @@ file (see <a class="reference internal" href="../smsd/mysql.html#mysql-create"><
 </div>
 </section>
 <section id="configuring-smsd">
-<h3>Configuring SMSD<a class="headerlink" href="#configuring-smsd" title="Permalink to this headline"></a></h3>
+<h3>Configuring SMSD<a class="headerlink" href="#configuring-smsd" title="Permalink to this heading"></a></h3>
 <p>Now we just have to tell SMSD what service it is supposed to use. This is done
 in the SMSD configuration file. You can place it anywhere and tell SMSD on
 startup where it can find it, but on Linux the recommended location for system
@@ -241,7 +242,7 @@ most environments. You can find more information on customizing SMSD in
 <a class="reference internal" href="../smsd/config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a>.</p>
 </section>
 <section id="running-smsd">
-<h3>Running SMSD<a class="headerlink" href="#running-smsd" title="Permalink to this headline"></a></h3>
+<h3>Running SMSD<a class="headerlink" href="#running-smsd" title="Permalink to this heading"></a></h3>
 <p>With configuration file ready, you can actually start SMSD. You can do this
 manually or as a system wide service.</p>
 <p>For manual startup, just execute it:</p>
@@ -260,7 +261,7 @@ system wide daemon.</p>
 </div>
 </section>
 <section id="sending-message-through-smsd">
-<h3>Sending message through SMSD<a class="headerlink" href="#sending-message-through-smsd" title="Permalink to this headline"></a></h3>
+<h3>Sending message through SMSD<a class="headerlink" href="#sending-message-through-smsd" title="Permalink to this heading"></a></h3>
 <p>Once SMSD is up and running, you can send some messages using it:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd-inject TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>

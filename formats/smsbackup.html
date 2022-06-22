@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -96,12 +97,12 @@
            <div itemprop="articleBody">
              
   <section id="sms-backup-format">
-<span id="gammu-smsbackup"></span><h1>SMS Backup Format<a class="headerlink" href="#sms-backup-format" title="Permalink to this headline"></a></h1>
+<span id="gammu-smsbackup"></span><h1>SMS Backup Format<a class="headerlink" href="#sms-backup-format" title="Permalink to this heading"></a></h1>
 <p>The SMS backup format is text file encoded in current encoding of platform
 where Gammu is running.</p>
 <p>This file use ini file syntax, see <a class="reference internal" href="ini.html#ini"><span class="std std-ref">INI file format</span></a>.</p>
 <section id="sections">
-<h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline"></a></h2>
+<h2>Sections<a class="headerlink" href="#sections" title="Permalink to this heading"></a></h2>
 <p>The file consists of sections, whose name starts with <code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code>. When
 creating the backup file, three digits are appended to this text defining
 order. While reading the backup, any part after <code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code> text is ignored
@@ -110,11 +111,11 @@ the section name <code class="docutils literal notranslate"><span class="pre">SM
 <p>The number of messages in backup file is currently limited by
 <a class="reference internal" href="../c/backup.html#c.GSM_BACKUP_MAX_SMS" title="GSM_BACKUP_MAX_SMS"><code class="xref c c-data docutils literal notranslate"><span class="pre">GSM_BACKUP_MAX_SMS</span></code></a> (100000 at time of writing this document).</p>
 <section id="smsbackup-section">
-<h3><code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code> section<a class="headerlink" href="#smsbackup-section" title="Permalink to this headline"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">SMSBackup</span></code> section<a class="headerlink" href="#smsbackup-section" title="Permalink to this heading"></a></h3>
 <p>Each section interprets one physical SMS message (eg. one message part in case
 of multipart messages).</p>
 <section id="decoded-text">
-<h4>Decoded text<a class="headerlink" href="#decoded-text" title="Permalink to this headline"></a></h4>
+<h4>Decoded text<a class="headerlink" href="#decoded-text" title="Permalink to this heading"></a></h4>
 <p>For SMS backups created by Gammu, there is a decoded text as a comment just
 after the section name:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup001]</span><span class="w"></span>
@@ -130,7 +131,7 @@ one, because it is stored in the comments in the file.</p>
 </div>
 </section>
 <section id="variables">
-<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h4>
+<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this heading"></a></h4>
 <p>The following variables can be defined for each SMS:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">SMSC</span></code></dt><dd><p>Text representation of SMSC number, not used by Gammu if <code class="docutils literal notranslate"><span class="pre">SMSCUnicode</span></code>
@@ -189,7 +190,7 @@ exists.</p>
 </section>
 </section>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>The backup of message can look like following:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup000]</span><span class="w"></span>
 <span class="c1">#ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><span class="w"></span>

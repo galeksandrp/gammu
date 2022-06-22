@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,9 +101,9 @@
            <div itemprop="articleBody">
              
   <section id="general-gammu-faq">
-<h1>General Gammu FAQ<a class="headerlink" href="#general-gammu-faq" title="Permalink to this headline"></a></h1>
+<h1>General Gammu FAQ<a class="headerlink" href="#general-gammu-faq" title="Permalink to this heading"></a></h1>
 <section id="will-gammu-work-on-my-system">
-<h2>Will Gammu work on my system?<a class="headerlink" href="#will-gammu-work-on-my-system" title="Permalink to this headline"></a></h2>
+<h2>Will Gammu work on my system?<a class="headerlink" href="#will-gammu-work-on-my-system" title="Permalink to this heading"></a></h2>
 <p>Gammu is known to run on wide range of systems. It can be compiled natively on
 Linux, Mac OS X, FreeBSD, OpenBSD and Microsoft Windows. It can be probably
 compiled also elsewhere, but nobody has yet tried. On some platforms however
@@ -114,7 +115,7 @@ USB).</p>
 </div>
 </section>
 <section id="how-to-set-sender-number-in-message">
-<h2>How to set sender number in message?<a class="headerlink" href="#how-to-set-sender-number-in-message" title="Permalink to this headline"></a></h2>
+<h2>How to set sender number in message?<a class="headerlink" href="#how-to-set-sender-number-in-message" title="Permalink to this heading"></a></h2>
 <p>You can quite often see messages sent from textual address or with some other
 nice looking sender number. However this needs to be done in the GSM network
 and it is not possible to influence this from the terminal device (phone).
@@ -127,7 +128,7 @@ also allow this functionality.</p>
 </div>
 </section>
 <section id="can-i-use-gammu-to-send-mms">
-<h2>Can I use Gammu to send MMS?<a class="headerlink" href="#can-i-use-gammu-to-send-mms" title="Permalink to this headline"></a></h2>
+<h2>Can I use Gammu to send MMS?<a class="headerlink" href="#can-i-use-gammu-to-send-mms" title="Permalink to this heading"></a></h2>
 <p>MMS contains of two parts - the actual MMS data in SMIL format and the SMS
 containing notification about the data. Gammu can create the notification SMS,
 where you just need to put URL of the data (use <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">sendsms</span></code>
@@ -135,7 +136,7 @@ MMSINDICATOR for that). However you need to encode MMS data yourself or use
 other program to do that.</p>
 </section>
 <section id="can-i-use-gammu-to-receive-mms">
-<span id="faq-mms-download"></span><h2>Can I use Gammu to receive MMS?<a class="headerlink" href="#can-i-use-gammu-to-receive-mms" title="Permalink to this headline"></a></h2>
+<span id="faq-mms-download"></span><h2>Can I use Gammu to receive MMS?<a class="headerlink" href="#can-i-use-gammu-to-receive-mms" title="Permalink to this heading"></a></h2>
 <p>MMS contains of two parts - the actual MMS data in SMIL format and the SMS
 containing notification about the data. Gammu (or SMSD) will receive the
 notification SMS, where URL to download the MMS content is included.</p>
@@ -144,7 +145,7 @@ specific for the MMS messages, so downloading it is a bit tricky and needs to
 connect using GSM modem to the network using this APN.</p>
 </section>
 <section id="device-name-always-changes-on-linux-how-to-solve-that">
-<span id="faq-devname"></span><h2>Device name always changes on Linux, how to solve that?<a class="headerlink" href="#device-name-always-changes-on-linux-how-to-solve-that" title="Permalink to this headline"></a></h2>
+<span id="faq-devname"></span><h2>Device name always changes on Linux, how to solve that?<a class="headerlink" href="#device-name-always-changes-on-linux-how-to-solve-that" title="Permalink to this heading"></a></h2>
 <p>You can use udev to assign persistent device name (used as
 <span class="target" id="index-0"></span><a class="reference internal" href="../config/index.html#option-Device"><code class="xref config config-option docutils literal notranslate"><span class="pre">Device</span></code></a>). You can either use standard persistent names based on
 serial number (located in <code class="file docutils literal notranslate"><span class="pre">/dev/serial/by-id/</span></code>) or define own rules:</p>
@@ -173,7 +174,7 @@ available online, for example on the <a class="reference external" href="http://
 </div>
 </section>
 <section id="multiple-programs-using-same-device-cause-various-errors-how-to-fix-that">
-<span id="echo"></span><h2>Multiple programs using same device cause various errors, how to fix that?<a class="headerlink" href="#multiple-programs-using-same-device-cause-various-errors-how-to-fix-that" title="Permalink to this headline"></a></h2>
+<span id="echo"></span><h2>Multiple programs using same device cause various errors, how to fix that?<a class="headerlink" href="#multiple-programs-using-same-device-cause-various-errors-how-to-fix-that" title="Permalink to this heading"></a></h2>
 <p>Gammu needs to be the only program using the device, otherwise you will get
 strange errors from both programs as they will read answer to command sent by
 something else.</p>
@@ -195,7 +196,7 @@ running see <a class="reference internal" href="../smsd/smsd.html#gammu-smsd-sus
 </ul>
 </section>
 <section id="what-are-free-alternatives-to-gammu">
-<h2>What are free alternatives to Gammu?<a class="headerlink" href="#what-are-free-alternatives-to-gammu" title="Permalink to this headline"></a></h2>
+<h2>What are free alternatives to Gammu?<a class="headerlink" href="#what-are-free-alternatives-to-gammu" title="Permalink to this heading"></a></h2>
 <p>It depends on your phone. For Nokia or AT based phones, you can try <a class="reference external" href="http://gnokii.org/">Gnokii</a>,
 but Gammu should be superior in most cases. For Symbian phone you can try using
 <a class="reference external" href="http://series60-remote.sourceforge.net/">Series60-Remote</a>, which works pretty well with S60 phones, though Gammu

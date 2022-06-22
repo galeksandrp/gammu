@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -106,12 +107,12 @@
            <div itemprop="articleBody">
              
   <section id="discovering-protocol">
-<span id="id1"></span><h1>Discovering protocol<a class="headerlink" href="#discovering-protocol" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Discovering protocol<a class="headerlink" href="#discovering-protocol" title="Permalink to this heading"></a></h1>
 <p>You need to get a communication dump to be able to understand protocol
 or discover new commands. As most vendors provide some software for
 Windows, all following sections assume you do the sniffing on Windows.</p>
 <section id="usb">
-<h2>USB<a class="headerlink" href="#usb" title="Permalink to this headline"></a></h2>
+<h2>USB<a class="headerlink" href="#usb" title="Permalink to this heading"></a></h2>
 <p>For USB there exist various tools to dump USB communication. The dumps
 can be later analyzed and used to discover protocol details or unknown
 commands. One of the best free tools available currently is <a class="reference external" href="http://www.pcausa.com/Utilities/UsbSnoop/">UsbSnoop</a>.</p>
@@ -119,7 +120,7 @@ commands. One of the best free tools available currently is <a class="reference 
 decode the output.</p>
 </section>
 <section id="serial-port">
-<h2>Serial port<a class="headerlink" href="#serial-port" title="Permalink to this headline"></a></h2>
+<h2>Serial port<a class="headerlink" href="#serial-port" title="Permalink to this heading"></a></h2>
 <p>Download <a class="reference external" href="http://technet.microsoft.com/en-us/sysinternals/bb896644.aspx">Portmon</a>, which allows one to capture bytes sent and received by
 ready binary software.</p>
 <p>If you have log saved by PortMon and protocol is the same to “old” Nokia
@@ -138,7 +139,7 @@ to add model). Dump file for –decodesniff and MBUS should be specific:</p>
 </ol>
 </section>
 <section id="infrared">
-<h2>Infrared<a class="headerlink" href="#infrared" title="Permalink to this headline"></a></h2>
+<h2>Infrared<a class="headerlink" href="#infrared" title="Permalink to this heading"></a></h2>
 <p>First of all you need two computers with IrDA. One running linux, that will
 sniff and one running windows, which will communicate with the phone and
 whatever software you want (Nokia, Logomanager, Oxygen Phone Manager).

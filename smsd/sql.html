@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -111,9 +112,9 @@
            <div itemprop="articleBody">
              
   <section id="sql-service">
-<span id="gammu-smsd-sql"></span><h1>SQL Service<a class="headerlink" href="#sql-service" title="Permalink to this headline"></a></h1>
+<span id="gammu-smsd-sql"></span><h1>SQL Service<a class="headerlink" href="#sql-service" title="Permalink to this heading"></a></h1>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p>SQL service stores all its data in database. It can use one of these SQL backends
 (configuration option <span class="target" id="index-0"></span><a class="reference internal" href="config.html#option-Driver"><code class="xref config config-option docutils literal notranslate"><span class="pre">Driver</span></code></a> in smsd section):</p>
 <ul class="simple">
@@ -133,7 +134,7 @@
 </ul>
 </section>
 <section id="sql-connection-parameters">
-<h2>SQL connection parameters<a class="headerlink" href="#sql-connection-parameters" title="Permalink to this headline"></a></h2>
+<h2>SQL connection parameters<a class="headerlink" href="#sql-connection-parameters" title="Permalink to this heading"></a></h2>
 <p>Common for all backends:</p>
 <ul class="simple">
 <li><p><span class="target" id="index-1"></span><a class="reference internal" href="config.html#option-User"><code class="xref config config-option docutils literal notranslate"><span class="pre">User</span></code></a> - user connecting to database</p></li>
@@ -154,7 +155,7 @@
 </div>
 </section>
 <section id="tables">
-<span id="configurable-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline"></a></h2>
+<span id="configurable-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading"></a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.37.1.</span></p>
 </div>
@@ -203,7 +204,7 @@ queries will reflect this, so it’s enough to change table name in this section
 </div>
 </section>
 <section id="sql-queries">
-<span id="id1"></span><h2>SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this headline"></a></h2>
+<span id="id1"></span><h2>SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this heading"></a></h2>
 <p>Almost all queries are configurable. You can edit them in
 <span class="target" id="index-10"></span><a class="reference internal" href="config.html#section-[sql]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[sql]</span></code></a> section. There are several variables used in SQL
 queries. We can separate them into three groups:</p>
@@ -213,7 +214,7 @@ queries. We can separate them into three groups:</p>
 <li><p>query specific, which are numeric and are specific only for given query (or set of queries), see <a class="reference internal" href="#configurable-queries"><span class="std std-ref">Configurable queries</span></a></p></li>
 </ul>
 <section id="phone-specific-parameters">
-<span id="id2"></span><h3>Phone Specific Parameters<a class="headerlink" href="#phone-specific-parameters" title="Permalink to this headline"></a></h3>
+<span id="id2"></span><h3>Phone Specific Parameters<a class="headerlink" href="#phone-specific-parameters" title="Permalink to this heading"></a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">%I</span></code></dt><dd><p>IMEI of phone</p>
 </dd>
@@ -230,7 +231,7 @@ queries. We can separate them into three groups:</p>
 </dl>
 </section>
 <section id="sms-specific-parameters">
-<span id="id3"></span><h3>SMS Specific Parameters<a class="headerlink" href="#sms-specific-parameters" title="Permalink to this headline"></a></h3>
+<span id="id3"></span><h3>SMS Specific Parameters<a class="headerlink" href="#sms-specific-parameters" title="Permalink to this heading"></a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">%R</span></code></dt><dd><p>remote number <a class="footnote-reference brackets" href="#f1" id="id4">1</a></p>
 </dd>
@@ -267,7 +268,7 @@ queries. We can separate them into three groups:</p>
 </section>
 </section>
 <section id="configurable-queries">
-<span id="id5"></span><h2>Configurable queries<a class="headerlink" href="#configurable-queries" title="Permalink to this headline"></a></h2>
+<span id="id5"></span><h2>Configurable queries<a class="headerlink" href="#configurable-queries" title="Permalink to this heading"></a></h2>
 <p>All configurable queries can be set in <span class="target" id="index-11"></span><a class="reference internal" href="config.html#section-[sql]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[sql]</span></code></a> section. Sequence of rows in selects are mandatory.</p>
 <p>All default queries noted here are noted for MySQL. Actual time and time addition
 are selected for default queries during initialization.</p>

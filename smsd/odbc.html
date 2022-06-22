@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -112,9 +113,9 @@
            <div itemprop="articleBody">
              
   <section id="odbc-backend">
-<span id="gammu-smsd-odbc"></span><h1>ODBC Backend<a class="headerlink" href="#odbc-backend" title="Permalink to this headline"></a></h1>
+<span id="gammu-smsd-odbc"></span><h1>ODBC Backend<a class="headerlink" href="#odbc-backend" title="Permalink to this heading"></a></h1>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.29.92.</span></p>
 </div>
@@ -125,12 +126,12 @@ configuration options).</p>
 <p>This backend is based on <a class="reference internal" href="sql.html#gammu-smsd-sql"><span class="std std-ref">SQL Service</span></a>.</p>
 </section>
 <section id="supported-drivers">
-<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this headline"></a></h2>
+<h2>Supported drivers<a class="headerlink" href="#supported-drivers" title="Permalink to this heading"></a></h2>
 <p>On Microsoft Windows, Gammu uses native ODBC, on other platforms, <a class="reference external" href="http://www.unixodbc.org/">unixODBC</a>
 can be used.</p>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
 <p>Due to limits of the ODBC interface, Gammu can not reliably detect which SQL
 engine it is connected to.</p>
 <p>In most cases this can be solved by setting <span class="target" id="index-0"></span><a class="reference internal" href="config.html#option-SQL"><code class="xref config config-option docutils literal notranslate"><span class="pre">SQL</span></code></a> setting to
@@ -140,7 +141,7 @@ see <a class="reference internal" href="sql.html#sql-queries"><span class="std s
 <span class="target" id="index-1"></span><a class="reference internal" href="config.html#option-SQL"><code class="xref config config-option docutils literal notranslate"><span class="pre">SQL</span></code></a> to closest matching SQL dialect.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Before running <a class="reference internal" href="smsd.html#gammu-smsd"><span class="std std-ref">gammu-smsd</span></a> you need to create necessary tables in the
 database. You can use examples given in database specific backends parts of
 this manual to do that.</p>
@@ -159,7 +160,7 @@ Windows or in global configuration on Linux).</p>
 <a class="reference external" href="http://www.unixodbc.org/doc/UserManual/">http://www.unixodbc.org/doc/UserManual/</a></p>
 </section>
 <section id="creating-tables">
-<h2>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline"></a></h2>
+<h2>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this heading"></a></h2>
 <p>Prior to starting SMSD you have to create tables it will use. Gammu ships SQL
 scripts for several databases to do that:</p>
 <ul class="simple">
@@ -169,7 +170,7 @@ scripts for several databases to do that:</p>
 </ul>
 </section>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>Example configuration:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smsd]</span><span class="w"></span>
 <span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sql</span><span class="w"></span>

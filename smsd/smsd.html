@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -106,15 +107,15 @@
            <div itemprop="articleBody">
              
   <section id="gammu-smsd">
-<span id="id1"></span><h1>gammu-smsd<a class="headerlink" href="#gammu-smsd" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>gammu-smsd<a class="headerlink" href="#gammu-smsd" title="Permalink to this heading"></a></h1>
 <section id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline"></a></h2>
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this heading"></a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>gammu-smsd [OPTION]...
 </pre></div>
 </div>
 </section>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p>This manual page documents briefly the <strong class="program">gammu-smsd</strong> command.</p>
 <p><strong class="program">gammu-smsd</strong> is a program that periodically scans GSM modem for
 received messages, stores them in defined storage and also sends messages
@@ -253,7 +254,7 @@ service differently. Default is “GammuSMSD”.</p>
 
 </section>
 <section id="signals">
-<span id="gammu-smsd-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline"></a></h2>
+<span id="gammu-smsd-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
 <p>SMSD can be controlled using following POSIX signals (if your platform supports this):</p>
 <dl class="simple">
 <dt>SIGHUP</dt><dd><p>Reload configuration and reconnect to phone.</p>
@@ -278,9 +279,9 @@ service differently. Default is “GammuSMSD”.</p>
 </div>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 <section id="linux-unix-examples">
-<h3>Linux/Unix Examples<a class="headerlink" href="#linux-unix-examples" title="Permalink to this headline"></a></h3>
+<h3>Linux/Unix Examples<a class="headerlink" href="#linux-unix-examples" title="Permalink to this heading"></a></h3>
 <p>Start SMSD as a daemon on Linux:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
 </pre></div>
@@ -291,7 +292,7 @@ service differently. Default is “GammuSMSD”.</p>
 </div>
 </section>
 <section id="smsd-as-a-system-wide-daemon">
-<h3>SMSD as a system wide daemon<a class="headerlink" href="#smsd-as-a-system-wide-daemon" title="Permalink to this headline"></a></h3>
+<h3>SMSD as a system wide daemon<a class="headerlink" href="#smsd-as-a-system-wide-daemon" title="Permalink to this heading"></a></h3>
 <p>To use SMSD as a daemon, you might want to use init script which is shipped
 with Gammu in contrib/init directory. It is not installed by default, either
 install it manually or check INSTALL file for instructions.</p>
@@ -299,7 +300,7 @@ install it manually or check INSTALL file for instructions.</p>
 you will be able to install SMSD service.</p>
 </section>
 <section id="windows-service-examples">
-<h3>Windows Service Examples<a class="headerlink" href="#windows-service-examples" title="Permalink to this headline"></a></h3>
+<h3>Windows Service Examples<a class="headerlink" href="#windows-service-examples" title="Permalink to this heading"></a></h3>
 <p>Install Gammu SMSD Windows service:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc -i
 </pre></div>
@@ -316,7 +317,7 @@ gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdr
 </div>
 </section>
 <section id="troubleshooting-windows-service">
-<h3>Troubleshooting Windows Service<a class="headerlink" href="#troubleshooting-windows-service" title="Permalink to this headline"></a></h3>
+<h3>Troubleshooting Windows Service<a class="headerlink" href="#troubleshooting-windows-service" title="Permalink to this heading"></a></h3>
 <p>If Gammu fails to start as a Windows service (you will usually get “Error
 1053: The service did not respond to the start or control request in a timely
 fashion”), first check your SMSD logs. If they do not contain any useful hint,
@@ -330,7 +331,7 @@ service (without -i).</p>
 service.</p>
 </section>
 <section id="invoking-gammu-and-suspending-smsd">
-<span id="gammu-smsd-suspend"></span><h3>Invoking Gammu and suspending SMSD<a class="headerlink" href="#invoking-gammu-and-suspending-smsd" title="Permalink to this headline"></a></h3>
+<span id="gammu-smsd-suspend"></span><h3>Invoking Gammu and suspending SMSD<a class="headerlink" href="#invoking-gammu-and-suspending-smsd" title="Permalink to this heading"></a></h3>
 <p>As you can not run Gammu and Gammu SMSD at same time on single device, you can
 workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</cite> and
 <cite>SIGUSR2</cite> signals (see also <a class="reference internal" href="#gammu-smsd-signals"><span class="std std-ref">Signals</span></a>):</p>
@@ -370,7 +371,7 @@ workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</c
 </section>
 </section>
 <section id="known-limitations">
-<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline"></a></h2>
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this heading"></a></h2>
 <p>You can not use same phone by more programs in same time. However in case you
 did not enable locking in <span class="target" id="index-0"></span><a class="reference internal" href="../config/index.html#section-[gammu]"><code class="xref config config-section docutils literal notranslate"><span class="pre">[gammu]</span></code></a> section, it might be able
 to start the communication with phone from more programs. In this case neither

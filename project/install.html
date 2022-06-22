@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -152,9 +153,9 @@
            <div itemprop="articleBody">
              
   <section id="installing-gammu">
-<span id="installing"></span><h1>Installing Gammu<a class="headerlink" href="#installing-gammu" title="Permalink to this headline"></a></h1>
+<span id="installing"></span><h1>Installing Gammu<a class="headerlink" href="#installing-gammu" title="Permalink to this heading"></a></h1>
 <section id="prebuilt-binaries-for-linux">
-<h2>Prebuilt Binaries for Linux<a class="headerlink" href="#prebuilt-binaries-for-linux" title="Permalink to this headline"></a></h2>
+<h2>Prebuilt Binaries for Linux<a class="headerlink" href="#prebuilt-binaries-for-linux" title="Permalink to this heading"></a></h2>
 <p>Many distributions come with prebuilt Gammu binaries, if you can use
 them, it is definitely the easiest thing. There are also binary packages
 of latest release built for many distributions available on Gammu home
@@ -162,7 +163,7 @@ page &lt;<a class="reference external" href="https://wammu.eu/gammu/">https://wa
 <p>You can usually also find Gammu in your distribution, so unless you need a
 newer version, just install package from your distribution.</p>
 <section id="debian">
-<h3>Debian<a class="headerlink" href="#debian" title="Permalink to this headline"></a></h3>
+<h3>Debian<a class="headerlink" href="#debian" title="Permalink to this heading"></a></h3>
 <p>Gammu packages are included in Debian (testing versions go to
 experimental and stable to unstable). If you want to build Debian
 package on your own, you can find packaging in Git repository at
@@ -170,35 +171,35 @@ package on your own, you can find packaging in Git repository at
 &lt;<a class="reference external" href="https://anonscm.debian.org/git/collab-maint/gammu.git">https://anonscm.debian.org/git/collab-maint/gammu.git</a>&gt;).</p>
 </section>
 <section id="rpm">
-<h3>RPM<a class="headerlink" href="#rpm" title="Permalink to this headline"></a></h3>
+<h3>RPM<a class="headerlink" href="#rpm" title="Permalink to this heading"></a></h3>
 <p>Gammu packages are included in openSUSE and Fedora. Additionally source tarball
 contains <code class="file docutils literal notranslate"><span class="pre">gammu.spec</span></code> which you can use for building RPM package.</p>
 </section>
 <section id="slackware">
-<h3>Slackware<a class="headerlink" href="#slackware" title="Permalink to this headline"></a></h3>
+<h3>Slackware<a class="headerlink" href="#slackware" title="Permalink to this heading"></a></h3>
 <p>Gammu packages are included in Gentoo. Additionally source tarball contains
 <code class="file docutils literal notranslate"><span class="pre">description-pak</span></code> which you can use for building Slackware package.</p>
 </section>
 </section>
 <section id="prebuilt-binaries-for-windows">
-<h2>Prebuilt Binaries for Windows<a class="headerlink" href="#prebuilt-binaries-for-windows" title="Permalink to this headline"></a></h2>
+<h2>Prebuilt Binaries for Windows<a class="headerlink" href="#prebuilt-binaries-for-windows" title="Permalink to this heading"></a></h2>
 <p>You can download Windows binaries from &lt;<a class="reference external" href="https://wammu.eu/gammu/">https://wammu.eu/gammu/</a>&gt;. For
 Windows 95, 98 and NT 4.0 you will also need ShFolder DLL, which can be
 downloaded from Microsoft:</p>
 <p><a class="reference external" href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=6AE02498-07E9-48F1-A5D6-DBFA18D37E0F">http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=6AE02498-07E9-48F1-A5D6-DBFA18D37E0F</a></p>
 </section>
 <section id="dependencies">
-<span id="deps"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<span id="deps"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
 <p>You need CMake from &lt;<a class="reference external" href="https://cmake.org/">https://cmake.org/</a>&gt; for compiling Gammu.</p>
 <p>Additionally pkg-config &lt;<a class="reference external" href="https://www.freedesktop.org/wiki/Software/pkg-config/">https://www.freedesktop.org/wiki/Software/pkg-config/</a>&gt; is used for
 detecting available libraries.</p>
 </section>
 <section id="optional-dependencies">
-<span id="opt-deps"></span><h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Permalink to this headline"></a></h2>
+<span id="opt-deps"></span><h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Permalink to this heading"></a></h2>
 <p>Gammu does not require any special libraries at all to build, but you might
 miss some features. Optional libraries include:</p>
 <section id="bluez-libs">
-<h3>Bluez-libs<a class="headerlink" href="#bluez-libs" title="Permalink to this headline"></a></h3>
+<h3>Bluez-libs<a class="headerlink" href="#bluez-libs" title="Permalink to this heading"></a></h3>
 <p>Required for Bluetooth support on Linux.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -206,7 +207,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="libusb-1-0">
-<h3>libusb-1.0<a class="headerlink" href="#libusb-1-0" title="Permalink to this headline"></a></h3>
+<h3>libusb-1.0<a class="headerlink" href="#libusb-1-0" title="Permalink to this heading"></a></h3>
 <p>Required for fbususb/dku2 connection support on Linux.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -214,7 +215,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="libcurl">
-<h3>libCURL<a class="headerlink" href="#libcurl" title="Permalink to this headline"></a></h3>
+<h3>libCURL<a class="headerlink" href="#libcurl" title="Permalink to this heading"></a></h3>
 <p>Required for new versions notification (see <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">checkversion</span></code>).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -222,7 +223,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="libiconv">
-<h3>libiconv<a class="headerlink" href="#libiconv" title="Permalink to this headline"></a></h3>
+<h3>libiconv<a class="headerlink" href="#libiconv" title="Permalink to this heading"></a></h3>
 <p>Used to support more character sets in AT engine.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -230,7 +231,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="gettext">
-<h3>Gettext<a class="headerlink" href="#gettext" title="Permalink to this headline"></a></h3>
+<h3>Gettext<a class="headerlink" href="#gettext" title="Permalink to this heading"></a></h3>
 <p>Localization of strings.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -238,7 +239,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="mysql">
-<h3>MySQL<a class="headerlink" href="#mysql" title="Permalink to this headline"></a></h3>
+<h3>MySQL<a class="headerlink" href="#mysql" title="Permalink to this heading"></a></h3>
 <p>Required for <a class="reference internal" href="../smsd/mysql.html#gammu-smsd-mysql"><span class="std std-ref">MySQL Backend</span></a> in <a class="reference internal" href="../smsd/index.html#smsd"><span class="std std-ref">SMS Daemon</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -246,7 +247,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="postgresql">
-<h3>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline"></a></h3>
+<h3>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this heading"></a></h3>
 <p>Required for <a class="reference internal" href="../smsd/pgsql.html#gammu-smsd-pgsql"><span class="std std-ref">PostgreSQL Backend</span></a> in <a class="reference internal" href="../smsd/index.html#smsd"><span class="std std-ref">SMS Daemon</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -254,7 +255,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="unixodbc">
-<h3>unixODBC<a class="headerlink" href="#unixodbc" title="Permalink to this headline"></a></h3>
+<h3>unixODBC<a class="headerlink" href="#unixodbc" title="Permalink to this heading"></a></h3>
 <p>Required for <a class="reference internal" href="../smsd/odbc.html#gammu-smsd-odbc"><span class="std std-ref">ODBC Backend</span></a> in <a class="reference internal" href="../smsd/index.html#smsd"><span class="std std-ref">SMS Daemon</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -266,7 +267,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="libdbi">
-<h3>libdbi<a class="headerlink" href="#libdbi" title="Permalink to this headline"></a></h3>
+<h3>libdbi<a class="headerlink" href="#libdbi" title="Permalink to this heading"></a></h3>
 <p>Required for <a class="reference internal" href="../smsd/dbi.html#gammu-smsd-dbi"><span class="std std-ref">DBI Backend</span></a> in <a class="reference internal" href="../smsd/index.html#smsd"><span class="std std-ref">SMS Daemon</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -278,7 +279,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline"></a></h3>
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading"></a></h3>
 <p>Gammu has a Python bindings, see <a class="reference internal" href="../python/index.html#python"><span class="std std-ref">python-gammu</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -286,7 +287,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="sqlite-libdbi-drivers-with-sqlite">
-<h3>SQLite + libdbi-drivers with SQLite<a class="headerlink" href="#sqlite-libdbi-drivers-with-sqlite" title="Permalink to this headline"></a></h3>
+<h3>SQLite + libdbi-drivers with SQLite<a class="headerlink" href="#sqlite-libdbi-drivers-with-sqlite" title="Permalink to this heading"></a></h3>
 <p>Needed for testing of SMSD using libdbi driver (libdbd-sqlite3), see <a class="reference internal" href="../testing/index.html#testing"><span class="std std-ref">Testing Gammu</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -294,7 +295,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="glib">
-<h3>glib<a class="headerlink" href="#glib" title="Permalink to this headline"></a></h3>
+<h3>glib<a class="headerlink" href="#glib" title="Permalink to this heading"></a></h3>
 <p>Currently needed only for <a class="reference internal" href="../utils/gammu-detect.html#gammu-detect"><span class="std std-ref">gammu-detect</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -302,7 +303,7 @@ miss some features. Optional libraries include:</p>
 </div>
 </section>
 <section id="gudev">
-<h3>gudev<a class="headerlink" href="#gudev" title="Permalink to this headline"></a></h3>
+<h3>gudev<a class="headerlink" href="#gudev" title="Permalink to this heading"></a></h3>
 <p>Currently needed only for <a class="reference internal" href="../utils/gammu-detect.html#gammu-detect"><span class="std std-ref">gammu-detect</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -311,7 +312,7 @@ miss some features. Optional libraries include:</p>
 </section>
 </section>
 <section id="compiling-on-linux-unix-systems">
-<h2>Compiling on Linux/Unix Systems<a class="headerlink" href="#compiling-on-linux-unix-systems" title="Permalink to this headline"></a></h2>
+<h2>Compiling on Linux/Unix Systems<a class="headerlink" href="#compiling-on-linux-unix-systems" title="Permalink to this heading"></a></h2>
 <p>First install all <a class="reference internal" href="#deps"><span class="std std-ref">Dependencies</span></a> and <a class="reference internal" href="#opt-deps"><span class="std std-ref">Optional Dependencies</span></a>. Do not forget to install
 corresponding devel packages as well, they are usually named with <code class="docutils literal notranslate"><span class="pre">-dev</span></code> or
 <code class="docutils literal notranslate"><span class="pre">-devel</span></code> suffix, depending on your distribution.</p>
@@ -329,7 +330,7 @@ following command:</p>
 </pre></div>
 </div>
 <section id="configure-like-wrapper">
-<h3>Configure like wrapper<a class="headerlink" href="#configure-like-wrapper" title="Permalink to this headline"></a></h3>
+<h3>Configure like wrapper<a class="headerlink" href="#configure-like-wrapper" title="Permalink to this heading"></a></h3>
 <p>For compatibility reasons, configure like wrapper is provided, if you
 don’t need much specific tuning, you can use usual set of commands:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./configure
@@ -342,7 +343,7 @@ binaries there (nothing is changed in source tree), for example gammu binary is
 in build-configure/gammu directory.</p>
 </section>
 <section id="using-cmake">
-<h3>Using CMake<a class="headerlink" href="#using-cmake" title="Permalink to this headline"></a></h3>
+<h3>Using CMake<a class="headerlink" href="#using-cmake" title="Permalink to this heading"></a></h3>
 <p>If you need/want to tweak build a bit more than configure wrapper
 provides, you have to use <a class="reference external" href="http://www.cmake.org/">CMake</a> directly. For now, only out of source
 build is supported, so you have to create separate directory for build:</p>
@@ -384,7 +385,7 @@ against buffer overflows and similar attacks</p></li>
 </ul>
 </section>
 <section id="library-search-paths">
-<h3>Library search paths<a class="headerlink" href="#library-search-paths" title="Permalink to this headline"></a></h3>
+<h3>Library search paths<a class="headerlink" href="#library-search-paths" title="Permalink to this heading"></a></h3>
 <p>By installing Gammu to non default system paths, you might need to add path
 where libGammu and other Gammu liraries are installed to <strong class="program">ldconfig</strong>
 search path.</p>
@@ -409,7 +410,7 @@ where it already searches, for examble by:</p>
 </section>
 </section>
 <section id="compiling-on-microsoft-windows">
-<h2>Compiling on Microsoft Windows<a class="headerlink" href="#compiling-on-microsoft-windows" title="Permalink to this headline"></a></h2>
+<h2>Compiling on Microsoft Windows<a class="headerlink" href="#compiling-on-microsoft-windows" title="Permalink to this heading"></a></h2>
 <p>First install all <a class="reference internal" href="#deps"><span class="std std-ref">Dependencies</span></a> and <a class="reference internal" href="#opt-deps"><span class="std std-ref">Optional Dependencies</span></a>.</p>
 <p><a class="reference external" href="http://www.cmake.org/">CMake</a> is able to generate projects for various tools including Microsoft
 Visual Studio, Borland toolchains, Cygwin or Mingw32. Just click on
@@ -418,7 +419,7 @@ optional libraries (see cross compilation section for more information about
 getting those). The result should be project for your compiler where you
 should be able to work with it as with any other project.</p>
 <section id="compiling-using-ms-visual-c">
-<h3>Compiling using MS Visual C++<a class="headerlink" href="#compiling-using-ms-visual-c" title="Permalink to this headline"></a></h3>
+<h3>Compiling using MS Visual C++<a class="headerlink" href="#compiling-using-ms-visual-c" title="Permalink to this heading"></a></h3>
 <p>You will probably need additional SDKs:</p>
 <ul class="simple">
 <li><p>Microsoft Windows Platform SDK (required especially for Bluetooth).
@@ -472,7 +473,7 @@ ISGTK. ITK, [wxWidgets <a class="reference external" href="http://www.wxwidgets.
 </ul>
 </section>
 <section id="compiling-using-borland-c">
-<h3>Compiling using Borland C++<a class="headerlink" href="#compiling-using-borland-c" title="Permalink to this headline"></a></h3>
+<h3>Compiling using Borland C++<a class="headerlink" href="#compiling-using-borland-c" title="Permalink to this heading"></a></h3>
 <p>Borland toolchain - you can download compiler at
 &lt;<a class="reference external" href="http://www.codegear.com/downloads/free/cppbuilder">http://www.codegear.com/downloads/free/cppbuilder</a>&gt;. You need to add
 c:/Borland/BCC55/Bin to system path (or manually set it when running
@@ -481,12 +482,12 @@ CMake) and add -Lc:/Borland/BCC55/Lib -Ic:/Borland/BCC55/Include
 compilation fails).</p>
 </section>
 <section id="compiling-using-cygwin">
-<h3>Compiling using Cygwin<a class="headerlink" href="#compiling-using-cygwin" title="Permalink to this headline"></a></h3>
+<h3>Compiling using Cygwin<a class="headerlink" href="#compiling-using-cygwin" title="Permalink to this heading"></a></h3>
 <p>This should work pretty much same as on Linux.</p>
 </section>
 </section>
 <section id="compiling-on-mac-os-x">
-<h2>Compiling on Mac OS X<a class="headerlink" href="#compiling-on-mac-os-x" title="Permalink to this headline"></a></h2>
+<h2>Compiling on Mac OS X<a class="headerlink" href="#compiling-on-mac-os-x" title="Permalink to this heading"></a></h2>
 <p>First install all <a class="reference internal" href="#deps"><span class="std std-ref">Dependencies</span></a> and <a class="reference internal" href="#opt-deps"><span class="std std-ref">Optional Dependencies</span></a>.</p>
 <p>Gammu should be compilable on Mac OS X, you need to have installed
 Developer Tols (version 2.4.1 was tested) and <a class="reference external" href="http://www.cmake.org/">CMake</a> (there is a Mac OS X
@@ -511,7 +512,7 @@ command line then would look like:</p>
 </div>
 </section>
 <section id="cross-compilation-for-windows-on-linux">
-<h2>Cross compilation for Windows on Linux<a class="headerlink" href="#cross-compilation-for-windows-on-linux" title="Permalink to this headline"></a></h2>
+<h2>Cross compilation for Windows on Linux<a class="headerlink" href="#cross-compilation-for-windows-on-linux" title="Permalink to this heading"></a></h2>
 <p>First install all <a class="reference internal" href="#deps"><span class="std std-ref">Dependencies</span></a> and <a class="reference internal" href="#opt-deps"><span class="std std-ref">Optional Dependencies</span></a> into your mingw build
 environment.</p>
 <p>Only cross compilation using <a class="reference external" href="http://www.cmake.org/">CMake</a> has been tested. You need to install
@@ -549,12 +550,12 @@ building against different MSVCRT, you need to adjust compiler
 specifications, example is shown in cmake/mingw.spec, which is used by
 CMakeLists.txt. You might need to tune it for your environment.</p>
 <section id="third-party-libraries">
-<h3>Third party libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline"></a></h3>
+<h3>Third party libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this heading"></a></h3>
 <p>The easiest way to link with third party libraries is to add path to
 their installation to cmake/Toolchain-mingw32.cmake or to list these
 paths in CMAKE_FIND_ROOT_PATH when invoking cmake.</p>
 <section id="id1">
-<h4>MySQL<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>MySQL<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>You can download MySQL binaries from &lt;<a class="reference external" href="http://dev.mysql.com/">http://dev.mysql.com/</a>&gt;, but then
 need some tweaks:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> mysql/lib/opt
@@ -567,25 +568,25 @@ i586-mingw32msvc-dlltool --kill-at --input-def libmysql.def <span class="se">\</
 try to compile native binary from it.</p>
 </section>
 <section id="id2">
-<h4>PostgreSQL<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>PostgreSQL<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <p>You can download PostgreSQL binaries from &lt;<a class="reference external" href="http://www.postgresql.org/">http://www.postgresql.org/</a>&gt;,
 but then you need to add wldap32.dll library to bin.</p>
 </section>
 <section id="id3">
-<h4>Gettext<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4>Gettext<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>For Gettext (internationalization support), you need
 gettext-0.14.4-bin.zip, gettext-0.14.4-dep.zip, gettext-0.14.4-lib.zip
 from &lt;<a class="reference external" href="http://gnuwin32.sourceforge.net/">http://gnuwin32.sourceforge.net/</a>&gt;. Unpack these to same directory.</p>
 </section>
 <section id="curl">
-<h4>CURL<a class="headerlink" href="#curl" title="Permalink to this headline"></a></h4>
+<h4>CURL<a class="headerlink" href="#curl" title="Permalink to this heading"></a></h4>
 <p>For CURL support, you need curl-7.19.0-devel-mingw32.zip from
 &lt;<a class="reference external" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;.</p>
 </section>
 </section>
 </section>
 <section id="crosscompiling-to-different-platform">
-<h2>Crosscompiling to different platform<a class="headerlink" href="#crosscompiling-to-different-platform" title="Permalink to this headline"></a></h2>
+<h2>Crosscompiling to different platform<a class="headerlink" href="#crosscompiling-to-different-platform" title="Permalink to this heading"></a></h2>
 <p>To cross compile Gammu to different architecture (or platform) you need to
 provide CMake toolchain file for that and invoke <a class="reference external" href="http://www.cmake.org/">CMake</a> with it:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>~/Toolchain-eldk-ppc74xx.cmake ..
@@ -596,12 +597,12 @@ page. Also distributions like <a class="reference external" href="http://www.ope
 prepared recipes for <a class="reference external" href="http://www.cmake.org/">CMake</a>.</p>
 </section>
 <section id="advanced-build-options">
-<h2>Advanced Build Options<a class="headerlink" href="#advanced-build-options" title="Permalink to this headline"></a></h2>
+<h2>Advanced Build Options<a class="headerlink" href="#advanced-build-options" title="Permalink to this heading"></a></h2>
 <p>The build system accepts wide range of options. You can see them all by
 running GUI version of <a class="reference external" href="http://www.cmake.org/">CMake</a> or by inspecting <code class="file docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> in
 build directory.</p>
 <section id="limiting-set-of-installed-data">
-<h3>Limiting set of installed data<a class="headerlink" href="#limiting-set-of-installed-data" title="Permalink to this headline"></a></h3>
+<h3>Limiting set of installed data<a class="headerlink" href="#limiting-set-of-installed-data" title="Permalink to this heading"></a></h3>
 <p>By setting following flags you can control which additional parts will
 be installed:</p>
 <ul class="simple">
@@ -619,7 +620,7 @@ be installed:</p>
 </div>
 </section>
 <section id="debugging-build-failures">
-<h3>Debugging build failures<a class="headerlink" href="#debugging-build-failures" title="Permalink to this headline"></a></h3>
+<h3>Debugging build failures<a class="headerlink" href="#debugging-build-failures" title="Permalink to this heading"></a></h3>
 <p>If there is some build failure (eg. some dependencies are not correctly
 detected), please attach <code class="file docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code>,
 <code class="file docutils literal notranslate"><span class="pre">CMakeFiles/CMakeError.log</span></code> and <code class="file docutils literal notranslate"><span class="pre">CMakeFiles/CMakeOutput.log</span></code> files
@@ -633,14 +634,14 @@ possibly fix these errors.</p>
 </div>
 </section>
 <section id="debugging-crashes">
-<h3>Debugging crashes<a class="headerlink" href="#debugging-crashes" title="Permalink to this headline"></a></h3>
+<h3>Debugging crashes<a class="headerlink" href="#debugging-crashes" title="Permalink to this heading"></a></h3>
 <p>To debug program crashes, you might want to build Gammu with
 <code class="docutils literal notranslate"><span class="pre">-DENABLE_PROTECTION=OFF</span></code>, otherwise debugging tools are somehow confused
 with protections GCC makes and produce bogus back traces.</p>
 </section>
 </section>
 <section id="installing-python-gammu">
-<h2>Installing python-gammu<a class="headerlink" href="#installing-python-gammu" title="Permalink to this headline"></a></h2>
+<h2>Installing python-gammu<a class="headerlink" href="#installing-python-gammu" title="Permalink to this heading"></a></h2>
 <p>You need to have <code class="docutils literal notranslate"><span class="pre">gammu</span></code> and <code class="docutils literal notranslate"><span class="pre">libgammu-dev</span></code> installed for using python-gammu.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>apt-get install gammu libgammu-dev
 pip3 install python-gammu
@@ -648,7 +649,7 @@ pip3 install python-gammu
 </div>
 <p>The location of the libraries is discovered using <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code>, <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code> environment variable and falls back to generic locations. In case it does not work, either install <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code> or set <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code>. <code class="docutils literal notranslate"><span class="pre">GAMMU_PATH</span></code> is recommended when building on Windows.</p>
 <section id="compiling-python-gammu">
-<h3>Compiling python-gammu<a class="headerlink" href="#compiling-python-gammu" title="Permalink to this headline"></a></h3>
+<h3>Compiling python-gammu<a class="headerlink" href="#compiling-python-gammu" title="Permalink to this heading"></a></h3>
 <p>Currently python-gammu is distributed as a separate package, which follows
 Python usual method for building modules - distutils, so use <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code>
 is placed in the top level directory:</p>
