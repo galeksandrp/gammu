@@ -17,6 +17,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -53,7 +54,83 @@
 <li class="toctree-l3"><a class="reference internal" href="smsd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.smsd</span></code> – SMSD access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code> – Generic data usable with Gammu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="worker.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.GSMError"><code class="docutils literal notranslate"><span class="pre">gammu.GSMError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_ABORTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_ABORTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_BADFEATURE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_BADFEATURE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_BUG"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_BUG</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_BUSY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_BUSY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_CANCELED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_CANCELED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_CANTOPENFILE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_CANTOPENFILE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_CORRUPTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_CORRUPTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_COULDNT_CONNECT"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_COULDNT_CONNECT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_COULDNT_RESOLVE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_COULDNT_RESOLVE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DATACONVERTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DATACONVERTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEBUSY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEBUSY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICECHANGESPEEDERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICECHANGESPEEDERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEDTRRTSERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEDTRRTSERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICELOCKED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICELOCKED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICENODRIVER"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICENODRIVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICENOPERMISSION"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICENOPERMISSION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICENOTEXIST"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICENOTEXIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICENOTWORK"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICENOTWORK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEOPENERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEOPENERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEPARITYERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEPARITYERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEREADERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEREADERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DEVICEWRITEERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DEVICEWRITEERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_DISABLED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_DISABLED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_EMPTY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_EMPTY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_EMPTYSMSC"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_EMPTYSMSC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FILEALREADYEXIST"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FILEALREADYEXIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FILENOTEXIST"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FILENOTEXIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FILENOTSUPPORTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FILENOTSUPPORTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FOLDERNOTEMPTY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FOLDERNOTEMPTY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FOLDERPART"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FOLDERPART</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FRAMENOTREQUESTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FRAMENOTREQUESTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_FULL"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_FULL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_GETTING_SMSC"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_GETTING_SMSC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_GNAPPLETWRONG"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_GNAPPLETWRONG</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_INSIDEPHONEMENU"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_INSIDEPHONEMENU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_INSTALL_NOT_FOUND"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_INSTALL_NOT_FOUND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_INVALIDDATA"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_INVALIDDATA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_INVALIDDATETIME"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_INVALIDDATETIME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_INVALIDLOCATION"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_INVALIDLOCATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_MEMORY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_MEMORY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_MOREMEMORY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_MOREMEMORY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NEEDANOTHERANSWER"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NEEDANOTHERANSWER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NETWORK_ERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NETWORK_ERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NONE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NONE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NONE_SECTION"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NONE_SECTION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOSERVICE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOSERVICE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOSIM"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOSIM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOTCONNECTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOTCONNECTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOTIMPLEMENTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOTIMPLEMENTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOTRUNNING"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOTRUNNING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_NOTSUPPORTED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_NOTSUPPORTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_OTHERCONNECTIONREQUIRED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_OTHERCONNECTIONREQUIRED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_PERMISSION"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_PERMISSION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_PHONEOFF"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_PHONEOFF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_PHONE_INTERNAL"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_PHONE_INTERNAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_READ_ONLY"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_READ_ONLY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_SECURITYERROR"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_SECURITYERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_SHOULDBEFILE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_SHOULDBEFILE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_SHOULDBEFOLDER"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_SHOULDBEFOLDER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_SOURCENOTAVAILABLE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_SOURCENOTAVAILABLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_SPECIFYCHANNEL"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_SPECIFYCHANNEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_TIMEOUT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNCONFIGURED"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNCONFIGURED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNKNOWN"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNKNOWNCONNECTIONTYPESTRING"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNKNOWNCONNECTIONTYPESTRING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNKNOWNFRAME"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNKNOWNFRAME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNKNOWNMODELSTRING"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNKNOWNMODELSTRING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_UNKNOWNRESPONSE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_UNKNOWNRESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_USING_DEFAULTS"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_USING_DEFAULTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_WORKINPROGRESS"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_WORKINPROGRESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_WRITING_FILE"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_WRITING_FILE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_WRONGCRC"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_WRONGCRC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.exception.gammu.ERR_WRONGFOLDER"><code class="docutils literal notranslate"><span class="pre">gammu.ERR_WRONGFOLDER</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
 </ul>
 </li>

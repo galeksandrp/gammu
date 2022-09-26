@@ -17,6 +17,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -52,7 +53,15 @@
 <li class="toctree-l3"><a class="reference internal" href="gammu.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu</span></code> – Mobile phone access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smsd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.smsd</span></code> – SMSD access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.data</span></code> – Generic data usable with Gammu</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.worker</span></code> - Asynchronous communication to phone.</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.GammuCommand"><code class="docutils literal notranslate"><span class="pre">GammuCommand</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.GammuTask"><code class="docutils literal notranslate"><span class="pre">GammuTask</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.GammuThread"><code class="docutils literal notranslate"><span class="pre">GammuThread</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.GammuWorker"><code class="docutils literal notranslate"><span class="pre">GammuWorker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.InvalidCommand"><code class="docutils literal notranslate"><span class="pre">InvalidCommand</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gammu.worker.check_worker_command"><code class="docutils literal notranslate"><span class="pre">check_worker_command()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="exceptions.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gammu.exception</span></code> – Gammu exception handling</a></li>
 <li class="toctree-l3"><a class="reference internal" href="objects.html">Objects</a></li>
 </ul>
@@ -198,9 +207,9 @@ done, caller is notified via callback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>command</strong> (<em>tuple of list of tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> of </em><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> of </em><em>tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
 <li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><em>string</em>) – Parameters to command.</p></li>
-<li><p><strong>commands</strong> (<em>list of tuples</em><em> or </em><em>strings</em>) – List of commands to execute. When this is not none, params are ignored and command is taken as task name.</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> of </em><em>tuples</em><em> or </em><em>strings</em>) – List of commands to execute. When this is not none, params are ignored and command is taken as task name.</p></li>
 </ul>
 </dd>
 </dl>
@@ -213,7 +222,7 @@ done, caller is notified via callback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>command</strong> (<em>tuple of list of tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> of </em><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> of </em><em>tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
 <li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><em>string</em>) – Parameters to command.</p></li>
 </ul>
 </dd>
@@ -227,8 +236,8 @@ done, caller is notified via callback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>command</strong> (<em>tuple of list of tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
-<li><p><strong>commands</strong> (<em>list of tuples</em><em> or </em><em>strings</em>) – List of commands to execute.</p></li>
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> of </em><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> of </em><em>tuples</em>) – Command(s) to execute. Each command is tuple containing function name and it’s parameters.</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> of </em><em>tuples</em><em> or </em><em>strings</em>) – List of commands to execute.</p></li>
 </ul>
 </dd>
 </dl>
