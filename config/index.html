@@ -267,13 +267,13 @@ as <code class="file docutils literal notranslate"><span class="pre">contrib/ude
 <span class="c1"># udev rule to give users access to USB device to be used by Gammu</span>
 <span class="c1">#</span>
 
-ACTION!<span class="o">=</span><span class="s2">&quot;add|change&quot;</span>, <span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
+ACTION!<span class="o">=</span><span class="s2">&quot;add|change&quot;</span>,<span class="w"> </span><span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
 
-KERNEL!<span class="o">=</span><span class="s2">&quot;ttyACM[0-9]*&quot;</span>, <span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
-SUBSYSTEM!<span class="o">=</span><span class="s2">&quot;tty&quot;</span>, <span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
+KERNEL!<span class="o">=</span><span class="s2">&quot;ttyACM[0-9]*&quot;</span>,<span class="w"> </span><span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
+SUBSYSTEM!<span class="o">=</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">GOTO</span><span class="o">=</span><span class="s2">&quot;gammu_acl_rules_end&quot;</span>
 
 <span class="c1"># Nokia devices</span>
-ATTRS<span class="o">{</span>manufacturer<span class="o">}==</span><span class="s2">&quot;Nokia&quot;</span>, <span class="nv">TAG</span><span class="o">+=</span><span class="s2">&quot;uaccess&quot;</span>
+ATTRS<span class="o">{</span>manufacturer<span class="o">}==</span><span class="s2">&quot;Nokia&quot;</span>,<span class="w"> </span><span class="nv">TAG</span><span class="o">+=</span><span class="s2">&quot;uaccess&quot;</span>
 
 <span class="c1"># Example for Sony Ericsson J108i Cedar</span>
 <span class="c1"># ATTRS{idVendor}==&quot;0fce&quot;, ATTRS{idProduct}==&quot;d14e&quot;, TAG+=&quot;uaccess&quot;</span>
@@ -297,8 +297,8 @@ the device. This can happen for example over network.</p>
 <p>For <strong>IrDA</strong> connections, this parameters is not used at all.</p>
 <p>If IrDA does not work on Linux, you might need to bring up the interface and
 enable discovery (you need to run these commands as root):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ip l s dev irda0 up          <span class="c1"># Enables irda0 device</span>
-sysctl net.irda.discovery<span class="o">=</span><span class="m">1</span>  <span class="c1"># Enables device discovery on IrDA</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ip<span class="w"> </span>l<span class="w"> </span>s<span class="w"> </span>dev<span class="w"> </span>irda0<span class="w"> </span>up<span class="w">          </span><span class="c1"># Enables irda0 device</span>
+sysctl<span class="w"> </span>net.irda.discovery<span class="o">=</span><span class="m">1</span><span class="w">  </span><span class="c1"># Enables device discovery on IrDA</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -306,8 +306,8 @@ sysctl net.irda.discovery<span class="o">=</span><span class="m">1</span>  <span
 <p>Native IrDA is not supported on Linux, you need to setup virtual
 serial port for it (eg. <code class="docutils literal notranslate"><span class="pre">/dev/ircomm0</span></code>) and use it same way as cable.
 This can be usually achieved by loading modules <code class="docutils literal notranslate"><span class="pre">ircomm-tty</span></code> and <code class="docutils literal notranslate"><span class="pre">irtty-sir</span></code>:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>modprobe ircomm-tty
-modprobe irtty-sir
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>modprobe<span class="w"> </span>ircomm-tty
+modprobe<span class="w"> </span>irtty-sir
 </pre></div>
 </div>
 </div>
@@ -483,29 +483,29 @@ using <code class="xref std std-option docutils literal notranslate"><span class
 <section id="connection-examples">
 <h3>Connection examples<a class="headerlink" href="#connection-examples" title="Permalink to this heading"></a></h3>
 <p>Gammu configuration for Nokia phone using DLR-3 cable:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dlr3</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dlr3</span>
 </pre></div>
 </div>
 <p>Gammu configuration for Sony-Ericsson phone (or any other AT compatible
 phone) connected using USB cable:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyACM0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 </pre></div>
 </div>
 <p>Gammu configuration for Sony-Ericsson (or any other AT compatible
 phone) connected using bluetooth:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">B0:0B:00:00:FA:CE</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">blueat</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">B0:0B:00:00:FA:CE</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">blueat</span>
 </pre></div>
 </div>
 <p>Gammu configuration for phone which needs to manually adjust Bluetooth channel to use channel 42:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">B0:0B:00:00:FA:CE/42</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">blueat</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">B0:0B:00:00:FA:CE/42</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">blueat</span>
 </pre></div>
 </div>
 </section>
@@ -515,17 +515,17 @@ phone) connected using bluetooth:</p>
 is used at one time, you can choose which one to use with <a class="reference external" href="https://docs.python.org/3.9/using/cmdline.html#cmdoption-s" title="(in Python v3.9)"><code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">-s</span></code></a>
 parameter). Configuration for phones on three serial ports would look
 like following:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 
-<span class="k">[gammmu1]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS1</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<span class="k">[gammmu1]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS1</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 
-<span class="k">[gammmu2]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS2</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<span class="k">[gammmu2]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyS2</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 </pre></div>
 </div>
 </section>
@@ -537,9 +537,9 @@ like following:</p>
 <p>You can connect using Gammu to phone running on different host. This can be
 achieved using proxy connection, which executes command to forward
 bi-directional communication with the phone.</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh root@my.router /usr/local/bin/myscript /dev/ttyUSB0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">proxyat</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh root@my.router /usr/local/bin/myscript /dev/ttyUSB0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">proxyat</span>
 </pre></div>
 </div>
 <p>You can find sample script which can be used on the remote side in
@@ -548,179 +548,179 @@ bi-directional communication with the phone.</p>
 <section id="fully-documented-example">
 <span id="id1"></span><h3>Fully documented example<a class="headerlink" href="#fully-documented-example" title="Permalink to this heading"></a></h3>
 <p>You can find this sample file as <code class="file docutils literal notranslate"><span class="pre">docs/config/gammurc</span></code> in Gammu sources.</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; This is a sample ~/.gammurc file.</span><span class="w"></span>
-<span class="c1">; In Unix/Linux  copy it into your home directory and name it .gammurc</span><span class="w"></span>
-<span class="c1">;                or into /etc and name it gammurc</span><span class="w"></span>
-<span class="c1">; In Win32       copy it into directory with Gammu.exe and name gammurc</span><span class="w"></span>
-<span class="c1">; More about parameters later</span><span class="w"></span>
-<span class="c1">; Anything behind ; or # is comment.</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; This is a sample ~/.gammurc file.</span>
+<span class="c1">; In Unix/Linux  copy it into your home directory and name it .gammurc</span>
+<span class="c1">;                or into /etc and name it gammurc</span>
+<span class="c1">; In Win32       copy it into directory with Gammu.exe and name gammurc</span>
+<span class="c1">; More about parameters later</span>
+<span class="c1">; Anything behind ; or # is comment.</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
 
-<span class="k">[gammu]</span><span class="w"></span>
+<span class="k">[gammu]</span>
 
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">com8:</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">irdaphonet</span><span class="w"></span>
-<span class="c1">; Do not use model configuration unless you really need it</span><span class="w"></span>
-<span class="c1">;model = 6110</span><span class="w"></span>
-<span class="c1">;synchronizetime = yes</span><span class="w"></span>
-<span class="c1">;logfile = gammulog</span><span class="w"></span>
-<span class="c1">;logformat = textall</span><span class="w"></span>
-<span class="c1">;use_locking = yes</span><span class="w"></span>
-<span class="c1">;gammuloc = locfile</span><span class="w"></span>
-<span class="c1">;startinfo = yes</span><span class="w"></span>
-<span class="c1">;gammucoding = utf8</span><span class="w"></span>
-<span class="c1">;usephonedb = yes</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">com8:</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">irdaphonet</span>
+<span class="c1">; Do not use model configuration unless you really need it</span>
+<span class="c1">;model = 6110</span>
+<span class="c1">;synchronizetime = yes</span>
+<span class="c1">;logfile = gammulog</span>
+<span class="c1">;logformat = textall</span>
+<span class="c1">;use_locking = yes</span>
+<span class="c1">;gammuloc = locfile</span>
+<span class="c1">;startinfo = yes</span>
+<span class="c1">;gammucoding = utf8</span>
+<span class="c1">;usephonedb = yes</span>
 
-<span class="k">[gammu1]</span><span class="w"></span>
+<span class="k">[gammu1]</span>
 
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">com8:</span><span class="w"></span>
-<span class="c1">;model = 6110</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fbusblue</span><span class="w"></span>
-<span class="c1">;synchronizetime = yes</span><span class="w"></span>
-<span class="c1">;logfile = gammulog</span><span class="w"></span>
-<span class="c1">;logformat = textall</span><span class="w"></span>
-<span class="c1">;use_locking = yes</span><span class="w"></span>
-<span class="c1">;gammuloc = locfile</span><span class="w"></span>
-<span class="c1">;startinfo = yes</span><span class="w"></span>
-<span class="c1">;gammucoding = utf8</span><span class="w"></span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">com8:</span>
+<span class="c1">;model = 6110</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fbusblue</span>
+<span class="c1">;synchronizetime = yes</span>
+<span class="c1">;logfile = gammulog</span>
+<span class="c1">;logformat = textall</span>
+<span class="c1">;use_locking = yes</span>
+<span class="c1">;gammuloc = locfile</span>
+<span class="c1">;startinfo = yes</span>
+<span class="c1">;gammucoding = utf8</span>
 
-<span class="c1">; Step 1. Please find required Connection parameter and look into assigned</span><span class="w"></span>
-<span class="c1">; with it device type. With some Connection you must set concrete model</span><span class="w"></span>
+<span class="c1">; Step 1. Please find required Connection parameter and look into assigned</span>
+<span class="c1">; with it device type. With some Connection you must set concrete model</span>
 
-<span class="c1">; ================================================================ cables =====</span><span class="w"></span>
-<span class="c1">; New Nokia protocol for FBUS/DAU9P</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbus&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; New Nokia protocol for DLR3/DLR3P</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbusdlr3&quot;/&quot;dlr3&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; New Nokia protocol for DKU2 (and phone with USB converter on phone mainboard</span><span class="w"></span>
-<span class="c1">;                              like 6230)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;dku2phonet&quot;/&quot;dku2&quot;, device type dku2 on Windows</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbususb&quot; on Linux</span><span class="w"></span>
-<span class="c1">; New Nokia protocol for DKU5 (and phone without USB converter on phone</span><span class="w"></span>
-<span class="c1">;                              mainboard like 5100)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;dku5fbus&quot;/&quot;dku5&quot;, device type dku5</span><span class="w"></span>
-<span class="c1">; New Nokia protocol for PL2303 USB cable (and phone without USB converter</span><span class="w"></span>
-<span class="c1">;                                          on phone mainboard like 5100)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbuspl2303&quot;, device type usb</span><span class="w"></span>
-<span class="c1">; Old Nokia protocol for MBUS/DAU9P</span><span class="w"></span>
-<span class="c1">;    Connection &quot;mbus&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; Variants:</span><span class="w"></span>
-<span class="c1">; You can modify a bit behaviour of connection using additional flags</span><span class="w"></span>
-<span class="c1">; specified just after connection name like connection-variant.</span><span class="w"></span>
-<span class="c1">; If you&#39;re using ARK3116 cable (or any other which does not like dtr</span><span class="w"></span>
-<span class="c1">; handling), you might need -nodtr variant of connection, eg. dlr3-nodtr.</span><span class="w"></span>
-<span class="c1">; If cable you use is not powered over DTR/RTS, try using -nopower variant of</span><span class="w"></span>
-<span class="c1">; connection, eg. fbus-nopower.</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; AT commands for DLR3, DKU5 or other AT compatible cable (8 bits, None</span><span class="w"></span>
-<span class="c1">; parity, no flow control, 1 stop bit). Used with Nokia, Alcatel, Siemens, etc.</span><span class="w"></span>
-<span class="c1">;    Connection &quot;at19200&quot;/&quot;at115200&quot;/.., device type serial</span><span class="w"></span>
-<span class="c1">; AT commands for DKU2 cable</span><span class="w"></span>
-<span class="c1">;    Connection &quot;dku2at&quot;, device type dku2</span><span class="w"></span>
-<span class="c1">; ============================================================== infrared =====</span><span class="w"></span>
-<span class="c1">; Nokia protocol for infrared with Nokia 6110/6130/6150</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbusirda&quot;/&quot;infrared&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; Nokia protocol for infrared with other Nokia models</span><span class="w"></span>
-<span class="c1">;    Connection &quot;irdaphonet&quot;/&quot;irda&quot;, device type irda</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; AT commands for infrared. Used with Nokia, Alcatel, Siemens, etc.</span><span class="w"></span>
-<span class="c1">;    Connection &quot;irdaat&quot;, device type irda</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; OBEX for infrared</span><span class="w"></span>
-<span class="c1">;    Connection &quot;irdaobex&quot;, device type irda.</span><span class="w"></span>
-<span class="c1">; ============================================================= Bluetooth =====</span><span class="w"></span>
-<span class="c1">; Nokia protocol with serial device set in BT stack (WidComm, other) from</span><span class="w"></span>
-<span class="c1">; adequate service and Nokia 6210</span><span class="w"></span>
-<span class="c1">;    Connection &quot;fbusblue&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; Nokia protocol with serial device set in BT stack (WidComm, other) from</span><span class="w"></span>
-<span class="c1">; adequate service and other Nokia models</span><span class="w"></span>
-<span class="c1">;    Connection &quot;phonetblue&quot;, device type serial</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Nokia protocol for Bluetooth stack with Nokia 6210</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluerffbus&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; Nokia protocol for Bluetooth stack with DCT4 Nokia models, which don&#39;t inform</span><span class="w"></span>
-<span class="c1">; about services correctly (6310, 6310i with firmware lower than 5.50, 8910,..)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluerfphonet&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; Nokia protocol for Bluetooth stack with other DCT4 Nokia models</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluephonet&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; AT commands for Bluetooth stack and 6210 / DCT4 Nokia models, which don&#39;t</span><span class="w"></span>
-<span class="c1">; inform about BT services correctly (6310, 6310i with firmware lower</span><span class="w"></span>
-<span class="c1">; than 5.50, 8910,..)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluerfat&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; AT commands for Bluetooth stack with other phones (Siemens, other Nokia,etc.)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;blueat&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; OBEX for Bluetooth stack with DCT4 Nokia models, which don&#39;t inform about</span><span class="w"></span>
-<span class="c1">; BT services correctly (6310, 6310i with firmware lower than 5.50, 8910,...)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluerfobex&quot;, device type BT</span><span class="w"></span>
-<span class="c1">; OBEX for Bluetooth stack with other phones (Siemens, other Nokia, etc.)</span><span class="w"></span>
-<span class="c1">;    Connection &quot;blueobex&quot;, device type BT.</span><span class="w"></span>
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">;    Connection &quot;bluerfgnapbus&quot;, device type BT, model &quot;gnap&quot;</span><span class="w"></span>
-<span class="c1">;    Connection &quot;irdagnapbus&quot;, device type irda, model &quot;gnap&quot;</span><span class="w"></span>
+<span class="c1">; ================================================================ cables =====</span>
+<span class="c1">; New Nokia protocol for FBUS/DAU9P</span>
+<span class="c1">;    Connection &quot;fbus&quot;, device type serial</span>
+<span class="c1">; New Nokia protocol for DLR3/DLR3P</span>
+<span class="c1">;    Connection &quot;fbusdlr3&quot;/&quot;dlr3&quot;, device type serial</span>
+<span class="c1">; New Nokia protocol for DKU2 (and phone with USB converter on phone mainboard</span>
+<span class="c1">;                              like 6230)</span>
+<span class="c1">;    Connection &quot;dku2phonet&quot;/&quot;dku2&quot;, device type dku2 on Windows</span>
+<span class="c1">;    Connection &quot;fbususb&quot; on Linux</span>
+<span class="c1">; New Nokia protocol for DKU5 (and phone without USB converter on phone</span>
+<span class="c1">;                              mainboard like 5100)</span>
+<span class="c1">;    Connection &quot;dku5fbus&quot;/&quot;dku5&quot;, device type dku5</span>
+<span class="c1">; New Nokia protocol for PL2303 USB cable (and phone without USB converter</span>
+<span class="c1">;                                          on phone mainboard like 5100)</span>
+<span class="c1">;    Connection &quot;fbuspl2303&quot;, device type usb</span>
+<span class="c1">; Old Nokia protocol for MBUS/DAU9P</span>
+<span class="c1">;    Connection &quot;mbus&quot;, device type serial</span>
+<span class="c1">; Variants:</span>
+<span class="c1">; You can modify a bit behaviour of connection using additional flags</span>
+<span class="c1">; specified just after connection name like connection-variant.</span>
+<span class="c1">; If you&#39;re using ARK3116 cable (or any other which does not like dtr</span>
+<span class="c1">; handling), you might need -nodtr variant of connection, eg. dlr3-nodtr.</span>
+<span class="c1">; If cable you use is not powered over DTR/RTS, try using -nopower variant of</span>
+<span class="c1">; connection, eg. fbus-nopower.</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; AT commands for DLR3, DKU5 or other AT compatible cable (8 bits, None</span>
+<span class="c1">; parity, no flow control, 1 stop bit). Used with Nokia, Alcatel, Siemens, etc.</span>
+<span class="c1">;    Connection &quot;at19200&quot;/&quot;at115200&quot;/.., device type serial</span>
+<span class="c1">; AT commands for DKU2 cable</span>
+<span class="c1">;    Connection &quot;dku2at&quot;, device type dku2</span>
+<span class="c1">; ============================================================== infrared =====</span>
+<span class="c1">; Nokia protocol for infrared with Nokia 6110/6130/6150</span>
+<span class="c1">;    Connection &quot;fbusirda&quot;/&quot;infrared&quot;, device type serial</span>
+<span class="c1">; Nokia protocol for infrared with other Nokia models</span>
+<span class="c1">;    Connection &quot;irdaphonet&quot;/&quot;irda&quot;, device type irda</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; AT commands for infrared. Used with Nokia, Alcatel, Siemens, etc.</span>
+<span class="c1">;    Connection &quot;irdaat&quot;, device type irda</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; OBEX for infrared</span>
+<span class="c1">;    Connection &quot;irdaobex&quot;, device type irda.</span>
+<span class="c1">; ============================================================= Bluetooth =====</span>
+<span class="c1">; Nokia protocol with serial device set in BT stack (WidComm, other) from</span>
+<span class="c1">; adequate service and Nokia 6210</span>
+<span class="c1">;    Connection &quot;fbusblue&quot;, device type serial</span>
+<span class="c1">; Nokia protocol with serial device set in BT stack (WidComm, other) from</span>
+<span class="c1">; adequate service and other Nokia models</span>
+<span class="c1">;    Connection &quot;phonetblue&quot;, device type serial</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; Nokia protocol for Bluetooth stack with Nokia 6210</span>
+<span class="c1">;    Connection &quot;bluerffbus&quot;, device type BT</span>
+<span class="c1">; Nokia protocol for Bluetooth stack with DCT4 Nokia models, which don&#39;t inform</span>
+<span class="c1">; about services correctly (6310, 6310i with firmware lower than 5.50, 8910,..)</span>
+<span class="c1">;    Connection &quot;bluerfphonet&quot;, device type BT</span>
+<span class="c1">; Nokia protocol for Bluetooth stack with other DCT4 Nokia models</span>
+<span class="c1">;    Connection &quot;bluephonet&quot;, device type BT</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; AT commands for Bluetooth stack and 6210 / DCT4 Nokia models, which don&#39;t</span>
+<span class="c1">; inform about BT services correctly (6310, 6310i with firmware lower</span>
+<span class="c1">; than 5.50, 8910,..)</span>
+<span class="c1">;    Connection &quot;bluerfat&quot;, device type BT</span>
+<span class="c1">; AT commands for Bluetooth stack with other phones (Siemens, other Nokia,etc.)</span>
+<span class="c1">;    Connection &quot;blueat&quot;, device type BT</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; OBEX for Bluetooth stack with DCT4 Nokia models, which don&#39;t inform about</span>
+<span class="c1">; BT services correctly (6310, 6310i with firmware lower than 5.50, 8910,...)</span>
+<span class="c1">;    Connection &quot;bluerfobex&quot;, device type BT</span>
+<span class="c1">; OBEX for Bluetooth stack with other phones (Siemens, other Nokia, etc.)</span>
+<span class="c1">;    Connection &quot;blueobex&quot;, device type BT.</span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">;    Connection &quot;bluerfgnapbus&quot;, device type BT, model &quot;gnap&quot;</span>
+<span class="c1">;    Connection &quot;irdagnapbus&quot;, device type irda, model &quot;gnap&quot;</span>
 
-<span class="c1">; Step2. According to device type from Step1 and used OS set Port parameter</span><span class="w"></span>
+<span class="c1">; Step2. According to device type from Step1 and used OS set Port parameter</span>
 
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Port type | &quot;Port&quot; parameter in Windows/DOS | &quot;Port&quot; parameter in Linux/Unix</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; serial    | &quot;com*:&quot;                         | &quot;/dev/ttyS*&quot;</span><span class="w"></span>
-<span class="c1">;           | (example &quot;com1:&quot;)               | (example &quot;/dev/ttyS1&quot;)</span><span class="w"></span>
-<span class="c1">;           |                                 | or &quot;/dev/tts/**&quot; (with DevFS)</span><span class="w"></span>
-<span class="c1">;           |                                 | virtual serial ports like</span><span class="w"></span>
-<span class="c1">;           |                                 | &quot;/dev/ircomm*&quot; or &quot;/dev/rfcomm*&quot;</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; irda      | ignored (can be empty)          | ignored (can be empty)</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; BT        | Bluetooth device address (example &quot;00:11:22:33:44:55&quot;).</span><span class="w"></span>
-<span class="c1">;           | Optionally you can also include channel after slash</span><span class="w"></span>
-<span class="c1">;           | (example &quot;00:11:22:33:44:55/12&quot;). Can be also empty.</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; dku2      | ignored (can be empty)          | /dev/ttyUSB* or /dev/ttyACM*</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; dku5      | ignored (can be empty)          | connection with it not possible</span><span class="w"></span>
-<span class="c1">; ----------|---------------------------------|--------------------------------</span><span class="w"></span>
-<span class="c1">; usb       | connection with it not possible | &quot;/dev/ttyUSB*&quot;</span><span class="w"></span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; Port type | &quot;Port&quot; parameter in Windows/DOS | &quot;Port&quot; parameter in Linux/Unix</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; serial    | &quot;com*:&quot;                         | &quot;/dev/ttyS*&quot;</span>
+<span class="c1">;           | (example &quot;com1:&quot;)               | (example &quot;/dev/ttyS1&quot;)</span>
+<span class="c1">;           |                                 | or &quot;/dev/tts/**&quot; (with DevFS)</span>
+<span class="c1">;           |                                 | virtual serial ports like</span>
+<span class="c1">;           |                                 | &quot;/dev/ircomm*&quot; or &quot;/dev/rfcomm*&quot;</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; irda      | ignored (can be empty)          | ignored (can be empty)</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; BT        | Bluetooth device address (example &quot;00:11:22:33:44:55&quot;).</span>
+<span class="c1">;           | Optionally you can also include channel after slash</span>
+<span class="c1">;           | (example &quot;00:11:22:33:44:55/12&quot;). Can be also empty.</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; dku2      | ignored (can be empty)          | /dev/ttyUSB* or /dev/ttyACM*</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; dku5      | ignored (can be empty)          | connection with it not possible</span>
+<span class="c1">; ----------|---------------------------------|--------------------------------</span>
+<span class="c1">; usb       | connection with it not possible | &quot;/dev/ttyUSB*&quot;</span>
 
-<span class="c1">; Step3. Set other config parameters</span><span class="w"></span>
+<span class="c1">; Step3. Set other config parameters</span>
 
-<span class="c1">; -----------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Parameter name  | Description</span><span class="w"></span>
-<span class="c1">; ----------------|------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Model           | Should not be used unless you have a good reason to do so.</span><span class="w"></span>
-<span class="c1">;                 | If Gammu doesn&#39;t recognize your phone model, put it here.</span><span class="w"></span>
-<span class="c1">;                 | Example values: &quot;6110&quot;, &quot;6150&quot;, &quot;6210&quot;, &quot;8210&quot;</span><span class="w"></span>
-<span class="c1">; SynchronizeTime | if you want to set time from computer to phone during</span><span class="w"></span>
-<span class="c1">;                 | starting connection. Do not rather use this option when</span><span class="w"></span>
-<span class="c1">;                 | when to reset phone during connection (in some phones need</span><span class="w"></span>
-<span class="c1">;                 | to set time again after restart)</span><span class="w"></span>
-<span class="c1">; GammuLoc        | name of localisation file</span><span class="w"></span>
-<span class="c1">; StartInfo       | this option allows one to set, that you want (setting &quot;yes&quot;)</span><span class="w"></span>
-<span class="c1">;                 | to see message on the phone screen or phone should enable</span><span class="w"></span>
-<span class="c1">;                 | light for a moment during starting connection. Phone</span><span class="w"></span>
-<span class="c1">;                 | WON&#39;T beep during starting connection with this option.</span><span class="w"></span>
-<span class="c1">; GammuCoding     | forces using specified codepage (in win32 - for example</span><span class="w"></span>
-<span class="c1">;                 | &quot;1250&quot; will force CP1250) or UTF8 (in Linux - &quot;utf8&quot;)</span><span class="w"></span>
-<span class="c1">; ----------------|------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Logfile         | Use, when want to have logfile from communication.</span><span class="w"></span>
-<span class="c1">; Logformat       | What debug info and format should be used:</span><span class="w"></span>
-<span class="c1">;                 |   &quot;nothing&quot; - no debug level (default)</span><span class="w"></span>
-<span class="c1">;                 |   &quot;text&quot;    - transmission dump in text format</span><span class="w"></span>
-<span class="c1">;                 |   &quot;textall&quot; - all possible info in text format</span><span class="w"></span>
-<span class="c1">;                 |   &quot;errors&quot;  - errors in text format</span><span class="w"></span>
-<span class="c1">;                 |   &quot;binary&quot;  - transmission dump in binary format</span><span class="w"></span>
-<span class="c1">; ----------------|------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Features        | Custom features for phone. This can be used as override</span><span class="w"></span>
-<span class="c1">;                 | when values coded in common/gsmphones.c are bad or</span><span class="w"></span>
-<span class="c1">;                 | missing. Consult include/gammu-info.h for possible values</span><span class="w"></span>
-<span class="c1">;                 | (all Feature values without leading F_ prefix).</span><span class="w"></span>
-<span class="c1">;                 | Please report correct values to Gammu authors.</span><span class="w"></span>
-<span class="c1">; ----------------|------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">; Use_Locking     | under Unix/Linux use &quot;yes&quot;, if want to lock used device</span><span class="w"></span>
-<span class="c1">;                 | to prevent using it by other applications. In win32 ignored</span><span class="w"></span>
+<span class="c1">; -----------------------------------------------------------------------------</span>
+<span class="c1">; Parameter name  | Description</span>
+<span class="c1">; ----------------|------------------------------------------------------------</span>
+<span class="c1">; Model           | Should not be used unless you have a good reason to do so.</span>
+<span class="c1">;                 | If Gammu doesn&#39;t recognize your phone model, put it here.</span>
+<span class="c1">;                 | Example values: &quot;6110&quot;, &quot;6150&quot;, &quot;6210&quot;, &quot;8210&quot;</span>
+<span class="c1">; SynchronizeTime | if you want to set time from computer to phone during</span>
+<span class="c1">;                 | starting connection. Do not rather use this option when</span>
+<span class="c1">;                 | when to reset phone during connection (in some phones need</span>
+<span class="c1">;                 | to set time again after restart)</span>
+<span class="c1">; GammuLoc        | name of localisation file</span>
+<span class="c1">; StartInfo       | this option allows one to set, that you want (setting &quot;yes&quot;)</span>
+<span class="c1">;                 | to see message on the phone screen or phone should enable</span>
+<span class="c1">;                 | light for a moment during starting connection. Phone</span>
+<span class="c1">;                 | WON&#39;T beep during starting connection with this option.</span>
+<span class="c1">; GammuCoding     | forces using specified codepage (in win32 - for example</span>
+<span class="c1">;                 | &quot;1250&quot; will force CP1250) or UTF8 (in Linux - &quot;utf8&quot;)</span>
+<span class="c1">; ----------------|------------------------------------------------------------</span>
+<span class="c1">; Logfile         | Use, when want to have logfile from communication.</span>
+<span class="c1">; Logformat       | What debug info and format should be used:</span>
+<span class="c1">;                 |   &quot;nothing&quot; - no debug level (default)</span>
+<span class="c1">;                 |   &quot;text&quot;    - transmission dump in text format</span>
+<span class="c1">;                 |   &quot;textall&quot; - all possible info in text format</span>
+<span class="c1">;                 |   &quot;errors&quot;  - errors in text format</span>
+<span class="c1">;                 |   &quot;binary&quot;  - transmission dump in binary format</span>
+<span class="c1">; ----------------|------------------------------------------------------------</span>
+<span class="c1">; Features        | Custom features for phone. This can be used as override</span>
+<span class="c1">;                 | when values coded in common/gsmphones.c are bad or</span>
+<span class="c1">;                 | missing. Consult include/gammu-info.h for possible values</span>
+<span class="c1">;                 | (all Feature values without leading F_ prefix).</span>
+<span class="c1">;                 | Please report correct values to Gammu authors.</span>
+<span class="c1">; ----------------|------------------------------------------------------------</span>
+<span class="c1">; Use_Locking     | under Unix/Linux use &quot;yes&quot;, if want to lock used device</span>
+<span class="c1">;                 | to prevent using it by other applications. In win32 ignored</span>
 
-<span class="c1">; vim: et ts=4 sw=4 sts=4 tw=78 spell spelllang=en_us</span><span class="w"></span>
+<span class="c1">; vim: et ts=4 sw=4 sts=4 tw=78 spell spelllang=en_us</span>
 </pre></div>
 </div>
 </section>

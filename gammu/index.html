@@ -1759,15 +1759,15 @@ data.</p>
 <span class="sig-name descname"><span class="pre">nokiaaddplaylists</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gammu-arg-nokiaaddplaylists" title="Permalink to this definition"></a></dt>
 <dd><p>Goes through phone memory and generated playlist for all music files found.</p>
 <p>To manually manage playlists:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu addfile a:<span class="se">\\</span>predefplaylist filename.m3u
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>addfile<span class="w"> </span>a:<span class="se">\\</span>predefplaylist<span class="w"> </span>filename.m3u
 </pre></div>
 </div>
 <p>Will add playlist filename.m3u</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu getfilesystem
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>getfilesystem
 </pre></div>
 </div>
 <p>Will get list of all files (including names of files with playlists)</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu deletefiles a:<span class="se">\\</span>predefplaylist<span class="se">\\</span>filename.m3u
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>deletefiles<span class="w"> </span>a:<span class="se">\\</span>predefplaylist<span class="se">\\</span>filename.m3u
 </pre></div>
 </div>
 <p>Will delete playlist filename.m3u</p>
@@ -2465,56 +2465,56 @@ values increased by 100:</p>
 <p>All messages below are sent to number 123456, replace it with proper destination.</p>
 </div>
 <p>Send text message up to standard 160 chars:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;All your base are belong to us&quot;</span> <span class="p">|</span> gammu sendsms TEXT <span class="m">123456</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gammu<span class="w"> </span>sendsms<span class="w"> </span>TEXT<span class="w"> </span><span class="m">123456</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>sendsms<span class="w"> </span>TEXT<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>
 </div>
 <p>Send long text message:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;All your base are belong to us&quot;</span> <span class="p">|</span> gammu sendsms TEXT <span class="m">123456</span> -len <span class="m">400</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gammu<span class="w"> </span>sendsms<span class="w"> </span>TEXT<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-len<span class="w"> </span><span class="m">400</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms TEXT <span class="m">123456</span> -len <span class="m">400</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>sendsms<span class="w"> </span>TEXT<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-len<span class="w"> </span><span class="m">400</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms EMS <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>sendsms<span class="w"> </span>EMS<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>
 </div>
 <p>Send some funky message with predefined sound and animation from 2 bitmaps:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms EMS <span class="m">123456</span> -text <span class="s2">&quot;Greetings&quot;</span> -defsound <span class="m">1</span> -text <span class="s2">&quot;from Gammu -tone10 axelf.txt -animation 2 file1.bmp file2.bmp</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>sendsms<span class="w"> </span>EMS<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;Greetings&quot;</span><span class="w"> </span>-defsound<span class="w"> </span><span class="m">1</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;from Gammu -tone10 axelf.txt -animation 2 file1.bmp file2.bmp</span>
 </pre></div>
 </div>
 <p>Send protected message with ringtone:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu sendsms EMS <span class="m">123456</span> -protected <span class="m">2</span> -variablebitmaplong ala.bmp -toneSElong axelf.txt -toneSE ring.txt
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>sendsms<span class="w"> </span>EMS<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-protected<span class="w"> </span><span class="m">2</span><span class="w"> </span>-variablebitmaplong<span class="w"> </span>ala.bmp<span class="w"> </span>-toneSElong<span class="w"> </span>axelf.txt<span class="w"> </span>-toneSE<span class="w"> </span>ring.txt
 </pre></div>
 </div>
 </section>
 <section id="retrieving-ussd-replies">
 <h3>Retrieving USSD replies<a class="headerlink" href="#retrieving-ussd-replies" title="Permalink to this heading"></a></h3>
 <p>For example for retrieving prepaid card status or retrieving various network info:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu getussd <span class="s1">&#39;#555#&#39;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>getussd<span class="w"> </span><span class="s1">&#39;#555#&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="uploading-files-to-nokia">
 <h3>Uploading files to Nokia<a class="headerlink" href="#uploading-files-to-nokia" title="Permalink to this heading"></a></h3>
 <p>Add Alien to applications in your phone (you need to have files Alien.JAD and Alien.JAR in current directory):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu nokiaaddfile APPLICATION Alien
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>nokiaaddfile<span class="w"> </span>APPLICATION<span class="w"> </span>Alien
 </pre></div>
 </div>
 <p>Add file.mid to ringtones folder:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu nokiaaddfile TONES file.mid
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>nokiaaddfile<span class="w"> </span>TONES<span class="w"> </span>file.mid
 </pre></div>
 </div>
 </section>
 <section id="setting-operator-logo">
 <h3>Setting operator logo<a class="headerlink" href="#setting-operator-logo" title="Permalink to this heading"></a></h3>
 <p>Set logo for network <code class="docutils literal notranslate"><span class="pre">230</span> <span class="pre">03</span></code> (Vodafone CZ):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu setbitmap OPERATOR ala.bmp <span class="s2">&quot;230 03&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>setbitmap<span class="w"> </span>OPERATOR<span class="w"> </span>ala.bmp<span class="w"> </span><span class="s2">&quot;230 03&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -2523,15 +2523,15 @@ values increased by 100:</p>
 <p>The formats conversion can done using <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">savefile</span></code> or
 <code class="xref std std-option docutils literal notranslate"><span class="pre">gammu</span> <span class="pre">convertbackup</span></code> commands.</p>
 <p>Convert single entry (at position 260) from <a class="reference internal" href="../formats/backup.html#gammu-backup"><span class="std std-ref">Backup Format</span></a> to vCalendar:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu savefile CALENDAR output.vcs myCalendar.backup <span class="m">260</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>savefile<span class="w"> </span>CALENDAR<span class="w"> </span>output.vcs<span class="w"> </span>myCalendar.backup<span class="w"> </span><span class="m">260</span>
 </pre></div>
 </div>
 <p>Convert first phonebook entry from <a class="reference internal" href="../formats/backup.html#gammu-backup"><span class="std std-ref">Backup Format</span></a> to vCard:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu savefile VCARD21 output.vcf phone.backup ME <span class="m">1</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>savefile<span class="w"> </span>VCARD21<span class="w"> </span>output.vcf<span class="w"> </span>phone.backup<span class="w"> </span>ME<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>Convert all contacts from backup to vCard:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu convertbackup phone.backup output.vcf
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>convertbackup<span class="w"> </span>phone.backup<span class="w"> </span>output.vcf
 </pre></div>
 </div>
 </section>
@@ -2541,14 +2541,14 @@ values increased by 100:</p>
 some useful information when sending bug reports (especially debug logs,
 operating system, it’s version and phone information are needed).</p>
 <p>To generate debug log, enable it in <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a>:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">YOUR CONNECTION SETTINGS</span><span class="w"></span>
-<span class="na">logfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/gammu.log</span><span class="w"></span>
-<span class="na">logformat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">textall</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">YOUR CONNECTION SETTINGS</span>
+<span class="na">logfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/gammu.log</span>
+<span class="na">logformat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">textall</span>
 </pre></div>
 </div>
 <p>Alternatively you can specify logging on command line:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu -d textall -f /tmp/gammu.log ...
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu<span class="w"> </span>-d<span class="w"> </span>textall<span class="w"> </span>-f<span class="w"> </span>/tmp/gammu.log<span class="w"> </span>...
 </pre></div>
 </div>
 <p>With this settings, Gammu generates /tmp/gammu.log on each connection to

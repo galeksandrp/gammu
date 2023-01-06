@@ -164,7 +164,7 @@ against interface number as well:</p>
 </pre></div>
 </div>
 <p>You can match by various attributes, you can figure them using udevadm command:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>udevadm info --name<span class="o">=</span>/dev/ttyUSB1 --attribute-walk
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>udevadm<span class="w"> </span>info<span class="w"> </span>--name<span class="o">=</span>/dev/ttyUSB1<span class="w"> </span>--attribute-walk
 </pre></div>
 </div>
 <div class="admonition seealso">
@@ -184,7 +184,7 @@ enabled echo, it can not work with Gammu!”, but it can be spotted later as
 well, depending on various conditions.</p>
 <p>In case you see such behavior, check what other programs are using given device.
 This can be done using <strong class="program">fuser</strong> tool:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>fuser -va /dev/ttyACM0
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>fuser<span class="w"> </span>-va<span class="w"> </span>/dev/ttyACM0
 </pre></div>
 </div>
 <p>The usual programs involve:</p>

@@ -140,13 +140,13 @@ all serial ports in your systems, where probably nothing is connected).</p>
 <p>Generally for most current modems you will end up with <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>.</p>
 <p>The next step is to create configuration file in <code class="file docutils literal notranslate"><span class="pre">~/.gammurc</span></code> (see
 <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a>):</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyUSB0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyUSB0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 </pre></div>
 </div>
 <p>And you can connect to the phone:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu identify
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu<span class="w"> </span>identify
 <span class="go">Device               : /dev/ttyUSB0</span>
 <span class="go">Manufacturer         : Wavecom</span>
 <span class="go">Model                : MULTIBAND  900E  1800 (MULTIBAND  900E  1800)</span>
@@ -165,9 +165,9 @@ easiest way is to look into <span class="guilabel">Device manager</span> under
 <code class="docutils literal notranslate"><span class="pre">COM12</span></code>.</p>
 <p>The next step is to create configuration file in
 <code class="file docutils literal notranslate"><span class="pre">$PROFILE\Application</span> <span class="pre">Data\gammurc</span></code> (see <a class="reference internal" href="../config/index.html#gammurc"><span class="std std-ref">Gammu Configuration File</span></a>):</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">COM12:</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">COM12:</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 </pre></div>
 </div>
 <p>And you can connect to the phone:</p>
@@ -203,17 +203,17 @@ workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</c
 <p>First we have to setup the actual storage. With MySQL, we need access to the
 MySQL server. Now connect as administrative user to the server (usually
 <code class="docutils literal notranslate"><span class="pre">root</span></code>), grant privileges to the <code class="docutils literal notranslate"><span class="pre">smsd</span></code> user and create <code class="docutils literal notranslate"><span class="pre">smsd</span></code> database:</p>
-<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;smsd&#39;</span><span class="nv">@&#39;localhost&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;smsd&#39;</span><span class="nv">@&#39;localhost&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span>
 
-<span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n n-Quoted">`smsd`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;smsd&#39;</span><span class="nv">@&#39;localhost&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n n-Quoted">`smsd`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;smsd&#39;</span><span class="nv">@&#39;localhost&#39;</span><span class="p">;</span>
 
-<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">smsd</span><span class="p">;</span><span class="w"></span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">smsd</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Once this is ready, you should import the tables structure. It is shipped as
 <code class="file docutils literal notranslate"><span class="pre">docs/sql/mysql.sql</span></code> with Gammu, so all you have to do is to import this
 file (see <a class="reference internal" href="../smsd/mysql.html#mysql-create"><span class="std std-ref">Creating tables for MySQL</span></a> for more details):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mysql -u root -p password smsd &lt; docs/sql/mysql.sql
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>password<span class="w"> </span>smsd<span class="w"> </span>&lt;<span class="w"> </span>docs/sql/mysql.sql
 </pre></div>
 </div>
 </section>
@@ -225,17 +225,17 @@ startup where it can find it, but on Linux the recommended location for system
 wide service is <code class="file docutils literal notranslate"><span class="pre">/etc/gammu-smsdrc</span></code> (see <a class="reference internal" href="../smsd/config.html#gammu-smsdrc"><span class="std std-ref">SMSD Configuration File</span></a> for more
 information).</p>
 <p>You have to put both modem and storage service configuration into this file:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span><span class="w"></span>
-<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyUSB0</span><span class="w"></span>
-<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gammu]</span>
+<span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyUSB0</span>
+<span class="na">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">at</span>
 
-<span class="k">[smsd]</span><span class="w"></span>
-<span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SQL</span><span class="w"></span>
-<span class="na">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">native_mysql</span><span class="w"></span>
-<span class="na">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
-<span class="na">database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
-<span class="na">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span><span class="w"></span>
-<span class="na">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">password</span><span class="w"></span>
+<span class="k">[smsd]</span>
+<span class="na">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SQL</span>
+<span class="na">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">native_mysql</span>
+<span class="na">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span>
+<span class="na">database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span>
+<span class="na">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smsd</span>
+<span class="na">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">password</span>
 </pre></div>
 </div>
 <p>There are many ways to customize SMSD, but the defaults should work fine in
@@ -251,20 +251,20 @@ manually or as a system wide service.</p>
 </pre></div>
 </div>
 <p>Alternatively you can specify path to the configuration file:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd -c /path/to/gammu-smsdrc
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd<span class="w"> </span>-c<span class="w"> </span>/path/to/gammu-smsdrc
 </pre></div>
 </div>
 <p>The binary packages on Linux usually come with support for starting SMSD as a
 system wide daemon.</p>
 <p>With systemd, you can start it by:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl start gammu-smsd.service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>start<span class="w"> </span>gammu-smsd.service
 </pre></div>
 </div>
 </section>
 <section id="sending-message-through-smsd">
 <h3>Sending message through SMSD<a class="headerlink" href="#sending-message-through-smsd" title="Permalink to this heading"></a></h3>
 <p>Once SMSD is up and running, you can send some messages using it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd-inject TEXT <span class="m">123456</span> -text <span class="s2">&quot;All your base are belong to us&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gammu-smsd-inject<span class="w"> </span>TEXT<span class="w"> </span><span class="m">123456</span><span class="w"> </span>-text<span class="w"> </span><span class="s2">&quot;All your base are belong to us&quot;</span>
 </pre></div>
 </div>
 <p>You can find more examples in the <a class="reference internal" href="../smsd/inject.html#gammu-smsd-inject"><span class="std std-ref">gammu-smsd-inject</span></a> documentation:

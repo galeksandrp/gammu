@@ -119,8 +119,8 @@ of multipart messages).</p>
 <h4>Decoded text<a class="headerlink" href="#decoded-text" title="Permalink to this heading"></a></h4>
 <p>For SMS backups created by Gammu, there is a decoded text as a comment just
 after the section name:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup001]</span><span class="w"></span>
-<span class="c1">; This is message text</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup001]</span>
+<span class="c1">; This is message text</span>
 </pre></div>
 </div>
 <p>The text can be split to more lines if it is too long or of original message
@@ -193,26 +193,26 @@ exists.</p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>The backup of message can look like following:</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup000]</span><span class="w"></span>
-<span class="c1">#ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><span class="w"></span>
-<span class="c1">#</span><span class="w"></span>
-<span class="na">SMSC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;+4540590000&quot;</span><span class="w"></span>
-<span class="na">SMSCUnicode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">002B0034003500340030003500390030003000300030</span><span class="w"></span>
-<span class="na">Sent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20021201T025023</span><span class="w"></span>
-<span class="na">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">UnRead</span><span class="w"></span>
-<span class="na">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;+4522706947&quot;</span><span class="w"></span>
-<span class="na">NumberUnicode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">002B0034003500320032003700300036003900340037</span><span class="w"></span>
-<span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="na">NameUnicode</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="na">Text00</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">004100420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A000A</span><span class="w"></span>
-<span class="na">Coding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Default</span><span class="w"></span>
-<span class="na">Folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
-<span class="na">Length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">27</span><span class="w"></span>
-<span class="na">Class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-1</span><span class="w"></span>
-<span class="na">ReplySMSC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
-<span class="na">RejectDuplicates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span><span class="w"></span>
-<span class="na">ReplaceMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
-<span class="na">MessageReference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[SMSBackup000]</span>
+<span class="c1">#ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+<span class="c1">#</span>
+<span class="na">SMSC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;+4540590000&quot;</span>
+<span class="na">SMSCUnicode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">002B0034003500340030003500390030003000300030</span>
+<span class="na">Sent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20021201T025023</span>
+<span class="na">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">UnRead</span>
+<span class="na">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;+4522706947&quot;</span>
+<span class="na">NumberUnicode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">002B0034003500320032003700300036003900340037</span>
+<span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="na">NameUnicode</span><span class="w"> </span><span class="o">=</span>
+<span class="na">Text00</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">004100420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A000A</span>
+<span class="na">Coding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Default</span>
+<span class="na">Folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<span class="na">Length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">27</span>
+<span class="na">Class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-1</span>
+<span class="na">ReplySMSC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span>
+<span class="na">RejectDuplicates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span>
+<span class="na">ReplaceMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
+<span class="na">MessageReference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
 </pre></div>
 </div>
 </section>

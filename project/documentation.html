@@ -117,19 +117,19 @@ included in this manual as well.</p>
 <p>To generate the documentation there are various <code class="docutils literal notranslate"><span class="pre">manual-*</span></code> targets for make.
 You can build HTML, PDF, PS, HTMLHELP and Latex versions of it:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generates HTML version of manual in docs/manual/html</span>
-make manual-html
+make<span class="w"> </span>manual-html
 
 <span class="c1"># Generates PS version of manual in docs/manual/latex/gammu.ps</span>
-make manual-ps
+make<span class="w"> </span>manual-ps
 
 <span class="c1"># Generates PDF version of manual in docs/manual/latex/gammu.pdf</span>
-make manual-pdf
+make<span class="w"> </span>manual-pdf
 
 <span class="c1"># Generates HTML version of manual in docs/manual/htmlhelp</span>
-make manual-htmlhelp
+make<span class="w"> </span>manual-htmlhelp
 
 <span class="c1"># Generates HTML version of manual in docs/manual/latex</span>
-make manual-latex
+make<span class="w"> </span>manual-latex
 </pre></div>
 </div>
 </section>
@@ -137,13 +137,13 @@ make manual-latex
 <h2>Man pages<a class="headerlink" href="#man-pages" title="Permalink to this heading"></a></h2>
 <p>The man pages for all commands are generated using Sphinx as well:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generates HTML version of manual in docs/manual/man</span>
-make manual-man
+make<span class="w"> </span>manual-man
 </pre></div>
 </div>
 <p>However man pages are stored in Git as well, so you should update generated
 copy on each change:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Updates generated man pages in Git</span>
-make update-man
+make<span class="w"> </span>update-man
 </pre></div>
 </div>
 </section>

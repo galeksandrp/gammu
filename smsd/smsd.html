@@ -284,11 +284,11 @@ service differently. Default is “GammuSMSD”.</p>
 <section id="linux-unix-examples">
 <h3>Linux/Unix Examples<a class="headerlink" href="#linux-unix-examples" title="Permalink to this heading"></a></h3>
 <p>Start SMSD as a daemon on Linux:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd<span class="w"> </span>--config<span class="w"> </span>/etc/gammu-smsdrc<span class="w"> </span>--pid<span class="w"> </span>/var/run/gammu-smsd.pid<span class="w"> </span>--daemon
 </pre></div>
 </div>
 <p>Start SMSD as a daemon on Linux with reduced privileges:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon --user gammu --group gammu
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd<span class="w"> </span>--config<span class="w"> </span>/etc/gammu-smsdrc<span class="w"> </span>--pid<span class="w"> </span>/var/run/gammu-smsd.pid<span class="w"> </span>--daemon<span class="w"> </span>--user<span class="w"> </span>gammu<span class="w"> </span>--group<span class="w"> </span>gammu
 </pre></div>
 </div>
 </section>
@@ -303,17 +303,17 @@ you will be able to install SMSD service.</p>
 <section id="windows-service-examples">
 <h3>Windows Service Examples<a class="headerlink" href="#windows-service-examples" title="Permalink to this heading"></a></h3>
 <p>Install Gammu SMSD Windows service:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc -i
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe<span class="w"> </span>-c<span class="w"> </span>c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc<span class="w"> </span>-i
 </pre></div>
 </div>
 <p>Install two instances of SMSD Windows service:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc-1 -n Gammu-first-phone -i
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe<span class="w"> </span>-c<span class="w"> </span>c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc-1<span class="w"> </span>-n<span class="w"> </span>Gammu-first-phone<span class="w"> </span>-i
 
-gammu-smsd.exe -c c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc-2 -n Gammu-second-phone -i
+gammu-smsd.exe<span class="w"> </span>-c<span class="w"> </span>c:<span class="se">\G</span>ammu<span class="se">\s</span>msdrc-2<span class="w"> </span>-n<span class="w"> </span>Gammu-second-phone<span class="w"> </span>-i
 </pre></div>
 </div>
 <p>To uninstall a Windows service:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -u
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe<span class="w"> </span>-u
 </pre></div>
 </div>
 </section>
@@ -325,7 +325,7 @@ fashion”), first check your SMSD logs. If they do not contain any useful hint,
 try starting SMSD manually with exactly same parameters as you installed the
 service (without -i).</p>
 <p>For example the command line can look like:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe -c smsdrc
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gammu-smsd.exe<span class="w"> </span>-c<span class="w"> </span>smsdrc
 </pre></div>
 </div>
 <p>You now should be able to get errors from SMSD even if it fails to start as a
@@ -336,36 +336,36 @@ service.</p>
 <p>As you can not run Gammu and Gammu SMSD at same time on single device, you can
 workaround this limitation by suspending SMSD temporarily using <cite>SIGUSR1</cite> and
 <cite>SIGUSR2</cite> signals (see also <a class="reference internal" href="#gammu-smsd-signals"><span class="std std-ref">Signals</span></a>):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">SMSD_PID</span><span class="o">=</span><span class="sb">`</span>pidof gammu-smsd<span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$SMSD_PID</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Failed to figure out SMSD PID!&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">SMSD_PID</span><span class="o">=</span><span class="sb">`</span>pidof<span class="w"> </span>gammu-smsd<span class="sb">`</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SMSD_PID</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to figure out SMSD PID!&quot;</span>
 <span class="k">else</span>
-    <span class="nb">kill</span> -SIGUSR1 <span class="nv">$SMSD_PID</span>
-    gammu identify
-    <span class="nb">kill</span> -SIGUSR2 <span class="nv">$SMSD_PID</span>
+<span class="w">    </span><span class="nb">kill</span><span class="w"> </span>-SIGUSR1<span class="w"> </span><span class="nv">$SMSD_PID</span>
+<span class="w">    </span>gammu<span class="w"> </span>identify
+<span class="w">    </span><span class="nb">kill</span><span class="w"> </span>-SIGUSR2<span class="w"> </span><span class="nv">$SMSD_PID</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
 <p>Or even create a <cite>gammu-safe</cite> script:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nv">SMSD_PID</span><span class="o">=</span><span class="sb">`</span>pidof gammu-smsd<span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$SMSD_PID</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-  gammu <span class="nv">$@</span>
+<span class="nv">SMSD_PID</span><span class="o">=</span><span class="sb">`</span>pidof<span class="w"> </span>gammu-smsd<span class="sb">`</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SMSD_PID</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>gammu<span class="w"> </span><span class="nv">$@</span>
 <span class="k">else</span>
-  <span class="nv">tty</span><span class="o">=</span><span class="k">$(</span>lsof <span class="p">|</span>grep -E <span class="s2">&quot;gammu-sms\s+</span><span class="nv">$SMSD_PID</span><span class="s2">\s+.*/dev/tty*&quot;</span><span class="p">|</span>awk <span class="o">{</span><span class="s1">&#39;print $NF&#39;</span><span class="o">}</span><span class="k">)</span>
-  <span class="nb">kill</span> -SIGUSR1 <span class="nv">$SMSD_PID</span>
-  <span class="k">while</span> <span class="nb">test</span> <span class="s2">&quot;</span><span class="k">$(</span>fuser <span class="nv">$ttyfuser</span> <span class="nv">$tty</span> <span class="m">2</span>&gt; /dev/null<span class="p">|</span>xargs<span class="k">)</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="nv">$SMSD_PID</span>
-  <span class="k">do</span>
-    sleep <span class="m">1</span>
-  <span class="k">done</span>
-  sleep <span class="m">1</span>
-  gammu <span class="nv">$@</span>
-  <span class="nb">kill</span> -SIGUSR2 <span class="nv">$SMSD_PID</span>
-  <span class="k">while</span> <span class="nb">test</span> <span class="s2">&quot;</span><span class="k">$(</span>fuser <span class="nv">$ttyfuser</span> <span class="nv">$tty</span> <span class="m">2</span>&gt; /dev/null<span class="p">|</span>xargs<span class="k">)</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="nv">$SMSD_PID</span>
-  <span class="k">do</span>
-    sleep <span class="m">1</span>
-  <span class="k">done</span>
-  sleep <span class="m">1</span>
+<span class="w">  </span><span class="nv">tty</span><span class="o">=</span><span class="k">$(</span>lsof<span class="w"> </span><span class="p">|</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;gammu-sms\s+</span><span class="nv">$SMSD_PID</span><span class="s2">\s+.*/dev/tty*&quot;</span><span class="p">|</span>awk<span class="w"> </span><span class="o">{</span><span class="s1">&#39;print $NF&#39;</span><span class="o">}</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">kill</span><span class="w"> </span>-SIGUSR1<span class="w"> </span><span class="nv">$SMSD_PID</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>fuser<span class="w"> </span><span class="nv">$ttyfuser</span><span class="w"> </span><span class="nv">$tty</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="p">|</span>xargs<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$SMSD_PID</span>
+<span class="w">  </span><span class="k">do</span>
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>gammu<span class="w"> </span><span class="nv">$@</span>
+<span class="w">  </span><span class="nb">kill</span><span class="w"> </span>-SIGUSR2<span class="w"> </span><span class="nv">$SMSD_PID</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>fuser<span class="w"> </span><span class="nv">$ttyfuser</span><span class="w"> </span><span class="nv">$tty</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="p">|</span>xargs<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="nv">$SMSD_PID</span>
+<span class="w">  </span><span class="k">do</span>
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
