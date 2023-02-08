@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WAP &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">WAP</li>
@@ -127,14 +131,14 @@
 <span class="target" id="group__WAP_1gaec2efc58d78f2ee41f1fe40890a4a5d6"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_EncodeURLFile</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Buffer</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Length</span></span>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark"><span class="n"><span class="pre">GSM_WAPBookmark</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bookmark</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_EncodeURLFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Encodes URL to VBKM file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Buffer</strong> – Storage for text. </p></li>
 <li><p><strong>Length</strong> – Pointer to storage, will be updated. </p></li>
 <li><p><strong>bookmark</strong> – Bookmark to encode.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code. </p>
 </dd>
 </dl>
@@ -145,13 +149,13 @@
 <span class="target" id="group__WAP_1gaca60c559c62d6c881ea3119ce1a8100c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetWAPBookmark</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark"><span class="n"><span class="pre">GSM_WAPBookmark</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bookmark</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetWAPBookmark" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads WAP bookmark.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>bookmark</strong> – Bookmark storage, need to contain location.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -162,13 +166,13 @@
 <span class="target" id="group__WAP_1gafabe8a6b0d98dee0fd9e42106a6cf64a"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SetWAPBookmark</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark"><span class="n"><span class="pre">GSM_WAPBookmark</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bookmark</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetWAPBookmark" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Sets WAP bookmark.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>bookmark</strong> – Bookmark data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -179,13 +183,13 @@
 <span class="target" id="group__WAP_1gafc5e8d3688f4346757d6598501c4fb41"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_DeleteWAPBookmark</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_WAPBookmark" title="GSM_WAPBookmark"><span class="n"><span class="pre">GSM_WAPBookmark</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bookmark</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_DeleteWAPBookmark" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Deletes WAP bookmark.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>bookmark</strong> – Bookmark data, need to contain location.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -196,13 +200,13 @@
 <span class="target" id="group__WAP_1gadbe999cded99607de51398509b6f1f68"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetWAPSettings</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_MultiWAPSettings" title="GSM_MultiWAPSettings"><span class="n"><span class="pre">GSM_MultiWAPSettings</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">settings</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetWAPSettings" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Acquires WAP settings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>settings</strong> – Settings storage.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -213,13 +217,13 @@
 <span class="target" id="group__WAP_1gad9af63edfdf04df610dab9440ea9680f"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SetWAPSettings</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_MultiWAPSettings" title="GSM_MultiWAPSettings"><span class="n"><span class="pre">GSM_MultiWAPSettings</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">settings</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetWAPSettings" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Changes WAP settings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>settings</strong> – Settings data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Info &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">Info</li>
@@ -139,12 +143,12 @@
 <span class="target" id="group__Info_1gac7006b65578cb37decb648bb0b142c1b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GSM_FeatureToString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="n"><span class="pre">GSM_Feature</span></span></a><span class="w"> </span><span class="n"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FeatureToString" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Converts feature value to string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>feature</strong> – GSM_Feature to convert.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pointer to static string with string for specified feature, NULL on failure. </p>
 </dd>
 </dl>
@@ -155,12 +159,12 @@
 <span class="target" id="group__Info_1ga1836ae030afe98b81f1ebddd106b89d5"></span><a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="n"><span class="pre">GSM_Feature</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_FeatureFromString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FeatureFromString" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Converts feature string to value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>feature</strong> – GSM_Feature string to convert.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>GSM_Feature value, 0 on failure. </p>
 </dd>
 </dl>
@@ -171,13 +175,13 @@
 <span class="target" id="group__Info_1ga4782f3a1f914bc2ccb0bbe97f185cae6"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_IsPhoneFeatureAvailable</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="n"><span class="pre">GSM_PhoneModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">model</span></span>, <a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="n"><span class="pre">GSM_Feature</span></span></a><span class="w"> </span><span class="n"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IsPhoneFeatureAvailable" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Checks whether phone supports features.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model</strong> – Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
 <li><p><strong>feature</strong> – GSM_Feature to check for.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if phone has defined this feature. </p>
 </dd>
 </dl>
@@ -188,13 +192,13 @@
 <span class="target" id="group__Info_1gae90ab1b976c29f17db0c4492c4b521f6"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_AddPhoneFeature</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="n"><span class="pre">GSM_PhoneModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">model</span></span>, <a class="reference internal" href="#c.GSM_Feature" title="GSM_Feature"><span class="n"><span class="pre">GSM_Feature</span></span></a><span class="w"> </span><span class="n"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddPhoneFeature" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Adds feature to phone configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model</strong> – Model information (you can get it using <a class="reference internal" href="#group__Info_1gadc32e8fcd4386331a0434bba52acb390"><span class="std std-ref">GSM_GetModelInfo</span></a>). </p></li>
 <li><p><strong>feature</strong> – GSM_Feature to check for.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if phone has defined this feature. </p>
 </dd>
 </dl>
@@ -205,13 +209,13 @@
 <span class="target" id="group__Info_1ga80bfce0fe93ee05533e5b15d33512bf7"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetManufacturer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetManufacturer" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads manufacturer from phone.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>value</strong> – Pointer where to store manufacturer name</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code. </p>
 </dd>
 </dl>
@@ -222,13 +226,13 @@
 <span class="target" id="group__Info_1ga4aac959d9baf0ef2ff5a1f7de34df71c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetModel" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads model from phone.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>value</strong> – Pointer where to store model name</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code. </p>
 </dd>
 </dl>
@@ -239,12 +243,12 @@
 <span class="target" id="group__Info_1gadc32e8fcd4386331a0434bba52acb390"></span><a class="reference internal" href="#c.GSM_PhoneModel" title="GSM_PhoneModel"><span class="n"><span class="pre">GSM_PhoneModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetModelInfo</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetModelInfo" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads model info from state machine.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pointer to phone information structure. </p>
 </dd>
 </dl>
@@ -255,7 +259,7 @@
 <span class="target" id="group__Info_1ga10ecdd81b151d0c682c6b361ca315ca9"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetFirmware</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">date</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">num</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetFirmware" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads firmware information from phone.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>value</strong> – Pointer where to store revision text </p></li>
@@ -263,7 +267,7 @@
 <li><p><strong>num</strong> – Pointer where to store revision number</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code. </p>
 </dd>
 </dl>
@@ -274,13 +278,13 @@
 <span class="target" id="group__Info_1ga02f4772bf770b4af786f8a72a36cd9a2"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetIMEI</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetIMEI" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads IMEI/serial number from phone.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>value</strong> – Pointer where to store IMEI, NULL to ignore.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code. </p>
 </dd>
 </dl>

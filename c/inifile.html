@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INI files &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">INI files</li>
@@ -127,7 +131,7 @@
 <span class="target" id="group__INI_1ga25f7c03b7adb0e870f42ffa5d19982a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_Free</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_Free" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Free INI data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>head</strong> – INI section data. </p></li>
 </ul>
@@ -140,14 +144,14 @@
 <span class="target" id="group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_ReadFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">Unicode</span></span>, <a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_ReadFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads INI data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – File to read. </p></li>
 <li><p><strong>Unicode</strong> – Whether file shoul be treated like unicode. </p></li>
 <li><p><strong>result</strong> – Pointer where file will be read.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -165,14 +169,14 @@
 
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_info</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
 <li><p><strong>section</strong> – Section to scan. </p></li>
 <li><p><strong>Unicode</strong> – Whether file is unicode.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Last entry in section.</p>
 </dd>
 </dl>
@@ -190,7 +194,7 @@
 
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_info</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
 <li><p><strong>section</strong> – Section to scan. </p></li>
@@ -198,7 +202,7 @@
 <li><p><strong>Unicode</strong> – Whether file is unicode.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Entry value.</p>
 </dd>
 </dl>
@@ -209,7 +213,7 @@
 <span class="target" id="gammu-inifile_8h_1a57f62642357c8954b1fc7d729934f384"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetInt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetInt" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns integer value from configuration. The file is automatically handled as not unicode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cfg</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
 <li><p><strong>section</strong> – Section to scan. </p></li>
@@ -217,7 +221,7 @@
 <li><p><strong>fallback</strong> – Fallback value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Key value or fallback in case of failure. </p>
 </dd>
 </dl>
@@ -228,7 +232,7 @@
 <span class="target" id="gammu-inifile_8h_1a6820d35258a52f51f3317bcc1bdfd852"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INI_GetBool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.INI_Section" title="INI_Section"><span class="n"><span class="pre">INI_Section</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">cfg</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">section</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">fallback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.INI_GetBool" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns boolean value from configuration. The file is automatically handled as not unicode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cfg</strong> – File data as returned by <a class="reference internal" href="#group__INI_1gaea2a382fc5fc51f9ac6f4474e9c44a9c"><span class="std std-ref">INI_ReadFile</span></a>. </p></li>
 <li><p><strong>section</strong> – Section to scan. </p></li>
@@ -236,7 +240,7 @@
 <li><p><strong>fallback</strong> – Fallback value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Key value or fallback in case of failure. </p>
 </dd>
 </dl>
@@ -248,12 +252,12 @@
 <dd><p>Converts value to boolean.</p>
 <p>It just takes the string and checks whether there is true/yes/t/y/1 or false/no/f/n/0.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – String to parse.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Boolean value, -1 on failure. </p>
 </dd>
 </dl>

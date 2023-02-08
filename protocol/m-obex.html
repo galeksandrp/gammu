@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>m-obex protocol used by some Samsung mobiles &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -131,7 +135,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Phone Protocols</a></li>
       <li class="breadcrumb-item active">m-obex protocol used by some Samsung mobiles</li>
       <li class="wy-breadcrumbs-aside">
@@ -174,11 +178,6 @@
 <h2>Obex commands<a class="headerlink" href="#obex-commands" title="Permalink to this heading"></a></h2>
 <p>In the following chapters I will describe the obex packages to read and edit data on the mobile. I think most of them are in standard-obex format and are following this structure:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 36%" />
-<col style="width: 29%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Package Header</p></th>
 <th class="head"><p>Session Id</p></th>
@@ -210,12 +209,6 @@
 <p>There exists mainly two types of operations: Put (package header 0x02 and 0x82) to write data to the mobile and Get (package header 0x03 and 0x83) to retrieve data from the mobile. A put or get operation can be divided into several packages. The high-bit indicates if this is the last package of an operation. For example if you want to transfer a file to the mobile you send n-time 0x02 packages and only the last one is 0x82.</p>
 <p>Headers consists normally out of three blocks: First byte: Header type, second and third byte: length of the header (if the headers length is variable), following bytes: data. The most used header types are</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 3%" />
-<col style="width: 12%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Obex description</p></th>
 <th class="head"><p>Byte</p></th>

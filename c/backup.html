@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Backup &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">Backup</li>
@@ -127,13 +131,13 @@
 <span class="target" id="group__Backup_1ga70d2d206e7feccaf2c05404ad05d7e69"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ReadSMSBackupFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_SMS_Backup" title="GSM_SMS_Backup"><span class="n"><span class="pre">GSM_SMS_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ReadSMSBackupFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads SMS backup file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – file name </p></li>
 <li><p><strong>backup</strong> – structure where backup will be stored</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -144,13 +148,13 @@
 <span class="target" id="group__Backup_1ga5ba8132f5037c324a4de5db3ad1a9cfe"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_AddSMSBackupFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_SMS_Backup" title="GSM_SMS_Backup"><span class="n"><span class="pre">GSM_SMS_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_AddSMSBackupFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Adds data to SMS backup file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – file name </p></li>
 <li><p><strong>backup</strong> – structure holding backup data</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -161,7 +165,7 @@
 <span class="target" id="group__Backup_1ga7042b23a589648911abc645fa2ed79c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ClearSMSBackup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMS_Backup" title="GSM_SMS_Backup"><span class="n"><span class="pre">GSM_SMS_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ClearSMSBackup" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Clears SMS backup structure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backup</strong> – structure where backup data will be stored </p></li>
 </ul>
@@ -174,7 +178,7 @@
 <span class="target" id="group__Backup_1gad623b20dd071530f3503d1db0bce0117"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_FreeSMSBackup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMS_Backup" title="GSM_SMS_Backup"><span class="n"><span class="pre">GSM_SMS_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FreeSMSBackup" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Deallocates all members of SMS backup structure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backup</strong> – structure where backup data will be stored </p></li>
 </ul>
@@ -187,14 +191,14 @@
 <span class="target" id="group__Backup_1ga1d78591b7bd57f44c2c8f88abeb00712"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SaveBackupFile</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_Backup" title="GSM_Backup"><span class="n"><span class="pre">GSM_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Backup</span></span>, <a class="reference internal" href="#c.GSM_BackupFormat" title="GSM_BackupFormat"><span class="n"><span class="pre">GSM_BackupFormat</span></span></a><span class="w"> </span><span class="n"><span class="pre">Format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SaveBackupFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Save backup file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – Name of file (format is detected from it). </p></li>
 <li><p><strong>Backup</strong> – structure holding backup data </p></li>
 <li><p><strong>Format</strong> – Backup format.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -205,13 +209,13 @@
 <span class="target" id="group__Backup_1ga57c39726c6ef1d1bf237297eb4b38f8b"></span><a class="reference internal" href="#c.GSM_BackupFormat" title="GSM_BackupFormat"><span class="n"><span class="pre">GSM_BackupFormat</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GuessBackupFormat</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">UseUnicode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GuessBackupFormat" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Guesses backup format based on filename.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – Name of backup filename. </p></li>
 <li><p><strong>UseUnicode</strong> – Whether to prefer unicode variant when guessing.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Backup format on success -1 on error. </p>
 </dd>
 </dl>
@@ -222,14 +226,14 @@
 <span class="target" id="group__Backup_1ga2249f2696f31f8e3d0d8ed07545a5644"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ReadBackupFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_Backup" title="GSM_Backup"><span class="n"><span class="pre">GSM_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span>, <a class="reference internal" href="#c.GSM_BackupFormat" title="GSM_BackupFormat"><span class="n"><span class="pre">GSM_BackupFormat</span></span></a><span class="w"> </span><span class="n"><span class="pre">Format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ReadBackupFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads data from backup file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – Name of file (format is detected from it). </p></li>
 <li><p><strong>backup</strong> – structure where backup data will be stored </p></li>
 <li><p><strong>Format</strong> – Format of backup. For Gammu backups, unicode subformats are ignored.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -240,7 +244,7 @@
 <span class="target" id="group__Backup_1ga2fe29d0a2217b1d589b051831a79365c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ClearBackup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Backup" title="GSM_Backup"><span class="n"><span class="pre">GSM_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ClearBackup" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Clears backup structure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backup</strong> – structure where backup data will be stored </p></li>
 </ul>
@@ -253,7 +257,7 @@
 <span class="target" id="group__Backup_1ga062787e062bd06d7aaa23969d03816ce"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_FreeBackup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Backup" title="GSM_Backup"><span class="n"><span class="pre">GSM_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_FreeBackup" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Deallocates all members of backup structure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backup</strong> – structure where backup data will be stored </p></li>
 </ul>
@@ -266,7 +270,7 @@
 <span class="target" id="group__Backup_1ga41aa55bea664d1e1987a7b9ec6bde902"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetBackupFormatFeatures</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_BackupFormat" title="GSM_BackupFormat"><span class="n"><span class="pre">GSM_BackupFormat</span></span></a><span class="w"> </span><span class="n"><span class="pre">Format</span></span>, <a class="reference internal" href="#c.GSM_Backup_Info" title="GSM_Backup_Info"><span class="n"><span class="pre">GSM_Backup_Info</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">info</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetBackupFormatFeatures" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Gets information about format features.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Format</strong> – Format of backup. </p></li>
 <li><p><strong>info</strong> – Output information about backup features. </p></li>
@@ -280,7 +284,7 @@
 <span class="target" id="group__Backup_1ga114c21b6887a73093a48a535983b6028"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetBackupFileFeatures</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_BackupFormat" title="GSM_BackupFormat"><span class="n"><span class="pre">GSM_BackupFormat</span></span></a><span class="w"> </span><span class="n"><span class="pre">Format</span></span>, <a class="reference internal" href="#c.GSM_Backup_Info" title="GSM_Backup_Info"><span class="n"><span class="pre">GSM_Backup_Info</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">info</span></span>, <a class="reference internal" href="#c.GSM_Backup" title="GSM_Backup"><span class="n"><span class="pre">GSM_Backup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">backup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetBackupFileFeatures" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Gets information about backup data features (resp. which data it contains).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Format</strong> – Format of backup. </p></li>
 <li><p><strong>info</strong> – Output information about backup features. </p></li>

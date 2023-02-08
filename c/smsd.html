@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMSD &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">SMSD</li>
@@ -127,14 +131,14 @@
 <span class="target" id="group__SMSD_1ga316b34be7ee8c7a1779084d5de9d0022"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_InjectSMS</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Config</span></span>, <a class="reference internal" href="message.html#c.GSM_MultiSMSMessage" title="GSM_MultiSMSMessage"><span class="n"><span class="pre">GSM_MultiSMSMessage</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sms</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">NewID</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_InjectSMS" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Enqueues SMS message in SMS daemon queue.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Config</strong> – SMSD configuration pointer. </p></li>
 <li><p><strong>sms</strong> – Message data to send. </p></li>
 <li><p><strong>NewID</strong> – Pointer to string where ID of new message will be written. Can be NULL and then it is ignored.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -145,13 +149,13 @@
 <span class="target" id="group__SMSD_1ga21560b7a7aad8f6b34e4ce15800e20de"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_GetStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Config</span></span>, <a class="reference internal" href="#c.GSM_SMSDStatus" title="GSM_SMSDStatus"><span class="n"><span class="pre">GSM_SMSDStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_GetStatus" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Gets SMSD status via shared memory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Config</strong> – SMSD configuration pointer. </p></li>
 <li><p><strong>status</strong> – pointer where status will be copied</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -162,12 +166,12 @@
 <span class="target" id="group__SMSD_1ga283ceb0a202c9c95c80fd2cfebc3f4ad"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_Shutdown</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_Shutdown" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Flags SMSD daemon to terminate itself gracefully.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Config</strong> – Pointer to SMSD configuration data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -178,14 +182,14 @@
 <span class="target" id="group__SMSD_1ga38d0fa63d2abbe998420a56ea3bf6b32"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_ReadConfig</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">filename</span></span>, <a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Config</span></span>, <a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="n"><span class="pre">uselog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_ReadConfig" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads SMSD configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> – File name of configuration. </p></li>
 <li><p><strong>Config</strong> – Pointer to SMSD configuration data. </p></li>
 <li><p><strong>uselog</strong> – Whether to log errors to configured log.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -201,14 +205,14 @@
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Config</strong> – Pointer to SMSD configuration data. </p></li>
 <li><p><strong>exit_on_failure</strong> – Whether failure should lead to terminaton of program. </p></li>
 <li><p><strong>max_failures</strong> – Maximal number of failures after which SMSD will terminate. Use 0 to not terminate on failures.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -219,12 +223,12 @@
 <span class="target" id="group__SMSD_1gaaec8b0889c17f7bd4725c7e7ab68389e"></span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_NewConfig</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_NewConfig" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Creates new SMSD configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – Name of process, will be used for logging. If NULL, gammu-smsd text is used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pointer to SMSD configuration data block. </p>
 </dd>
 </dl>
@@ -235,7 +239,7 @@
 <span class="target" id="group__SMSD_1gaa2129fb770cc8df44a8168ea483d93ab"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMSD_FreeConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_SMSDConfig" title="GSM_SMSDConfig"><span class="n"><span class="pre">GSM_SMSDConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMSD_FreeConfig" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Frees SMSD configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – Pointer to SMSD configuration data. </p></li>
 </ul>

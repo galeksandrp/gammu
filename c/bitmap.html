@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitmap &mdash; Gammu 1.42.0 documentation</title>
@@ -30,14 +30,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Gammu
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Gammu
           </a>
               <div class="version">
                 1.42.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">libGammu</a></li>
           <li class="breadcrumb-item"><a href="api.html">libGammu C API</a></li>
       <li class="breadcrumb-item active">Bitmap</li>
@@ -139,7 +143,7 @@
 <span class="target" id="group__Bitmap_1gad6875e1ea3d0f8e51186e7e8f4744638"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_PrintBitmap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">file</span></span>, <a class="reference internal" href="#c.GSM_Bitmap" title="GSM_Bitmap"><span class="n"><span class="pre">GSM_Bitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bitmap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_PrintBitmap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Prints bitmap to file descriptor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> – Where to print. </p></li>
 <li><p><strong>bitmap</strong> – Bitmap to print. </p></li>
@@ -153,13 +157,13 @@
 <span class="target" id="group__Bitmap_1gac79cfa5196bbc66f1006a5633d5f9690"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SaveBitmapFile</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_MultiBitmap" title="GSM_MultiBitmap"><span class="n"><span class="pre">GSM_MultiBitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bitmap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SaveBitmapFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Saves bitmap to file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – Where to save. </p></li>
 <li><p><strong>bitmap</strong> – Bitmap to save.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -170,13 +174,13 @@
 <span class="target" id="group__Bitmap_1ga6d33760e64661ba940b1ebf8e6af1933"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ReadBitmapFile</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">FileName</span></span>, <a class="reference internal" href="#c.GSM_MultiBitmap" title="GSM_MultiBitmap"><span class="n"><span class="pre">GSM_MultiBitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bitmap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ReadBitmapFile" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reads bitmap from file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileName</strong> – Where to load from. </p></li>
 <li><p><strong>bitmap</strong> – Pointer where to load bitmap.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Error code </p>
 </dd>
 </dl>
@@ -187,14 +191,14 @@
 <span class="target" id="group__Bitmap_1gaca30f669bfdab3944a754eb718cf5e57"></span><a class="reference internal" href="types.html#c.gboolean" title="gboolean"><span class="n"><span class="pre">gboolean</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_IsPointBitmap</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Bitmap" title="GSM_Bitmap"><span class="n"><span class="pre">GSM_Bitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bmp</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">x</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_IsPointBitmap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Checks whether point is set in bitmap.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bmp</strong> – Bitmap </p></li>
 <li><p><strong>x</strong> – Horizontal coordinate. </p></li>
 <li><p><strong>y</strong> – Vertical coordinate. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if point is set. </p>
 </dd>
 </dl>
@@ -205,7 +209,7 @@
 <span class="target" id="group__Bitmap_1ga44dc42489ef4265594cb08b6bc297469"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_SetPointBitmap</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Bitmap" title="GSM_Bitmap"><span class="n"><span class="pre">GSM_Bitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bmp</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">x</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_SetPointBitmap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Sets point in bitmap.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bmp</strong> – Bitmap </p></li>
 <li><p><strong>x</strong> – Horizontal coordinate. </p></li>
@@ -220,7 +224,7 @@
 <span class="target" id="group__Bitmap_1gac175b70ae6f2a7fc6786daa382f3a564"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ClearPointBitmap</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Bitmap" title="GSM_Bitmap"><span class="n"><span class="pre">GSM_Bitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bmp</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">x</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ClearPointBitmap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Clears point in bitmap.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bmp</strong> – Bitmap </p></li>
 <li><p><strong>x</strong> – Horizontal coordinate. </p></li>
@@ -235,7 +239,7 @@
 <span class="target" id="group__Bitmap_1ga2f24169a7d4d9877d61eda558829f283"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_ClearBitmap</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.GSM_Bitmap" title="GSM_Bitmap"><span class="n"><span class="pre">GSM_Bitmap</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bmp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_ClearBitmap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Clears bitmap.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bmp</strong> – Bitmap </p></li>
 </ul>
@@ -490,7 +494,7 @@
 <span class="target" id="group__Bitmap_1ga03eb7b3b5fc9d69d0b89b983a917e2a7"></span><a class="reference internal" href="error.html#c.GSM_Error" title="GSM_Error"><span class="n"><span class="pre">GSM_Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_GetScreenshot</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="statemachine.html#c.GSM_StateMachine" title="GSM_StateMachine"><span class="n"><span class="pre">GSM_StateMachine</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">s</span></span>, <a class="reference internal" href="#c.GSM_BinaryPicture" title="GSM_BinaryPicture"><span class="n"><span class="pre">GSM_BinaryPicture</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">picture</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.GSM_GetScreenshot" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Gets phone screenshot.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> – State machine pointer. </p></li>
 <li><p><strong>picture</strong> – Structure which will hold data. </p></li>
