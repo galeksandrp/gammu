@@ -94,6 +94,14 @@ static GSM_Error SMSDFiles_SaveInboxSMS(GSM_MultiSMSMessage * sms, GSM_SMSDConfi
 				"IN%02d%02d%02d_%02d%02d%02d_%02i_%s_%02i.%s",
 				sms->SMS[i].DateTime.Year, sms->SMS[i].DateTime.Month, sms->SMS[i].DateTime.Day,
 				sms->SMS[i].DateTime.Hour, sms->SMS[i].DateTime.Minute, sms->SMS[i].DateTime.Second, j, buffer2, i, ext);
+
+			if (1 == 1) {
+				sprintf(FileName,
+					"IN%02d%02d%02d_%02d%02d%02d_%02i_%02i.%s",
+					sms->SMS[i].DateTime.Year, sms->SMS[i].DateTime.Month, sms->SMS[i].DateTime.Day,
+					sms->SMS[i].DateTime.Hour, sms->SMS[i].DateTime.Minute, sms->SMS[i].DateTime.Second, j, i, ext);
+			}
+
 			strcpy(FullName, Config->inboxpath);
 			strcat(FullName, FileName);
 			if (file) {
@@ -148,6 +156,7 @@ static GSM_Error SMSDFiles_SaveInboxSMS(GSM_MultiSMSMessage * sms, GSM_SMSDConfi
 				free(backup);
 #endif
 			} else {
+				SMSD_Log(DEBUG_NOTICE, Config, "EXTREME: %s", FullName);
 				file = fopen(FullName, "wb");
 				if (file == NULL) {
 					SMSD_LogErrno(Config, "Cannot save file!");

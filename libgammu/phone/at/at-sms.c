@@ -1587,7 +1587,7 @@ GSM_Error ATGEN_GetSMSStatus(GSM_StateMachine *s, GSM_SMSMemoryStatus *status)
 			Priv->SMSMemoryWrite = FALSE;
 		}
 		if (error != ERR_NONE) {
-			return error;
+			//return error;
 		}
 		Priv->SMSMemory = MEM_SM;
 	}
