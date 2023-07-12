@@ -92,9 +92,13 @@ jobs:
           $env:PGPASSWORD = 'smsd'
           & $env:PGBIN\psql --username=smsd --host=localhost --list smsd
       - name: cmake
-        run: cmake -S . -B _build -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Continuous -DONLINE_TESTING=ON -DPSQL_TESTING=ON
+        run: cmake -S . -B _build -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Continuous -DONLINE_TESTING=ON -DPSQL_TESTING=ON -DPOSTGRES_FOUND=OFF
       - name: build
         run: cmake --build _build  --config Release --target package -- /verbosity:minimal
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path:  D:/a/gammu/gammu/_build/*.exe
       - name: test
         run: |
           cd _build
